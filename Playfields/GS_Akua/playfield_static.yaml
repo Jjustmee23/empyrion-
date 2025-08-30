@@ -358,27 +358,6 @@ POIs:
               Value: "Weekly_Challenge"
 
         # ==============================================================
-        # NEXON COMMUNITY CHALLENGES & REWARDS SYSTEM
-        # ==============================================================
-        - GroupName: NexonCommunityChallenges
-          CountMinMax: [ 1, 1 ]
-          SpawnPOINear: [NexonPrimeCommunityHub]
-          SpawnPOINearRange: [400, 600]
-          IsImportant: True
-          Faction: None
-          Properties: 
-            - Key: MapMarker
-              Value: Neutral
-            - Key: RegenAfter
-              Value: 1440
-            - Key: CommunityFacility
-              Value: "Challenges,Rewards,Events"
-            - Key: PersonalContainer
-              Value: "CommunityRewards:1"
-            - Key: SpecialEvent
-              Value: "Daily_Challenge"
-
-        # ==============================================================
         # BASIC RESOURCES - Community Starter Area
         # ==============================================================
         - GroupName: NullPOI
@@ -514,16 +493,16 @@ POIs:
           # Enhanced starter equipment sets for different difficulties
           Items: [ 
            # EASY MODE - Community Welcome Package
-           "SurvivalTool:1, Flashlight:1, SurvivalTent:1, RadarSuitT1:1, PDA:1, Bandages:8, PowerBar:8, Medikit02:5, AntidotePills:3, EmergencyRations:5, WaterBottle:3, EnergyCell:5, OreScanner:1, SmallConstructor:1, OxygenGenerator:1, WaterGenerator:1, SolarPanel:2, Battery:2, FoodProcessor:1, WoodLogs:50, Stone:50, IronOre:50, CopperOre:50", 
+           "SurvivalTool:1, Flashlight:1, SurvivalTent:1, RadarSuitT1:1, PDA:1, Bandages:8, PowerBar:8, Medikit02:5, AntidotePills:3, EmergencyRations:5, WaterBottle:3, EnergyCell:5, OreScanner:1, SmallConstructor:1, OxygenGenerator:1, WaterGenerator:1, SolarPanel:2, Battery:2, FoodProcessor:1, WoodLog:50, Stone:50, IronOre:50, CopperOre:50", 
            
            # NORMAL MODE - Balanced Starter Kit
-           "SurvivalTool:1, Flashlight:1, SurvivalTent:1, RadarSuitT1:1, PDA:1, Bandages:5, PowerBar:5, Medikit02:3, AntidotePills:2, EmergencyRations:3, WaterBottle:2, EnergyCell:3, OreScanner:1, SmallConstructor:1, OxygenGenerator:1, WaterGenerator:1, SolarPanel:1, Battery:1, WoodLogs:30, Stone:30, IronOre:30, CopperOre:30", 
+           "SurvivalTool:1, Flashlight:1, SurvivalTent:1, RadarSuitT1:1, PDA:1, Bandages:5, PowerBar:5, Medikit02:3, AntidotePills:2, EmergencyRations:3, WaterBottle:2, EnergyCell:3, OreScanner:1, SmallConstructor:1, OxygenGenerator:1, WaterGenerator:1, SolarPanel:1, Battery:1, WoodLog:30, Stone:30, IronOre:30, CopperOre:30", 
            
            # HARD MODE - Survival Challenge
-           "SurvivalTool:1, Flashlight:1, SurvivalTent:1, RadarSuitT1:1, PDA:1, Bandages:3, PowerBar:3, Medikit02:2, AntidotePills:1, EmergencyRations:2, WaterBottle:1, EnergyCell:2, OreScanner:1, WoodLogs:20, Stone:20, IronOre:20, CopperOre:20", 
+           "SurvivalTool:1, Flashlight:1, SurvivalTent:1, RadarSuitT1:1, PDA:1, Bandages:3, PowerBar:3, Medikit02:2, AntidotePills:1, EmergencyRations:2, WaterBottle:1, EnergyCell:2, OreScanner:1, WoodLog:20, Stone:20, IronOre:20, CopperOre:20", 
            
            # FRESH START - New Player Experience
-           "#FreshStart: SurvivalTool:1, Flashlight:1, SurvivalTent:1, RadarSuitT1:1, PDA:1, Bandages:4, PowerBar:4, Medikit02:2, AntidotePills:1, EmergencyRations:2, WaterBottle:1, EnergyCell:2, OreScanner:1, SmallConstructor:1, OxygenGenerator:1, WaterGenerator:1, SolarPanel:1, Battery:1, WoodLogs:25, Stone:25, IronOre:25, CopperOre:25"
+           "#FreshStart: SurvivalTool:1, Flashlight:1, SurvivalTent:1, RadarSuitT1:1, PDA:1, Bandages:4, PowerBar:4, Medikit02:2, AntidotePills:1, EmergencyRations:2, WaterBottle:1, EnergyCell:2, OreScanner:1, SmallConstructor:1, OxygenGenerator:1, WaterGenerator:1, SolarPanel:1, Battery:1, WoodLog:25, Stone:25, IronOre:25, CopperOre:25"
           ]
 
 DroneBaseSetup: 

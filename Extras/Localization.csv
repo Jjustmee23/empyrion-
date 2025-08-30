@@ -26,6 +26,7 @@ DESC,[c][e6e6e6]DESC[-][/c]
 Wastelanders,[c][b2664c]Wastelanders[-][/c]
 ARC,[c][ffe5b2]ARC[-][/c]
 Eleon,[c][0066cc]Eleon Game Studios[-][/c]
+NexonWorld,[c][00ff88]Nexon World[-][/c]
 TitanAsteroid,Titanium Asteroid
 PlatinAsteroid,Platinum Asteroid
 CPUExtenderLevel,CPU Extender Level
@@ -98,9 +99,68 @@ ShieldRechargeBonus,Shield Recharge (Bonus)
 bkiShieldExtender,Extender to extend the Shield Capactity and Recharge Rate\n\nCan be placed anywhere.
 bkiSuitProps,Will be equipped automatically when carried in inventory or toolbar.
 BronzeCrown,[c][fff700]Bronze Crown[-][/c]
-SilverCrown,[c][fff700]Silver Crown[-][/c]
-GoldCrown,[c][fff700]Gold Crown[-][/c]
-SantaClausMaleWalking,Santa Claus
-MrsClausFemaleWalking,Mrs. Claus
-ElfGirlStatic,Magic Elf
-bkiDecalGun,-[00ff00]LeftShift + Scrollwheel[-] to scale a decal\n\n-[00ff00]LeftControl + Scrollwheel[-] to rotate a decal\n\n-[00ff00]LeftShift + LeftControl + Scrollwheel[-] to change decal distance it snaps to a wall\n\n-[00ff00]PageUp[-] / [00ff00]PageDown[-] to cycle between decals in the same group
+pda_NexonWorldWelcome,[c][00ff88]Welcome to Nexon World[-][/c]
+pda_NexonWorldWelcomeDesc,Welcome to the enhanced multiplayer experience of Nexon World! This scenario has been carefully crafted to provide the ultimate community gaming experience with balanced PvE/PvP gameplay, enhanced anti-griefing protection, and optimized performance for smooth multiplayer gameplay.
+pda_NexonWorldWelcomeTask,Getting Started
+pda_NexonWorldWelcomeAction,Welcome Message
+pda_NexonWorldWelcomeActionDesc,Welcome to Nexon World! This enhanced multiplayer scenario features:\n\n• Balanced PvE/PvP gameplay for all skill levels\n• Enhanced anti-griefing protection for new players\n• Optimized POI regeneration and resource distribution\n• Improved structure protection and community building\n• Custom starting experience with unique items\n• Performance optimized for smooth multiplayer gameplay\n\nPerfect for community servers, guilds, and players looking for a balanced, community-friendly experience!
+pda_NexonWorldPlanets,[c][00ff88]Nexon World Planets[-][/c]
+pda_NexonWorldPlanetsDesc,Explore the beautifully themed planets of Nexon World, each with unique characteristics, enhanced starting experiences, and community features designed to enhance your multiplayer adventure.
+pda_NexonPrimeTask,Nexon Prime (Temperate)
+pda_NexonPrimeAction,Planet Overview
+pda_NexonPrimeActionDesc,Nexon Prime is the main temperate world featuring:\n\n• Enhanced community hub with trading, storage, and workshop facilities\n• Safe zones for new player protection\n• Community workshop for crafting and storage\n• Nexon Challenge Arena for special events\n• Optimized resource spawning\n• Four difficulty levels with custom starting equipment\n\nPerfect starting planet with balanced resources and community features!
+pda_CrystalHavenTask,Crystal Haven (Desert)
+pda_CrystalHavenAction,Planet Overview
+pda_CrystalHavenActionDesc,Crystal Haven offers a challenging desert environment with:\n\n• Adventure hub for exploration and rescue operations\n• Safe zones for PvP protection\n• Supply depots for emergency resources\n• Heat-resistant starting equipment\n• Enhanced crystal and mineral resources\n• Adventure-focused community features\n\nGreat for experienced players seeking desert challenges!
+pda_ObsidianPeakTask,Obsidian Peak (Volcanic)
+pda_ObsidianPeakAction,Planet Overview
+pda_ObsidianPeakActionDesc,Obsidian Peak provides a harsh volcanic environment featuring:\n\n• Survival hub with medical and rescue facilities\n• Safe zones for player protection\n• Medical supply depots\n• Antidote pills and protective equipment\n• Volcanic resources and challenges\n• Survival-focused community support\n\nChallenging environment for advanced survival gameplay!
+pda_AzureDepthsTask,Azure Depths (Ocean)
+pda_AzureDepthsAction,Planet Overview
+pda_AzureDepthsActionDesc,Azure Depths offers an underwater adventure with:\n\n• Ocean hub for maritime operations\n• Safe zones for underwater protection\n• Maritime supply depots\n• Water bottles and aquatic equipment\n• Ocean resources and underwater exploration\n• Maritime community features\n\nUnique underwater experience with specialized equipment!
+pda_FrostForgeTask,Frost Forge (Ice)
+pda_FrostForgeAction,Planet Overview
+pda_FrostForgeActionDesc,Frost Forge presents a frozen challenge featuring:\n\n• Ice hub for polar operations\n• Safe zones for cold weather protection\n• Polar supply depots\n• Heat-resistant suits and cold weather gear\n• Ice resources and frozen landscapes\n• Polar community support\n\nExtreme cold environment for hardcore survival!
+pda_VerdantGroveTask,Verdant Grove (Forest)
+pda_VerdantGroveAction,Planet Overview
+pda_VerdantGroveActionDesc,Verdant Grove offers a lush forest environment with:\n\n• Forest hub for nature-based operations\n• Safe zones for forest protection\n• Nature supply depots\n• Wood logs and plant protein equipment\n• Forest resources and natural materials\n• Nature-focused community features\n\nRich forest environment with abundant natural resources!
+pda_NexusCoreTask,Nexus Core (Space Station)
+pda_NexusCoreAction,Planet Overview
+pda_NexusCoreActionDesc,Nexus Core is the advanced space station featuring:\n\n• Tech hub with research and storage facilities\n• Safe zones for high-tech protection\n• Research facility for advanced technology\n• Advanced constructor and quantum processors\n• High-tier resources (Neodymium, Promethium, etc.)\n• Technology-focused community features\n\nAdvanced location for end-game content and high-tier resources!
+pda_NexonWorldCommunity,[c][00ff88]Community Features[-][/c]
+pda_NexonWorldCommunityDesc,Discover the enhanced community features throughout Nexon World, designed to promote cooperation, protect new players, and create a balanced multiplayer experience.
+pda_CommunityHubsTask,Community Hubs
+pda_CommunityHubsAction,Hub Overview
+pda_CommunityHubsActionDesc,Community hubs are located on each planet and provide:\n\n• Trading facilities for commerce\n• Storage systems for item management\n• Workshop areas for crafting\n• Rescue operations for player assistance\n• Community meeting points\n• Resource sharing capabilities\n\nThese hubs serve as central community centers for each world!
+pda_SafeZonesTask,Safe Zones
+pda_SafeZonesAction,Protection Overview
+pda_SafeZonesActionDesc,Safe zones provide essential protection:\n\n• PvP disabled areas for new player safety\n• Anti-griefing protection\n• Community gathering spaces\n• Emergency refuge locations\n• Trading and social interaction areas\n• Varying protection radius (200-600m)\n\nSafe zones ensure new players can learn and build without harassment!
+pda_SupplyDepotsTask,Supply Depots
+pda_SupplyDepotsAction,Resource Centers
+pda_SupplyDepotsActionDesc,Supply depots offer essential resources:\n\n• Emergency supplies for players in need\n• Storage facilities for community use\n• Rescue operations for stranded players\n• Resource distribution centers\n• Community support services\n• Quick access to basic materials\n\nSupply depots help maintain community sustainability!
+pda_ChallengeArenaTask,Challenge Arena
+pda_ChallengeArenaAction,Special Events
+pda_ChallengeArenaActionDesc,The Nexon Challenge Arena hosts special events:\n\n• Weekly challenges for community engagement\n• Special event facilities\n• Community competitions\n• Reward distribution\n• Skill-based activities\n• Community building events\n\nParticipate in special events to earn unique rewards!
+pda_NexonWorldStarting,[c][00ff88]Starting Experience[-][/c]
+pda_NexonWorldStartingDesc,Learn about the enhanced starting experience in Nexon World, featuring custom equipment, multiple difficulty levels, and optimized beginning gameplay.
+pda_StartingEquipmentTask,Starting Equipment
+pda_StartingEquipmentAction,Equipment Overview
+pda_StartingEquipmentActionDesc,Each planet provides custom starting equipment:\n\n• Small Constructor for basic building\n• Oxygen Generator for life support\n• Water Generator for hydration\n• Solar Panel for power generation\n• Battery for energy storage\n• Food Processor for sustenance\n• Basic resources (Wood, Stone, Iron, Copper, Silicon)\n• Planet-specific equipment (heat suits, water bottles, etc.)\n\nCustom equipment ensures a smooth start on each world!
+pda_DifficultyLevelsTask,Difficulty Levels
+pda_DifficultyLevelsAction,Level Overview
+pda_DifficultyLevelsActionDesc,Four difficulty levels are available:\n\n• Easy: Enhanced starting status and equipment\n• Normal: Balanced starting experience\n• Hard: Challenging starting conditions\n• Fresh Start: Minimal equipment for experienced players\n\nEach level provides different starting health, food, oxygen, and stamina values!
+pda_FirstStepsTask,First Steps
+pda_FirstStepsAction,Getting Started Guide
+pda_FirstStepsActionDesc,Recommended first steps in Nexon World:\n\n1. Visit your local community hub for resources\n2. Establish a base near a safe zone for protection\n3. Join community activities and events\n4. Explore supply depots for additional resources\n5. Participate in the challenge arena events\n6. Build relationships with other players\n7. Contribute to community projects\n\nCommunity cooperation is key to success in Nexon World!
+pda_NexonWorldExploration,[c][00ff88]Exploration & Resources[-][/c]
+pda_NexonWorldExplorationDesc,Discover the enhanced exploration features and optimized resource distribution throughout Nexon World, designed to provide balanced and rewarding gameplay.
+pda_ExplorationRewardsTask,Exploration Rewards
+pda_ExplorationRewardsAction,Reward System
+pda_ExplorationRewardsActionDesc,Exploration rewards include:\n\n• Explorer tokens for visiting new systems\n• Faction reputation increases\n• Unlocked PDA chapters and information\n• Special access to faction facilities\n• Community recognition\n• Unique discovery achievements\n\nExploration is highly rewarded in Nexon World!
+pda_ResourceLocationsTask,Resource Locations
+pda_ResourceLocationsAction,Resource Guide
+pda_ResourceLocationsActionDesc,Resource distribution is optimized:\n\n• Enhanced resource spawning on all planets\n• Increased counts and sizes for common resources\n• High-tier resources available on Nexus Core\n• Balanced distribution for fair gameplay\n• Community resource sharing encouraged\n• Sustainable resource regeneration\n\nResources are plentiful but require exploration to find!
+pda_POIRegenerationTask,POI Regeneration
+pda_POIRegenerationAction,Regeneration System
+pda_POIRegenerationActionDesc,POI regeneration is optimized:\n\n• Community hubs: 720 minutes (12 hours)\n• Safe zones: 1440 minutes (24 hours)\n• Supply depots: 240-360 minutes (4-6 hours)\n• Challenge arenas: 1440 minutes (24 hours)\n• Standard POIs: 180-360 minutes (3-6 hours)\n• Balanced for community sustainability\n\nRegeneration times ensure continuous community resources!
+pda_NexonWorldGroup,Nexon World

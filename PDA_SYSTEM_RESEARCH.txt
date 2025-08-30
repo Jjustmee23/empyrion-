@@ -1,0 +1,159 @@
+PDA SYSTEM RESEARCH - EMPYRION GALACTIC SURVIVAL
+==================================================
+
+ONLINE RESEARCH
+---------------
+
+1. eWPDA Tool (Empyrion World PDA Editor)
+   - Website: https://empyrion-homeworld.net/tools/ewpda
+   - Version: 2.75.0 (as seen in PDA.yaml header)
+   - Created by: Hayawen & RexXxuS
+   - License: Creative Commons BY-NC-ND 4.0
+   - Purpose: Tool for creating and editing PDA content for Empyrion scenarios
+
+2. PDA System Overview
+   - PDA = Personal Data Assistant
+   - In-game tutorial and information system
+   - Provides guidance, tips, and faction information
+   - Can be customized per scenario
+   - Supports multiple languages through localization
+
+LOCAL FILE ANALYSIS
+-------------------
+
+1. PDA.yaml Structure (Extras/PDA/PDA.yaml)
+   - Created with eWPDA 2.75.0 | 15.10.2024 - 9:55:28
+   - Creator: Eleon Game Studios
+   - Contains chapters, tasks, and actions with localization keys
+
+2. File Structure:
+   ```
+   Chapters:
+     - ChapterTitle: [localization_key]
+       Category: FAQ
+       Description: [localization_key]
+       PictureFile: [image_file]
+       PlayerLevel: [level_requirement]
+       Visibility: [Always/Never/WhenRewarded/WhileCompleted]
+       Tasks:
+         - TaskTitle: [localization_key]
+           Actions:
+             - ActionTitle: [localization_key]
+               Description: [localization_key]
+   ```
+
+3. Key Components:
+   - Chapters: Main sections of the PDA
+   - Tasks: Sub-sections within chapters
+   - Actions: Individual information entries
+   - Localization Keys: References to text in Localization.csv
+   - Pictures: Image files displayed with content
+   - Groups: Organizational categories
+   - Rewards: Items given for completing chapters
+   - ChapterActivation: Conditions for chapter availability
+
+4. Localization System (Extras/Localization.csv)
+   - CSV format with multiple language support
+   - Keys reference PDA content (e.g., pda_uWuPu82)
+   - Supports 17 languages including English, German, French, etc.
+   - Format: KEY,English,Deutsch,Français,Italiano,Spanish,Portuguese (Euro),Portuguese (Brazil),Polish,Russian,Japanese,Chinese (simplified),Chinese (traditional),Korean,Turkish,Greek,Dutch,Vietnamese
+
+5. PDA Content Categories Found:
+   - FAQ: General information and tutorials
+   - Getting Started: Basic game tips
+   - Knowledge Base: Comprehensive game mechanics
+   - Faction Information: Details about different factions
+   - Medical Conditions: Health status information
+   - Exploration Rewards: System discovery content
+
+6. Visibility Types:
+   - Always: Always visible
+   - Never: Never visible (hidden content)
+   - WhenRewarded: Only visible after receiving reward
+   - WhileCompleted: Only visible while chapter is completed
+
+7. Activation Conditions:
+   - StarClassEntered: Triggers when entering specific star systems
+   - PlayfieldTypeEntered: Triggers when entering specific playfield types
+   - PlayerLevel: Requires specific player level
+
+8. Reward System:
+   - ExplorerToken: Common reward for exploration chapters
+   - Item rewards with specific counts
+   - RewardedChapters: Links to other chapters that become available
+
+9. Special Features:
+   - NoSkip: Prevents skipping chapters
+   - Activatable: Controls when chapters can be activated
+   - HideTasks: Hides task list
+   - RepeatConditions: Controls chapter repetition
+   - CompletedMessage: Custom completion messages
+
+10. Medical System Integration:
+    - Extensive medical condition chapters
+    - Health status tracking
+    - Treatment information
+    - Condition-specific images
+
+11. Faction System Integration:
+    - Detailed faction information
+    - Reputation system
+    - Faction-specific rewards
+    - Exploration tokens for visiting faction systems
+
+12. Technical Implementation:
+    - YAML format for easy editing
+    - Modular structure for content organization
+    - Localization support for international players
+    - Image integration for visual content
+    - Conditional visibility for progressive content
+
+13. Customization Capabilities:
+    - Scenario-specific content
+    - Custom tutorials and guides
+    - Faction-specific information
+    - Medical condition documentation
+    - Exploration rewards and achievements
+
+14. Integration with Game Systems:
+    - Player progression tracking
+    - Faction reputation system
+    - Medical condition system
+    - Exploration and discovery
+    - Tutorial and learning system
+
+15. Best Practices for PDA Creation:
+    - Use eWPDA tool for creation and editing
+    - Organize content into logical chapters
+    - Provide clear localization keys
+    - Include appropriate images
+    - Set proper visibility conditions
+    - Link related content through groups
+    - Provide meaningful rewards
+    - Test multi-language support
+
+16. File Locations:
+    - PDA.yaml: Extras/PDA/PDA.yaml
+    - Localization: Extras/Localization.csv
+    - Images: Extras/PDA/ (referenced in PictureFile)
+
+17. Content Examples Found:
+    - Basic game mechanics tutorials
+    - Building and construction guides
+    - Vessel operation instructions
+    - Weapon and combat information
+    - Faction relationship guides
+    - Medical treatment procedures
+    - Exploration and discovery content
+    - Console and admin commands
+
+18. Advanced Features:
+    - Conditional chapter activation
+    - Progressive content unlocking
+    - Reward-based content access
+    - Multi-language support
+    - Image integration
+    - Group organization
+    - Completion tracking
+
+This research provides a comprehensive understanding of the PDA system in Empyrion Galactic Survival, covering both the technical implementation and practical usage for scenario customization.

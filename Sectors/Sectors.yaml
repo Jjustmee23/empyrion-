@@ -59,10 +59,10 @@ SolarSystems:
       - Coordinates: [55, 0, 0]
         Color: '0.5,0.5,0.5'
         Playfields:
-          - ['-5600, -5000, 12600', Nexon Prime, GS_Akua,'Human:1', '', '', '']
-          - ['12600, -5000, 6000', Frost Forge, GS_Ningues,'Human:1', '', '', '']          
-          - ['-12600, -5000, -6000', Azure Depths, GS_Skillon,'Human:1', '', '', '']
-          - ['5600, -5000, -12600', Obsidian Peak, GS_Masperon,'Human:1', '', '', '']
+          - ['-5600, -5000, 12600', Akua, GS_Akua,'Human:1', '', '', '']
+          - ['12600, -5000, 6000', Ningues, GS_Ningues,'Human:1', '', '', '']          
+          - ['-12600, -5000, -6000', Skillon, GS_Skillon,'Human:1', '', '', '']
+          - ['5600, -5000, -12600', Masperon, GS_Masperon,'Human:1', '', '', '']
           - ['0,0,0', Crown Sector, GS_CrownSector, '']
       - Coordinates: [25,0,15]
         Color: '0.16,0.18,0.51'
@@ -116,9 +116,9 @@ SolarSystems:
       - Coordinates: [5, 20, 46]  #212
         Color: '0.57,0.09,0.05 : 0.3,0.06,0.04'
         Playfields:
-          - ['0, 0, 0', Crystal Haven, GS_Ashon2]
-          - ['6700, 0, 5600', Crystal Haven Moon, GS_Ashon2Moon] 
-          - ['0, 0, 0', Crystal Haven Orbit, GS_Ashon2Orbit, 'Human:1']
+          - ['0, 0, 0', Ashon II, GS_Ashon2]
+          - ['6700, 0, 5600', Ashon II Moon, GS_Ashon2Moon] 
+          - ['0, 0, 0', Ashon II Orbit, GS_Ashon2Orbit, 'Human:1']
 
   - Name: Frontline Alpha # (Conflict Arid)
     Coordinates: [155, 26, 140]
@@ -957,8 +957,8 @@ SolarSystems:
       - Coordinates: [-18,0,-93]
         Color: '0.49,0.49,0.49'
         Playfields:
-          - ['0,0,0', Nexus Core, HomeworldARC,'', '', '', '']
-          - ['0,0,0', Nexus Core Sector, HomeworldARCSpaceOrbit, '']
+          - ['0,0,0', New Arkenia, HomeworldARC,'', '', '', '']
+          - ['0,0,0', New Arkenia Sector, HomeworldARCSpaceOrbit, '']
           
 # ==========          
 # Wastelanders Home System

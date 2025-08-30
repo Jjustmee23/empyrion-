@@ -3,35 +3,7 @@
 #Biomes: Pole, Hotspot, RadiatedFog, Radiated, Plains, PlainsEdge, Flats, Mountains, LowMountains, Dunes, Sand
 # NEXUS CORE - Een mysterieuze, geavanceerde planeet waar oude technologie en moderne innovatie samenkomen. Deze planeet is het hart van een verloren beschaving die geavanceerde AI-systemen en quantum-technologie heeft achtergelaten. De atmosfeer gloeit met een onnatuurlijke energie, terwijl de grond trilt van ondergrondse machines die nog steeds actief zijn. Spelers kunnen hier zeldzame technologie ontdekken, maar moeten oppassen voor de automatische verdedigingssystemen die nog steeds de planeet bewaken.
 
-Description: |
-  🌟 NEXUS CORE - The Mysterious Tech Realm of Nexon World! 🌟
-  
-  Welcome to Nexus Core, the heart of a lost civilization where ancient 
-  technology and modern innovation converge. This mysterious planet glows 
-  with unnatural energy and vibrates with underground machines, offering 
-  the most advanced challenges in the entire Nexon World.
-  
-  FEATURES:
-  • Advanced technology and rare resources
-  • Mysterious underground facilities
-  • Automated defense systems guarding secrets
-  • Quantum effects and energy particles
-  • Ultimate challenge for experienced players
-  
-  Nexus Core tells a story of technological marvel and ancient secrets, 
-  where the remnants of a highly advanced civilization still pulse with 
-  life. The planet's surface is dotted with mysterious structures that 
-  seem to operate on their own, while underground facilities hold 
-  secrets that could change the fate of the entire galaxy.
-  
-  This is a world for the most experienced explorers who can navigate 
-  through automated defenses and decipher ancient technology. The 
-  quantum effects that permeate this world create unique challenges 
-  and opportunities for those who can master them.
-  
-  In Nexus Core, every discovery could be your last, but those who 
-  survive may unlock technologies beyond imagination. This is where 
-  legends are made and civilizations are reborn.   
+Description: "NEXUS CORE - Het hart van een verloren beschaving waar oude technologie en moderne innovatie samenkomen. Deze mysterieuze planeet gloeit met een onnatuurlijke energie en trilt van ondergrondse machines. Ontdek zeldzame technologie, maar wees voorzichtig - de automatische verdedigingssystemen bewaken nog steeds hun kostbare geheimen."   
 
 PlanetType: NexusCore
 PlayfieldType: Planet

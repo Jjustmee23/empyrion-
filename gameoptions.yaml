@@ -100,6 +100,3 @@ Options:
     DSLUnloadSecs: 45                           # Enhanced: Increased from 30 to 45 seconds for better performance
     DSLDistancePlanet: 1500                     # Enhanced: Increased from 1200 to 1500m for better planet performance
     DSLDistanceSpace: 4000                      # Enhanced: Increased from 3000 to 4000m for better space performance
-
-    # NEXON WORLD ENHANCED GAMEPLAY SETTINGS
-    # Note: Advanced features are implemented through POI configurations and PDA systems

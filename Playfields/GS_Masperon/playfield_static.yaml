@@ -367,27 +367,6 @@ POIs:
               Value: "MedicalSupplies:1"
 
         # ==============================================================
-        # OBSIDIAN PEAK COMMUNITY CHALLENGES - Survival Challenges
-        # ==============================================================
-        - GroupName: ObsidianPeakChallenges
-          CountMinMax: [ 1, 1 ]
-          SpawnPOINear: [ObsidianPeakSurvivalHub]
-          SpawnPOINearRange: [300, 600]
-          IsImportant: True
-          Faction: None
-          Properties: 
-            - Key: MapMarker
-              Value: Neutral
-            - Key: RegenAfter
-              Value: 1440
-            - Key: CommunityFacility
-              Value: "Survival,Challenges,Events"
-            - Key: PersonalContainer
-              Value: "SurvivalRewards:1"
-            - Key: SpecialEvent
-              Value: "Survival_Challenge"
-
-        # ==============================================================
         # BASIC RESOURCES - Survival Starter Area
         # ==============================================================
         - GroupName: NullPOI
