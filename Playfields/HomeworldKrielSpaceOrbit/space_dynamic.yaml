@@ -1,0 +1,655 @@
+# Playfield Characteristics
+Gravity: 0                         
+AtmosphereEnabled: False          
+PvPProb: 0
+UseFixed: True                       
+Radiation: [5,10]                    
+TemperatureDay: [-200,-100]    
+Music: [moonstone, space, DistantWorlds, Migration]          
+ 
+PlayfieldType: Space  
+PlanetType: KrielHomeworldSector          
+
+### Resource Asteroid
+## Design Note: Kriel keep a better lineup of potential resource asteroids as long as their homeworld is not updated to the "new" variant but using the "kriel cradle" world that will be relocated in the next iteration.
+Resources:                     
+    - Name: [ AsteroidVoxel01Iron, AsteroidVoxel02Iron, AsteroidVoxel03Iron]
+      DisplayName: Iron Asteroid
+      CountMinMax: [ 1, 2 ]
+      Probability: 0.4    
+      Properties:     
+        - Key: RegenAfter
+          Value: 180         
+ 
+    - Name: [ AsteroidVoxel01Copper, AsteroidVoxel02Copper, AsteroidVoxel03Copper]
+      DisplayName: Copper Asteroid
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.4  
+      Properties:     
+        - Key: RegenAfter
+          Value: 180         
+ 
+    - Name: [ AsteroidVoxel01Silicon, AsteroidVoxel02Silicon, AsteroidVoxel03Silicon]
+      DisplayName: Silicon Asteroid
+      CountMinMax: [ 1, 2 ]
+      Probability: 0.4 
+      Properties:     
+        - Key: RegenAfter
+          Value: 180         
+
+    - Name: [ AsteroidVoxel01Magnesium, AsteroidVoxel02Magnesium, AsteroidVoxel03Magnesium]
+      DisplayName: Magnesium Asteroid
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.4 
+      Properties:     
+        - Key: RegenAfter
+          Value: 180         
+
+    - Name: [ AsteroidVoxel01Cobalt, AsteroidVoxel02Cobalt, AsteroidVoxel03Cobalt]
+      DisplayName: Cobalt Asteroid
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.4  
+      Properties:     
+        - Key: RegenAfter
+          Value: 180             
+
+    - Name: [ AsteroidVoxel01Neodymium, AsteroidVoxel02Neodymium, AsteroidVoxel03Neodymium]
+      DisplayName: Neodymium Asteroid
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.4 
+      Properties:     
+        - Key: RegenAfter
+          Value: 180          
+
+    - Name: [ AsteroidVoxel01Promethium, AsteroidVoxel02Promethium, AsteroidVoxel03Promethium]
+      DisplayName: Promethium Asteroid
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.4  
+      Properties:     
+        - Key: RegenAfter
+          Value: 180         
+
+    - Name: [ AsteroidVoxel01Sathium, AsteroidVoxel02Sathium, AsteroidVoxel03Sathium]
+      DisplayName: Sathium Asteroid
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.4 
+      Properties:     
+        - Key: RegenAfter
+          Value: 180         
+
+    - Name: [ AsteroidVoxel01Erestrum, AsteroidVoxel02Erestrum, AsteroidVoxel03Erestrum]
+      DisplayName: Erestrum Asteroid
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.1  
+      Properties:     
+        - Key: RegenAfter
+          Value: 180         
+
+    - Name: [ AsteroidVoxel01Zascosium, AsteroidVoxel02Zascosium, AsteroidVoxel03Zascosium]
+      DisplayName: Zascosium Asteroid
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.1  
+      Properties:     
+        - Key: RegenAfter
+          Value: 180         
+
+    - Name: [ AsteroidVoxel01Pentaxid, AsteroidVoxel02Pentaxid, AsteroidVoxel03Pentaxid]
+      DisplayName: Pentaxid Asteroid
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.3     
+      Properties:     
+        - Key: RegenAfter
+          Value: 180         
+
+    - Name: [ AsteroidVoxel01Gold, AsteroidVoxel02Gold, AsteroidVoxel03Gold]
+      DisplayName: Gold Asteroid
+      CountMinMax: [ 1, 1 ]
+      Probability: 0.3 
+      Properties:     
+        - Key: RegenAfter
+          Value: 180           
+
+    - Name: [ AsteroidVoxel01Titan, AsteroidVoxel02Titan, AsteroidVoxel03Titan]
+      DisplayName: Titan Asteroid
+      CountMinMax: [ 1, 2 ]
+      Probability: 0.5 
+      Properties:     
+        - Key: RegenAfter
+          Value: 180          
+           
+### POIs
+POIs:
+    - Name: [AsteroidFieldBoxExclude, AsteroidFieldFewBoxExclude] 
+      FieldName: [AsteroidField, AsteroidFieldRectangle2]   # used if playfield is not an orbit
+      CountMinMax: [ 1, 1 ]     
+      Probability: 1
+      BaseField: True 
+      RandomRotation: True
+
+# Uniques
+    - Type: BA_Alien
+      # GroupName: BAOKrielUnique
+      Name: [BAO_KrielArcanum]                               # Requires NexustT2 > Teleporter
+      DisplayName: Arcanum
+      Faction: Kriel
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]     
+      Probability: 1
+      InitPower: True
+      Position:
+       #  PosXZMinMax: [1000, 2500]
+       #  PosYMax: 2500 
+        RadialInfo: [0, 0, 0,   0,   1.5, 2,   -1, -1,   0, 0, 0]
+      Properties: 
+        - Key: Music
+          Value: NebularClouds  
+        - Key: StationInterface
+          Value: "Fuel:1,O2:1,Repair:8,Shield:8,IfNeutral:0.05,IfFriendly:-0.08,IfHonored:-0.16"
+
+    - Type: BA_Alien
+      # GroupName: BAOKrielUnique
+      Name: [BAO_KrielNexusT2]                               #Requires Arcanum > Teleporter
+      DisplayName: Nexus
+      Faction: Kriel
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]     
+      Probability: 1
+      InitPower: True
+      Position:
+       #  PosXZMinMax: [1000, 2500]
+       #  PosYMax: 2500 
+        RadialInfo: [0, 0, 0,   0,   1.5, 2,   -1, -1,   0, 0, 0]
+      Properties: 
+        - Key: Music
+          Value: NebularClouds  
+          
+# Main Random
+
+    - Type: BA_Alien   
+      GroupName: BAOKriel
+      Faction: Kriel
+      Mode: Survival
+      CountMinMax: [ 2, 3 ]     
+      Probability: 1
+      InitPower: True
+      Position:
+       #  PosXZMinMax: [1000, 2500]
+       #  PosYMax: 2500 
+        RadialInfo: [0, 0, 0,   0,   2, 3,   -1, -1,   0, 0, 0]
+      Properties: 
+        - Key: RegenAfter
+          Value: 720   
+# Aux
+
+# Satellites 
+    - Type: BA_Alien         
+      Name: [BAO_KrielCommonSat,BAO_KrielCommonSat2,BAO_KrielCommonSat3]  
+      DisplayName: Com Sat
+      Faction: Kriel
+      Mode: Survival
+      CountMinMax: [ 2, 3]     
+      Probability: 1
+      InitPower: True
+      Position: 
+        RadialInfo: [0, 0, 0,   0,   3.5, 3.5,   -1, -1,   0, 0, 0]
+      Properties: 
+        - Key: RegenAfter
+          Value: 720   
+          
+# Defenses
+
+# Randoms 
+
+    - Type: BA_Alien
+      GroupName: JunkYardSpaceBAO
+      Faction: None
+      Mode: Survival
+      CountMinMax: [ 0, 4 ]
+      Probability: 0.3
+      InitPower: True
+      Properties:
+        - Key: MapMarker
+          Value: Neutral
+        - Key: RegenAfter
+          Value: 720
+
+      # CV single
+    - Type: CV_Alien
+      GroupName: JunkYardSpaceCV
+      Faction: None
+      Mode: Survival
+      CountMinMax: [ 0,6 ]
+      Probability: 0.2
+      InitPower: True
+      Properties:
+        - Key: MapMarker
+          Value: Neutral
+        - Key: RegenAfter
+          Value: 720
+
+       # SV single
+    - Type: SV_Player
+      GroupName: JunkYardSpaceSV
+      Faction: None
+      Mode: Survival
+      CountMinMax: [ 0, 8 ]
+      Probability: 0.4
+      InitPower: True
+      Properties:
+        - Key: MapMarker
+          Value: Neutral
+        - Key: RegenAfter
+          Value: 720
+ 
+# Perimeter Beacons (fixed position) for use with PDA missions
+
+    - Type: BA_Alien   
+      Name: [BAO_PerimenterBeacon]
+      DisplayName: Beacon MMM
+      GroupName: BAOBeaconPerimeter    
+      Faction: none
+      CountMinMax: [1, 1]
+      InitPower: True
+      Mode: Survival 
+      Probability: 1 
+      Position: 
+        RadialInfo: [-10000, -10000, -10000,   0,   0, 0,   0, 0,   0, 0, 0]
+      Properties:   
+        - Key: RegenAfter
+          Value: 180   
+        - Key: MapDistance 
+          Value: 0 
+        - Key: HudDistance 
+          Value: 0 
+        - Key: MapMarker
+          Value: Neutral
+          
+    - Type: BA_Alien         
+      Name: [BAO_PerimenterBeacon]
+      DisplayName: Beacon MMP
+      Faction: none
+      CountMinMax: [1, 1]
+      InitPower: True
+      Mode: Survival 
+      Probability: 1 
+      Position:
+        RadialInfo: [-10000, -10000, 10000,   0,   0, 0,   0, 0,   0, 0, 0]
+      Properties:  
+        - Key: RegenAfter
+          Value: 180   
+        - Key: MapDistance 
+          Value: 0 
+        - Key: HudDistance 
+          Value: 0 
+        - Key: MapMarker
+          Value: Neutral
+          
+    - Type: BA_Alien   
+      Name: [BAO_PerimenterBeacon]
+      DisplayName: Beacon MPM
+      Faction: none
+      CountMinMax: [1, 1]
+      InitPower: True
+      Mode: Survival 
+      Probability: 1 
+      Position: 
+        RadialInfo: [-10000, 10000, -10000,   0,   0, 0,   0, 0,   0, 0, 0]
+      Properties:   
+        - Key: RegenAfter
+          Value: 180   
+        - Key: MapDistance 
+          Value: 0 
+        - Key: HudDistance 
+          Value: 0 
+        - Key: MapMarker
+          Value: Neutral
+          
+    - Type: BA_Alien   
+      Name: [BAO_PerimenterBeacon]
+      DisplayName: Beacon MPP
+      Faction: none
+      CountMinMax: [1, 1]
+      InitPower: True
+      Mode: Survival 
+      Probability: 1 
+      Position: 
+        RadialInfo: [-10000, 10000, 10000,   0,   0, 0,   0, 0,   0, 0, 0]
+      Properties:   
+        - Key: RegenAfter
+          Value: 180   
+        - Key: MapDistance 
+          Value: 0 
+        - Key: HudDistance 
+          Value: 0 
+        - Key: MapMarker
+          Value: Neutral
+          
+    - Type: BA_Alien   
+      Name: [BAO_PerimenterBeacon]
+      DisplayName: Beacon PMM
+      Faction: none
+      CountMinMax: [1, 1]
+      InitPower: True
+      Mode: Survival 
+      Probability: 1 
+      Position: 
+        RadialInfo: [10000, -10000, -10000,   0,   0, 0,   0, 0,   0, 0, 0]
+      Properties:   
+        - Key: RegenAfter
+          Value: 180   
+        - Key: MapDistance 
+          Value: 0 
+        - Key: HudDistance 
+          Value: 0 
+        - Key: MapMarker
+          Value: Neutral
+          
+    - Type: BA_Alien   
+      Name: [BAO_PerimenterBeacon]
+      DisplayName: Beacon PMP
+      Faction: none
+      CountMinMax: [1, 1]
+      InitPower: True
+      Mode: Survival 
+      Probability: 1 
+      Position: 
+        RadialInfo: [10000, -10000, 10000,   0,   0, 0,   0, 0,   0, 0, 0]
+      Properties:   
+        - Key: RegenAfter
+          Value: 180   
+        - Key: MapDistance 
+          Value: 0 
+        - Key: HudDistance 
+          Value: 0 
+        - Key: MapMarker
+          Value: Neutral
+          
+    - Type: BA_Alien   
+      Name: [BAO_PerimenterBeacon]
+      DisplayName: Beacon PPM
+      Faction: none
+      CountMinMax: [1, 1]
+      InitPower: True
+      Mode: Survival 
+      Probability: 1 
+      Position: 
+        RadialInfo: [10000, 10000, -10000,   0,   0, 0,   0, 0,   0, 0, 0]
+      Properties:   
+        - Key: RegenAfter
+          Value: 180   
+        - Key: MapDistance 
+          Value: 0 
+        - Key: HudDistance 
+          Value: 0 
+        - Key: MapMarker
+          Value: Neutral
+          
+    - Type: BA_Alien   
+      Name: [BAO_PerimenterBeacon]
+      DisplayName: Beacon PPP
+      Faction: none
+      CountMinMax: [1, 1]
+      InitPower: True
+      Mode: Survival 
+      Probability: 1 
+      Position: 
+        RadialInfo: [10000, 10000, 10000,   0,   0, 0,   0, 0,   0, 0, 0]
+      Properties:   
+        - Key: RegenAfter
+          Value: 180   
+        - Key: MapDistance 
+          Value: 0 
+        - Key: HudDistance 
+          Value: 0 
+        - Key: MapMarker
+          Value: Neutral
+ 
+DroneBaseSetup:                                           
+# Free Roaming Drones
+      - FreeDrones:                                             
+          - Name: [SpaceDroneKrielLaser]
+            Faction: Kriel                               
+            CanNotBeControlledByMasterAI: False          
+            Count: [10, 16]                       
+            Radius: [2500, 10000]
+            Properties:
+              - Key: AIManMaxPursuitRange 
+                Value: 2500
+                
+        SpaceVessels: 
+
+# Combat Vessels
+          # - Name: [OPVKrielT2]     
+            # Faction: Kriel
+            # CountMinMax: [8, 8]      #double T2 as long as no T3 available
+            # Probability: 1  
+            # CanNotBeControlledByMasterAI: False 
+            # FixedMaxSpeed: [50, 55] 
+            # Mission: SpacePatrol   
+            # MissionDescription:
+              # DelayBetweenRespawnMinMax: [300, 600]  
+              # DelayBeforeSelfDestructionMinMax: [200, 250]  
+              # IsRespawnAfterDestruction: True               
+              # RadiusMinMax: [1000, 10000]         
+            # StockDescription:
+              # Name: [SpaceDroneKrielLaser] 
+              # AmountMinMax: [2, 4]  
+              # Type: FighterDrone  
+            # Properties:                      
+              # - Key: SelfDestructionWithNoCore 
+                # Value: True                        
+              # - Key: AIManMaxPursuitRange 
+                # Value: 4000
+              # - Key: AIManPatrolFactions  
+                # Value: "Kriel"
+                
+          # - Name: [OPVKrielT3]     
+            # Faction: Kriel
+            # CountMinMax: [3, 3]   
+            # Probability: 1  
+            # CanNotBeControlledByMasterAI: False 
+            # FixedMaxSpeed: [45, 50] 
+            # Mission: SpacePatrol   
+            # MissionDescription:
+              # DelayBetweenRespawnMinMax: [300, 600]  
+              # DelayBeforeSelfDestructionMinMax: [200, 250]  
+              # IsRespawnAfterDestruction: True               
+              # RadiusMinMax: [1000, 10000]         
+            # StockDescription:
+              # Name: [SpaceDroneKrielLaser] 
+              # AmountMinMax: [2, 4]  
+              # Type: FighterDrone  
+            # Properties:                      
+              # - Key: SelfDestructionWithNoCore 
+                # Value: True                        
+              # - Key: AIManMaxPursuitRange 
+                # Value: 4000
+              # - Key: AIManPatrolFactions  
+                # Value: "Kriel"
+                
+          - Name: [OPVKrielT4]     
+            Faction: Kriel
+            CountMinMax: [2, 2]   
+            Probability: 1  
+            CanNotBeControlledByMasterAI: False 
+            FixedMaxSpeed: [40, 45] 
+            Mission: SpacePatrol   
+            MissionDescription:
+              DelayBetweenRespawnMinMax: [300, 600]  
+              DelayBeforeSelfDestructionMinMax: [200, 250]  
+              IsRespawnAfterDestruction: True               
+              RadiusMinMax: [1000, 10000]         
+            StockDescription:
+              Name: [SpaceDroneKrielLaser] 
+              AmountMinMax: [2, 4]  
+              Type: FighterDrone  
+            Properties:                      
+              - Key: SelfDestructionWithNoCore 
+                Value: True                        
+              - Key: AIManMaxPursuitRange 
+                Value: 4000              
+              - Key: AIManPatrolFactions  
+                Value: "Kriel"
+                
+          - Name: [OPVKrielT5]     
+            Faction: Kriel
+            CountMinMax: [1, 1]   
+            Probability: 1  
+            CanNotBeControlledByMasterAI: False 
+            FixedMaxSpeed: [35, 40] 
+            Mission: SpacePatrol   
+            MissionDescription:
+              DelayBetweenRespawnMinMax: [300, 600]  
+              DelayBeforeSelfDestructionMinMax: [200, 250]  
+              IsRespawnAfterDestruction: True               
+              RadiusMinMax: [1000, 10000]         
+            StockDescription:
+              Name: [SpaceDroneKrielLaser] 
+              AmountMinMax: [2, 4]  
+              Type: FighterDrone  
+            Properties:                      
+              - Key: SelfDestructionWithNoCore 
+                Value: True                        
+              - Key: AIManMaxPursuitRange 
+                Value: 4000              
+              - Key: AIManPatrolFactions  
+                Value: "Kriel"
+                
+          - Name: [OPVKrielT6]     
+            Faction: Kriel
+            CountMinMax: [1, 1]   
+            Probability: 1  
+            CanNotBeControlledByMasterAI: False 
+            FixedMaxSpeed: [30, 35] 
+            Mission: SpacePatrol   
+            MissionDescription:
+              DelayBetweenRespawnMinMax: [300, 600]  
+              DelayBeforeSelfDestructionMinMax: [200, 250]  
+              IsRespawnAfterDestruction: True               
+              RadiusMinMax: [1000, 10000]         
+            StockDescription:
+              Name: [SpaceDroneKrielLaser] 
+              AmountMinMax: [2, 4]  
+              Type: FighterDrone  
+            Properties:                      
+              - Key: SelfDestructionWithNoCore 
+                Value: True                        
+              - Key: AIManMaxPursuitRange 
+                Value: 4000              
+              - Key: AIManPatrolFactions  
+                Value: "Kriel"
+
+#Large Freighters
+          # - Name: [FreighterKriel] 
+            # FixedMaxSpeed: [20, 50]
+            # Mission: Freighter
+            # CountMinMax: [6, 6]
+            # Probability: 1
+            # Faction: Kriel                              
+            # MissionDescription:
+              # DelayBetweenRespawnMinMax: [300, 600]
+              # DelayBeforeSelfDestructionMinMax: [200, 250]
+              # IsRespawnAfterDestruction: True
+              # Position:                                  
+                # PosXZMinMax: [1000, 2500]
+                # PosYMax: 2500                
+            # StockDescription:
+              # Name: [SpaceDroneKrielLaser] 
+              # AmountMinMax: [1, 2]
+              # Type: FighterDrone 
+              
+# Orbital Traffic / small transports/freighters
+           
+          - Name: [CivilianDroneCVfast]      # scanner drones / courier drones
+            Faction: Kriel
+            CountMinMax: [2, 4]   
+            Probability: 1  
+            CanNotBeControlledByMasterAI: True 
+            FixedMaxSpeed: [90, 110] 
+            Mission: SpacePatrol       #Mission 'Freighter' does not allowto use the AI Properties!   
+            MissionDescription:
+              DelayBetweenRespawnMinMax: [300, 600]  
+              DelayBeforeSelfDestructionMinMax: [200, 250]  
+              IsRespawnAfterDestruction: True               
+              RadiusMinMax: [300, 800]        
+              POINameAsPositionRef: [BAO_KrielArcanum]
+            StockDescription:
+              Name: [SpaceDroneKrielLaser] 
+              AmountMinMax: [0, 0]  
+              Type: FighterDrone  
+            Properties:                      
+              - Key: SelfDestructionWithNoCore 
+                Value: True                        
+              - Key: AIManMaxPursuitRange 
+                Value: 4000  
+           
+          - Name: [CivilianDroneCVfast]      # scanner drones / courier drones
+            Faction: Kriel
+            CountMinMax: [2, 4]   
+            Probability: 1  
+            CanNotBeControlledByMasterAI: True 
+            FixedMaxSpeed: [90, 110] 
+            Mission: SpacePatrol       #Mission 'Freighter' does not allowto use the AI Properties!   
+            MissionDescription:
+              DelayBetweenRespawnMinMax: [300, 600]  
+              DelayBeforeSelfDestructionMinMax: [200, 250]  
+              IsRespawnAfterDestruction: True               
+              RadiusMinMax: [300, 800]        
+              POINameAsPositionRef: [BAO_KrielNexusT2]
+            StockDescription:
+              Name: [SpaceDroneKrielLaser] 
+              AmountMinMax: [0, 0]  
+              Type: FighterDrone  
+            Properties:                      
+              - Key: SelfDestructionWithNoCore 
+                Value: True                        
+              - Key: AIManMaxPursuitRange 
+                Value: 4000  
+                
+          # - Name: [CivilianMicroCV]      # Privat Transports
+            # Faction: Kriel
+            # CountMinMax: [2, 4]   
+            # Probability: 1  
+            # CanNotBeControlledByMasterAI: True 
+            # FixedMaxSpeed: [90, 110] 
+            # Mission: SpacePatrol       #Mission 'Freighter' does not allowto use the AI Properties!   
+            # MissionDescription:
+              # DelayBetweenRespawnMinMax: [300, 600]  
+              # DelayBeforeSelfDestructionMinMax: [200, 250]  
+              # IsRespawnAfterDestruction: True               
+              # RadiusMinMax: [300, 1200]        
+              # POINameAsPositionRef: [TSO_Variant11]
+            # StockDescription:
+              # Name: [SpaceDroneKrielLaser] 
+              # AmountMinMax: [0, 0]  
+              # Type: FighterDrone  
+            # Properties:                      
+              # - Key: SelfDestructionWithNoCore 
+                # Value: True                        
+              # - Key: AIManMaxPursuitRange 
+                # Value: 4000  
+           
+          - Name: [CivilianDroneCV]    # small freighters
+            Faction: Kriel
+            CountMinMax: [12, 18]   
+            Probability: 1  
+            CanNotBeControlledByMasterAI: True 
+            FixedMaxSpeed: [50, 80] 
+            Mission: SpacePatrol    #Mission 'Freighter' does not allowto use the AI Properties!   
+            MissionDescription:
+              DelayBetweenRespawnMinMax: [300, 600]  
+              DelayBeforeSelfDestructionMinMax: [200, 250]  
+              IsRespawnAfterDestruction: True               
+              RadiusMinMax: [300, 2000]        
+              POINameAsPositionRef: [BAO_KrielArcanum]
+            StockDescription:
+              Name: [SpaceDroneKrielLaser] 
+              AmountMinMax: [0, 0]  
+              Type: FighterDrone  
+            Properties:                      
+              - Key: SelfDestructionWithNoCore 
+                Value: True                        
+              - Key: AIManMaxPursuitRange 
+                Value: 1000  
+           #   - Key: AIManPatrolGroups  
+            #    Value: "BAO_PolSupplyStation"

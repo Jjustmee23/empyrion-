@@ -1,0 +1,823 @@
+---
+# Playfield Configuration
+# IMPORTANT: YAML files use spaces as indentation. Please don't use TABs - tab indentation is forbidden: http://yaml.org/faq.html
+
+Description: |
+  Difficulty: Hard (BP Factory DISABLED!)
+  Tutorial: No
+  Mission: To Good Business (Traders Guild)
+
+  At the last second, you were pulled into the fleet's warp vortex as you departed the Milky Way. But where are you now? And more importantly ... where are the other Operation Phoenix ships?
+
+# Playfield Characteristics
+Gravity: 0                          # Please don't change
+AtmosphereEnabled: False            # Please don't change
+PvP: True                          # Set to True to allow PvP in this playfield, default is False
+UseFixed: True                      # If set uses fixed drones
+Radiation: 2.2
+TemperatureDay: -130   
+# Music: Magnitude   # is very good, and 'cold'
+
+Music: Desert
+
+
+# Playfield difficulty (has impact on experience gains)
+Difficulty: 5                       # Between 2 and 5: larger values indicate higher difficulty
+
+# Planet or Space
+PlayfieldType: Space               # Please don't change
+ 
+
+PlanetType: SpaceStarter                  # No functionality yet
+# ==============================================================
+# Special parameters:
+# ==============================================================
+
+AllowBlueprintSV: False         # Dis-allow to spawn SV Blueprint in this playfield, default is True
+AllowBlueprintCV: False         # Dis-allow to spawn CV Blueprint in this playfield, default is True
+AllowBlueprintBA: False         # Dis-allow to spawn BA Blueprint in this playfield, default is True
+AllowBlueprintHV: False         # Dis-allow to spawn HV Blueprint in this playfield, default is True
+
+# ==============================================================
+# # Sun                               
+# #SunFlare: EnvironmentalEffects/SunFlareWhite4Space
+# SunFlare: EnvironmentalEffects/SunFlareWhite3Space
+
+
+# # Stars
+# Stars: SkyboxStarsBlue #SkyboxStarsCyan                        
+
+# # Nebula
+# Nebula: PrefabNebulaBlueGlittery #PrefabNebulaBlueOrange
+
+### POIs
+POIs:
+    Fixed:
+ 
+        - Type: AsteroidFieldRing
+          Name: Asteroid Field
+          Pos: [300, 0, 0]  
+          Rot: [19, 00, 0]
+
+
+        - Type: AsteroidFieldBoxExclude
+          Name: Asteroid Field2
+          Pos: [7000, 0, -6000]
+          Rot: [90, 0, 0]
+
+
+        - Type: AsteroidField  #AsteroidFieldRectangle2
+          Name: Asteroid Field3
+          Pos: [6500, 200, 0]
+          Rot: [20, 20, 10]
+ 
+ 
+# Supply Depot Promethium
+# BAO_BeaconDistress2; BAOBeacons
+        - Type: BA_Alien
+          Prefab: BAOgs_AshonOrbitPromA
+          Mode: Survival       
+          Faction: Warlord
+          Name: Supply Station      
+          Pos: [ 6317, 2171, -7981 ] 
+         # Rot: [180, -50, 50] 
+          InitPower: True    
+          Properties:  
+            - Key: RegenAfter
+              Value: 720
+
+        - Type: BA_Alien
+          Prefab: BAOgs_AshonOrbitPromB
+          Mode: Survival       
+          Faction: Warlord
+          Name: Supply Station      
+          Pos: [ -12681, 2150, -1937 ] 
+         # Rot: [180, -50, 50] 
+          InitPower: True    
+          Properties:  
+            - Key: RegenAfter
+              Value: 720
+              
+        - Type: BA_Alien
+          Prefab: BAOgs_AshonOrbitPromMission
+          Mode: Survival       
+          Faction: Warlord
+          Name: Supply Station      
+          Pos: [ -3686, 384, -11297 ] 
+         # Rot: [180, -50, 50] 
+          InitPower: True    
+          Properties:  
+            - Key: RegenAfter
+              Value: 720
+              
+              
+        - Type: CV_Alien # Station A
+          Prefab: CV_FreighterPromethiumT
+          Mode: Survival
+          Name: Promethium Freighter
+          Faction: Warlord
+          Pos: [ 6265, 2188, -7993 ] 
+        #  Rot: [ 0, 0, 0 ]  
+          InitPower: True    
+          Properties:  
+            - Key: RegenAfter
+              Value: 720
+              
+        - Type: CV_Alien # Station B
+          Prefab: CVJ_TraderPromethium
+          Mode: Survival
+          Name: Damaged Freighter
+          Faction: Warlord
+          Pos: [ -12611, 2187, -1944 ] 
+          Rot: [ 0, 90, 0 ]  
+          InitPower: True    
+          Properties:  
+            - Key: RegenAfter
+              Value: 720
+              
+        - Type: CV_Alien # Station C
+          Prefab: CV_FreighterPromethiumT
+          Mode: Survival
+          Name: Promethium Freighter
+          Faction: Warlord
+          Pos: [ -3608, 413, -11317 ] 
+        #  Rot: [ 0, 0, 0 ]  
+          InitPower: True    
+          Properties:  
+            - Key: RegenAfter
+              Value: 720
+              
+              
+        - Type: CV_Alien # Pentaxid Station
+          Prefab: CV_Outrunner
+          Mode: Survival
+          Name: Warlord Krysshk
+          Faction: Warlord
+          Pos: [ 2493, 2177, 13489 ] 
+          Rot: [ 0, 90, 0 ]  
+          InitPower: True    
+          Properties:  
+            - Key: RegenAfter
+              Value: 720
+# Supply Depot Pentaxid
+
+        - Type: BA_Alien
+          Prefab: BAOgs_AshonWarlordPentaxid
+          Mode: Survival       
+          Faction: Warlord
+          Name: Depleted Pentaxid Mine      
+          Pos: [ 2478, 2130, 13441 ] 
+         # Rot: [180, -50, 50] 
+          InitPower: True    
+          Properties:  
+            - Key: RegenAfter
+              Value: 720
+
+# ====  wreckage parts floating around vessel: DECO! ====
+ 
+              
+        - Type: BA_Alien
+          Prefab: BAJgs_AshonJunk_01
+          Mode: Survival       
+          Faction: None
+          Name: Junk1      
+          Pos: [ 0, 445, -2520 ] 
+          Rot: [180, -50, 50] 
+          InitPower: True    
+          Properties: 
+            - Key: HudDistance
+              Value: 0
+            - Key: MapDistance
+              Value: 0
+            - Key: MapMarker
+              Value: Neutral
+            - Key: RegenAfter
+              Value: 720
+
+
+              
+              
+        - Type: BA_Alien
+          Prefab: BAJgs_AshonJunk_01 
+          Mode: Survival
+          Faction: None
+          Name: Junk2   
+          Pos: [ -4, 417, -2513 ] 
+          Rot: [180, -50, 50] 
+          InitPower: True    
+          Properties: 
+            - Key: HudDistance
+              Value: 0
+            - Key: MapDistance
+              Value: 0
+            - Key: MapMarker
+              Value: Neutral
+            - Key: RegenAfter
+              Value: 720
+
+
+        - Type: BA_Alien
+          Prefab: BAJgs_AshonJunk_01
+          Mode: Survival
+          Faction: None
+          Name: Junk3  
+          Pos: [ 6, 420, -2522 ] 
+          Rot: [100, -50, 50] 
+          InitPower: True    
+          Properties: 
+            - Key: HudDistance
+              Value: 0
+            - Key: MapDistance
+              Value: 0
+            - Key: MapMarker
+              Value: Neutral
+            - Key: RegenAfter
+              Value: 720
+
+        - Type: BA_Alien
+          Prefab: BAJgs_AshonJunk_01 
+          Mode: Survival
+          Faction: None
+          Name: Junk4   
+          Pos: [ 4, 430, -2522 ] 
+          Rot: [30, 0, 50] 
+          InitPower: True    
+          Properties: 
+            - Key: HudDistance
+              Value: 0
+            - Key: MapDistance
+              Value: 0
+            - Key: MapMarker
+              Value: Neutral
+            - Key: RegenAfter
+              Value: 720
+
+        - Type: BA_Alien
+          Prefab: BAJgs_AshonJunk_02
+          Mode: Survival
+          Faction: None
+          Name: Junk5   
+          Pos: [ -4, 395, -2512 ] 
+          Rot: [180, -50, 50] 
+          InitPower: True    
+          Properties: 
+            - Key: HudDistance
+              Value: 0
+            - Key: MapDistance
+              Value: 0
+            - Key: MapMarker
+              Value: Neutral
+            - Key: RegenAfter
+              Value: 720
+
+        - Type: BA_Alien
+          Prefab: BAJgs_AshonJunk_02
+          Mode: Survival
+          Faction: None
+          Name: Junk6   
+          Pos: [ 8, 424, -2507 ] 
+          Rot: [30, 0, -50] 
+          InitPower: True    
+          Properties: 
+            - Key: HudDistance
+              Value: 0
+            - Key: MapDistance
+              Value: 0
+            - Key: MapMarker
+              Value: Neutral
+            - Key: RegenAfter
+              Value: 720
+
+        - Type: BA_Alien
+          Prefab: BAJgs_AshonJunk_02
+          Mode: Survival       
+          Faction: None
+          Name: Junk7   
+          Pos: [ -12, 426, -2516 ] 
+          Rot: [90, 0, 70] 
+          InitPower: True    
+          Properties: 
+            - Key: HudDistance
+              Value: 0
+            - Key: MapDistance
+              Value: 0
+            - Key: MapMarker
+              Value: Neutral
+            - Key: RegenAfter
+              Value: 720
+
+        - Type: BA_Alien
+          Prefab: BAJgs_AshonJunk_02
+          Mode: Survival
+          Faction: None
+          Name: Junk8
+          Pos: [ 9, 388, -2516 ] 
+          Rot: [-30, 0, 50] 
+          InitPower: True
+          Properties: 
+            - Key: HudDistance
+              Value: 0
+            - Key: MapDistance
+              Value: 0
+            - Key: MapMarker
+              Value: Neutral
+            - Key: RegenAfter
+              Value: 720
+
+              
+        - Type: BA_Alien
+          Prefab: BAJgs_AshonJunk_02
+          Mode: Survival
+          Faction: None
+          Name: Junk9   
+          Pos: [ -1, 387, -2534 ] 
+          Rot: [-130, 0, -50] 
+          InitPower: True
+          Properties: 
+            - Key: HudDistance
+              Value: 0
+            - Key: MapDistance
+              Value: 0
+            - Key: MapMarker
+              Value: Neutral
+            - Key: RegenAfter
+              Value: 720
+
+        - Type: BA_Alien
+          Prefab: BAJgs_AshonJunk_02
+          Mode: Survival       
+          Faction: None
+          Name: Junk10   
+          Pos: [ 7, 438, -2534 ] 
+          Rot: [-30, -50, 150] 
+          InitPower: True    
+          Properties: 
+            - Key: HudDistance
+              Value: 0
+            - Key: MapDistance
+              Value: 0
+            - Key: MapMarker
+              Value: Neutral
+            - Key: RegenAfter
+              Value: 720
+
+
+         # ============= Player spawn ===============
+
+
+         # Spawn plate to have the player spawn inside the CV
+        - Type: BA_Player
+          Prefab: BAgs_AshonPlayerSpawner
+          Mode: Survival
+          # Faction: Trader
+          Name: Scout Cockpit
+          # Pos: [4, 404, -2481]
+          Pos: [4, 404.2, -2481]
+          Rot: [0, 180, 0] 
+          InitPower: True
+          Properties: 
+            - Key: MapDistance
+              Value: 0
+            - Key: HudDistance
+              Value: 0
+            - Key: MapMarker
+              Value: Neutral
+            - Key: Discovery
+              Value: False
+
+         # Player ship
+        - Type: CV_Player # BA_Player
+          Prefab: CVgs_AshonStarter
+          Mode: Survival
+          Name: Scout
+          Pos: [ 0, 400, -2500 ] 
+          Rot: [ 0, 0, 0 ]  
+          InitPower: True    
+          Properties: 
+            - Key: PersonalContainer
+              Value: "ArmorMedium: 1, EmergencyRations:2, HotBeverage:2, WaterBottle:20, OxygenBottleSmall:10, OxygenGeneratorSmall:1, InsulationBoost:1, JetpackBoost:1, RadiationBoost:1, OxygenBoost:1, MultiBoost:1, SurvivalTent, PlayerBikeKit"
+          #  - Key: Discovery
+         #     Value: False
+            # - Key: RegenAfter
+              # Value: 720
+        #    - Key: MapDistance
+         #     Value: 0
+         #   - Key: HudDistance
+          #    Value: 10000
+          #  - Key: MapMarker
+          #    Value: Neutral
+
+# Floating Containers (Loot)
+          
+        - Type: BA_Alien    
+          Prefab: BAJgs_AshonCargoFuel 
+          Mode: Survival       
+          Faction: None
+          Name: Fuel Container
+          Pos: [ 43.1, 391.5, -2546.34 ] 
+          Rot: [-30, -45, 25] 
+          InitPower: True    
+          Properties: 
+            # - Key: HudDistance
+              # Value: 500
+            # - Key: MapDistance
+              # Value: 0
+            - Key: MapMarker
+              Value: Neutral
+            - Key: Discovery
+              Value: False
+
+        - Type: BA_Alien   
+          Prefab: BAJgs_AshonCargoA
+          Mode: Survival       
+          Faction: None
+          Name: Container ASCP4
+       #   Pos: [ 64.6,401.7,-2544.5 ] 
+          Pos: [ 0, 417, -2550 ] 
+          Rot: [0, 60, 25] 
+          InitPower: True    
+          Properties: 
+            # - Key: HudDistance
+              # Value: 500
+            # - Key: MapDistance
+              # Value: 0
+            - Key: MapMarker
+              Value: Neutral
+            - Key: Discovery
+              Value: False
+            - Key: PersonalContainer 
+              Value: "IronOre:3, SiliconOre:2, CopperOre:1, PromethiumPellets:10"
+           #   Value: "IronOre:8, SiliconOre:5, CopperOre:5, PromethiumPellets:10"
+
+        - Type: BA_Alien   
+          Prefab: BAJgs_AshonCargoB
+          Mode: Survival       
+          Faction: None
+          Name: Container BCMO2W8
+        #  Pos: [ 103.5, 393.4, -2546.3] 
+          Pos: [ 93, 411, -2567 ] 
+          Rot: [ 0, -90, 10] 
+          InitPower: True    
+          Properties: 
+            # - Key: HudDistance
+              # Value: 500
+            # - Key: MapDistance
+              # Value: 0
+            - Key: MapMarker
+              Value: Neutral
+            - Key: Discovery
+              Value: False
+            - Key: PersonalContainer
+              Value: "BigFlowerStage1:1, EmergencyRations:1, CornStage1:1, SnakeweedStage1:1, DurianRoot:1, ConstructorSurvival, MobileAirCon, OxygenBottleSmall:10, WaterBottle:5"
+
+        - Type: BA_Alien   
+          Prefab: BAJgs_AshonSeat
+          Mode: Survival       
+          Faction: None
+          Name: Floating Seat 
+        #  Pos: [ 109.1, 395, -2542 ]
+          Pos: [ 93, 411, -2567 ] 
+          Rot: [ 20, 80, 50] 
+          InitPower: True    
+          Properties: 
+            # - Key: HudDistance
+              # Value: 500
+            # - Key: MapDistance
+              # Value: 0
+            - Key: MapMarker
+              Value: Neutral
+            - Key: Discovery
+              Value: False
+              
+        - Type: BA_Alien   
+          Prefab: BAJgs_AshonCargoC
+          Mode: Survival       
+          Faction: None
+          Name: Container MFN3
+         # Pos: [ 122,393,-2573 ]
+          Pos: [ -35, 445, -2614 ]  
+          Rot: [15, 25, 10] 
+          InitPower: True    
+          Properties: 
+            # - Key: HudDistance
+              # Value: 500
+            # - Key: MapDistance
+              # Value: 0
+            - Key: MapMarker
+              Value: Neutral
+            - Key: Discovery
+              Value: False
+            - Key: PersonalContainer
+              Value: "MechanicalComponents:10, Fiber:7, Nanotubes:8"
+            #  Value: "MechanicalComponents:7, Fiber:7, Nanotubes:3"
+            #  Value: "MechanicalComponents:10, Fiber:10, Nanotubes:5"
+              
+        - Type: BA_Alien   
+          Prefab: BAJgs_AshonCargoD
+          Mode: Survival       
+          Faction: None
+          Name: Container M6
+       #   Pos: [ 109,398,-2576 ]
+          Pos: [ 13, 396, -2616 ]  
+          Rot: [0, 30, 4] 
+          InitPower: True    
+          Properties: 
+            # - Key: HudDistance
+              # Value: 500
+            # - Key: MapDistance
+              # Value: 0
+            - Key: MapMarker
+              Value: Neutral
+            - Key: Discovery
+              Value: False
+            - Key: PersonalContainer
+              Value: "StomachPills, Medikit01, Medikit02, Medikit03, AntibioticOintment:3, Bandages:2"
+              
+        - Type: BA_Alien   
+          Prefab: BAJgs_AshonCargoE
+          Mode: Survival       
+          Faction: None
+          Name: Container PSG3
+         # Pos: [ 73,406,-2622 ] 
+          Pos: [ 80, 397, -2613 ] 
+          Rot: [0, -10, 5] 
+          InitPower: True    
+          Properties: 
+            # - Key: HudDistance
+              # Value: 500
+            # - Key: MapDistance
+              # Value: 0
+            - Key: MapMarker
+              Value: Neutral
+            - Key: Discovery
+              Value: False
+            - Key: PersonalContainer
+              Value: "PlasticMaterial:8, SteelPlate:5, GlassPlate:3"
+           #   Value: "PlasticMaterial:11, SteelPlate:16, GlassPlate:4"
+              
+        - Type: BA_Alien   
+          Prefab: BAJgs_AshonCargoF
+          Mode: Survival       
+          Faction: None
+          Name: Container OE2
+          Pos: [ -59, 467, -2596 ] 
+          Rot: [0, -35, 15] 
+          InitPower: True    
+          Properties: 
+            # - Key: HudDistance
+              # Value: 500
+            # - Key: MapDistance
+              # Value: 0
+            - Key: MapMarker
+              Value: Neutral
+            - Key: Discovery
+              Value: False
+            - Key: PersonalContainer
+              Value: "OpticalFiber:4, Electronics:10 "
+             # Value: "OpticalFiber:6, Electronics:18 "
+             # Value: "OpticalFiber:8, Electronics:22 "
+              
+        - Type: BA_Alien   
+          Prefab: BAJgs_AshonCargoG
+          Mode: Survival       
+          Faction: None
+          Name: Container CMO23
+          Pos: [ -46, 473, -2603 ] 
+          Rot: [-50, 20, 5] 
+          InitPower: True    
+          Properties: 
+            # - Key: HudDistance
+              # Value: 500
+            # - Key: MapDistance
+              # Value: 0
+            - Key: MapMarker
+              Value: Neutral
+            - Key: Discovery
+              Value: False
+            - Key: PersonalContainer
+              Value: "Computer:4, Motor:2, OxygenBottleSmall:15 "
+            #  Value: "Computer:7, Motor:1, OxygenBottleSmall:15 "
+            #  Value: "Computer:7, Motor:3, OxygenBottleSmall:15 "
+              
+        - Type: BA_Alien   
+          Prefab: BAJgs_AshonCargoH
+          Mode: Survival       
+          Faction: None
+          Name: Container WAB6
+          Pos: [ -46, 370, -2603 ] 
+          Rot: [50, 10, 5] 
+          InitPower: True    
+          Properties: 
+            # - Key: HudDistance
+              # Value: 500
+            # - Key: MapDistance
+              # Value: 0
+            - Key: MapMarker
+              Value: Neutral
+            - Key: Discovery
+              Value: False
+            - Key: PersonalContainer
+              Value: "Sniper, RocketLauncher, SlowRocket:8, 12.7mmBullet:24, ArmorBoost:1, MobilityBoost:1"
+              
+        - Type: BA_Alien   
+          Prefab: BAJgs_AshonCargoI
+          Mode: Survival       
+          Faction: None
+         # Name: Container CEHO4
+          Name: Container CPEH1
+         # Pos: [ -15, 407, -2736 ] 
+          Pos: [ -84, 412, -3190 ] 
+          Rot: [0, 50, 5] 
+          InitPower: True    
+          Properties: 
+            # - Key: HudDistance
+              # Value: 1200
+            # - Key: MapDistance
+              # Value: 0
+            - Key: MapMarker
+              Value: Neutral
+            - Key: Discovery
+              Value: False
+            - Key: PersonalContainer
+              Value: "CockpitBlocksCV:1, EmergencyRations:1, HotBeverage:1"
+             # Value: "CockpitBlocksCV:1"
+
+        - Type: SV_Player
+          Prefab: SVgs_AshonThrusterWreck
+          Mode: Survival
+          Faction: None
+          Name: Destroyed Small Vessel
+       #   Pos: [ 62, 450, -2781 ] 
+          Pos: [ 55, 454, -2860 ] 
+          Rot: [0, 45, 0] 
+          InitPower: False
+          Properties: 
+            # - Key: HudDistance
+              # Value: 500  #30
+            - Key: MapMarker
+              Value: Neutral
+            # - Key: MapDistance
+              # Value: 500
+            - Key: RegenAfter
+              Value: 720
+
+        # ===== Trading station
+        - Type: BA_Alien
+          Prefab: BAOgs_AshonTradersTSO
+          Mode: Survival
+          Faction: Trader
+          Name: Ashon Trading Outpost
+          Pos: [1794, 180, -2180]
+          Rot: [0, 60, 0] 
+          SpaceDefenseOverrideDefaults: False
+          SpaceDefenseProbability: 0
+          InitPower: True
+          Properties: 
+            - Key: RegenAfter
+              Value: 720
+        #    - Key: PersonalContainer
+         #     Value: "Flashlight, LightWork:2, Flare, BioFuel:2, Explosives, CapacitorComponent:1, PlasticMaterial:10, OpticalFiber, Nanotubes:2, SteelPlateArmored, Core:1, MultiCharge, EnergyPills"
+            # - Key: HudDistance
+              # Value: 4000  #1900
+            # - Key: MapDistance
+              # Value: 400
+
+        - Type: BA_Alien
+          Prefab: BAO_AshonTraderSatellite
+          Mode: Survival
+          Faction: Trader
+          Name: Communication Satellite
+          Pos: [1929, 232, -2147]
+          Rot: [0, 60, 0] 
+          SpaceDefenseOverrideDefaults: False
+          SpaceDefenseProbability: 0
+          InitPower: True
+          Properties: 
+            - Key: RegenAfter
+              Value: 720
+               
+
+        - Type: SV_Player
+          Prefab: SVgs_AshonEscapePod
+          Mode: Survival
+          Faction: None
+          Name: Suspicious Escape Pod
+          # Pos: [1793.2, 198.1, -2178]    # Pointing to Nemesis
+          # Rot: [0, -50, 0] 
+       #   Pos: [1794.4, 198.1, -2178]     # Pointing away from Scout
+          Pos: [1795.4, 206.1, -2180.9]     # Pointing away from Scout
+          Rot: [0, -30, 0] 
+          InitPower: False
+          Properties: 
+            - Key: HudDistance
+              Value: 500  #30
+            - Key: MapMarker
+              Value: Neutral
+            - Key: MapDistance
+              Value: 500
+            - Key: RegenAfter
+              Value: 720
+ 
+
+
+    FixedPlayerStart:
+        - Mode: Survival
+          Spawn: Structure
+          Structure: "Scout Cockpit"
+
+         # Armor: ArmorMedium
+
+          Status: [ "Food: 500, Health: 500", "Food: 450, Health: 450", "Food: 450, Health: 450", "#FreshStart:Food: 450, Health: 450" ]
+
+          Items: [ 
+          "MultiTool, Drill, RadarSuitT1, Pistol, PulseRifle, 50Caliber:100, 5.8mmBullet:300, Flashlight, OxygenBottleSmall:10, WaterBottle:10, PowerBar:6, EmergencyRations:2, Medikit05:6, Bandages:4", 
+          "SurvivalTool, RadarSuitT1, Pistol, PulseRifle, 50Caliber:70, 5.8mmBullet:200, Flashlight, OxygenBottleSmall:5, WaterBottle:5, PowerBar:4, EmergencyRations:1, Medikit05:3, Bandages:2", 
+          "Pistol, PulseRifle, 50Caliber:50, 5.8mmBullet:120, Flashlight, OxygenBottleSmall:3, WaterBottle:3, PowerBar:2, EmergencyRations:1, Medikit05:2, Bandages:1", 
+          "#FreshStart: " ]
+
+
+
+# Drones
+DroneBaseSetup:
+      # - FreeDrones:
+          # - Name: [SpaceDroneBattered01, SpaceDroneBattered02]   #Define the types of drones that will be used to patrol the area; If a list is given, the actual types will be drawn randomly; See EClassConfig.ecf for all available drone types
+            # Faction: Warlord                               #The facion of the drone among : {Main, Zirax, Polaris, Pirates, Kriel, TheLegacy}. Main stands for the dominant faction owning the playfield/solar system (see GalaxyConfig.ecf for more info); Check Faction.ecf for all available factions
+            # CanNotBeControlledByMasterAI: True          #Value can be {True, False}. If True the the AI drone can not be use by the space master AI (see DroneOnDuty) to do other task than the one defined here; Default: False
+            # POINameAsPositionRef: [TSO_Ashon]  #A list of POI names can be defined here. From all the POIs defined in this list that effectively exist in the playfield, one of them will be drawn randomly and use as a reference position for the patrolling area center. If this reference position don't exist then the AI drone will patrol the whole playfield. 
+            # Count: [2, 5]                          #[Min number of drone, Max number of drone] defines the boundaries of the number randomly drawn of drones that will patrol.
+            # Radius: [500, 2500]            #[Min radius, Max radius] define the boundaries the patrol area radius randomly drawn; MANDATORY ENTRY! Also need to be added in case you have not specified patrol center any further!!
+            # Properties:
+            # #Space AI manager configuration, Drones will by default patrol resource asteroids
+              # # - Key: AIManPatrolGroups #which POI groups can the drones patrol? Asteroids will be ignored
+                # # Value: "TSO_AkuaOrbit, BAO_PolarisGasRefinery, BAO_PolarisAlloySynthesis"
+              # # - Key: AIManPatrolFactions #POI's of which factions can be patroled?
+                # # Value: "Polaris, Zirax, Pirates"
+              # - Key: AIManMaxPursuitRange #if drone is patroling or guarding, how far can he go, or react to a threat? (if threat is further from his guard target or patrol rout, it will not react to it)
+                # Value: 500
+              # # - Key: AIManPatrolRoute #you can specify a precise patrol route, you can use only the precise patrol route or the "POI" generated patrol rout, they cannot be combined
+                # # Value: "0,0,0;100,100,100"        
+    # Fixed:
+        # - Name: MainDroneBase
+          # Pos: [ 5000, 200, 5000 ]      # position coordinates
+          # DroneOnDuty:
+            # - Name: SpaceDroneBattered01    # Close to Scout Wreckage [ 0, 400, -2500 ] 
+              # Pos: [ 0, 400, -2700 ]
+              # Radius: 200
+          
+          
+            # - Name: SpaceDroneBattered01
+              # Pos: [ 4000, 200, 2000 ]
+              # Radius: 350
+            # - Name: SpaceDroneBattered02
+              # Pos: [ -4000, -200, 2000 ]
+              # Radius: 350
+            # - Name: SpaceDroneBattered01
+              # Pos: [ 4000, 200, -2000 ]
+              # Radius: 350
+            # - Name: SpaceDroneBattered02
+              # Pos: [ -4000, -200, -2000 ]
+              # Radius: 350
+            # - Name: SpaceDroneBattered01
+              # Pos: [ 6000, 200, 6000 ]
+              # Radius: 350
+            # - Name: SpaceDroneBattered02
+              # Pos: [ -6000, -200, 6000 ]
+              # Radius: 350
+            # - Name: SpaceDroneBattered01
+              # Pos: [ 6000, 200, -6000 ]
+              # Radius: 350
+            # - Name: SpaceDroneBattered02
+              # Pos: [ -6000, -200, -6000 ]
+              # Radius: 350
+          # SpaceVessel:
+            # - Name: _CV_LavaFreighter_TVI2    # Freighter              # Name of the prefab group or name of the prefab
+              # FixedMaxSpeed: 20
+              # Mission: SpacePatrol
+              # Freighter:
+                # DelayBetweenRespawn: 600  
+                # PathWayPoint:
+                # - [ 5000, 250, 5000 ]
+                # - [ 5000, 250, -2000 ]
+                # - [ -5000, 250, -5000 ]
+              # Stock:
+                # - Name: SpaceDroneBattered01          # Name of drone   
+                  # Amount: 5                      # Amount of drones in stock          
+                  # Extra: 0                        # Type of drone 0..3 -> see comment above     
+                  
+            # - Name: _CV_LavaFreighter_TVI2 # Freighter              # Name of the prefab group or name of the prefab
+              # FixedMaxSpeed: 20
+              # Mission: SpacePatrol                # Mission among : {SpacePatrol}
+              # Freighter:
+                # DelayBetweenRespawn: 800  
+                # PathWayPoint:
+                # - [ -7500, 250, -2000 ]
+                # - [ -4000, 250, 2000 ]
+                # - [ 7500, 250, 3000 ]
+              # Stock:
+                # - Name: SpaceDroneBattered02          # Name of drone   
+                  # Amount: 5                      # Amount of drones in stock          
+                  # Extra: 0                        # Type of drone 0..3 -> see comment above               
+
+
+
+# Build: 2409

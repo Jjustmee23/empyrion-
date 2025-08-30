@@ -1,0 +1,363 @@
+# --------------------------------------------------------------------------------------------------------------------------
+# Created by EPD v2.34.0.5831, Playfield Version: 1.7.5 [3714] (V1.7.5)
+# Last Saved: 2023-01-03 17:44:13
+# --------------------------------------------------------------------------------------------------------------------------
+#
+PlanetSize:
+   SizeRange: [3]
+   SizeProbs: [1]
+TemperatureMin: [-157, -127]
+TemperatureMax: [-50, -3]
+TemperatureNight: [30, 30]
+PlanetAxis: [15, 25]
+HumidityMin: [0.3, 0.5]
+HumidityMax: [0.7, 0.8]
+Radiation: [5, 12]
+LandWaterRatio: [0, 0]
+SeaLevel: [0, 0]
+TerrainLevel: [250, 400]
+BaseLevel: [20, 30]
+TerrainHeightMapMax: 490
+TemperatureHeightRange: [1, 240]
+TemperatureGradientRange: [0.45, 0]
+TemperatureNoiseFac: 0.75
+HumidityHeightFac: [0, 270]
+HumidityNoiseFac: 0.9
+
+
+# PlayfieldLevelOverride: [0, 0]
+
+
+GravityMinMax: [-14, -11]
+AtmosphereDensityMinMax: [0.6, 0.8]
+AtmosphereFogRange: [0.3, 0.4]
+GroundFogIntensityRange: [0.3, 0.5]
+GroundFogHeightRange: [90, 120]
+
+Water: [RockLava03]
+Music: [Reaver]
+
+
+HumidityMasks:
+- Global_3
+- Global_4
+
+
+TemperatureMasks:
+- Global_2_R
+
+
+
+GroundShapes:
+- GroundShape_1
+
+
+BiomeStampTries: 50
+
+Presets:
+   - Name: SandBush_V            # Uncommon bushes in the deserts. Outer ring. High size difference
+     Density: 0.5
+     Snow: 0
+     spawn:
+       Min: 0.68
+       Max: 1
+       BushPower: 6
+       Noise: 3,0.02,3,0.45
+     scale:
+       Power: 3
+       Noise: 3,0.02,2,0.45
+     Hue: 0,0,0.001
+
+# 
+# ====================
+# BIOMES 
+# ====================
+#
+Biomes:
+-  Name: Pole
+   Color: [1, 1, 1]
+   SelectionCriteria:
+   - +Lat > 0.975
+   Weather: PoleFog
+   AmbientSound: ArcticLowPlains
+   IgnoreForcedBiome: True
+   Texture: [5, 11, 0.2]
+   UndergroundLayers:
+   - [0, 2]
+   - [10, 4]
+   - [11, -1]
+   - [10, 1]
+   Temperature: -6
+
+
+
+-  Name: ImpactCrater
+   Color: [1, 0, 0]
+   Stamps:
+   - CraterBattle_Geo1a
+   - CraterBattle_Geo1b
+   Decorations:
+   - [RockGrey01Large, 0.01, SandBush_V, 0]
+   - [RockGrey02Large, 0.01, SandBush_V, 0]
+   - [RealRock10Dark, 0.01, SandBush_V, 0]
+   Texture: [6, 2, 0.2]
+   UndergroundLayers:
+   - [2, 2]
+   - [4, 3]
+   - [18, -1]
+   - [19, 2]
+   StampProb: 1
+   StampForcesBiome: True
+   StampForcesBiomeType: OverlapOff
+   StampTries: 10
+
+
+
+-  Name: StrikeCrater
+   Color: [1, 0, 0]
+   Stamps:
+   - CraterBattle_Bombx3
+   - CraterBattle_Bomblets
+   Decorations:
+   - [RockGrey01Large, 0.01, SandBush_V, 0]
+   - [RockGrey02Large, 0.01, SandBush_V, 0]
+   - [RealRock10Dark, 0.01, SandBush_V, 0]
+   Texture: [5, 6, 0.2]
+   UndergroundLayers:
+   - [5, 0]
+   - [3, 3]
+   - [18, -1]
+   - [19, 2]
+   StampProb: 1
+   StampForcesBiome: True
+   StampForcesBiomeType: OverlapOwn
+   StampTries: 100
+
+
+
+-  Name: AtomicCrater
+   Color: [0.78, 0.08, 0.52]
+   Stamps:
+   - CraterBattle_Atomic
+   Decorations:
+   - [RockGrey01Large, 0.01, SandBush_V, 0]
+   - [RockGrey02Large, 0.01, SandBush_V, 0]
+   - [RealRock10Dark, 0.01, SandBush_V, 0]
+   Texture: [11, 2, 0]
+   UndergroundLayers:
+   - [11, 2]
+   - [4, 3]
+   - [18, -1]
+   - [19, 2]
+   StampProb: 1
+   StampForcesBiome: True
+   StampTries: 10
+   Radiation: 24
+
+
+
+-  Name: BurntLandscape
+   Color: [0.87, 0.72, 0.53]
+   SelectionCriteria:
+   - Height > 125
+   - Height < 95
+   Stamps:
+   - Crystalline_Plates
+   Texture: [6, 4, 0]
+   UndergroundLayers:
+   - [11, 2]
+   - [18, -1]
+   - [19, 2]
+   StampProb: 1
+   StampForcesBiome: True
+   StampForcesBiomeType: OverlapOther
+   StampTries: 100
+
+
+
+-  Name: Mountains
+   Color: [0.42, 0.56, 0.14]
+   SelectionCriteria:
+   - Height > 210
+   Stamps:
+   - Mountain_10_sp, 0.5, 4, 9, 8, 10
+   - Mountain_2, 0.5
+   - Mountain_6, 0.5
+   Texture: [10, 9, 0]
+   UndergroundLayers:
+   - [11, 5]
+   - [18, -1]
+   - [19, 2]
+   StampProb: 1
+   StampForcesBiome: True
+   StampTries: 4
+
+
+
+-  Name: Dunes
+   Color: [1, 0, 1]
+   SelectionCriteria:
+   - Height > 185
+   - Height < 209
+   Texture: [0, 0, 0]
+   UndergroundLayers:
+   - [5, 2]
+   - [3, 3]
+   - [18, -1]
+   - [19, 2]
+
+
+
+-  Name: Plateau
+   Color: [0, 0, 0]
+   SelectionCriteria:
+   - Height >195
+   - Height < 209
+   Stamps:
+   - MountainPlateau_02, 0.5
+   - MountainEroded_01b, 0.5
+   Texture: [1, 8, 0.3]
+   UndergroundLayers:
+   - [11, 2]
+   - [4, 3]
+   - [18, -1]
+   - [19, 2]
+   StampProb: 1
+   StampForcesBiome: True
+   StampForcesBiomeType: OverlapOff
+   StampTries: 10
+
+
+
+-  Name: Hills
+   Color: [0.18, 0.55, 0.34]
+   SelectionCriteria:
+   - Height > 170
+   Stamps:
+   - Hill_1, 0.75
+   - Hill_2, 0.25
+   - Hill_3, 0.25
+   Texture: [0, 0, 0]
+   UndergroundLayers:
+   - [11, 2]
+   - [4, 3]
+   - [18, -1]
+   - [19, 2]
+   StampProb: 1
+   StampForcesBiome: True
+   StampForcesBiomeType: OverlapOff
+   StampTries: 10
+
+
+
+-  Name: RadiatedLandscape
+   Color: [1, 0.84, 0]
+   SelectionCriteria:
+   - Height > 100
+   - Height <130
+   Stamps:
+   - AlienTree_01_sp, 1, 10, 2, 6, 11
+   - AlienSpire_01
+   Texture: [7, 7, 0.5]
+   UndergroundLayers:
+   - [11, 2]
+   - [4, 3]
+   - [18, -1]
+   - [19, 2]
+   StampProb: 1
+   StampForcesBiome: False
+   StampForcesBiomeType: OverlapOther
+   StampTries: 25
+   Radiation: 13
+
+
+
+-  Name: LavaFold
+   Color: [1, 1, 0.94]
+   SelectionCriteria:
+   - Height <150
+   - Height >130
+   Stamps:
+   - IceGraben
+   Texture: [4, 11, 0]
+   UndergroundLayers:
+   - [4, 3]
+   - [11, 4]
+   - [18, -1]
+   - [19, 2]
+   StampProb: 1
+   StampForcesBiome: True
+   StampForcesBiomeType: OverlapAll
+   StampTries: 10
+
+
+
+-  Name: Scarred Landscape
+   Color: [0.48, 0.41, 0.93]
+   Stamps:
+   - CraterBattle_LaserScar
+   Decorations:
+   - [RockGrey01Large, 0.01, SandBush_V, 0]
+   - [RockGrey02Large, 0.01, SandBush_V, 0]
+   - [RealRock10Dark, 0.01, SandBush_V, 0]
+   Texture: [3, 6, 0.5, 11, 2, 0.5, 1]
+   UndergroundLayers:
+   - [3, 2]
+   - [6, 3]
+   - [18, -1]
+   - [19, 2]
+   StampProb: 1
+   StampForcesBiome: True
+   StampTries: 75
+
+
+
+-  Name: Crater
+   Color: [1, 0.63, 0.48]
+   SelectionCriteria:
+   - Height > 165
+   Stamps:
+   - CraterBattle_Bomb, 0.5
+   - CraterBattle_Bomb_2_sp, 0.5, T, S, T, S
+   Texture: [5, 11, 0]
+   UndergroundLayers:
+   - [5, 0]
+   - [3, 3]
+   - [18, -1]
+   - [19, 2]
+   StampForcesBiome: True
+   StampForcesBiomeType: OverlapOff
+   StampTries: 25
+
+
+
+-  Name: TornLandscape
+   Color: [0.5, 0.5, 0.5]
+   SelectionCriteria:
+   - Height > 70
+   - Height < 100
+   Decorations:
+   - [RockGrey01Large, 0.01, SandBush_V, 0]
+   - [RockGrey02Large, 0.01, SandBush_V, 0]
+   - [RealRock10Dark, 0.01, SandBush_V, 0]
+   Texture: [1, 11, 0]
+   UndergroundLayers:
+   - [11, 2]
+   - [4, 3]
+   - [18, -1]
+   - [19, 2]
+
+
+
+-  Name: Barren Plains
+   Color: [0.5, 1, 0.83]
+   SelectionCriteria:
+   - true
+   IgnoreForcedBiome: False
+   Texture: [0, 0, 0]
+   UndergroundLayers:
+   - [5, 2]
+   - [3, 3]
+   - [18, -1]
+   - [19, 2]
+   StampForcesBiomeType: OverlapOwn

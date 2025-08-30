@@ -1,0 +1,106 @@
+KEY,English,Deutsch,Français,Italiano,Spanish,Portuguese (Euro),Portuguese (Brazil),Polish,Russian,Japanese,Chinese (simplified),Chinese (traditional),Korean,Turkish,Greek,Dutch,Vietnamese
+Alien,[c][e6e6e6]Alien[-][/c]
+UCH,[c][3333e6]United Council of Humanity (UCH )[-][/c]
+Trader,[c][99ffff]Traders Guild[-][/c]
+Pirates,[c][cccc00]Pirates[-][/c]
+Zirax,[c][e63333]Zirax Empire[-][/c]
+Talon,[c][33e633]Talon Guardians[-][/c]
+Polaris,[c][e69933]Polaris Megacorp[-][/c]
+Kriel,[c][8000cc]Kriel Empire[-][/c]
+Civilian,[c][e6e6e6]Civilian[-][/c]
+TheLegacy,[c][00ffab]The Legacy[-][/c]
+Progenitor,[c][e6e6e6]Progenitor[-][/c]
+Void,[c][000000]VOID[-][/c]
+GLaD,[c][3333e6]GLaD[-][/c]
+Colonists,[c][e6e6e6]Free Colonists[-][/c]
+Tesch,[c][e63333]Tesch Collective[-][/c]
+Abyssal,[c][e63333]House of Abyssal (Zirax Empire)[-][/c]
+Serdu,[c][e63333]House of Serdu (Zirax Empire)[-][/c]
+Epsilon,[c][e63333]House of Epsilon (Zirax Empire)[-][/c]
+Rados,[c][e63333]House of Rados (Zirax Empire)[-][/c]
+Ghyst,[c][e63333]House of Ghyst (Zirax Empire)[-][/c]
+Xenu,[c][e63333]House of Xenu (Zirax Empire)[-][/c]
+Farr,[c][ffe6b3]Brotherhood of Farr[-][/c]
+Warlord,[c][e63333]Warlord[-][/c]
+DESC,[c][e6e6e6]DESC[-][/c]
+Wastelanders,[c][b2664c]Wastelanders[-][/c]
+ARC,[c][ffe5b2]ARC[-][/c]
+Eleon,[c][0066cc]Eleon Game Studios[-][/c]
+TitanAsteroid,Titanium Asteroid
+PlatinAsteroid,Platinum Asteroid
+CPUExtenderLevel,CPU Extender Level
+bkiNoInfo,No information given
+bkiGenNoFunction,This device is not functional yet
+bkiDecoModel,Decoration device
+bkiDetector,Allows to scan an area for structures and resources in range of the device.\n\nWorks on planets and in space
+stiStationWelcome,WELCOME TO THE STATION INTERFACE AT {0}
+repInfoOverviewGeneral,Trading with a faction requires at least NEUTRAL reputation\nHONORED will get you a price cut when trading
+cplOPAlliances,ON: OP will Function when the whole Alliance is OFFLINE
+igmGeneratorOverload,Overload damage detected!\nGenerator remaining health: {0} %
+DrillAttachmentSVT2,Drill Module (T2) - Laser (SV)
+ttwHVConstructor,HV Constructor
+igmFreighterCanNotBeControlled,This freighter can not be controlled
+igmFreighterLastWarning,Freighter self desctruction sequence has been activated
+igmFreighterSelfDestruction,Freighter self desctruction sequence has been activated
+igmFreighterSpotted,Freighter has been spotted that carries valuable goods
+DrillAttachmentSVWeapon,Drill Module (SV)
+TransportationBoost,Transportation Boost
+TransportationBoostEpic,[c][c724b1]Transportation Boost (Epic)[-][/c]
+EVABoostEpic,[c][c724b1]EVA Boost (Epic)[-][/c]
+RadiationBoostEpic,[c][c724b1]Radiation Protection Boost (Epic)[-][/c]
+MobilityBoostEpic,[c][c724b1]Mobility Boost (Epic)[-][/c]
+InsulationBoostEpic,[c][c724b1]Insulation Boost (Epic)[-][/c]
+OxygenBoostEpic,[c][c724b1]Oxygen Tank Boost (Epic)[-][/c]
+MultiBoostEpic,[c][c724b1]Multi Boost (Epic)[-][/c]
+JetpackBoostEpic,[c][c724b1]Jetpack Boost (Epic)[-][/c]
+ArmorBoostEpic,[c][c724b1]Armor Boost (Epic)[-][/c]
+ArmorLightEpic,[c][c724b1]Armor Light (Epic)[-][/c]
+ArmorMediumEpic,[c][c724b1]Armor Medium (Epic)[-][/c]
+ArmorHeavyEpic,[c][c724b1]Armor Heavy (Epic)[-][/c]
+DrillEpic,[c][c724b1]Drill (Epic)[-][/c]
+PulseRifleEpic,[c][c724b1]EM Pulse Rifle (Epic)[-][/c]
+RocketLauncherEpic,[c][c724b1]Rocket Launcher (Epic)[-][/c]
+PistolEpic,[c][c724b1]Pistol (Epic)[-][/c]
+ScifiCannonEpic,[c][c724b1]Plasma Cannon (Epic)[-][/c]
+LaserRifleEpic,[c][c724b1]Plasma Rifle (Epic)[-][/c]
+Shotgun2Epic,[c][c724b1]Assault Shotgun (Epic)[-][/c]
+MinigunEpic,[c][c724b1]Laser Minigun (Epic)[-][/c]
+Sniper2Epic,[c][c724b1]Heavy Sniper Rifle (Epic)[-][/c]
+AssaultRifleEpic,[c][c724b1]Assault Rifle (Epic)[-][/c]
+RocketLauncherDebug,[c][ff0000]Rocket Launcher (Debug)[-][/c]
+AssaultRifleDebug,[c][ff0000]Assault Rifle (Debug)[-][/c]
+DrillDebug,[c][ff0000]Drill (Debug)[-][/c]
+RadarSuitDebug,[c][ff0000]Detector (Debug)[-][/c]
+DecalGunDebug,[c][ff0000]Decal Gun (Debug)[-][/c]
+TaelynBotWalking,Taelyn Bot
+TaelynBotBlock,Taelyn Bot (Clone)
+ClownBotWalking,TSM 'Clown' Bot
+LilRobotOrangeWalking,Brad Chadley
+LilRobotBlueWalking,Derek
+bkiSuitProps,Will be equipped automatically when carried in inventory or toolbar.
+bkiExplorerToken,Redeem at a GIN console in any trading station!\nUnlock rewards and raise your rank with the Exploration Guild!
+CPUOut,CPU (out)
+CPUIn,CPU (in)
+igmPvPWarning,You are now in a PVP area (see icon) - other players can attack and damage you and your ship!,Du bist jetzt in einem PVP-Gebiet (siehe Symbol) - andere Spieler können dich und dein Schiff angreifen und Schaden zufügen!
+TurretBasePulseLaserRetract,Pulse Laser Turret  (retractable)
+bmCrashSite,Crash Site
+PirateHat,[c][fff700]Pirate Hat (yarrr)[-][/c]
+SheriffHat,[c][fff700]Sheriffs Hat[-][/c]
+Sombrero,[c][fff700]Sombrero[-][/c]
+CowboyHat,[c][fff700]Cowboy Hat[-][/c]
+HornHelmet,[c][fff700]Viking Helmet[-][/c]
+ShieldExtenderBA,Shield Extender (BA)
+ShieldExtenderCV,Shield Extender (CV)
+ShieldExtenderSV,Shield Extender (SV)
+ShieldExtenderHV,Shield Extender (HV)
+ShieldCapacityBonus,Shield Capacity (Bonus)
+ShieldRechargeBonus,Shield Recharge (Bonus)
+bkiShieldExtender,Extender to extend the Shield Capactity and Recharge Rate\n\nCan be placed anywhere.
+bkiSuitProps,Will be equipped automatically when carried in inventory or toolbar.
+BronzeCrown,[c][fff700]Bronze Crown[-][/c]
+SilverCrown,[c][fff700]Silver Crown[-][/c]
+GoldCrown,[c][fff700]Gold Crown[-][/c]
+SantaClausMaleWalking,Santa Claus
+MrsClausFemaleWalking,Mrs. Claus
+ElfGirlStatic,Magic Elf
+bkiDecalGun,-[00ff00]LeftShift + Scrollwheel[-] to scale a decal\n\n-[00ff00]LeftControl + Scrollwheel[-] to rotate a decal\n\n-[00ff00]LeftShift + LeftControl + Scrollwheel[-] to change decal distance it snaps to a wall\n\n-[00ff00]PageUp[-] / [00ff00]PageDown[-] to cycle between decals in the same group

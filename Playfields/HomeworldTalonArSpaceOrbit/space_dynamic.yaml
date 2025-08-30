@@ -1,0 +1,460 @@
+# Playfield Characteristics
+Gravity: 0                         
+AtmosphereEnabled: False          
+PvPProb: 0
+UseFixed: True                       
+Radiation: [5,10]                    
+TemperatureDay: [-200,-100]    
+Music: [moonstone, space, DistantWorlds, Migration]          
+ 
+PlayfieldType: Space  
+PlanetType: TalonArHomeworldSector            
+
+### Resource Asteroid
+Resources:                     
+    - Name: [ AsteroidVoxel02Ice]
+      DisplayName: Ice Asteroid
+      CountMinMax: [ 2, 4 ]
+      Probability: 1    
+      Properties:     
+        - Key: RegenAfter
+          Value: 180                               
+ 
+    # - Name: [ AsteroidVoxel01Copper, AsteroidVoxel02Copper, AsteroidVoxel03Copper]
+      # DisplayName: Copper Asteroid
+      # CountMinMax: [ 1, 1 ]
+      # Probability: 0.4  
+      # Properties:     
+        # - Key: RegenAfter
+          # Value: 180         
+ 
+    # - Name: [ AsteroidVoxel01Silicon, AsteroidVoxel02Silicon, AsteroidVoxel03Silicon]
+      # DisplayName: Silicon Asteroid
+      # CountMinMax: [ 1, 2 ]
+      # Probability: 0.4 
+      # Properties:     
+        # - Key: RegenAfter
+          # Value: 180         
+
+    # - Name: [ AsteroidVoxel01Magnesium, AsteroidVoxel02Magnesium, AsteroidVoxel03Magnesium]
+      # DisplayName: Magnesium Asteroid
+      # CountMinMax: [ 1, 1 ]
+      # Probability: 0.4 
+      # Properties:     
+        # - Key: RegenAfter
+          # Value: 180         
+
+    # - Name: [ AsteroidVoxel01Cobalt, AsteroidVoxel02Cobalt, AsteroidVoxel03Cobalt]
+      # DisplayName: Cobalt Asteroid
+      # CountMinMax: [ 1, 1 ]
+      # Probability: 0.4  
+      # Properties:     
+        # - Key: RegenAfter
+          # Value: 180             
+
+    # - Name: [ AsteroidVoxel01Neodymium, AsteroidVoxel02Neodymium, AsteroidVoxel03Neodymium]
+      # DisplayName: Neodymium Asteroid
+      # CountMinMax: [ 1, 1 ]
+      # Probability: 0.4 
+      # Properties:     
+        # - Key: RegenAfter
+          # Value: 180          
+
+    # - Name: [ AsteroidVoxel01Promethium, AsteroidVoxel02Promethium, AsteroidVoxel03Promethium]
+      # DisplayName: Promethium Asteroid
+      # CountMinMax: [ 1, 1 ]
+      # Probability: 0.4  
+      # Properties:     
+        # - Key: RegenAfter
+          # Value: 180         
+
+    # - Name: [ AsteroidVoxel01Sathium, AsteroidVoxel02Sathium, AsteroidVoxel03Sathium]
+      # DisplayName: Sathium Asteroid
+      # CountMinMax: [ 1, 1 ]
+      # Probability: 0.4 
+      # Properties:     
+        # - Key: RegenAfter
+          # Value: 180         
+
+    # - Name: [ AsteroidVoxel01Erestrum, AsteroidVoxel02Erestrum, AsteroidVoxel03Erestrum]
+      # DisplayName: Erestrum Asteroid
+      # CountMinMax: [ 1, 1 ]
+      # Probability: 0.1  
+      # Properties:     
+        # - Key: RegenAfter
+          # Value: 180         
+
+    # - Name: [ AsteroidVoxel01Zascosium, AsteroidVoxel02Zascosium, AsteroidVoxel03Zascosium]
+      # DisplayName: Zascosium Asteroid
+      # CountMinMax: [ 1, 1 ]
+      # Probability: 0.1  
+      # Properties:     
+        # - Key: RegenAfter
+          # Value: 180         
+
+    # - Name: [ AsteroidVoxel01Pentaxid, AsteroidVoxel02Pentaxid, AsteroidVoxel03Pentaxid]
+      # DisplayName: Pentaxid Asteroid
+      # CountMinMax: [ 1, 1 ]
+      # Probability: 0.3     
+      # Properties:     
+        # - Key: RegenAfter
+          # Value: 180         
+
+    # - Name: [ AsteroidVoxel01Gold, AsteroidVoxel02Gold, AsteroidVoxel03Gold]
+      # DisplayName: Gold Asteroid
+      # CountMinMax: [ 1, 1 ]
+      # Probability: 0.3 
+      # Properties:     
+        # - Key: RegenAfter
+          # Value: 180           
+
+    # - Name: [ AsteroidVoxel01Titan, AsteroidVoxel02Titan, AsteroidVoxel03Titan]
+      # DisplayName: Titan Asteroid
+      # CountMinMax: [ 1, 2 ]
+      # Probability: 0.5 
+      # Properties:     
+        # - Key: RegenAfter
+          # Value: 180          
+           
+### POIs
+POIs:
+    - Name: [AsteroidFieldBoxExclude, AsteroidFieldFewBoxExclude, AsteroidRingPlanet] 
+      FieldName: [AsteroidField, AsteroidFieldRectangle2]   # used if playfield is not an orbit
+      CountMinMax: [ 1, 1 ]     
+      Probability: 1
+      BaseField: True 
+      RandomRotation: True
+
+#Main
+    - Type: BA_Alien
+      GroupName: BAOTalonAr
+      Faction: Talon
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]     
+      Probability: 1
+      InitPower: True 
+      Position: 
+        RadialInfo: [0, 0, 0,   0,   2.5, 3,   -1, -1,   0, 0, 0]
+      Properties: 
+        - Key: Music
+          Value: NebularClouds  
+     #   - Key: Discovery
+    #      Value: False
+        - Key: StationInterface
+          Value: "Fuel:1,O2:1,Repair:2,Shield:2,IfNeutral:0,IfFriendly:-0.15,IfHonored:-0.30"
+     
+#Special
+    - Type: BA_Alien
+      GroupName: BAOTalonArPhalanx
+      Faction: Talon
+      Mode: Survival
+      CountMinMax: [ 2, 3 ]     
+      Probability: 1
+      InitPower: True 
+      Position: 
+        RadialInfo: [0, 0, 0,   0,   1.5, 2,   -1, -1,   0, 0, 0]
+      Properties: 
+        - Key: Music
+          Value: NebularClouds  
+     #   - Key: Discovery
+    #      Value: False
+    #    - Key: StationInterface
+     #     Value: "Fuel:1,O2:1,Repair:8,Shield:8,IfNeutral:0,IfFriendly:-0.15,IfHonored:-0.30"
+
+
+ #Randoms
+ # Perimeter Beacons (fixed position) for use with PDA missions
+
+    - Type: BA_Alien   
+      Name: [BAO_PerimenterBeacon]
+      DisplayName: Beacon MMM
+      GroupName: BAOBeaconPerimeter    
+      Faction: none
+      CountMinMax: [1, 1]
+      InitPower: True
+      Mode: Survival 
+      Probability: 1 
+      Position: 
+        RadialInfo: [-10000, -10000, -10000,   0,   0, 0,   0, 0,   0, 0, 0]
+      Properties:   
+        - Key: RegenAfter
+          Value: 180   
+        - Key: MapDistance 
+          Value: 0 
+        - Key: HudDistance 
+          Value: 0 
+        - Key: MapMarker
+          Value: Neutral
+          
+    - Type: BA_Alien         
+      Name: [BAO_PerimenterBeacon]
+      DisplayName: Beacon MMP
+      Faction: none
+      CountMinMax: [1, 1]
+      InitPower: True
+      Mode: Survival 
+      Probability: 1 
+      Position:
+        RadialInfo: [-10000, -10000, 10000,   0,   0, 0,   0, 0,   0, 0, 0]
+      Properties:  
+        - Key: RegenAfter
+          Value: 180   
+        - Key: MapDistance 
+          Value: 0 
+        - Key: HudDistance 
+          Value: 0 
+        - Key: MapMarker
+          Value: Neutral
+          
+    - Type: BA_Alien   
+      Name: [BAO_PerimenterBeacon]
+      DisplayName: Beacon MPM
+      Faction: none
+      CountMinMax: [1, 1]
+      InitPower: True
+      Mode: Survival 
+      Probability: 1 
+      Position: 
+        RadialInfo: [-10000, 10000, -10000,   0,   0, 0,   0, 0,   0, 0, 0]
+      Properties:   
+        - Key: RegenAfter
+          Value: 180   
+        - Key: MapDistance 
+          Value: 0 
+        - Key: HudDistance 
+          Value: 0 
+        - Key: MapMarker
+          Value: Neutral
+          
+    - Type: BA_Alien   
+      Name: [BAO_PerimenterBeacon]
+      DisplayName: Beacon MPP
+      Faction: none
+      CountMinMax: [1, 1]
+      InitPower: True
+      Mode: Survival 
+      Probability: 1 
+      Position: 
+        RadialInfo: [-10000, 10000, 10000,   0,   0, 0,   0, 0,   0, 0, 0]
+      Properties:   
+        - Key: RegenAfter
+          Value: 180   
+        - Key: MapDistance 
+          Value: 0 
+        - Key: HudDistance 
+          Value: 0 
+        - Key: MapMarker
+          Value: Neutral
+          
+    - Type: BA_Alien   
+      Name: [BAO_PerimenterBeacon]
+      DisplayName: Beacon PMM
+      Faction: none
+      CountMinMax: [1, 1]
+      InitPower: True
+      Mode: Survival 
+      Probability: 1 
+      Position: 
+        RadialInfo: [10000, -10000, -10000,   0,   0, 0,   0, 0,   0, 0, 0]
+      Properties:   
+        - Key: RegenAfter
+          Value: 180   
+        - Key: MapDistance 
+          Value: 0 
+        - Key: HudDistance 
+          Value: 0 
+        - Key: MapMarker
+          Value: Neutral
+          
+    - Type: BA_Alien   
+      Name: [BAO_PerimenterBeacon]
+      DisplayName: Beacon PMP
+      Faction: none
+      CountMinMax: [1, 1]
+      InitPower: True
+      Mode: Survival 
+      Probability: 1 
+      Position: 
+        RadialInfo: [10000, -10000, 10000,   0,   0, 0,   0, 0,   0, 0, 0]
+      Properties:   
+        - Key: RegenAfter
+          Value: 180   
+        - Key: MapDistance 
+          Value: 0 
+        - Key: HudDistance 
+          Value: 0 
+        - Key: MapMarker
+          Value: Neutral
+          
+    - Type: BA_Alien   
+      Name: [BAO_PerimenterBeacon]
+      DisplayName: Beacon PPM
+      Faction: none
+      CountMinMax: [1, 1]
+      InitPower: True
+      Mode: Survival 
+      Probability: 1 
+      Position: 
+        RadialInfo: [10000, 10000, -10000,   0,   0, 0,   0, 0,   0, 0, 0]
+      Properties:   
+        - Key: RegenAfter
+          Value: 180   
+        - Key: MapDistance 
+          Value: 0 
+        - Key: HudDistance 
+          Value: 0 
+        - Key: MapMarker
+          Value: Neutral
+          
+    - Type: BA_Alien   
+      Name: [BAO_PerimenterBeacon]
+      DisplayName: Beacon PPP
+      Faction: none
+      CountMinMax: [1, 1]
+      InitPower: True
+      Mode: Survival 
+      Probability: 1 
+      Position: 
+        RadialInfo: [10000, 10000, 10000,   0,   0, 0,   0, 0,   0, 0, 0]
+      Properties:   
+        - Key: RegenAfter
+          Value: 180   
+        - Key: MapDistance 
+          Value: 0 
+        - Key: HudDistance 
+          Value: 0 
+        - Key: MapMarker
+          Value: Neutral
+          
+          
+DroneBaseSetup:                                           
+# Free Roaming Drones
+      - FreeDrones:                                             
+          - Name: [SpaceDronePolarisLaser]
+            Faction: Talon                               
+            CanNotBeControlledByMasterAI: False          
+            Count: [10, 16]                       
+            Radius: [2500, 10000]
+            Properties:
+              - Key: AIManMaxPursuitRange 
+                Value: 2500
+                
+        SpaceVessels: 
+
+# Combat Vessels
+          - Name: [OPVTalonArT2]     
+            Faction: Talon
+            CountMinMax: [10, 10]   
+            Probability: 1  
+            CanNotBeControlledByMasterAI: False 
+            FixedMaxSpeed: [50, 55] 
+            Mission: SpacePatrol   
+            MissionDescription:
+              DelayBetweenRespawnMinMax: [300, 600]  
+              DelayBeforeSelfDestructionMinMax: [200, 250]  
+              IsRespawnAfterDestruction: True               
+              RadiusMinMax: [1000, 10000]         
+            StockDescription:
+              Name: [SpaceDronePlasma] 
+              AmountMinMax: [2, 4]  
+              Type: FighterDrone  
+            Properties:                      
+              - Key: SelfDestructionWithNoCore 
+                Value: True                        
+              - Key: AIManMaxPursuitRange 
+                Value: 4000
+              - Key: AIManPatrolFactions  
+                Value: "Talon"
+     
+
+#Large Freighters
+          # - Name: [FreighterTalonAr] 
+            # FixedMaxSpeed: [20, 40]
+            # Mission: Freighter
+            # CountMinMax: [6, 6]
+            # Probability: 1
+            # Faction: Talon                              
+            # MissionDescription:
+              # DelayBetweenRespawnMinMax: [300, 600]
+              # DelayBeforeSelfDestructionMinMax: [200, 250]
+              # IsRespawnAfterDestruction: True
+              # Position:                                  
+                # PosXZMinMax: [1000, 2500]
+                # PosYMax: 2500                
+            # StockDescription:
+              # Name: [SpaceDronePlasma] 
+              # AmountMinMax: [1, 2]
+              # Type: FighterDrone 
+              
+# Orbital Traffic / small transports/freighters
+           
+          - Name: [CivilianDroneCVfast]      # scanner drones / courier drones
+            Faction: Talon
+            CountMinMax: [2, 4]   
+            Probability: 1  
+            CanNotBeControlledByMasterAI: True 
+            FixedMaxSpeed: [90, 110] 
+            Mission: SpacePatrol       #Mission 'Freighter' does not allowto use the AI Properties!   
+            MissionDescription:
+              DelayBetweenRespawnMinMax: [300, 600]  
+              DelayBeforeSelfDestructionMinMax: [200, 250]  
+              IsRespawnAfterDestruction: True               
+              RadiusMinMax: [300, 800]        
+              POINameAsPositionRef: [BAO_TalonStation]
+            StockDescription:
+              Name: [SpaceDronePlasma] 
+              AmountMinMax: [0, 0]  
+              Type: FighterDrone  
+            Properties:                      
+              - Key: SelfDestructionWithNoCore 
+                Value: True                        
+              - Key: AIManMaxPursuitRange 
+                Value: 4000  
+                
+          # - Name: [CivilianMicroCV]      # Privat Transports
+            # Faction: Talon
+            # CountMinMax: [2, 4]   
+            # Probability: 1  
+            # CanNotBeControlledByMasterAI: True 
+            # FixedMaxSpeed: [90, 110] 
+            # Mission: SpacePatrol       #Mission 'Freighter' does not allowto use the AI Properties!   
+            # MissionDescription:
+              # DelayBetweenRespawnMinMax: [300, 600]  
+              # DelayBeforeSelfDestructionMinMax: [200, 250]  
+              # IsRespawnAfterDestruction: True               
+              # RadiusMinMax: [300, 1200]        
+              # POINameAsPositionRef: [TSO_Variant11]
+            # StockDescription:
+              # Name: [SpaceDronePolarisLaser] 
+              # AmountMinMax: [0, 0]  
+              # Type: FighterDrone  
+            # Properties:                      
+              # - Key: SelfDestructionWithNoCore 
+                # Value: True                        
+              # - Key: AIManMaxPursuitRange 
+                # Value: 4000  
+           
+          # - Name: [CivilianDroneCV]    # small freighters
+            # Faction: Talon
+            # CountMinMax: [12, 18]   
+            # Probability: 1  
+            # CanNotBeControlledByMasterAI: True 
+            # FixedMaxSpeed: [50, 80] 
+            # Mission: SpacePatrol    #Mission 'Freighter' does not allowto use the AI Properties!   
+            # MissionDescription:
+              # DelayBetweenRespawnMinMax: [300, 600]  
+              # DelayBeforeSelfDestructionMinMax: [200, 250]  
+              # IsRespawnAfterDestruction: True               
+              # RadiusMinMax: [300, 2000]        
+              # POINameAsPositionRef: [TSO_Variant11]
+            # StockDescription:
+              # Name: [SpaceDronePolarisLaser] 
+              # AmountMinMax: [0, 0]  
+              # Type: FighterDrone  
+            # Properties:                      
+              # - Key: SelfDestructionWithNoCore 
+                # Value: True                        
+              # - Key: AIManMaxPursuitRange 
+                # Value: 1000  
+           # #   - Key: AIManPatrolGroups  
+            # #    Value: "BAO_PolSupplyStation"

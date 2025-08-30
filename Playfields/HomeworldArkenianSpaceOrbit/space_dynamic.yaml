@@ -1,0 +1,484 @@
+# Playfield Characteristics
+Gravity: 0                         
+AtmosphereEnabled: False          
+PvPProb: 0
+UseFixed: True                       
+Radiation: [5,10]                    
+TemperatureDay: [-200,-100]    
+Music: [moonstone, space, DistantWorlds, Migration]
+ 
+PlayfieldType: Space  
+PlanetType: ArkenianHomeworldSector
+
+### Resource Asteroid
+Resources:                     
+    - Name: [ AsteroidVoxel02Ice]
+      DisplayName: Ice Asteroid
+      CountMinMax: [ 2, 4 ]
+      Probability: 1    
+      Properties:     
+        - Key: RegenAfter
+          Value: 180                               
+    # - Name: [ AsteroidVoxel01Iron, AsteroidVoxel02Iron, AsteroidVoxel03Iron]
+      # DisplayName: Iron Asteroid
+      # CountMinMax: [ 1, 1 ]
+      # Probability: 1    
+      # Properties:     
+        # - Key: RegenAfter
+          # Value: 180                               
+    # - Name: [ AsteroidVoxel01Copper, AsteroidVoxel02Copper, AsteroidVoxel03Copper]
+      # DisplayName: Copper Asteroid
+      # CountMinMax: [ 1, 1 ]
+      # Probability: 1    
+      # Properties:     
+        # - Key: RegenAfter
+          # Value: 180                               
+    # - Name: [ AsteroidVoxel01Silicon, AsteroidVoxel02Silicon, AsteroidVoxel03Silicon]
+      # DisplayName: Silicon Asteroid
+      # CountMinMax: [ 1, 1 ]
+      # Probability: 1    
+      # Properties:     
+        # - Key: RegenAfter
+          # Value: 180          
+    # - Name: [ AsteroidVoxel01Cobalt, AsteroidVoxel02Cobalt, AsteroidVoxel03Cobalt]
+      # DisplayName: Cobalt Asteroid
+      # CountMinMax: [ 1, 1 ]
+      # Probability: 1    
+      # Properties:     
+        # - Key: RegenAfter
+          # Value: 180          
+    # - Name: [ AsteroidVoxel02Promethium]
+      # DisplayName: Promethium Asteroid
+      # CountMinMax: [ 1, 1 ]
+      # Probability: 1    
+      # Properties:     
+        # - Key: RegenAfter
+          # Value: 180          
+    # - Name: [ AsteroidVoxel02Pentaxid]
+      # DisplayName: Pentaxid Asteroid
+      # CountMinMax: [ 1, 1 ]
+      # Probability: 1    
+      # Properties:     
+        # - Key: RegenAfter
+          # Value: 180          
+           
+### POIs
+POIs:
+
+    # ========== Please do not change ============
+    
+    - Name: [AsteroidRingPlanet] 
+      FieldName: [AsteroidField, AsteroidFieldRectangle2] 
+      CountMinMax: [ 1, 1 ]     
+      Probability: 1
+      BaseField: True 
+      Properties:     
+        - Key: Color
+          Value: "0.70, 0.85, 0.95 - 0.52, 0.38, 0.5"   # FITTED TO ARKENIAN HOMEWORLD. (It is the lost water and debris of this world.)
+
+    # =======================================
+
+
+# Unique
+
+    - Type: BA_Alien   
+      GroupName: TSOPolarisUnique
+     # Name: [TSO_Variant11]  
+     # DisplayName: Derpacs Station
+      Faction: ArkenianRepublic
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]     
+      Probability: 1
+      InitPower: True
+      Position:
+       #  PosXZMinMax: [1000, 2500]
+       #  PosYMax: 2500 
+        # RadialInfo: [0, 0, 0,   0,   1.5, 2,   -1, -1,   0, 0, 0]
+        RadialInfo: [0, 0, 0,   400,   1.5, 2,   -1, -1,   0, 0, 0]  # Prevent overlapping with ring, and enough space for the vessels
+      Properties: 
+        - Key: RegenAfter
+          Value: 720  
+        - Key: Music
+          Value: ExtraktTechno  
+        - Key: StationInterface
+          Value: "Fuel:4,O2:4,IfNeutral:0,IfFriendly:-0.1,IfHonored:-0.20"
+          
+#Main 
+
+    - Type: BA_Alien   
+      Name: [BAO_PolSupplyStation]  
+      DisplayName: Supply Station
+      Faction: ArkenianRepublic
+      Mode: Survival
+      CountMinMax: [ 2, 3 ]     
+      Probability: 1
+      InitPower: True
+      Position:
+       #  PosXZMinMax: [1000, 2500]
+       #  PosYMax: 2500 
+        # RadialInfo: [0, 0, 0,   0,   2, 3,   -1, -1,   0, 0, 0]
+        RadialInfo: [0, 0, 0,   100,   2, 3,   -1, -1,   0, 0, 0]  # Prevent overalapping with ring
+      Properties: 
+        - Key: RegenAfter
+          Value: 720   
+        - Key: StationInterface
+          Value: "Fuel:4,O2:4,IfNeutral:0,IfFriendly:-0.1,IfHonored:-0.20"
+
+#Aux
+
+# Satellites 
+    - Type: BA_Alien         
+      Name: [BAO_PolarisCommonSat,BAO_PolarisCommonSat2,BAO_PolarisCommonSat3]  
+      DisplayName: Com Sat
+      Faction: ArkenianRepublic
+      Mode: Survival
+      CountMinMax: [ 2, 3]     
+      Probability: 1
+      InitPower: True
+      Position: 
+        RadialInfo: [0, 0, 0,   0,   3.5, 3.5,   -1, -1,   0, 0, 0]
+      Properties: 
+        - Key: RegenAfter
+          Value: 720   
+#Randoms
+ # Perimeter Beacons (fixed position) for use with PDA missions
+
+    - Type: BA_Alien   
+      Name: [BAO_PerimenterBeacon]
+      DisplayName: Beacon MMM
+      GroupName: BAOBeaconPerimeter    
+      Faction: none
+      CountMinMax: [1, 1]
+      InitPower: True
+      Mode: Survival 
+      Probability: 1 
+      Position: 
+        RadialInfo: [-10000, -10000, -10000,   0,   0, 0,   0, 0,   0, 0, 0]
+      Properties:   
+        - Key: RegenAfter
+          Value: 180   
+        - Key: MapDistance 
+          Value: 0 
+        - Key: HudDistance 
+          Value: 0 
+        - Key: MapMarker
+          Value: Neutral
+          
+    - Type: BA_Alien         
+      Name: [BAO_PerimenterBeacon]
+      DisplayName: Beacon MMP
+      Faction: none
+      CountMinMax: [1, 1]
+      InitPower: True
+      Mode: Survival 
+      Probability: 1 
+      Position:
+        RadialInfo: [-10000, -10000, 10000,   0,   0, 0,   0, 0,   0, 0, 0]
+      Properties:  
+        - Key: RegenAfter
+          Value: 180   
+        - Key: MapDistance 
+          Value: 0 
+        - Key: HudDistance 
+          Value: 0 
+        - Key: MapMarker
+          Value: Neutral
+          
+    - Type: BA_Alien   
+      Name: [BAO_PerimenterBeacon]
+      DisplayName: Beacon MPM
+      Faction: none
+      CountMinMax: [1, 1]
+      InitPower: True
+      Mode: Survival 
+      Probability: 1 
+      Position: 
+        RadialInfo: [-10000, 10000, -10000,   0,   0, 0,   0, 0,   0, 0, 0]
+      Properties:   
+        - Key: RegenAfter
+          Value: 180   
+        - Key: MapDistance 
+          Value: 0 
+        - Key: HudDistance 
+          Value: 0 
+        - Key: MapMarker
+          Value: Neutral
+          
+    - Type: BA_Alien   
+      Name: [BAO_PerimenterBeacon]
+      DisplayName: Beacon MPP
+      Faction: none
+      CountMinMax: [1, 1]
+      InitPower: True
+      Mode: Survival 
+      Probability: 1 
+      Position: 
+        RadialInfo: [-10000, 10000, 10000,   0,   0, 0,   0, 0,   0, 0, 0]
+      Properties:   
+        - Key: RegenAfter
+          Value: 180   
+        - Key: MapDistance 
+          Value: 0 
+        - Key: HudDistance 
+          Value: 0 
+        - Key: MapMarker
+          Value: Neutral
+          
+    - Type: BA_Alien   
+      Name: [BAO_PerimenterBeacon]
+      DisplayName: Beacon PMM
+      Faction: none
+      CountMinMax: [1, 1]
+      InitPower: True
+      Mode: Survival 
+      Probability: 1 
+      Position: 
+        RadialInfo: [10000, -10000, -10000,   0,   0, 0,   0, 0,   0, 0, 0]
+      Properties:   
+        - Key: RegenAfter
+          Value: 180   
+        - Key: MapDistance 
+          Value: 0 
+        - Key: HudDistance 
+          Value: 0 
+        - Key: MapMarker
+          Value: Neutral
+          
+    - Type: BA_Alien   
+      Name: [BAO_PerimenterBeacon]
+      DisplayName: Beacon PMP
+      Faction: none
+      CountMinMax: [1, 1]
+      InitPower: True
+      Mode: Survival 
+      Probability: 1 
+      Position: 
+        RadialInfo: [10000, -10000, 10000,   0,   0, 0,   0, 0,   0, 0, 0]
+      Properties:   
+        - Key: RegenAfter
+          Value: 180   
+        - Key: MapDistance 
+          Value: 0 
+        - Key: HudDistance 
+          Value: 0 
+        - Key: MapMarker
+          Value: Neutral
+          
+    - Type: BA_Alien   
+      Name: [BAO_PerimenterBeacon]
+      DisplayName: Beacon PPM
+      Faction: none
+      CountMinMax: [1, 1]
+      InitPower: True
+      Mode: Survival 
+      Probability: 1 
+      Position: 
+        RadialInfo: [10000, 10000, -10000,   0,   0, 0,   0, 0,   0, 0, 0]
+      Properties:   
+        - Key: RegenAfter
+          Value: 180   
+        - Key: MapDistance 
+          Value: 0 
+        - Key: HudDistance 
+          Value: 0 
+        - Key: MapMarker
+          Value: Neutral
+          
+    - Type: BA_Alien   
+      Name: [BAO_PerimenterBeacon]
+      DisplayName: Beacon PPP
+      Faction: none
+      CountMinMax: [1, 1]
+      InitPower: True
+      Mode: Survival 
+      Probability: 1 
+      Position: 
+        RadialInfo: [10000, 10000, 10000,   0,   0, 0,   0, 0,   0, 0, 0]
+      Properties:   
+        - Key: RegenAfter
+          Value: 180   
+        - Key: MapDistance 
+          Value: 0 
+        - Key: HudDistance 
+          Value: 0 
+        - Key: MapMarker
+          Value: Neutral
+ 
+DroneBaseSetup:                                           
+# Free Roaming Drones
+      - FreeDrones:                                             
+          - Name: [SpaceDronePolarisLaser]
+            Faction: ArkenianRepublic                               
+            CanNotBeControlledByMasterAI: False          
+            Count: [10, 16]                       
+            Radius: [2500, 10000]
+            Properties:
+              - Key: AIManMaxPursuitRange 
+                Value: 2500
+                
+        SpaceVessels: 
+
+# Combat Vessels
+          - Name: [OPVArkenianT2]     
+            Faction: ArkenianRepublic
+            CountMinMax: [6, 6]   
+            Probability: 1  
+            CanNotBeControlledByMasterAI: False 
+            FixedMaxSpeed: [50, 55] 
+            Mission: SpacePatrol   
+            MissionDescription:
+              DelayBetweenRespawnMinMax: [300, 600]  
+              DelayBeforeSelfDestructionMinMax: [200, 250]  
+              IsRespawnAfterDestruction: True               
+              RadiusMinMax: [1000, 10000]         
+            StockDescription:
+              Name: [SpaceDronePolarisLaser] 
+              AmountMinMax: [2, 4]  
+              Type: FighterDrone  
+            Properties:                      
+              - Key: SelfDestructionWithNoCore 
+                Value: True                        
+              - Key: AIManMaxPursuitRange 
+                Value: 4000
+              - Key: AIManPatrolFactions  
+                Value: "ArkenianRepublic"
+                
+          - Name: [OPVArkenianT3]     
+            Faction: ArkenianRepublic
+            CountMinMax: [3, 3]   
+            Probability: 1  
+            CanNotBeControlledByMasterAI: False 
+            FixedMaxSpeed: [45, 50] 
+            Mission: SpacePatrol   
+            MissionDescription:
+              DelayBetweenRespawnMinMax: [300, 600]  
+              DelayBeforeSelfDestructionMinMax: [200, 250]  
+              IsRespawnAfterDestruction: True               
+              RadiusMinMax: [1000, 10000]         
+            StockDescription:
+              Name: [SpaceDronePolarisLaser] 
+              AmountMinMax: [2, 4]  
+              Type: FighterDrone  
+            Properties:                      
+              - Key: SelfDestructionWithNoCore 
+                Value: True                        
+              - Key: AIManMaxPursuitRange 
+                Value: 4000
+              - Key: AIManPatrolFactions  
+                Value: "ArkenianRepublic"
+                
+          - Name: [OPVArkenianT4]     
+            Faction: ArkenianRepublic
+            CountMinMax: [1, 1]   
+            Probability: 1  
+            CanNotBeControlledByMasterAI: False 
+            FixedMaxSpeed: [40, 45] 
+            Mission: SpacePatrol   
+            MissionDescription:
+              DelayBetweenRespawnMinMax: [300, 600]  
+              DelayBeforeSelfDestructionMinMax: [200, 250]  
+              IsRespawnAfterDestruction: True               
+              RadiusMinMax: [1000, 10000]         
+            StockDescription:
+              Name: [SpaceDronePolarisLaser] 
+              AmountMinMax: [2, 4]  
+              Type: FighterDrone  
+            Properties:                      
+              - Key: SelfDestructionWithNoCore 
+                Value: True                        
+              - Key: AIManMaxPursuitRange 
+                Value: 4000              
+              - Key: AIManPatrolFactions  
+                Value: "ArkenianRepublic"
+
+#Large Freighters
+          - Name: [FreighterArkenian] 
+            FixedMaxSpeed: [20, 50]
+            Mission: Freighter
+            CountMinMax: [6, 6]
+            Probability: 1
+            Faction: ArkenianRepublic                              
+            MissionDescription:
+              DelayBetweenRespawnMinMax: [300, 600]
+              DelayBeforeSelfDestructionMinMax: [200, 250]
+              IsRespawnAfterDestruction: True
+              Position:                                  
+                PosXZMinMax: [1000, 2500]
+                PosYMax: 2500                
+            StockDescription:
+              Name: [SpaceDronePolarisLaser] 
+              AmountMinMax: [1, 2]
+              Type: FighterDrone 
+              
+# Orbital Traffic / small transports/freighters
+           
+          - Name: [CivilianDroneCVfast]      # scanner drones / courier drones
+            Faction: ArkenianRepublic
+            CountMinMax: [2, 4]   
+            Probability: 1  
+            CanNotBeControlledByMasterAI: True 
+            FixedMaxSpeed: [90, 110] 
+            Mission: SpacePatrol       #Mission 'Freighter' does not allowto use the AI Properties!   
+            MissionDescription:
+              DelayBetweenRespawnMinMax: [300, 600]  
+              DelayBeforeSelfDestructionMinMax: [200, 250]  
+              IsRespawnAfterDestruction: True               
+              RadiusMinMax: [300, 800]        
+              POINameAsPositionRef: [TSO_Variant11]
+            StockDescription:
+              Name: [SpaceDronePolarisLaser] 
+              AmountMinMax: [0, 0]  
+              Type: FighterDrone  
+            Properties:                      
+              - Key: SelfDestructionWithNoCore 
+                Value: True                        
+              - Key: AIManMaxPursuitRange 
+                Value: 4000  
+                
+          - Name: [CivilianMicroCV]      # Privat Transports
+            Faction: ArkenianRepublic
+            CountMinMax: [2, 4]   
+            Probability: 1  
+            CanNotBeControlledByMasterAI: True 
+            FixedMaxSpeed: [90, 110] 
+            Mission: SpacePatrol       #Mission 'Freighter' does not allowto use the AI Properties!   
+            MissionDescription:
+              DelayBetweenRespawnMinMax: [300, 600]  
+              DelayBeforeSelfDestructionMinMax: [200, 250]  
+              IsRespawnAfterDestruction: True               
+              RadiusMinMax: [300, 1200]        
+              POINameAsPositionRef: [TSO_Variant11]
+            StockDescription:
+              Name: [SpaceDronePolarisLaser] 
+              AmountMinMax: [0, 0]  
+              Type: FighterDrone  
+            Properties:                      
+              - Key: SelfDestructionWithNoCore 
+                Value: True                        
+              - Key: AIManMaxPursuitRange 
+                Value: 4000  
+           
+          - Name: [CivilianDroneCV]    # small freighters
+            Faction: ArkenianRepublic
+            CountMinMax: [12, 18]   
+            Probability: 1  
+            CanNotBeControlledByMasterAI: True 
+            FixedMaxSpeed: [50, 80] 
+            Mission: SpacePatrol    #Mission 'Freighter' does not allowto use the AI Properties!   
+            MissionDescription:
+              DelayBetweenRespawnMinMax: [300, 600]  
+              DelayBeforeSelfDestructionMinMax: [200, 250]  
+              IsRespawnAfterDestruction: True               
+              RadiusMinMax: [300, 2000]        
+              POINameAsPositionRef: [TSO_Variant11]
+            StockDescription:
+              Name: [SpaceDronePolarisLaser] 
+              AmountMinMax: [0, 0]  
+              Type: FighterDrone  
+            Properties:                      
+              - Key: SelfDestructionWithNoCore 
+                Value: True                        
+              - Key: AIManMaxPursuitRange 
+                Value: 1000  
+           #   - Key: AIManPatrolGroups  
+            #    Value: "BAO_PolSupplyStation"

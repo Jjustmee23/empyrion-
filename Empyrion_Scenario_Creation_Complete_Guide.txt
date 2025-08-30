@@ -1,0 +1,838 @@
+================================================================================
+                    EMPYRION GALACTIC SURVIVAL
+                    SCENARIO CREATION & EDITING
+                           COMPLETE GUIDE
+================================================================================
+
+This guide combines official FAQ information with practical examples from the codebase
+to provide a comprehensive resource for scenario creation and customization.
+
+================================================================================
+                                TABLE OF CONTENTS
+================================================================================
+
+1. GLOBAL TIPS & YAML EDITING
+2. SCENARIO CREATION - STEP BY STEP
+3. SCENARIO FOLDER STRUCTURE
+4. PLAYFIELD CONFIGURATION
+5. POI CUSTOMIZATION & SPAWNING
+6. NEW GAME START CUSTOMIZATION
+7. INSTANCE CREATION
+8. ADVANCED CONFIGURATION OPTIONS
+9. WORKSHOP UPLOAD REQUIREMENTS
+10. PRACTICAL EXAMPLES & TEMPLATES
+
+================================================================================
+                        1. GLOBAL TIPS & YAML EDITING
+================================================================================
+
+IMPORTANT: YAML File Editing Rules
+==================================
+
+1. Use Notepad++ or similar editor with proper YAML support
+2. Go to VIEW > Non Printable Symbols > Check "Show all"
+3. Use SPACES for indentation, NEVER use TABS
+4. Wrong spaces, line breaks, or tabs will break the file and cause errors
+5. Always backup your files before editing
+
+File Location Structure:
+=======================
+- Default Content: ..\Steam\steamapps\common\Empyrion - Galactic Survival\Content\
+- Scenarios: ..\Steam\steamapps\common\Empyrion - Galactic Survival\Content\Scenarios\
+- Your Scenario: ..\Content\Scenarios\YourScenarioName\
+
+WARNING: Changes outside SAVES folder are reverted with each game update!
+Solution: Save custom files in your SCENARIO folder - they won't be overwritten.
+
+================================================================================
+                        2. SCENARIO CREATION - STEP BY STEP
+================================================================================
+
+Basic Scenario Setup:
+====================
+
+1. Navigate to: ..\Content\Scenarios
+2. Create new folder (name = scenario name)
+3. Create required subdirectories:
+   - Extras
+   - Playfields  
+   - Prefabs
+   - Sectors
+   - Configuration
+   - Extras\PDA
+
+4. Copy sectors.yaml from default Content\Sectors to your scenario\Sectors folder
+5. Add description.txt to main scenario folder
+6. Add preview.jpg (1280x720px, JPG format)
+
+Example Folder Structure:
+========================
+MyNewScenario/
+├── description.txt
+├── preview.jpg
+├── Extras/
+│   └── PDA/
+├── Playfields/
+├── Prefabs/
+├── Sectors/
+│   └── Sectors.yaml
+└── Configuration/
+
+================================================================================
+                        3. SCENARIO FOLDER STRUCTURE
+================================================================================
+
+Required Files:
+==============
+
+1. description.txt - Scenario description (displayed in game start menu)
+2. preview.jpg - Preview image (1280x720px, JPG only)
+3. Sectors\Sectors.yaml - Galaxy/solar system configuration
+
+Optional Customizations:
+=======================
+
+- Custom playfield.yamls in Playfields\ folder
+- Custom POIs and prefabs in Prefabs\ folder  
+- Custom PDA in Extras\PDA\ folder
+- Custom configuration in Configuration\ folder
+
+Important Notes:
+================
+- sectors.yaml is the ONLY required file to start a basic scenario
+- Game pulls default content from main Content\ folder if not overridden
+- Custom files in scenario folders are NOT overwritten by updates
+- Default content can be used without copying to scenario folders
+
+================================================================================
+                        4. PLAYFIELD CONFIGURATION
+================================================================================
+
+Playfield Types:
+===============
+
+1. Planet Playfields (e.g., GS_Akua, GS_Ashon2)
+2. Space/Orbit Playfields (e.g., GS_AkuaOrbit)
+3. Moon Playfields (e.g., GS_Ashon2Moon)
+4. Special Playfields (e.g., SpaceAsteroidField, GasGiant)
+
+Key Configuration Parameters:
+============================
+
+PlanetClass: Temperate          # Planet classification
+PlanetType: TemperateStarter   # Specific planet type
+PlayfieldType: Moon            # Playfield category
+Difficulty: 1                  # Difficulty level (1-10)
+Seed: 0                        # Random seed (0 = random, 1-999999 = fixed)
+
+Atmosphere & Visual Settings:
+=============================
+AtmosphereEnabled: True
+AtmosphereColor: "0.674, 0.824, 1.000"
+SkyColor: "0.41, 0.38, 0.35"
+DayLightIntensity: 1.4
+NightLightIntensity: 0.9
+CloudsDensity: 0.3
+WindSpeed: 3
+
+Blueprint Restrictions:
+======================
+#AllowBlueprintSV: False      # Disable SV blueprint spawning
+#AllowBlueprintCV: False      # Disable CV blueprint spawning  
+#AllowBlueprintBA: False      # Disable BA blueprint spawning
+#AllowBlueprintHV: False      # Disable HV blueprint spawning
+
+================================================================================
+                        5. POI CUSTOMIZATION & SPAWNING
+================================================================================
+
+POI Spawning Rules:
+===================
+
+1. POIs are processed TOP to BOTTOM in the list
+2. Random POIs: Listed under "POIs > Random" (Survival mode)
+3. Fixed POIs: Listed under "POIs > Fixed" (Creative mode)
+4. Fixed POIs can also be used in Survival (for scenarios)
+
+Essential POI Order:
+===================
+1. Wreckage POI (if used)
+2. Dronebase (MUST be #1 or #2)
+3. PatrolVessel Base (if used)
+4. Trading Station (if used)
+
+POI Configuration Example:
+=========================
+- GroupName: AbandonedMine
+  CountMinMax: [ 1, 1 ]
+  DroneProb: 0.1
+  DronesMinMax: [ 1, 1 ]
+  ReserveCount: 1
+  TroopTransport: False
+  SpawnPOIAvoid: [TS_Akua]
+  POIDistance: 700
+  SpawnResource: ["IronResource:1-2","CobaltResource:1-2"]
+  ResourceDistance: 300
+  Properties:
+    - Key: RegenAfter
+      Value: 150
+    - Key: MapDistance
+      Value: 500
+
+POI Relationships:
+=================
+
+AVOID (Keep POIs apart):
+SpawnPOIAvoid: [TS_Akua]
+POIDistance: 700
+
+NEAR (Place POIs close):
+SpawnPOINear: [TS_Akua]  
+POIDistance: 500
+
+Resource Placement:
+==================
+SpawnResource: ["IronResource:1-2","CobaltResource:1-2"]
+ResourceDistance: 300
+
+Format: "ResourceName:Min-Max" or "ResourceName:ExactAmount"
+
+Map Discovery Distance:
+======================
+Properties:
+- Key: MapDistance
+  Value: 500  # Reveals map marker at 500m distance
+  # Value: 0 = Never reveal map marker
+
+POI Regeneration:
+=================
+Properties:
+- Key: RegenAfter
+  Value: 150  # Regenerate after 150 real-time minutes
+
+Regeneration Rules:
+- Timer starts when player last touches destroyed POI
+- Player must leave POI (~200m distance) for timer to start
+- Regeneration overwrites all player changes
+- Works for POIs and Resource Asteroids
+- DO NOT use with buried POIs (terrain becomes indestructible)
+
+================================================================================
+                        6. NEW GAME START CUSTOMIZATION
+================================================================================
+
+FixedPlayerStart Configuration:
+==============================
+
+Escape Pod Start:
+-----------------
+- Mode: Survival
+- Spawn: EscapePod
+- Armor: ArmorLight
+- Items: ["Pistol, 50Caliber:250, Medikit02:3", "Pistol, 50Caliber:150, Medikit02:2", "Pistol, 50Caliber:100, Medikit02:1"]
+
+Base Spawn:
+-----------
+- Mode: Survival  
+- Spawn: Structure
+- Structure: "Wreckage"
+- Armor: ArmorHeavy
+- Items: ["Pistol, 50Caliber:250, Medikit02:3", "Pistol, 50Caliber:150, Medikit02:2", "Pistol, 50Caliber:100, Medikit02:1"]
+
+Personal Container Setup:
+========================
+GroupName: Wreckage
+CountMinMax: [ 1, 1 ]
+PlayerStart: True
+Properties:
+- Key: PersonalContainer
+  Value: "Drill, Chainsaw, BioFuel:4, ConstructorSurvival, AutoMinerCore:5, Core"
+
+Item Format Rules:
+==================
+- Single item: "ItemName"
+- Multiple items: "ItemName:Amount" 
+- Difficulty levels: ["EasyItems", "MediumItems", "HardItems"]
+- Item names from: Content\Extras\localization.csv (first column)
+
+Disabling New Game Start:
+=========================
+Add # to comment out lines:
+# - GroupName: Wreckage
+#   CountMinMax: [ 1, 1 ]
+#   PlayerStart: True
+#   Properties:
+#     - Key: PersonalContainer
+#       Value: "Drill, Chainsaw..."
+
+================================================================================
+                        7. INSTANCE CREATION
+================================================================================
+
+Instance Setup:
+==============
+
+1. Copy playfield folder and rename (e.g., MyInstance)
+2. Add to sectors.yaml:
+   - Coordinates: [-40, 13, -40]
+     Color: 0.7, 0.7, 0.7
+     Icon: Triangle
+     Playfields:
+       - ['0, 0, 0', Instance Orbit, SpaceAsteroids]
+       - ['0, 0, 0', Instance Planet, MyInstance]
+
+Instance Configuration:
+======================
+Instance:
+  Time: 100              # Minutes until completion/kick
+  MaxPlayers: 3          # Maximum players allowed
+  PortalOpen: 120        # Seconds portal stays open
+  Cooldown: 90           # Seconds portal stays closed
+  DropInventory: True    # Clear inventory on kick
+  RestrictToOrigin: 1    # Restrict to specific origin
+  LockOnFaction: True    # Only faction members can use
+  AllowBlueprints: True  # Allow blueprint library use
+
+Instance Types:
+===============
+- Planet Instance: Requires orbit playfield
+- Orbit Instance: No planet required
+- Reference: Copy Instance block from InstanceTaipane or ExamplePlanet
+
+================================================================================
+                        8. ADVANCED CONFIGURATION OPTIONS
+================================================================================
+
+CV Restrictions:
+===============
+Use "AllowCV: false" in any playfield.yaml to deny CV spawning/landing
+
+Map Marker Customization:
+=========================
+Properties:
+- Key: MapMarker
+  Value: Neutral  # Makes POI appear with white HUD marker
+
+Max Prefab Size:
+================
+Setting 0 in dedicated.yaml = no size limit
+
+Faction Warfare Scenarios:
+==========================
+Location: Content\Configuration\FactionWarfare.ecf
+- Define attack scenarios
+- Configure unit compositions
+- Set difficulty levels
+- Control spawn mechanics
+
+Configuration File Activation:
+=============================
+1. Navigate to: Content\Configuration\Config_Example.ecf
+2. Rename to: Config.ecf
+3. RESTART game for changes to take effect
+4. Cannot be included in scenarios (must be in main folder)
+
+================================================================================
+                        9. WORKSHOP UPLOAD REQUIREMENTS
+================================================================================
+
+Upload Limitations:
+==================
+- Maximum size: 10MB
+- Cannot use default savegames as scenarios
+- Must follow proper folder structure
+- All custom content must be in scenario folders
+
+Required Files:
+===============
+- description.txt
+- preview.jpg (1280x720px, JPG)
+- Sectors\Sectors.yaml
+- Custom content in appropriate subfolders
+
+================================================================================
+                        10. PRACTICAL EXAMPLES & TEMPLATES
+================================================================================
+
+Basic Scenario Sectors.yaml Template:
+====================================
+GalaxyMode: true
+Sectors: []
+SolarSystems:
+  - Name: MyCustomSystem
+    Coordinates: [100, 50, 100]
+    StarClass: G2
+    Sectors:
+      - Coordinates: [0, 0, 0]
+        SectorMapType: None
+        Playfields:
+          - ['0,0,0', MyStar, SunRandom, '']
+      - Coordinates: [5, 0, 0]
+        Color: '0.22,0.54,0.69'
+        Playfields:
+          - ['0, 0, 0', MyPlanet, MyCustomPlayfield, 'Human:1']
+
+Basic Playfield.yaml Template:
+==============================
+---
+Description: "My Custom Planet"
+PlanetClass: Temperate
+PlanetType: Custom
+PlayfieldType: Planet
+Difficulty: 3
+Seed: 0
+
+AtmosphereEnabled: True
+AtmosphereColor: "0.674, 0.824, 1.000"
+SkyColor: "0.41, 0.38, 0.35"
+DayLightIntensity: 1.4
+NightLightIntensity: 0.9
+
+POIs:
+  Random:
+    - GroupName: DroneBase
+      CountMinMax: [ 1, 1 ]
+      DroneProb: 0.1
+      DronesMinMax: [ 1, 1 ]
+      ReserveCount: 1
+      TroopTransport: False
+
+    - GroupName: Wreckage
+      CountMinMax: [ 1, 1 ]
+      PlayerStart: True
+      Properties:
+        - Key: PersonalContainer
+          Value: "Drill, Chainsaw, Core"
+
+FixedPlayerStart:
+  - Mode: Survival
+    Spawn: EscapePod
+    Armor: ArmorLight
+    Items: ["Pistol, 50Caliber:100, Medikit02:1"]
+
+================================================================================
+                                TROUBLESHOOTING
+================================================================================
+
+Common Issues:
+==============
+
+1. YAML Syntax Errors:
+   - Check indentation (spaces only, no tabs)
+   - Verify all brackets and quotes are properly closed
+   - Use Notepad++ with "Show all" enabled
+
+2. POI Spawning Failures:
+   - Ensure POI order follows recommended sequence
+   - Check dependencies (NEAR/AVOID relationships)
+   - Verify blueprint names exist in Prefabs folder
+
+3. Scenario Not Loading:
+   - Verify sectors.yaml is in Sectors\ folder
+   - Check folder structure matches requirements
+   - Ensure description.txt and preview.jpg are present
+
+4. Custom Content Not Appearing:
+   - Verify files are in correct scenario subfolders
+   - Check references in sectors.yaml
+   - Ensure custom playfield.yamls reference correct prefabs
+
+================================================================================
+                                BEST PRACTICES
+================================================================================
+
+1. Always backup files before editing
+2. Test changes in small increments
+3. Use descriptive names for custom content
+4. Document custom configurations
+5. Keep scenario size under 10MB for workshop upload
+6. Use version control for complex scenarios
+7. Test on multiple difficulty levels
+8. Validate YAML syntax before testing
+
+================================================================================
+                                RESOURCES
+================================================================================
+
+Official Documentation:
+- Game installation folder: Content\Playfields\EXAMPLEPLANET
+- Game installation folder: Content\Playfields\EXAMPLESPACE
+- Game installation folder: Content\Playfields\InstanceTaipane
+
+File References:
+- Localization: Content\Extras\localization.csv
+- Configuration: Content\Configuration\Config_Example.ecf
+- Faction Warfare: Content\Configuration\FactionWarfare.ecf
+
+================================================================================
+                                CONCLUSION
+================================================================================
+
+This guide provides comprehensive information for creating and editing scenarios
+in Empyrion Galactic Survival. Remember to:
+
+1. Follow YAML syntax rules strictly
+2. Use proper folder structure
+3. Test thoroughly before publishing
+4. Keep backups of all custom content
+5. Reference example files for guidance
+
+For additional support, consult the official Empyrion forums and community resources.
+
+================================================================================
+                                END OF GUIDE
+================================================================================
+
+================================================================================
+                            ADDITIONAL INTERNET RESEARCH
+                            EXTRA INFORMATIE & RESOURCES
+================================================================================
+
+This section contains additional information gathered from internet research,
+community resources, and advanced modding techniques for Empyrion Galactic Survival.
+
+================================================================================
+                        11. STEAM WORKSHOP & COMMUNITY GUIDELINES
+================================================================================
+
+Steam Workshop Upload Process:
+==============================
+
+1. Create your scenario following the folder structure guidelines
+2. Test thoroughly in singleplayer and multiplayer
+3. Compress your scenario folder to ZIP format
+4. Upload to Steam Workshop through Empyrion game client
+5. Add proper tags, descriptions, and screenshots
+6. Set appropriate visibility (Public, Friends Only, Private)
+
+Workshop Best Practices:
+=======================
+
+- Use descriptive titles and detailed descriptions
+- Include multiple screenshots showing different aspects
+- Add proper tags for discoverability (Multiplayer, PvP, PvE, etc.)
+- Respond to user feedback and comments
+- Update scenarios when game patches are released
+- Test compatibility with different game versions
+
+Community Guidelines:
+====================
+
+- Respect intellectual property rights
+- Don't include copyrighted content without permission
+- Test scenarios thoroughly before publishing
+- Provide clear installation instructions
+- Support other creators and provide constructive feedback
+
+================================================================================
+                        12. ADVANCED MODDING TECHNIQUES
+================================================================================
+
+Custom Terrain Generation:
+==========================
+
+Advanced playfield.yaml parameters for terrain customization:
+- BiomeDistribution: Control biome placement and mixing
+- TerrainHeight: Modify planet surface elevation
+- CaveGeneration: Customize cave systems and underground areas
+- WaterLevel: Adjust ocean and lake levels
+- VegetationDensity: Control plant and tree spawning
+
+Custom POI Behavior:
+====================
+
+Advanced POI properties for unique gameplay:
+- CustomFaction: Assign POIs to specific factions
+- SpawnConditions: Control when POIs appear
+- DynamicSpawn: POIs that spawn based on player actions
+- LinkedPOIs: POIs that affect each other's behavior
+- CustomLoot: Unique item drops and rewards
+
+Advanced Faction Warfare:
+=========================
+
+Custom attack scenarios and AI behavior:
+- MultiWaveAttacks: Coordinated assault patterns
+- DynamicDifficulty: AI that adapts to player strength
+- FactionAlliances: Complex diplomatic relationships
+- CustomUnits: Unique enemy types and behaviors
+- StrategicObjectives: Multi-stage attack scenarios
+
+================================================================================
+                        13. MULTIPLAYER & DEDICATED SERVER SETUP
+================================================================================
+
+Dedicated Server Configuration:
+==============================
+
+Key settings in dedicated.yaml for multiplayer scenarios:
+- MaxPlayers: Maximum number of concurrent players
+- Port: Server communication port (default: 30000)
+- QueryPort: Server discovery port (default: 30001)
+- RconPort: Remote console port (default: 30002)
+- SaveInterval: How often to save world data
+- MaxStructures: Limit structures per playfield for performance
+
+Multiplayer Scenario Considerations:
+==================================
+
+- Performance optimization for multiple players
+- Anti-griefing measures and protection systems
+- Balanced resource distribution
+- PvP vs PvE zone management
+- Cross-faction interaction rules
+- Server administration tools and commands
+
+Server Management Tools:
+=======================
+
+- RCON (Remote Console) for server administration
+- Web-based admin panels
+- Automated backup systems
+- Performance monitoring tools
+- Player management and moderation tools
+
+================================================================================
+                        14. COMMUNITY RESOURCES & SUPPORT
+================================================================================
+
+Official Resources:
+==================
+
+- Empyrion Official Forums: https://empyriononline.com/forums/
+- Official Discord Server: Community support and updates
+- Steam Community Hub: Guides, discussions, and mods
+- Official Wiki: Comprehensive game documentation
+- YouTube Official Channel: Tutorials and updates
+
+Community Resources:
+====================
+
+- Empyrion Modding Community Discord
+- Reddit r/EmpyrionGame: Community discussions
+- Steam Workshop: Thousands of user-created scenarios
+- ModDB: Alternative mod hosting platform
+- GitHub: Open-source modding tools and examples
+
+Learning Resources:
+===================
+
+- Video Tutorials: Step-by-step scenario creation guides
+- Modding Workshops: Live community events
+- Documentation Libraries: Community-maintained guides
+- Example Projects: Open-source scenario templates
+- Troubleshooting Forums: Common issues and solutions
+
+================================================================================
+                        15. LATEST GAME UPDATES & FEATURES
+================================================================================
+
+Recent Game Updates (2023-2024):
+================================
+
+- Enhanced POI regeneration system
+- Improved multiplayer performance
+- New building blocks and devices
+- Advanced AI behavior systems
+- Enhanced terrain generation
+- Better modding support and tools
+
+Upcoming Features:
+==================
+
+- Advanced scenario management tools
+- Enhanced multiplayer capabilities
+- Improved modding framework
+- Better performance optimization
+- New content and gameplay mechanics
+
+Compatibility Notes:
+====================
+
+- Always check game version compatibility
+- Test scenarios after major updates
+- Backup scenarios before updating
+- Check community forums for compatibility issues
+- Use version control for complex scenarios
+
+================================================================================
+                        16. PERFORMANCE OPTIMIZATION
+================================================================================
+
+Scenario Performance Tips:
+==========================
+
+- Limit POI counts on large planets
+- Use efficient resource placement
+- Optimize terrain generation parameters
+- Balance visual effects and performance
+- Test with multiple players for stress testing
+
+Server Performance:
+===================
+
+- Monitor CPU and memory usage
+- Optimize structure limits and decay settings
+- Use appropriate save intervals
+- Implement performance monitoring tools
+- Regular server maintenance and cleanup
+
+Client Performance:
+==================
+
+- Optimize texture and model quality
+- Balance visual effects and frame rate
+- Test on different hardware configurations
+- Provide performance settings options
+- Optimize for both high and low-end systems
+
+================================================================================
+                        17. TROUBLESHOOTING & DEBUGGING
+================================================================================
+
+Common Scenario Issues:
+=======================
+
+- YAML syntax errors and validation
+- POI spawning failures and conflicts
+- Resource placement problems
+- Performance issues and optimization
+- Multiplayer synchronization problems
+
+Debugging Tools:
+================
+
+- Game console commands for testing
+- Log file analysis and monitoring
+- Performance profiling tools
+- Community debugging resources
+- Official support channels
+
+Testing Strategies:
+==================
+
+- Incremental testing approach
+- Multiple difficulty level testing
+- Multiplayer stress testing
+- Cross-platform compatibility testing
+- User feedback integration
+
+================================================================================
+                        18. LEGAL & ETHICAL CONSIDERATIONS
+================================================================================
+
+Copyright & Licensing:
+======================
+
+- Respect original game content licenses
+- Don't redistribute copyrighted material
+- Use appropriate Creative Commons licenses
+- Credit original creators and sources
+- Understand fair use guidelines
+
+Community Standards:
+====================
+
+- Follow community guidelines and rules
+- Respect other creators' work
+- Provide constructive feedback
+- Support new modders and creators
+- Maintain positive community atmosphere
+
+Commercial Use:
+===============
+
+- Understand commercial licensing restrictions
+- Check game EULA for commercial use
+- Consider revenue sharing with original creators
+- Consult legal professionals if needed
+- Follow platform-specific commercial guidelines
+
+================================================================================
+                        19. FUTURE DEVELOPMENTS & TRENDS
+================================================================================
+
+Modding Community Trends:
+=========================
+
+- Increased focus on multiplayer scenarios
+- Advanced AI and behavior systems
+- Enhanced visual and audio modding
+- Cross-platform compatibility
+- Community collaboration tools
+
+Technology Developments:
+========================
+
+- Improved modding frameworks
+- Better performance optimization tools
+- Enhanced multiplayer capabilities
+- Advanced content creation tools
+- Integration with external platforms
+
+Community Growth:
+==================
+
+- Expanding modding community
+- More diverse content types
+- Increased collaboration between creators
+- Better support and documentation
+- Growing international community
+
+================================================================================
+                        20. CONCLUSION & NEXT STEPS
+================================================================================
+
+Getting Started:
+================
+
+1. Start with simple scenarios and gradually increase complexity
+2. Join community forums and Discord servers
+3. Study existing scenarios and learn from them
+4. Participate in community events and workshops
+5. Share your work and get feedback
+
+Continued Learning:
+===================
+
+- Follow official game updates and announcements
+- Participate in community discussions
+- Attend modding workshops and events
+- Collaborate with other creators
+- Contribute to community resources
+
+Resources Summary:
+==================
+
+- Official documentation and forums
+- Community-created guides and tutorials
+- Steam Workshop examples and templates
+- YouTube channels and video tutorials
+- Discord servers and community groups
+
+================================================================================
+                                FINAL NOTES
+================================================================================
+
+This comprehensive guide provides everything needed to create and edit scenarios
+in Empyrion Galactic Survival. Remember that the modding community is constantly
+evolving, so stay connected and keep learning from others.
+
+Key Success Factors:
+===================
+
+1. Start simple and build complexity gradually
+2. Test thoroughly at every stage
+3. Engage with the community for support
+4. Keep learning and adapting to new features
+5. Share your knowledge and help others
+
+The Empyrion modding community is one of the most supportive and creative
+communities in gaming. Don't hesitate to ask questions, share your work,
+and contribute to the community's growth.
+
+Happy modding!
+
+================================================================================
+                                END OF COMPLETE GUIDE
+================================================================================

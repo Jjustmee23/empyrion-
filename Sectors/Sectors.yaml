@@ -1,0 +1,1257 @@
+GalaxyMode: true
+Sectors: []
+SolarSystems:
+# ==========
+# Starter System
+# ==========
+  - Name: Ellyon
+    Coordinates: [134, 25, 126]
+    StarClass: G2
+    Sectors:
+      - Coordinates: [0, 0, 0]
+        SectorMapType: None
+        Playfields:
+          - ['0,0,0', Ellyon, SunRandom, '']
+      - Coordinates: [2,0,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Ellyon [Sun Right]', SpaceWarpTarget, '']
+      - Coordinates: [-2,0,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Ellyon [Sun Left]', SpaceWarpTarget, '']
+      - Coordinates: [0,2,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Ellyon [Sun Top]', SpaceWarpTarget, '']
+      - Coordinates: [0,-2,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Ellyon [Sun Bottom]', SpaceWarpTarget, '']
+      - Coordinates: [0,0,2]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Ellyon [Sun Front]', SpaceWarpTarget, '']
+      - Coordinates: [0,0,-2]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Ellyon [Sun Back]', SpaceWarpTarget, '']
+      - Coordinates: [6,0,-19]
+        Color: '0.04,0.8,0.1 : 0,0,0'
+        Playfields:
+          - ['0,0,0', Omicron, Omicron,'', '', '', '']
+          - ['0,0,0', Omicron Sector, OmicronSector, '']
+      - Coordinates: [-10,0,-49]
+        Color: '0.45,0.2,0.09'
+        SectorMapType: GasGiant
+        Playfields:
+          - ['0,0,0', Uabion, GasGiant,'', '', 'JupiterBrown2', '9']
+      - Coordinates: [-10,0,-48]
+        Color: '0,0,0'
+        Playfields:
+          - ['0,0,0', Uabion Moon, Moon,'', '', '', '']
+          - ['0,0,0', Uabion Moon Sector, SpaceOrbitSectorStart, '']
+      - Coordinates: [53, 1, -2]
+        Color: '0.22,0.54,0.69'
+        SectorMapType: GasGiant
+        Playfields:
+          - ['0, 0, 0', Crown, GasGiant,'', '', 'SaturnBlue', '11']
+      - Coordinates: [55, 0, 0]
+        Color: '0.5,0.5,0.5'
+        Playfields:
+          - ['-5600, -5000, 12600', Nexon Prime, GS_Akua,'Human:1', '', '', '']
+          - ['12600, -5000, 6000', Frost Forge, GS_Ningues,'Human:1', '', '', '']          
+          - ['-12600, -5000, -6000', Azure Depths, GS_Skillon,'Human:1', '', '', '']
+          - ['5600, -5000, -12600', Obsidian Peak, GS_Masperon,'Human:1', '', '', '']
+          - ['0,0,0', Crown Sector, GS_CrownSector, '']
+      - Coordinates: [25,0,15]
+        Color: '0.16,0.18,0.51'
+        Playfields:
+          - ['0,0,0', Sienna, StorySnow,'', '', '', '']
+          - ['0,0,0', Sienna Sector, SpaceOrbitSectorStart, '']
+      - Coordinates: [-49,0,-51]
+        Color: '0.49,0.49,0.49 : 0.16,0.18,0.51'
+        Playfields:
+          - ['0,0,0', Symos, BarrenMetal,'', '', '', '']
+          - ['329,11992,-9004', Symos Moon, MoonIce]
+          - ['0,0,0', Symos Sector, SpaceOrbitIlmarinen, '']
+      - Coordinates: [69,0,3]
+        Color: '0.49,0.49,0.49'
+        SectorMapType: AsteroidFieldAttention
+        Playfields:
+          - ['0,0,0', Obipl Rho, SpaceAsteroidFieldStarter,'', '', '', '']
+          
+  - Name: Ashon 
+    Coordinates: [70, 5, 97]
+    StarClass: G3  #G
+    Sectors:
+      - Coordinates: [0, 0, 0]
+        SectorMapType: None
+        Playfields:
+          - ['0,0,0', Ashon, SunRandom, '']
+      - Coordinates: [2,0,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Ashon [Sun Right]', SpaceWarpTarget, '']
+      - Coordinates: [-2,0,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Ashon [Sun Left]', SpaceWarpTarget, '']
+      - Coordinates: [0,2,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Ashon [Sun Top]', SpaceWarpTarget, '']
+      - Coordinates: [0,-2,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Ashon [Sun Bottom]', SpaceWarpTarget, '']
+      - Coordinates: [0,0,2]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Ashon [Sun Front]', SpaceWarpTarget, '']
+      - Coordinates: [0,0,-2]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Ashon [Sun Back]', SpaceWarpTarget, ''] 
+      - Coordinates: [5, 20, 46]  #212
+        Color: '0.57,0.09,0.05 : 0.3,0.06,0.04'
+        Playfields:
+          - ['0, 0, 0', Crystal Haven, GS_Ashon2]
+          - ['6700, 0, 5600', Crystal Haven Moon, GS_Ashon2Moon] 
+          - ['0, 0, 0', Crystal Haven Orbit, GS_Ashon2Orbit, 'Human:1']
+
+  - Name: Frontline Alpha # (Conflict Arid)
+    Coordinates: [155, 26, 140]
+    StarClass: G
+    Sectors:
+      - Coordinates: [0, 0, 0]
+        SectorMapType: None
+        Playfields:
+          - ['0,0,0', Frontline Alpha, SunRandom, '']
+      - Coordinates: [2,0,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Frontline Alpha [Sun Right]', SpaceWarpTarget, '']
+      - Coordinates: [-2,0,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Frontline Alpha [Sun Left]', SpaceWarpTarget, '']
+      - Coordinates: [0,2,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Frontline Alpha [Sun Top]', SpaceWarpTarget, '']
+      - Coordinates: [0,-2,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Frontline Alpha [Sun Bottom]', SpaceWarpTarget, '']
+      - Coordinates: [0,0,2]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Frontline Alpha [Sun Front]', SpaceWarpTarget, '']
+      - Coordinates: [0,0,-2]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Frontline Alpha [Sun Back]', SpaceWarpTarget, '']
+      - Coordinates: [20,-6,1]
+        Playfields:
+          - ['0,0,0', Frontline B, Sun,'', '', 'B', '11']     #Companion
+      - Coordinates: [5, 20, 46] 
+        Color: '0.50, 0.47, 0.04 : 0.16,0.18,0.5'
+        Playfields:
+          - ['0, 0, 0', Contact Point Alpha, GS_ConflictArid,'Human:1', '', '', '']
+          - ['8700, 800, 9600', Nomad Moon, MoonIce2]      # Cobalt (SV warp)
+          - ['0, 0, 0', Contact Alpha Orbit, GS_ConflictArid_Orbit]  
+      - Coordinates: [25,-1,60]
+        Color: '0.16,0.18,0.51'
+        Playfields:
+          - ['0,0,0', Sunrise, Snow,'', '', '', '']  # Neodymium (CV thrusters)  ## Replace with custom playfield later
+          - ['0,0,0', Sunrise Orbit, SpaceEmpty, '']
+      - Coordinates: [0,4,160]
+        Color: '0.5, 0.5, 0.5'
+        Playfields:
+          - ['0,0,0', Mote, NitrogenVolcanic,'', '', '', '']  # Sathium (CV Warp)
+          - ['0,0,0', Mote Orbit, NitrogenIce_Orbit, '']          
+          
+# ==========
+# Mission: Sigma Fulcrum, Glad
+# ==========
+  - Name: Sigma Zero
+    Coordinates: [97, 1, 129]
+    StarClass: SigmaZero
+    Sectors:
+      - Coordinates: [0, 0, 0]
+        SectorMapType: None
+        Playfields:
+          - ['0,0,0', Sigma Zero, SunRandom, '']
+      - Coordinates: [2,0,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Sigma Zero [Sun Right]', SpaceWarpTarget, '']
+      - Coordinates: [-2,0,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Sigma Zero [Sun Left]', SpaceWarpTarget, '']
+      - Coordinates: [0,2,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Sigma Zero [Sun Top]', SpaceWarpTarget, '']
+      - Coordinates: [0,-2,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Sigma Zero [Sun Bottom]', SpaceWarpTarget, '']
+      - Coordinates: [0,0,2]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Sigma Zero [Sun Front]', SpaceWarpTarget, '']
+      - Coordinates: [0,0,-2]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Sigma Zero [Sun Back]', SpaceWarpTarget, '']
+      - Coordinates: [57,0,-20]
+        Color: '0.49,0.49,0.49'
+        SectorMapType: AsteroidFieldRich
+        Playfields:
+          - ['0,0,0', Sigma Beta, SpaceAsteroidFieldGLaD,'', '', '', '']
+      - Coordinates: [-1,0,8]
+        Color: '0.7,0.5,0'
+        SectorMapType: Station
+        Playfields:
+          - ['0,0,0', Sigma Fulcrum, SpaceAsteroidFieldSigma,'', '', '', '']
+
+# ==========
+# Mission
+# ==========
+  - Name: Unrir
+    Coordinates: [104, -3, 139]
+    StarClass: MiningOperation
+    Sectors:
+      - Coordinates: [0, 0, 0]
+        SectorMapType: None
+        Playfields:
+          - ['0,0,0', Unrir, SunRandom, '']
+      - Coordinates: [4,0,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Unrir [Sun Right]', SpaceWarpTarget, '']
+      - Coordinates: [-4,0,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Unrir [Sun Left]', SpaceWarpTarget, '']
+      - Coordinates: [0,4,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Unrir [Sun Top]', SpaceWarpTarget, '']
+      - Coordinates: [0,-4,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Unrir [Sun Bottom]', SpaceWarpTarget, '']
+      - Coordinates: [0,0,4]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Unrir [Sun Front]', SpaceWarpTarget, '']
+      - Coordinates: [0,0,-4]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Unrir [Sun Back]', SpaceWarpTarget, '']
+      - Coordinates: [3,0,-72]
+        Color: '0.5,0.32,0.04'
+        Playfields:
+          - ['0,0,0', Lilym, DesertBurnt,'', '', '', '']
+          - ['0,0,0', Lilym Sector, SpaceOrbitMiningOperations, '']
+      - Coordinates: [-44,1,63]
+        Color: '0.04,0.5,0.1'
+        Playfields:
+          - ['0,0,0', Raeelzesc, TemperatePlateauStory,'', '', '', '']
+          - ['0,0,0', Raeelzesc Sector, SpaceOrbit, '']
+      - Coordinates: [-17,0,8]
+        Color: '0.49,0.49,0.49'
+        SectorMapType: AsteroidFieldRich
+        Playfields:
+          - ['0,0,0', Unrir AF1, SpaceAsteroidFieldAbyssalVessel,'', '', '', ''] 
+
+# ==========
+# Mission
+# ==========
+  - Name: Onytrya
+    Coordinates: [161, 5, 152]
+    StarClass: HighSecurity
+    Sectors:
+      - Coordinates: [0, 0, 0]
+        SectorMapType: None
+        Playfields:
+          - ['0,0,0', Onytrya, SunRandom, '']
+      - Coordinates: [4,0,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Onytrya [Sun Right]', SpaceWarpTarget, '']
+      - Coordinates: [-4,0,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Onytrya [Sun Left]', SpaceWarpTarget, '']
+      - Coordinates: [0,4,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Onytrya [Sun Top]', SpaceWarpTarget, '']
+      - Coordinates: [0,-4,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Onytrya [Sun Bottom]', SpaceWarpTarget, '']
+      - Coordinates: [0,0,4]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Onytrya [Sun Front]', SpaceWarpTarget, '']
+      - Coordinates: [0,0,-4]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Onytrya [Sun Back]', SpaceWarpTarget, '']
+      - Coordinates: [10,0,-4]
+        Color: '0.49,0.49,0.49'
+        SectorMapType: AsteroidFieldAttention
+        Playfields:
+          - ['0,0,0', High Security Prison, SpaceAsteroidFieldHighSecurity,'', '', '', ''] 
+
+# ==========          
+# Talon Home system ("modern Talon")
+# ==========
+  - Name: Tal
+    Coordinates: [0, 0, 0]
+    StarClass: TalonAr
+  #  HideFromGalaxy: true        #change with CA build 4048
+    HideFromMap: true          #change with CA build 4048
+    HideFromSearch: true       #change with CA build 4048
+    Sectors:
+      - Coordinates: [0, 0, 0]
+        SectorMapType: None
+        Playfields:
+          - ['0,0,0', Tal, SunRandom, '']
+      - Coordinates: [2,0,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Tal [Sun Right]', SpaceWarpTarget, '']
+      - Coordinates: [-2,0,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Tal [Sun Left]', SpaceWarpTarget, '']
+      - Coordinates: [0,2,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Tal [Sun Top]', SpaceWarpTarget, '']
+      - Coordinates: [0,-2,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Tal [Sun Bottom]', SpaceWarpTarget, '']
+      - Coordinates: [0,0,2]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Tal [Sun Front]', SpaceWarpTarget, '']
+      - Coordinates: [0,0,-2]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Tal [Sun Back]', SpaceWarpTarget, '']
+      - Coordinates: [-30,0,-25]
+        Color: '0.04,0.75,0.74 : 0,0,0'
+        Playfields:
+          - ['0,0,0', Talonar, HomeworldTalonAr,'', '', '', '']
+          - ['0,0,0', Talonar Sector, HomeworldTalonArSpaceOrbit, ''] 
+          
+# ==========
+# Legacy
+# ==========
+  - Name: Yara
+    Coordinates: [400, 75, 100]
+    StarClass: Unknown
+    Sectors:
+      - Coordinates: [0, 0, 0]
+        SectorMapType: None
+        Playfields:
+          - ['0,0,0', Yara, SunRandom, '']
+      - Coordinates: [7,0,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Yara [Sun Right]', SpaceWarpTarget, '']
+      - Coordinates: [-7,0,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Yara [Sun Left]', SpaceWarpTarget, '']
+      - Coordinates: [0,7,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Yara [Sun Top]', SpaceWarpTarget, '']
+      - Coordinates: [0,-7,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Yara [Sun Bottom]', SpaceWarpTarget, '']
+      - Coordinates: [0,0,7]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Yara [Sun Front]', SpaceWarpTarget, '']
+      - Coordinates: [0,0,-7]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Yara [Sun Back]', SpaceWarpTarget, '']
+      - Coordinates: [1,-6,-16]
+        Playfields:
+          - ['0,0,0', YaraB, Sun,'', '', 'BH', '7']    #Companion
+      - Coordinates: [-110,0,-72]
+        Color: '0.38,0.27,0.4'
+        SectorMapType: GasGiant
+        Playfields:
+          - ['0,0,0', Arumanch, GasGiant,'', '', 'JupiterPurple', '9']
+      - Coordinates: [-85,1,-28]
+        Color: '0.04,0.75,0.74'
+        Playfields:
+          - ['0,0,0', Mivoi, HomeworldLegacy,'', '', '', '']
+          - ['0,0,0', Mivoi Sector, HomeworldLegacySpaceOrbit, '']
+      - Coordinates: [-125,0,45]
+        Color: '0.49,0.49,0.49'
+        SectorMapType: AsteroidFieldRich
+        Playfields:
+          - ['0,0,0', Iteunevyr Phi, SpaceAsteroidFieldLegacy,'', '', '', '']
+      - Coordinates: [87,0,-106]
+        Color: '0.49,0.49,0.49'
+        SectorMapType: AsteroidFieldAttention
+        Playfields:
+          - ['0,0,0', Ornincian Omicron, SpaceAsteroidFieldLegacy,'', '', '', '']
+      - Coordinates: [-208,1,-127]
+        Color: '0.49,0.49,0.49'
+        SectorMapType: AsteroidFieldRich
+        Playfields:
+          - ['0,0,0', Rimmine Alpha, SpaceAsteroidFieldLegacy,'', '', '', '']
+      - Coordinates: [6,0,13]
+        Color: '0.49,0.49,0.49'
+        SectorMapType: AsteroidFieldRich
+        Playfields:
+          - ['0,0,0', Aearoeure Alpha, SpaceAsteroidFieldLegacy,'', '', '', '']
+      - Coordinates: [-27,1,171]
+        Color: '0.49,0.49,0.49'
+        SectorMapType: AsteroidFieldRich
+        Playfields:
+          - ['0,0,0', Gaytan Alpha, SpaceAsteroidFieldLegacy,'', '', '', '']
+      - Coordinates: [172,1,119]
+        Color: '0.49,0.49,0.49'
+        SectorMapType: AsteroidFieldRich
+        Playfields:
+          - ['0,0,0', Ishescix Omega, SpaceAsteroidFieldLegacy,'', '', '', '']
+
+# ==========
+# Zirax Empire Home System
+# Each House = one Moon or Gas Giant? System can look "space terra formed"!
+# ==========
+  - Name: Bokore
+    Coordinates: [130, 0, 207]
+    StarClass: ZiraxEmpire
+    Sectors:
+      - Coordinates: [0, 0, 0]
+        SectorMapType: None
+        Playfields:
+          - ['0,0,0', Bokore, SunRandom, '']
+      - Coordinates: [4,0,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Bokore [Sun Right]', SpaceWarpTarget, '']
+      - Coordinates: [-4,0,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Bokore [Sun Left]', SpaceWarpTarget, '']
+      - Coordinates: [0,4,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Bokore [Sun Top]', SpaceWarpTarget, '']
+      - Coordinates: [0,-4,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Bokore [Sun Bottom]', SpaceWarpTarget, '']
+      - Coordinates: [0,0,4]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Bokore [Sun Front]', SpaceWarpTarget, '']
+      - Coordinates: [0,0,-4]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Bokore [Sun Back]', SpaceWarpTarget, '']
+      - Coordinates: [0,0,50]
+        Color: '0.04,0.5,0.1 : 0.16,0.18,0.51'
+        Playfields:
+          - ['0,0,0', Zeyhines, HomeworldZirax,'', '', '', '']
+          - ['0,0,0', Zeyhines Sector, HomeworldZiraxSpaceOrbit, '']
+          
+# ==========          
+# Kriel Empire Home System
+# ==========
+  - Name: Tartipho
+    Coordinates: [207, 1, 92]
+    StarClass: KrielEmpire
+    Sectors:
+      - Coordinates: [0, 0, 0]
+        SectorMapType: None
+        Playfields:
+          - ['0,0,0', Tartipho, SunRandom, '']
+      - Coordinates: [1,0,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Tartipho [Sun Right]', SpaceWarpTarget, '']
+      - Coordinates: [-1,0,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Tartipho [Sun Left]', SpaceWarpTarget, '']
+      - Coordinates: [0,1,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Tartipho [Sun Top]', SpaceWarpTarget, '']
+      - Coordinates: [0,-1,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Tartipho [Sun Bottom]', SpaceWarpTarget, '']
+      - Coordinates: [0,0,1]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Tartipho [Sun Front]', SpaceWarpTarget, '']
+      - Coordinates: [0,0,-1]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Tartipho [Sun Back]', SpaceWarpTarget, '']
+      - Coordinates: [-31,0,28]
+        Color: '0.04,0.75,0.74 : 0.57,0.09,0.05'
+        Playfields:
+          - ['0,0,0', Finelzios, HomeworldKriel,'', '', '', '']
+          - ['0,0,0', Finelzios Sector, HomeworldKrielSpaceOrbit, '']
+
+# ==========          
+# UCH home system (New Terra)
+# ==========
+  - Name: Phoenix
+    Coordinates: [82, 10, -8]
+    StarClass: UCHHNewTerra
+    Sectors:
+      - Coordinates: [0, 0, 0]
+        SectorMapType: None
+        Playfields:
+          - ['0,0,0', Phoenix, SunRandom, '']
+      - Coordinates: [2,0,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Phoenix [Sun Right]', SpaceWarpTarget, '']
+      - Coordinates: [-2,0,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Phoenix [Sun Left]', SpaceWarpTarget, '']
+      - Coordinates: [0,2,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Phoenix [Sun Top]', SpaceWarpTarget, '']
+      - Coordinates: [0,-2,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Phoenix [Sun Bottom]', SpaceWarpTarget, '']
+      - Coordinates: [0,0,2]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Phoenix [Sun Front]', SpaceWarpTarget, '']
+      - Coordinates: [0,0,-2]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Phoenix [Sun Back]', SpaceWarpTarget, '']
+      #2nd Sun
+      - Coordinates: [2,-8,0]
+        Playfields:
+          - ['0,0,0', Halcyon, Sun,'', '', 'K', '10']
+
+      # Planets ====
+      - Coordinates: [25,5,3]     # Closer to double stars
+        Color: '0.57, 0.09, 0.05'
+        Playfields:
+          - ['0, 0, 0', Cherufe, HomeworldUCH_Volcanic]   # LavaNascent world - variant
+          - ['0, 0, 0', Cherufe Orbit, HomeworldUCH_VolcanicOrbit]  # Warm orbit
+
+     # === Gas giant & moons ==== 
+      - Coordinates: [-49,0,10]
+        Color: '0.22,0.54,0.69'
+        SectorMapType: GasGiant
+        Playfields:
+          - ['0,0,0', Themis, GasGiant,'', '', 'JupiterBlue', '9']
+
+      - Coordinates: [-48,0,10]     # At nightfall close to gas giant
+        Color: '0.04, 0.75, 0.74'  # 'Alien' playfield color - - This is a 'VolcanicPlateau' playfield
+        Playfields:
+          - ['0, 0, 0', New Terra, HomeworldUCH] # UCH homeworld
+          - ['0, 0, 0', New Terra Orbit, HomeworldUCH_SpaceOrbit]
+          - ['-5500, 500, -10000', Boreas, HomeworldUCH_Moon1]  # MoonIce2 - variant
+
+      - Coordinates: [58,0,-30]
+        Color: '0.7,0.5,0'
+        SectorMapType: Station
+        Playfields:
+          - ['0,0,0', Listening Outpost, HomeworldUCH_Outpost]
+          
+# ==========          
+# Arkenian Republic Home System  (Polaris)
+# ==========
+  - Name: Arkenia
+    Coordinates: [95, 14, 43]
+    StarClass: ArkenianRepublic
+    Sectors:
+      - Coordinates: [0, 0, 0]
+        SectorMapType: None
+        Playfields:
+          - ['0,0,0', Arkenia, SunRandom, '']
+      - Coordinates: [4,0,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Arkenia [Sun Right]', SpaceWarpTarget, '']
+      - Coordinates: [-4,0,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Arkenia [Sun Left]', SpaceWarpTarget, '']
+      - Coordinates: [0,4,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Arkenia [Sun Top]', SpaceWarpTarget, '']
+      - Coordinates: [0,-4,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Arkenia [Sun Bottom]', SpaceWarpTarget, '']
+      - Coordinates: [0,0,4]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Arkenia [Sun Front]', SpaceWarpTarget, '']
+      - Coordinates: [0,0,-4]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Arkenia [Sun Back]', SpaceWarpTarget, '']
+      - Coordinates: [69,1,-51]
+        Color: '0.68,0.56,0.26'
+        SectorMapType: GasGiant
+        Playfields:
+          - ['0,0,0', Ourechoao, GasGiant,'', '', 'JupiterYellow', '9']
+      - Coordinates: [-60,0,-50]
+        Color: '0.04,0.75,0.74 : 0,0,0'
+        Playfields:
+          - ['0,0,0', Arkenia Prime, HomeworldArkenian,'', '', '', '']
+          - ['10515,10696,17', Arkenia Prime Moon, HomeworldArkenianMoon]
+          - ['0,0,0', Arkenia Prime Sector, HomeworldArkenianSpaceOrbit, '']
+ 
+# ==========
+# Prenn Home System (Trader)
+# ==========
+  - Name: Beeli Gamma
+    Coordinates: [15, 16 , 122]
+    StarClass: PrennTradingFederation
+    Sectors:
+      - Coordinates: [0, 0, 0]
+        SectorMapType: None
+        Playfields:
+          - ['0,0,0', Beeli Gamma, SunRandom, '']
+      - Coordinates: [4,0,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Beeli Gamma [Sun Right]', SpaceWarpTarget, '']
+      - Coordinates: [-4,0,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Beeli Gamma [Sun Left]', SpaceWarpTarget, '']
+      - Coordinates: [0,4,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Beeli Gamma [Sun Top]', SpaceWarpTarget, '']
+      - Coordinates: [0,-4,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Beeli Gamma [Sun Bottom]', SpaceWarpTarget, '']
+      - Coordinates: [0,0,4]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Beeli Gamma [Sun Front]', SpaceWarpTarget, '']
+      - Coordinates: [0,0,-4]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Beeli Gamma [Sun Back]', SpaceWarpTarget, '']
+      - Coordinates: [73,0,-39]
+        Color: '0.38,0.27,0.4'
+        SectorMapType: GasGiant
+        Playfields:
+          - ['0,0,0', Digre, GasGiant,'', '', 'JupiterPurple', '9']
+      - Coordinates: [-53,0,-61]
+        Color: '0.38,0.27,0.4'
+        SectorMapType: GasGiantRing
+        Playfields:
+          - ['0,0,0', ACC I, GasGiant,'', '', 'SaturnPurple', '11']
+      - Coordinates: [81,0,41]
+        Color: '0.04,0.5,0.1'
+        Playfields:
+          - ['0,0,0', Uavi, HomeworldPrenn,'', '', '', '']
+          - ['0,0,0', Uavi Sector, HomeworldPrennSpaceOrbit, '']
+          
+# ==========          
+# Tresari Home System
+# ==========
+  - Name: Epatria Prime
+    Coordinates: [103, -66, 139]
+    StarClass: Tresari          #O Type star
+    Sectors:
+      - Coordinates: [0, 0, 0]
+        SectorMapType: None
+        Playfields:
+          - ['0,0,0', Epatria Prime, SunRandom, '']
+      - Coordinates: [8,0,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Epatria Prime [Sun Right]', SpaceWarpTarget, '']
+      - Coordinates: [-8,0,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Epatria Prime [Sun Left]', SpaceWarpTarget, '']
+      - Coordinates: [0,8,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Epatria Prime [Sun Top]', SpaceWarpTarget, '']
+      - Coordinates: [0,-8,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Epatria Prime [Sun Bottom]', SpaceWarpTarget, '']
+      - Coordinates: [0,0,8]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Epatria Prime [Sun Front]', SpaceWarpTarget, '']
+      - Coordinates: [0,0,-8]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Epatria Prime [Sun Back]', SpaceWarpTarget, '']
+      - Coordinates: [1,-6,-20]
+        Playfields:
+          - ['0,0,0', Epatria Minor, Sun,'', '', 'K', '10']     #Companion
+      - Coordinates: [15,0,0]
+        Color: '0.42,0.54,0.31'
+        SectorMapType: GasGiant
+        Playfields:
+          - ['0,0,0', LSEU 615 I, GasGiant,'', '', 'NeptuneGreen', '8']
+      - Coordinates: [-5,0,-48]
+        Color: '0.04,0.5,0.1'
+        Playfields:
+          - ['0,0,0', Nyxia, HomeworldTresari,'', '', '', '']      # AlienTemperate (custom @Escarli)
+          - ['1286,12853,7624', Jewel, HomeworldTresariMoon1]      #forest
+          - ['14593,-1384,-3183', Peace, HomeworldTresariMoon2]      #forest
+          - ['6479,-7240,11428', Prosperity, HomeworldTresariMoon3]      #forest
+          - ['0,0,0', Nyxia Sector, HomeworldTresariSpaceOrbit, '']
+
+# ==========
+# Karana Home System
+# ==========
+  - Name: Rama
+    Coordinates: [-310, 0, 22]
+    StarClass: Karana                     #M Type star 
+    Sectors:
+      - Coordinates: [0, 0, 0]
+        SectorMapType: None
+        Playfields:
+          - ['0,0,0', Rama, SunRandom, '']
+      - Coordinates: [1,0,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Rama [Sun Right]', SpaceWarpTarget, '']
+      - Coordinates: [-1,0,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Rama [Sun Left]', SpaceWarpTarget, '']
+      - Coordinates: [0,1,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Rama [Sun Top]', SpaceWarpTarget, '']
+      - Coordinates: [0,-1,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Rama [Sun Bottom]', SpaceWarpTarget, '']
+      - Coordinates: [0,0,1]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Rama [Sun Front]', SpaceWarpTarget, '']
+      - Coordinates: [0,0,-1]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Rama [Sun Back]', SpaceWarpTarget, '']
+      - Coordinates: [39,0,-26]
+        Color: '0.04,0.5,0.1 : 0.3,0.06,0.04 : 0.57,0.09,0.05'
+        Playfields:
+          - ['0,0,0', Krichanda, HomeworldKarana,'', '', '', '']
+          - ['8204,-12334,2360', Dachri, HomeworldKaranaMoon]
+          - ['0,0,0', Krichanda Sector, HomeworldKaranaSpaceOrbit, '']
+
+# ==========
+# Pirates Home System
+# ==========
+  - Name: Succuvarte
+   # Coordinates: [91, 2, 92]
+    Coordinates: [73, 4, 109]
+    StarClass: PiratesLair
+    Sectors:
+      - Coordinates: [0, 0, 0]
+        SectorMapType: None
+        Playfields:
+          - ['0,0,0', Succuvarte, SunRandom, '']
+      - Coordinates: [1,0,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Succuvarte [Sun Right]', SpaceWarpTarget, '']
+      - Coordinates: [-1,0,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Succuvarte [Sun Left]', SpaceWarpTarget, '']
+      - Coordinates: [0,1,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Succuvarte [Sun Top]', SpaceWarpTarget, '']
+      - Coordinates: [0,-1,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Succuvarte [Sun Bottom]', SpaceWarpTarget, '']
+      - Coordinates: [0,0,1]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Succuvarte [Sun Front]', SpaceWarpTarget, '']
+      - Coordinates: [0,0,-1]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Succuvarte [Sun Back]', SpaceWarpTarget, '']
+      - Coordinates: [0,2,0]
+        Color: '0.5,0.32,0.04'
+        Playfields:
+          - ['0,0,0', Botarokk, HomeworldPirates,'', '', '', '']
+          - ['0,0,0', Botarokk Sector, HomeworldPiratesSpaceOrbit, '']
+      - Coordinates: [-65,1,120]
+        Color: '0.49,0.49,0.49'
+        SectorMapType: AsteroidFieldAttention
+        Playfields:
+          - ['0,0,0', Abado Vega, SpaceAsteroidFieldPirates,'', '', '', '']
+      - Coordinates: [0,0,-1]
+        Color: '0.7,0.5,0'
+        SectorMapType: Station
+        Playfields:
+          - ['0,0,0', Zelphil Delta, SpaceAsteroidFieldPirates,'', '', '', '']
+          
+# ==========          
+# Tesch Home System
+# ==========
+  - Name: Bal Surodda
+    Coordinates: [-93, 20, -17]
+    StarClass: TESCH
+    Sectors:
+      - Coordinates: [0, 0, 0]
+        SectorMapType: None
+        Playfields:
+          - ['0,0,0', Bal Surodda, SunRandom, '']
+      - Coordinates: [1,0,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Bal Surodda [Sun Right]', SpaceWarpTarget, '']
+      - Coordinates: [-1,0,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Bal Surodda [Sun Left]', SpaceWarpTarget, '']
+      - Coordinates: [0,1,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Bal Surodda [Sun Top]', SpaceWarpTarget, '']
+      - Coordinates: [0,-1,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Bal Surodda [Sun Bottom]', SpaceWarpTarget, '']
+      - Coordinates: [0,0,1]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Bal Surodda [Sun Front]', SpaceWarpTarget, '']
+      - Coordinates: [0,0,-1]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Bal Surodda [Sun Back]', SpaceWarpTarget, '']
+      - Coordinates: [-117,0,-60]
+        Color: '0.45,0.2,0.09'
+        SectorMapType: GasGiant
+        Playfields:
+          - ['0,0,0', QFF 5790 I, GasGiant,'', '', 'JupiterBrown2', '9']
+      - Coordinates: [-8,0,24]
+        Color: '0.16,0.18,0.51'
+        Playfields:
+          - ['0,0,0', Fenaror, HomeworldTesch,'', '', '', '']
+          - ['0,0,0', Fenaror Sector, HomeworldTeschSpaceOrbit, '']
+
+# ==========          
+# Brotherhood of Farr Home System
+# ==========
+  - Name: Ixia
+    Coordinates: [-168, 65, 270]
+    StarClass: BrotherhoodOfFarr
+    Sectors:
+      - Coordinates: [0, 0, 0]
+        SectorMapType: None
+        Playfields:
+          - ['0,0,0', Ixia, SunRandom, '']
+      - Coordinates: [4,0,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Ixia [Sun Right]', SpaceWarpTarget, '']
+      - Coordinates: [-4,0,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Ixia [Sun Left]', SpaceWarpTarget, '']
+      - Coordinates: [0,4,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Ixia [Sun Top]', SpaceWarpTarget, '']
+      - Coordinates: [0,-4,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Ixia [Sun Bottom]', SpaceWarpTarget, '']
+      - Coordinates: [0,0,4]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Ixia [Sun Front]', SpaceWarpTarget, '']
+      - Coordinates: [0,0,-4]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Ixia [Sun Back]', SpaceWarpTarget, '']
+      - Coordinates: [42,0,-11]
+        Color: '0.5,0.47,0.04'
+        Playfields:
+          - ['0,0,0', Parthix, HomeworldFarr,'', '', '', '']
+          - ['0,0,0', Parthix Sector, HomeworldFarrSpaceOrbit, '']
+
+# ==========
+# ARC Home System
+# ==========
+  - Name: Cinas Mojiras
+    Coordinates: [18, 219, 192]
+    StarClass: ARC
+    Sectors:
+      - Coordinates: [0, 0, 0]
+        SectorMapType: None
+        Playfields:
+          - ['0,0,0', Cinas Mojiras, SunRandom, '']
+      - Coordinates: [2,0,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Cinas Mojiras [Sun Right]', SpaceWarpTarget, '']
+      - Coordinates: [-2,0,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Cinas Mojiras [Sun Left]', SpaceWarpTarget, '']
+      - Coordinates: [0,2,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Cinas Mojiras [Sun Top]', SpaceWarpTarget, '']
+      - Coordinates: [0,-2,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Cinas Mojiras [Sun Bottom]', SpaceWarpTarget, '']
+      - Coordinates: [0,0,2]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Cinas Mojiras [Sun Front]', SpaceWarpTarget, '']
+      - Coordinates: [0,0,-2]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Cinas Mojiras [Sun Back]', SpaceWarpTarget, '']
+      - Coordinates: [63,1,-63]
+        Color: '0.36,0.3,0.56'
+        SectorMapType: GasGiant
+        Playfields:
+          - ['0,0,0', Proibel, GasGiant,'', '', 'NeptunePurple', '8']
+      - Coordinates: [-18,0,-93]
+        Color: '0.49,0.49,0.49'
+        Playfields:
+          - ['0,0,0', Nexus Core, HomeworldARC,'', '', '', '']
+          - ['0,0,0', Nexus Core Sector, HomeworldARCSpaceOrbit, '']
+          
+# ==========          
+# Wastelanders Home System
+# ==========
+           
+  - Name: Fukushu
+    Coordinates: [-40, 16, 93]
+    StarClass: Wastelanders
+    Sectors:
+      - Coordinates: [0, 0, 0]
+        SectorMapType: None
+        Playfields:
+          - ['0,0,0', Fukushu, SunRandom, '']
+      - Coordinates: [2,0,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Fukushu [Sun Right]', SpaceWarpTarget, '']
+      - Coordinates: [-2,0,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Fukushu [Sun Left]', SpaceWarpTarget, '']
+      - Coordinates: [0,2,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Fukushu [Sun Top]', SpaceWarpTarget, '']
+      - Coordinates: [0,-2,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Fukushu [Sun Bottom]', SpaceWarpTarget, '']
+      - Coordinates: [0,0,2]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Fukushu [Sun Front]', SpaceWarpTarget, '']
+      - Coordinates: [0,0,-2]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Fukushu [Sun Back]', SpaceWarpTarget, '']          
+      - Coordinates: [2, 1, 12]
+        Color: '0.97,0.97,1'
+        SectorMapType: Sun
+        Playfields:
+          - ['0,0,0', FukushuB, SunRandom, '', '', 'A', '11']
+      - Coordinates: [2,1,65]
+        Color: '0.49,0.49,0.49'
+        Playfields:
+          - ['0,0,0', Suibun, HomeworldWastelanders,'', '', '', '']
+          - ['0,0,0', Suibun Sector, HomeworldWastelandersSpaceOrbit, '']
+
+# ==========
+# Ravagers Home System
+# ==========
+
+  - Name: Vanara
+    Coordinates: [77, 77, 62]
+    StarClass: Ravagers
+    Sectors:
+      - Coordinates: [0, 0, 0]
+        SectorMapType: None
+        Playfields:
+          - ['0,0,0', Vanara, SunRandom, '']
+      - Coordinates: [7,0,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Vanara [Sun Right]', SpaceWarpTarget, '']
+      - Coordinates: [-7,0,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Vanara [Sun Left]', SpaceWarpTarget, '']
+      - Coordinates: [0,7,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Vanara [Sun Top]', SpaceWarpTarget, '']
+      - Coordinates: [0,-7,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Vanara [Sun Bottom]', SpaceWarpTarget, '']
+      - Coordinates: [0,0,7]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Vanara [Sun Front]', SpaceWarpTarget, '']
+      - Coordinates: [0,0,-7]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Vanara [Sun Back]', SpaceWarpTarget, '']
+      - Coordinates: [-134,1,6]
+        Color: '0.42,0.54,0.31'
+        SectorMapType: GasGiant
+        Playfields:
+          - ['0,0,0', Ibsyr, GasGiant,'', '', 'NeptuneGreen', '8']
+      - Coordinates: [50,1,-7]
+        Color: '0.04,0.5,0.1'
+        Playfields:
+          - ['0,0,0', Vanara II, HomeworldRavagers,'', '', '', '']
+          - ['0,0,0', Vanara II Sector, HomeworldRavagersSpaceOrbit, '']
+          - ['-852,4025,5852', Vanara II Moon, HomeworldRavagersMoon]
+
+# ==========
+# Helios Group Home System
+# ==========
+
+  - Name: Azuldeus
+    Coordinates: [32, -2, 34]
+    StarClass: Helios
+    Sectors:
+      - Coordinates: [0, 0, 0]
+        SectorMapType: None
+        Playfields:
+          - ['0,0,0', Azuldeus, SunRandom, '']
+      - Coordinates: [7,0,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Azuldeus [Sun Right]', SpaceWarpTarget, '']
+      - Coordinates: [-7,0,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Azuldeus [Sun Left]', SpaceWarpTarget, '']
+      - Coordinates: [0,7,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Azuldeus [Sun Top]', SpaceWarpTarget, '']
+      - Coordinates: [0,-7,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Azuldeus [Sun Bottom]', SpaceWarpTarget, '']
+      - Coordinates: [0,0,7]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Azuldeus [Sun Front]', SpaceWarpTarget, '']
+      - Coordinates: [0,0,-7]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Azuldeus [Sun Back]', SpaceWarpTarget, '']
+      - Coordinates: [164,1,88]
+        Color: '0.38,0.27,0.4'
+        SectorMapType: GasGiantRing
+        Playfields:
+          - ['0,0,0', Eaen, GasGiant,'', '', 'SaturnPurple', '11']
+      - Coordinates: [-80,1,-155]
+        Color: '0.45,0.2,0.09'
+        SectorMapType: GasGiant
+        Playfields:
+          - ['0,0,0', Lyaramaae, GasGiant,'', '', 'JupiterBrown2', '9']
+      - Coordinates: [-55,1,106]
+        Color: '0.16,0.18,0.51'
+        Playfields:
+          - ['0,0,0', Tavos, Snow,'', '', '', '']
+          - ['0,0,0', Tavos Sector, SpaceOrbit, '']
+          - ['-9954,5474,-9796', Tavos Moon, Moon]
+
+# ==========
+# Containment Area 13b-7
+# ==========
+  - Name: Validheneg
+    Coordinates: [90, 0, 79]
+    StarClass: ContAr13b7
+    Sectors:
+      - Coordinates: [0, 0, 0]
+        SectorMapType: None
+        Playfields:
+          - ['0,0,0', Validheneg, SunRandom, '']
+      - Coordinates: [2,0,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Validheneg [Sun Right]', SpaceWarpTarget, '']
+      - Coordinates: [-2,0,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Validheneg [Sun Left]', SpaceWarpTarget, '']
+      - Coordinates: [0,2,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Validheneg [Sun Top]', SpaceWarpTarget, '']
+      - Coordinates: [0,-2,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Validheneg [Sun Bottom]', SpaceWarpTarget, '']
+      - Coordinates: [0,0,2]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Validheneg [Sun Front]', SpaceWarpTarget, '']
+      - Coordinates: [0,0,-2]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Validheneg [Sun Back]', SpaceWarpTarget, '']
+      - Coordinates: [-4,0,-2]
+        Color: '0.49,0.49,0.49'
+        SectorMapType: AsteroidFieldJunkyard
+        Playfields:
+          - ['0,0,0', Idehemon Alpha, SpaceAsteroidFieldHyperion,'', '', '', '']
+      - Coordinates: [-103,1,146]
+        Color: '0.7,0.5,0'
+        SectorMapType: Station
+        Playfields:
+          - ['0,0,0', Nuvoure Phi, SpaceEmptyBeacon,'', '', '', '']
+          
+# ==========
+# Containment Area 1a-95
+# ==========
+  - Name: Eilina Beta
+    Coordinates: [95, 31, 107]
+    StarClass: ContAr1a95
+    Sectors:
+      - Coordinates: [0, 0, 0]
+        SectorMapType: None
+        Playfields:
+          - ['0,0,0', Eilina Beta, SunRandom, '']
+      - Coordinates: [1,0,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Eilina Beta [Sun Right]', SpaceWarpTarget, '']
+      - Coordinates: [-1,0,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Eilina Beta [Sun Left]', SpaceWarpTarget, '']
+      - Coordinates: [0,1,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Eilina Beta [Sun Top]', SpaceWarpTarget, '']
+      - Coordinates: [0,-1,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Eilina Beta [Sun Bottom]', SpaceWarpTarget, '']
+      - Coordinates: [0,0,1]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Eilina Beta [Sun Front]', SpaceWarpTarget, '']
+      - Coordinates: [0,0,-1]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Eilina Beta [Sun Back]', SpaceWarpTarget, '']
+      - Coordinates: [-50,0,30]
+        Color: '0.38,0.27,0.4'
+        SectorMapType: GasGiant
+        Playfields:
+          - ['0,0,0', Folantan, GasGiant,'', '', 'JupiterPurple', '9']
+      - Coordinates: [-50,-1,30]
+        Color: '0.16,0.18,0.51'
+        Playfields:
+          - ['0,0,0', Folantan Moon, ContAr1a95GasGiantMoon,'', '', '', '']
+          - ['0,0,0', Folantan Moon Sector, ContAr1a95GasGiantSpaceOrbit, '']
+      - Coordinates: [44,0,11]
+        Color: '0.04,0.5,0.1'
+        Playfields:
+          - ['0,0,0', Cuplasyr I, ContAr1a95,'', '', '', '']
+          - ['0,0,0', Cuplasyr I Sector, ContAr1a95SpaceOrbit, '']
+      - Coordinates: [-13,0,2]
+        Color: '0.49,0.49,0.49'
+        SectorMapType: AsteroidFieldAttention
+        Playfields:
+          - ['0,0,0', Arumia Zeta, SpaceAsteroidFieldSigma,'', '', '', '']
+      - Coordinates: [-2,1,-15]
+        Color: '0.7,0.5,0'
+        SectorMapType: Station
+        Playfields:
+          - ['0,0,0', Tiglvi Phi, SpaceEmptyBeacon,'', '', '', '']
+
+# ==========
+# Containment Area 41
+# ==========
+  - Name: Containment Area 41
+    Coordinates: [40, 0, 0]
+    StarClass: RP
+    Sectors:
+      - Coordinates: [0, 0, 0]
+        SectorMapType: None
+        Playfields:
+          - ['0,0,0', Containment Area 41, SunRandom, '']
+      - Coordinates: [0,0,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Containment Area 41 [Sun Right]', SpaceWarpTarget, '']
+      - Coordinates: [0,0,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Containment Area 41 [Sun Left]', SpaceWarpTarget, '']
+      - Coordinates: [0,0,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Containment Area 41 [Sun Top]', SpaceWarpTarget, '']
+      - Coordinates: [0,0,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Containment Area 41 [Sun Bottom]', SpaceWarpTarget, '']
+      - Coordinates: [0,0,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Containment Area 41 [Sun Front]', SpaceWarpTarget, '']
+      - Coordinates: [0,0,0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Containment Area 41 [Sun Back]', SpaceWarpTarget, '']
+      - Coordinates: [0,0,0]
+        Color: '0.04,0.8,0.1 : 0,0,0'
+        Playfields:
+          - ['0,0,0', ContA-41a, ContainmentArea41a,'', '', '', ''] 
+          - ['0,0,0', ContA-41a Sector, ContainmentArea41aOrbit, '']

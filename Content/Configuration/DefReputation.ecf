@@ -1,0 +1,293 @@
+# Allow to override the default reputation for all Origin based factions to NPC factions
+# Hostile: 0-6000
+# Unfriendly: 6001-12000
+# Neutral: 12001-18000
+# Friendly: 18001-24000
+# Honored: 24001-30000
+{ Reputation Name: "Human:1"
+  Zirax: 12005               #Not unfriendly, but close to. Not decided, but stranges not welcome.
+  Xenu: 8000                 #Unfriendly. Hates every UCH member, but is not sure if the player is not an Arkenian at first
+  Ghyst: 10000               #Little less unfriendly, slightly interested; little dragged by Xenu (major hostility driver)   
+  Epsilon: 11190             #Nearly neutral towards player (dragged by X+G only!)  
+  Abyssal: 16000             #Neutral to player and even curious/hoping for help against XGE houses
+  Rados: 14000               #Following the Abyssal.
+  Serdu: 15000               #Following the Abyssal closely
+  UCH: 20000                 #Friendly; Player related faction BUT  not THE player faction (lore: GLaD is the 'player faction'), thus only 'friendly' and not honored.
+  Talon: 17500               #Positive towards player (and strangers in general)
+  ArkenianRepublic:16500     #Small "one of our kind" bonus
+  Polaris: 18000             #Have helped the UCH to escape
+  PrennFederation: 15000     #You have to prove yourself to the Federation. No welcome bonuses.
+  Trader: 16000              #What the Federation says, but more curious as a faction towards 'unforseen opportunities'
+  Kriel: 6300                #Human, get lost and we might spare your life.  
+  Karana: 12005              #You are a human, so watch your steps.
+  Tresari: 12005             #You are a human, but you look .. tasty.
+  Tesch: 12005               #Do not waste our time.
+  Farr: 12500                #We will judge you by your deeds!
+  Wastelanders: 12500        #We will judge you by your deeds!
+  ARC: 12500                 #We will judge you by your deeds!
+  Helios: 12500              #We will judge you by your deeds!
+  Ravagers: 12500            #We will judge you by your deeds!
+  Pirates: 12500             #You are not a Pirate, but maybe you want to trade .. or buy some Tril?
+  Colonists: 12500           #We will judge you by your deeds!
+}
+
+# Matrix defining reputation points that you get when you do actions to this faction
+# Example: if you killed a member of Zirax your reputation is decreased by 300 points
+# => define this matrix before defining any trigger or threshold levels and rivalry values
+# AttackedMember:  value is multiplied with damage points  
+# KilledMember: NOT multiplied with damage points  
+# AttackedPrey:  multiplied with damage points
+# AttackedPredator:  multiplied with damage points
+# StructStayInTerritory: every 5min realtime and only WITH pilot 
+# OreMined:  about every 10 ores
+{ Reputation Name: "Action.Reputation"
+  Order:                   "Zirax,  Talon, Polaris, Pirates, Kriel, Trader, Colonists,  Xenu,  Rados, Epsilon, Ghyst,   Serdu, Abyssal,  Tesch,   Farr,  Wastelanders,    ARC, ArkenianRepublic, PrennFederation, Helios, Ravagers, Karana, Tresari,UCH"
+  AttackedMember:          " -0.12, -0.12,  -0.12,   -0.12,  -0.12,  -0.12,     -0.12, -0.12,  -0.12,   -0.12, -0.12,   -0.12,   -0.12,  -0.12,  -0.12,         -0.12,  -0.12,           -0.12,        -0.12,        -0.12,        -0.12,        -0.12,        -0.12,        -0.12" 
+  KilledMember:            " -300,  -300,    -300,    -300,   -300,   -300,      -300, -300,    -300,    -300,  -300,    -300,    -300,   -300,   -300,          -300,   -300,            -300,         -300,         -300,         -300,         -300,         -300,         -300" 
+  DestroyBlock:            "  -30,   -30,     -30,     -30,    -30,    -30,       -30,  -30,     -30,     -30,   -30,     -30,     -30,    -30,    -30,           -30,    -30,             -30,          -30,          -30,          -30,          -30,          -30,          -30"
+  ShieldAttacked:          "  -30,   -30,     -30,     -30,    -30,    -30,       -30,  -30,     -30,     -30,   -30,     -30,     -30,    -30,    -30,           -30,    -30,             -30,          -30,          -30,          -30,          -30,          -30,          -30"
+  OpenContainer:           " -200,  -200,    -200,    -200,   -200,   -200,      -200, -200,    -200,    -200,  -200,    -200,    -200,   -200,   -200,          -200,   -200,            -200,         -200,         -200,         -200,         -200,         -200,         -200"
+  AttackedPrey:            "  0.1,  -0.1,       0,       0,      0,      0,         0,    0,       0,       0,     0,       0,       0,      0,      0,             0,      0,               0,            0,            0,            0,            0,            0,            0" 
+  AttackedPredator:        "  0.1,   0.3,     0.1,     0.1,    0.1,    0.1,       0.1,  0.1,     0.1,     0.1,   0.1,     0.1,     0.1,    0.1,    0.1,           0.1,    0.1,             0.1,           0.1,           0.1,           0.1,           0.1,           0.1,           0.1" 
+  StructSpawnedInTerritory:" -100,  -100,    -100,    -100,   -100,   -100,      -100, -100,    -100,    -100,  -100,    -100,    -100,   -100,   -100,          -100,   -100,            -100,          -100,          -100,          -100,          -100,          -100,          -100" 
+  StructStayInTerritory:   "  -25,   -50,     -25,     -50,    -25,    -25,       -25,  -25,     -25,     -25,   -25,     -25,     -25,    -25,    -25,           -25,    -25,             -25,           -25,           -25,           -25,           -25,           -25,           -25" 
+  OreMined:                "  -15,    -5,     -30,     -15,    -20,    -20,       -20,  -20,     -20,     -20,   -20,     -20,     -20,    -20,    -20,           -20,    -20,             -20,           -20,           -20,           -20,           -20,           -20,           -20" 
+  PlantHarvest:            "    0,    -1,       0,       0,      0,      0,         0,    0,       0,       0,     0,       0,       0,      0,      0,             0,      0,               0,             0,             0,             0,             0,             0,             0"
+  PlantDestroy:            "    0,    -5,       0,       0,      0,      0,         0,    0,       0,       0,     0,       0,       0,      0,      0,             0,      0,               0,             0,             0,             0,             0,             0,             0"
+  OutsideHostileTerritory: "    0,     0,       0,       0,      0,      0,         0,    0,       0,       0,     0,       0,       0,      0,      0,             0,      0,               0,             0,             0,             0,             0,             0,             0"
+}
+
+# If one of these actions was executed, the reputation level will get set back at least to that value
+# You can specify reputation levels or reputation levels with added Min/Max to use either the minimum or maximum of a level.
+# Example: if you attacked a member of any faction your reputation will drop at least to the minimum value of Neutral
+{ Reputation Name: "Action.TriggerLevel"
+  # AttackedMember:  "NeutralMin"
+  KilledMember:    "NeutralMin"
+  # DestroyBlock:    "NeutralMin"  #stray shot protection: removing drop penalty for picking/destroying a plant or weak block > adjust with action.reputation!
+  # ShieldAttacked:  "NeutralMin"  #stray shot protectionv
+  # OpenContainer:   "NeutralMin"  #Handle with action.reputation. No global "stealing drop".
+}
+
+# If one of these actions was executed, the reputation points are added/subtracted only if the reputation is already less than to this level
+# You can specify reputation levels directly.
+# Example: on spawning a structure in Zirax territory, you will only get -25 reputation to Zirax if you are less than Honored
+{ Reputation Name: "Action.ThresholdLevel"
+  StructSpawnedInTerritory: "Honored"
+  StructStayInTerritory:    "Friendly"
+  OreMined:                 "Friendly"
+ # PlantHarvest:             "Neutral"   #remove penalty drop for picking a plant in the faction territory > adjust with global action.reputation!
+ # PlantDestroy:             "Neutral"   #remove penalty drop for destroying a plant in the faction territory > adjust with global action.reputation!
+}
+
+# Matrix defining reputation points that rivalry factions get when you do actions to this faction
+# Note: No changes required for the Faction columan that is defined in its own rivalry matrix! This is handled by line 38-47.
+# Example: If you killed a member of Zirax, you get 5 points to the reputation to Talon, 5 to Polaris, 15 to Pirates, 25 to Kriel, etc
+# Point-Levels: 25 15 5 1 = war/nemesis, hostilities, cold war/annoyed/allied, interest/disrespect
+# Point-Levels for Subfactions = Faction internal: 4,3,2,1
+#
+# Global Directions:
+# The Wastelanders hate the Zirax, but the Zirax do not bother with them; Wastelanders are interested in Traders and ARC
+# The Zirax houses have fights between each other, but the Zirax empire guard does not bother.
+#     Subfaction: The Zirax Houses Abyssal,Serdu,Rados are loyal to the Empress; The Epsilon are in question. The Ghyst cheer any damage done and the Xenu want the Empress to be removed.
+# Killing a Zirax empire guard bother Abyssal more than the other houses (because the empress is an Abyssal)
+# Kriel and Zirax are at the brink of a big war.
+# Everyone is annoyed by the pirates
+# BoF is nemesis with Kriel (but Kriel do not really bother) and affiliated with Arkenian (Polaris)
+# ARC is nemesis with Kriel (but Kriel do not really bother) and affiliated with Wastelanders
+# The Talon will cheer if you kill a Xenu, Epsilon or Ghyst, but the Zirax Empire and the affected Houses will not bother officially
+# Prenn (Trader) and Colonists will reward you more for killing pirates than the other factions.
+# =
+# Order: this must fit the order defined in "Action.Reputation" above
+# AttackedMember:  value is multiplied with damage points
+{Reputation Name:"Zirax.Rivalry" # Zirax are at war with Kriel; Killing Zirax Empire give penalyt by Xenu and Abyssal for reasons; The Ravagers hate the Zirax; The Traders have good connections to them.
+#Order:"Zirax,Talon,Polaris,Pirates,Kriel,Trader,Colonists,Xenu,Rados,Epsilon,Ghyst,Serdu,Abyssal,Tesch,Farr,Wastelanders,ARC,ArkenianRepublic,PrennFederation,Helios,Ravagers,Karana,Tresari,UCH"
+AttackedMember:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+KilledMember:"0,0,0,0,40,-10,0,-20,0,0,0,0,-20,0,0,0,0,0,0,0,10,0,0,0"
+DestroyBlock:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+OpenContainer:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+StructSpawnedInTerritory:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+}
+{Reputation Name:"Talon.Rivalry" # Xenu distrust the Talon; Polaris and UCH see their responsibility; The Pirats have a trade relationship, while the Traders have an old quarrel with the Talon overthrowing them thousand years back. 
+#Order:"Zirax,Talon,Polaris,Pirates,Kriel,Trader,Colonists,Xenu,Rados,Epsilon,Ghyst,Serdu,Abyssal,Tesch,Farr,Wastelanders,ARC,ArkenianRepublic,PrennFederation,Helios,Ravagers,Karana,Tresari,UCH"
+AttackedMember:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+KilledMember:"0,0,-10,-10,0,10,0,20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-10"
+DestroyBlock:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+OpenContainer:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+StructSpawnedInTerritory:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+}
+{Reputation Name:"Polaris.Rivalry" # Polaris are in conflict with Traders;  Pirates support them/good relations. Polaris is an Arkenian Company
+#Order:"Zirax,Talon,Polaris,Pirates,Kriel,Trader,Colonists,Xenu,Rados,Epsilon,Ghyst,Serdu,Abyssal,Tesch,Farr,Wastelanders,ARC,ArkenianRepublic,PrennFederation,Helios,Ravagers,Karana,Tresari,UCH"
+AttackedMember:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+KilledMember:"0,0,0,-10,0,20,0,0,0,0,0,0,0,0,0,0,0,-10,0,0,0,0,0,0"
+DestroyBlock:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+OpenContainer:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+StructSpawnedInTerritory:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+}
+{Reputation Name:"Pirates.Rivalry" # Killing Pirates gains rep for Colonists, but drops REp with ARC and Helios that have good standing with SOME of the pirates clans, although both will fight Pirates in general. UCH fights piracy and Kriel support the chaos the pirates create.
+#Order:"Zirax,Talon,Polaris,Pirates,Kriel,Trader,Colonists,Xenu,Rados,Epsilon,Ghyst,Serdu,Abyssal,Tesch,Farr,Wastelanders,ARC,ArkenianRepublic,PrennFederation,Helios,Ravagers,Karana,Tresari,UCH"
+AttackedMember:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+KilledMember:"0,0,0,0,-10,0,20,0,0,0,0,0,0,0,0,0,-10,0,0,-10,0,0,0,10"
+DestroyBlock:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+OpenContainer:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+StructSpawnedInTerritory:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+}
+{Reputation Name:"Kriel.Rivalry" # Kriel are in War with the Ziraxe Empire. The Karana & Tesch are allied to both being "bugs"
+#Order:"Zirax,Talon,Polaris,Pirates,Kriel,Trader,Colonists,Xenu,Rados,Epsilon,Ghyst,Serdu,Abyssal,Tesch,Farr,Wastelanders,ARC,ArkenianRepublic,PrennFederation,Helios,Ravagers,Karana,Tresari,UCH"
+AttackedMember:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+KilledMember:"40,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-20,-20,0"
+DestroyBlock:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+OpenContainer:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+StructSpawnedInTerritory:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+}
+{Reputation Name:"Trader.Rivalry" # Traders have quarrels with Polaris, but are backed by the Zirax Empire and the Farr; The Tesch have some contacts with the Traders, but ARC sees them as a competition for the race of Tesch technology
+#Order:"Zirax,Talon,Polaris,Pirates,Kriel,Trader,Colonists,Xenu,Rados,Epsilon,Ghyst,Serdu,Abyssal,Tesch,Farr,Wastelanders,ARC,ArkenianRepublic,PrennFederation,Helios,Ravagers,Karana,Tresari,UCH"
+AttackedMember:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+KilledMember:"-10,0,20,0,0,0,0,0,0,0,0,0,0,-10,-10,0,10,0,0,0,0,0,0,0"
+DestroyBlock:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+OpenContainer:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+StructSpawnedInTerritory:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+}
+{Reputation Name:"Xenu.Rivalry" # Abyssal just Xenu out of the way. Epsilon and Ghyst support the Xenu; General penalty for attacking a member of the Empire
+#Order:"Zirax,Talon,Polaris,Pirates,Kriel,Trader,Colonists,Xenu,Rados,Epsilon,Ghyst,Serdu,Abyssal,Tesch,Farr,Wastelanders,ARC,ArkenianRepublic,PrennFederation,Helios,Ravagers,Karana,Tresari,UCH"
+AttackedMember:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+KilledMember:"-5,0,0,0,0,0,0,0,0,-5,-10,0,20,0,0,0,0,0,0,0,0,0,0,0"
+DestroyBlock:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+OpenContainer:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+StructSpawnedInTerritory:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+}
+{Reputation Name:"Ghyst.Rivalry" # Serdu want the Ghyst out of the way. Epsilon+ Xenu support Ghyst.; General penalty for attacking a member of the Empire
+#Order:"Zirax,Talon,Polaris,Pirates,Kriel,Trader,Colonists,Xenu,Rados,Epsilon,Ghyst,Serdu,Abyssal,Tesch,Farr,Wastelanders,ARC,ArkenianRepublic,PrennFederation,Helios,Ravagers,Karana,Tresari,UCH"
+AttackedMember:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+KilledMember:"-5,0,0,0,0,0,0,-10,0,-5,0,20,0,0,0,0,0,0,0,0,0,0,0,0"
+DestroyBlock:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+OpenContainer:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+StructSpawnedInTerritory:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+}
+{Reputation Name:"Epsilon.Rivalry" # Rados want Epsilon out of the way; Ghyst + Xenu support Epsilon; General penalty for attacking a member of the Empire
+#Order:"Zirax,Talon,Polaris,Pirates,Kriel,Trader,Colonists,Xenu,Rados,Epsilon,Ghyst,Serdu,Abyssal,Tesch,Farr,Wastelanders,ARC,ArkenianRepublic,PrennFederation,Helios,Ravagers,Karana,Tresari,UCH"
+AttackedMember:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+KilledMember:"-5,0,0,0,0,0,0,-10,20,0,-5,0,0,0,0,0,0,0,0,0,0,0,0,0"
+DestroyBlock:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+OpenContainer:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+StructSpawnedInTerritory:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+}
+{Reputation Name:"Rados.Rivalry" # Epsilon want Rados out of the way; Serdu  + Abyssal Support Rados; General penalty for attacking a member of the Empire
+#Order:"Zirax,Talon,Polaris,Pirates,Kriel,Trader,Colonists,Xenu,Rados,Epsilon,Ghyst,Serdu,Abyssal,Tesch,Farr,Wastelanders,ARC,ArkenianRepublic,PrennFederation,Helios,Ravagers,Karana,Tresari,UCH"
+AttackedMember:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+KilledMember:"-5,0,0,0,0,0,0,0,0,20,0,-5,-10,0,0,0,0,0,0,0,0,0,0,0"
+DestroyBlock:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+OpenContainer:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+StructSpawnedInTerritory:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+}
+{Reputation Name:"Serdu.Rivalry" # Ghyst want Serdu out of the way; Rados and Abyssal support Serdu; General penalty for attacking a member of the Empire
+#Order:"Zirax,Talon,Polaris,Pirates,Kriel,Trader,Colonists,Xenu,Rados,Epsilon,Ghyst,Serdu,Abyssal,Tesch,Farr,Wastelanders,ARC,ArkenianRepublic,PrennFederation,Helios,Ravagers,Karana,Tresari,UCH"
+AttackedMember:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+KilledMember:"-5,0,0,0,0,0,0,0,-5,0,20,0,-10,0,0,0,0,0,0,0,0,0,0,0"
+DestroyBlock:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+OpenContainer:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+StructSpawnedInTerritory:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+}
+{Reputation Name:"Abyssal.Rivalry" # Xenu want Abyssal out of the way; Serdu and Rados support Abyssal; General penalty for attacking a member of the Empire
+#Order:"Zirax,Talon,Polaris,Pirates,Kriel,Trader,Colonists,Xenu,Rados,Epsilon,Ghyst,Serdu,Abyssal,Tesch,Farr,Wastelanders,ARC,ArkenianRepublic,PrennFederation,Helios,Ravagers,Karana,Tresari,UCH"
+AttackedMember:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+KilledMember:"-5,0,0,0,0,0,0,20,-5,0,0,-10,0,0,0,0,0,0,0,0,0,0,0,0"
+DestroyBlock:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+OpenContainer:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+StructSpawnedInTerritory:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+}
+{Reputation Name:"Colonists.Rivalry" # Pirates rep for ambushing colonists; Ark + Prenn are main drivers of DESC treaty for space colonization and will always back the Colonists. So do the Zirax. The Karana see any colonization as a risk of big conflicts coming.
+#Order:"Zirax,Talon,Polaris,Pirates,Kriel,Trader,Colonists,Xenu,Rados,Epsilon,Ghyst,Serdu,Abyssal,Tesch,Farr,Wastelanders,ARC,ArkenianRepublic,PrennFederation,Helios,Ravagers,Karana,Tresari,UCH"
+AttackedMember:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+KilledMember:"-10,0,0,20,0,0,0,0,0,0,0,0,0,0,0,0,0,-10,-10,0,0,10,0,0"
+DestroyBlock:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+OpenContainer:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+StructSpawnedInTerritory:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+}
+{Reputation Name:"Tesch.Rivalry" # ARC will reward killing Tesch, because they want their tech; Tesch are backed by Prenn as they cannot agree on that approach and the Colonists do not want the Tesch to be provoked; Polaris help the ARC and the Rados try to calm things down.
+#Order:"Zirax,Talon,Polaris,Pirates,Kriel,Trader,Colonists,Xenu,Rados,Epsilon,Ghyst,Serdu,Abyssal,Tesch,Farr,Wastelanders,ARC,ArkenianRepublic,PrennFederation,Helios,Ravagers,Karana,Tresari,UCH"
+AttackedMember:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+KilledMember:"0,0,10,0,0,0,-10,0,-10,0,0,0,0,0,0,0,20,0,-10,0,0,0,0,0"
+DestroyBlock:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+OpenContainer:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+StructSpawnedInTerritory:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+}
+{Reputation Name:"Farr.Rivalry" # The Abyssal accuse the Farr of bringing back the Legacy, while Wastelanders back the Farr due to historical reasons and the Helios because of the riches and powers
+#Order:"Zirax,Talon,Polaris,Pirates,Kriel,Trader,Colonists,Xenu,Rados,Epsilon,Ghyst,Serdu,Abyssal,Tesch,Farr,Wastelanders,ARC,ArkenianRepublic,PrennFederation,Helios,Ravagers,Karana,Tresari,UCH"
+AttackedMember:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+KilledMember:"0,0,0,0,0,0,0,0,0,-10,0,0,20,0,0,-10,0,0,0,-10,0,10,0,0"
+DestroyBlock:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+OpenContainer:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+StructSpawnedInTerritory:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+}
+{Reputation Name:"Wastelanders.Rivalry" #Tresari are enemies of the WST; Polaris/Traders Companies support the Wastelanders
+#Order:"Zirax,Talon,Polaris,Pirates,Kriel,Trader,Colonists,Xenu,Rados,Epsilon,Ghyst,Serdu,Abyssal,Tesch,Farr,Wastelanders,ARC,ArkenianRepublic,PrennFederation,Helios,Ravagers,Karana,Tresari,UCH"
+AttackedMember:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+KilledMember:"0,0,-10,0,0,-10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,20,0"
+DestroyBlock:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+OpenContainer:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+StructSpawnedInTerritory:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+}
+{Reputation Name:"ARC.Rivalry" #The Tesch accuse the ARC of stealing their tech. The WST and RAV have good trading connections to the ARC and such support ARC
+#Order:"Zirax,Talon,Polaris,Pirates,Kriel,Trader,Colonists,Xenu,Rados,Epsilon,Ghyst,Serdu,Abyssal,Tesch,Farr,Wastelanders,ARC,ArkenianRepublic,PrennFederation,Helios,Ravagers,Karana,Tresari,UCH"
+AttackedMember:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+KilledMember:"0,0,0,0,0,0,0,0,0,0,0,0,0,20,0,-10,0,0,0,0,-10,0,0,0"
+DestroyBlock:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+OpenContainer:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+StructSpawnedInTerritory:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+}
+{Reputation Name:"ArkenianRepublic.Rivalry" # Prenn and Arkeninan struggle with their peace negotiations; Polaris and ARC are 'arkenian decendands'; Karana see the risk of a conflict and the Serdu have good connections to the Arkenians.
+#Order:"Zirax,Talon,Polaris,Pirates,Kriel,Trader,Colonists,Xenu,Rados,Epsilon,Ghyst,Serdu,Abyssal,Tesch,Farr,Wastelanders,ARC,ArkenianRepublic,PrennFederation,Helios,Ravagers,Karana,Tresari,UCH"
+AttackedMember:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+KilledMember:"0,0,-10,0,0,0,0,0,0,0,0,-5,0,0,0,0,-10,0,20,0,0,5,0,0"
+DestroyBlock:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+OpenContainer:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+StructSpawnedInTerritory:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+}
+{Reputation Name:"PrennFederation.Rivalry" # Prenn and Arkenian struggle with their peace negotiations; Traders are part of the Prenn and the Kriel support the Prenn to weaken the Arkenians. Same for the Ghyst. The Karana only see the rising conflict. 
+#Order:"Zirax,Talon,Polaris,Pirates,Kriel,Trader,Colonists,Xenu,Rados,Epsilon,Ghyst,Serdu,Abyssal,Tesch,Farr,Wastelanders,ARC,ArkenianRepublic,PrennFederation,Helios,Ravagers,Karana,Tresari,UCH"
+AttackedMember:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+KilledMember:"0,0,0,0,-10,-10,0,0,0,0,-5,0,0,0,0,0,0,20,0,0,0,5,0,0"
+DestroyBlock:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+OpenContainer:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+StructSpawnedInTerritory:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+}
+{Reputation Name:"Helios.Rivalry" # Farr and Helios are in a secret war for dominace; ARC support Helios because of good relationships and the Zirax do actually profit from the Helios engagements.
+#Order:"Zirax,Talon,Polaris,Pirates,Kriel,Trader,Colonists,Xenu,Rados,Epsilon,Ghyst,Serdu,Abyssal,Tesch,Farr,Wastelanders,ARC,ArkenianRepublic,PrennFederation,Helios,Ravagers,Karana,Tresari,UCH"
+AttackedMember:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+KilledMember:"-10,0,0,0,0,0,0,0,0,0,0,0,0,0,20,0,-10,0,0,0,0,0,0,0"
+DestroyBlock:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+OpenContainer:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+StructSpawnedInTerritory:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+}
+{Reputation Name:"Ravagers.Rivalry" # Zirax and Ravagers have some issues. Colonists and Farr do not want to get involved but support the Ravagers because of their own reasons
+#Order:"Zirax,Talon,Polaris,Pirates,Kriel,Trader,Colonists,Xenu,Rados,Epsilon,Ghyst,Serdu,Abyssal,Tesch,Farr,Wastelanders,ARC,ArkenianRepublic,PrennFederation,Helios,Ravagers,Karana,Tresari,UCH"
+AttackedMember:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+KilledMember:"20,0,0,0,0,0,-10,0,0,0,0,0,0,0,-10,0,0,0,0,0,0,0,0,0"
+DestroyBlock:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+OpenContainer:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+StructSpawnedInTerritory:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+}
+{Reputation Name:"Karana.Rivalry" # Helios are after the tech of the Karana; Kriel + Tresari + Karana = Bug alliance
+#Order:"Zirax,Talon,Polaris,Pirates,Kriel,Trader,Colonists,Xenu,Rados,Epsilon,Ghyst,Serdu,Abyssal,Tesch,Farr,Wastelanders,ARC,ArkenianRepublic,PrennFederation,Helios,Ravagers,Karana,Tresari,UCH"
+AttackedMember:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+KilledMember:"0,0,0,0,-10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,20,0,0,-10,0"
+DestroyBlock:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+OpenContainer:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+StructSpawnedInTerritory:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+}
+{Reputation Name:"Tresari.Rivalry" # Wastelander have quarrels with the Tresari; Kriel + Tresari + Karana = Bug alliance
+#Order:"Zirax,Talon,Polaris,Pirates,Kriel,Trader,Colonists,Xenu,Rados,Epsilon,Ghyst,Serdu,Abyssal,Tesch,Farr,Wastelanders,ARC,ArkenianRepublic,PrennFederation,Helios,Ravagers,Karana,Tresari,UCH"
+AttackedMember:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+KilledMember:"0,0,0,0,-10,0,0,0,0,0,0,0,0,0,0,20,0,0,0,0,0,-10,0,0"
+DestroyBlock:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+OpenContainer:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+StructSpawnedInTerritory:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+}
+{Reputation Name:"UCH.Rivalry" # Tresari consider UCH intrudiers in the 'ordered Galaxy'; Tesh assume that the 'Earthlings' might shape the galaxy to the better due to the contact they made with the player.
+#Order:"Zirax,Talon,Polaris,Pirates,Kriel,Trader,Colonists,Xenu,Rados,Epsilon,Ghyst,Serdu,Abyssal,Tesch,Farr,Wastelanders,ARC,ArkenianRepublic,PrennFederation,Helios,Ravagers,Karana,Tresari,UCH"
+AttackedMember:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+KilledMember:"0,0,0,0,0,0,0,0,0,0,0,0,0,-10,0,0,0,0,0,0,0,0,10,0"
+DestroyBlock:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+OpenContainer:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+StructSpawnedInTerritory:"0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+}

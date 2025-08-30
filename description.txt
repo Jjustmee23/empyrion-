@@ -1,0 +1,19 @@
+Nexon World - Enhanced Multiplayer Experience
+
+Welcome to Nexon World, a carefully crafted multiplayer scenario designed for the ultimate community gaming experience!
+
+FEATURES:
+• Balanced PvE/PvP gameplay for all skill levels
+• Enhanced anti-griefing protection for new players
+• Optimized POI regeneration and resource distribution
+• Improved structure protection and community building
+• Custom starting experience with unique items
+• Performance optimized for smooth multiplayer gameplay
+
+Perfect for:
+- Community servers and guilds
+- New players learning the game
+- Experienced players looking for balanced gameplay
+- Server administrators wanting stable performance
+
+This scenario maintains all the classic Empyrion content while providing enhanced multiplayer features and better community experience.

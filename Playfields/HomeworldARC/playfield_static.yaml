@@ -1,0 +1,858 @@
+---
+#PlanetType: Nexus 
+#Biomes: Pole, Hotspot, RadiatedFog, Radiated, Plains, PlainsEdge, Flats, Mountains, LowMountains, Dunes, Sand
+# NEXUS CORE - Een mysterieuze, geavanceerde planeet waar oude technologie en moderne innovatie samenkomen. Deze planeet is het hart van een verloren beschaving die geavanceerde AI-systemen en quantum-technologie heeft achtergelaten. De atmosfeer gloeit met een onnatuurlijke energie, terwijl de grond trilt van ondergrondse machines die nog steeds actief zijn. Spelers kunnen hier zeldzame technologie ontdekken, maar moeten oppassen voor de automatische verdedigingssystemen die nog steeds de planeet bewaken.
+
+Description: |
+  🌟 NEXUS CORE - The Mysterious Tech Realm of Nexon World! 🌟
+  
+  Welcome to Nexus Core, the heart of a lost civilization where ancient 
+  technology and modern innovation converge. This mysterious planet glows 
+  with unnatural energy and vibrates with underground machines, offering 
+  the most advanced challenges in the entire Nexon World.
+  
+  FEATURES:
+  • Advanced technology and rare resources
+  • Mysterious underground facilities
+  • Automated defense systems guarding secrets
+  • Quantum effects and energy particles
+  • Ultimate challenge for experienced players
+  
+  Nexus Core tells a story of technological marvel and ancient secrets, 
+  where the remnants of a highly advanced civilization still pulse with 
+  life. The planet's surface is dotted with mysterious structures that 
+  seem to operate on their own, while underground facilities hold 
+  secrets that could change the fate of the entire galaxy.
+  
+  This is a world for the most experienced explorers who can navigate 
+  through automated defenses and decipher ancient technology. The 
+  quantum effects that permeate this world create unique challenges 
+  and opportunities for those who can master them.
+  
+  In Nexus Core, every discovery could be your last, but those who 
+  survive may unlock technologies beyond imagination. This is where 
+  legends are made and civilizations are reborn.   
+
+PlanetType: NexusCore
+PlayfieldType: Planet
+Difficulty: 10
+
+LandClaimZone: Device
+
+
+# Playfield Configuration - NEXUS CORE (Formerly HomeworldARC)
+# ==============================================================
+
+# Sun
+SunFlare: EnvironmentalEffects/SunFlarePurple
+
+# Atmosphere and Sky
+AtmosphereEnabled: True
+AtmosphereColor: "0.3, 0.1, 0.8"
+SkyColor: "0.2, 0.05, 1"
+SkyHorizonColor: "0.1, 0.02, 0.6"  
+AtmosphereParams: [4, 2.0]       
+
+# Light
+DayLightIntensity: 0.80
+NightLightIntensity: 0.25
+
+LightZenithColor: "0.8, 0.7, 1"
+LightHorizonColor: "0.4, 0.2, 0.8"
+NightLightColor: "0.2, 0.1, 0.5" 
+ 
+DayShadowStrength: 0.85
+
+# Fog
+FogColor: "0.3, 0.1, 0.6"
+FogCloudIntensity: 0.9
+# AtmosphereFog: 0.9    # Needs to be below 0.5
+# GroundFogIntensity: 0.25
+# GroundFogHeight: 40
+
+# Clouds
+CloudsDensity: 0.8
+CloudsSharpness: 0.9
+CloudsBrightness: 0.7
+CloudsOpacity: 0.4 
+
+CloudsZenithColor: "0.3, 0.1, 0.8"
+CloudsHorizonColor: "0.1, 0.05, 0.4"
+CloudsNightZenithColor: "0.05, 0.02, 0.2"
+CloudsNightHorizonColor: "0.05, 0.02, 0.2"
+
+# Wind Speed
+WindSpeed: 6  
+
+# Special Effects 
+SpecialEffectsLocal:
+  - Name: EnergyParticles
+    Biome: [ Plains, Flats ]
+    Time: Always
+    MaxHeight: 20
+  - Name: QuantumSparkles
+    Biome: [ Plains, Flats ]
+    Time: Always
+    MaxHeight: 25
+  - Name: TechGlow
+    Biome: [ RadiatedFog, Hotspot ]
+    Time: Always
+    MaxHeight: 15
+  - Name: DataStreams
+    Biome: [ RadiatedFog, Hotspot ]
+    Time: Always
+    MaxHeight: 30
+
+SpecialEffectsGlobal:
+# Weather
+  - Name: Clear
+    Type: Weather
+    InitialDelay: 0
+    Delay: 2
+    Lifetime: 600
+  - Name: QuantumStorm
+    Type: Weather
+    InitialDelay: 0
+    Delay: 3
+    Lifetime: 900
+  - Name: EnergyRain
+    Type: Weather
+    InitialDelay: 0
+    Delay: 4
+    Lifetime: 1200
+  - Name: TechFog
+    Type: Weather
+    InitialDelay: 0
+    Delay: 2
+    Lifetime: 1200
+  - Name: Wind
+    Type: Weather
+    InitialDelay: 0
+    Delay: 5
+    Lifetime: 600
+  - Name: QuantumDistortion
+    Type: Weather
+    InitialDelay: 48
+    Delay: 24
+    Lifetime: 1200
+  - Name: FogQuantum
+    Type: Weather
+    InitialDelay: 10
+    Delay: 5 
+    Lifetime: 1000
+  - Name: EnergyStorm
+    Type: Weather
+    InitialDelay: 48
+    Delay: 24
+    Lifetime: 600
+# Global Effect
+  - Name: QuantumMeteorShower
+    Biome: [ Plains ]
+    Time: Always
+    InitialDelay: 3.5
+    Delay: 5
+    Lifetime: 60
+    PlyDist: 200
+    SpawnY: 100
+    Struct: Avoid
+  - Name: QuantumLightning
+    Biome: [ Any ]
+    Time: Always
+    InitialDelay: 0.5
+    Delay: 8
+    Lifetime: 300
+    PlyDist: 100
+    SpawnY: 500
+    Struct: Avoid
+
+
+# ==============================================================
+
+### Resource Deposits
+RandomResources:
+# Common Resources
+-  Name: IronResource
+   IsScalingCount: True
+   CountMinMax: [2, 3]
+   SizeMinMax: [3, 8]
+   DepthMinMax: [3, 18]
+   DroneProb: 0.3
+   MaxDroneCount: 2
+-  Name: CopperResource
+   IsScalingCount: True
+   CountMinMax: [2, 3]
+   SizeMinMax: [3, 8]
+   DepthMinMax: [5, 18]
+   DroneProb: 0.3
+-  Name: SiliconResource
+   IsScalingCount: True
+   CountMinMax: [2, 3]
+   SizeMinMax: [3, 8]
+   DepthMinMax: [5, 18]
+   DroneProb: 0.3
+-  Name: CobaltResource
+   IsScalingCount: True
+   CountMinMax: [2, 3]
+   SizeMinMax: [3, 8]
+   DepthMinMax: [5, 18]
+   DroneProb: 0.3
+
+#special resource
+-  Name: ErestrumResource #rich
+   IsScalingCount: True 
+   CountMinMax: [ 4, 5 ]
+   SizeMinMax: [ 12, 15 ]
+   DepthMinMax: [ 6, 18 ]
+   DroneProb: 1
+   MaxDroneCount: 3
+
+# Nexus Core special resources
+-  Name: NeodymiumResource
+   IsScalingCount: True 
+   CountMinMax: [ 2, 3 ]
+   SizeMinMax: [ 8, 12 ]
+   DepthMinMax: [ 8, 20 ]
+   DroneProb: 0.8
+   MaxDroneCount: 2
+
+-  Name: PromethiumResource
+   IsScalingCount: True 
+   CountMinMax: [ 2, 3 ]
+   SizeMinMax: [ 8, 12 ]
+   DepthMinMax: [ 8, 20 ]
+   DroneProb: 0.8
+   MaxDroneCount: 2
+
+-  Name: SathiumResource
+   IsScalingCount: True 
+   CountMinMax: [ 2, 3 ]
+   SizeMinMax: [ 8, 12 ]
+   DepthMinMax: [ 8, 20 ]
+   DroneProb: 0.8
+   MaxDroneCount: 2
+
+-  Name: PentaxidResource
+   IsScalingCount: True 
+   CountMinMax: [ 2, 3 ]
+   SizeMinMax: [ 8, 12 ]
+   DepthMinMax: [ 8, 20 ]
+   DroneProb: 0.8
+   MaxDroneCount: 2
+
+-  Name: ZascResource
+   IsScalingCount: True 
+   CountMinMax: [ 2, 3 ]
+   SizeMinMax: [ 8, 12 ]
+   DepthMinMax: [ 8, 20 ]
+   DroneProb: 0.8
+   MaxDroneCount: 2
+
+-  Name: GoldResource
+   IsScalingCount: True 
+   CountMinMax: [ 1, 2 ]
+   SizeMinMax: [ 6, 10 ]
+   DepthMinMax: [ 10, 25 ]
+   DroneProb: 0.6
+   MaxDroneCount: 1
+
+-  Name: SilverResource
+   IsScalingCount: True 
+   CountMinMax: [ 1, 2 ]
+   SizeMinMax: [ 6, 10 ]
+   DepthMinMax: [ 10, 25 ]
+   DroneProb: 0.6
+   MaxDroneCount: 1
+
+-  Name: PlatinumResource
+   IsScalingCount: True 
+   CountMinMax: [ 1, 2 ]
+   SizeMinMax: [ 6, 10 ]
+   DepthMinMax: [ 10, 25 ]
+   DroneProb: 0.6
+   MaxDroneCount: 1
+
+-  Name: TitaniumResource
+   IsScalingCount: True 
+   CountMinMax: [ 1, 2 ]
+   SizeMinMax: [ 6, 10 ]
+   DepthMinMax: [ 10, 25 ]
+   DroneProb: 0.6
+   MaxDroneCount: 1
+
+-  Name: MagnesiumResource
+   IsScalingCount: True 
+   CountMinMax: [ 1, 2 ]
+   SizeMinMax: [ 6, 10 ]
+   DepthMinMax: [ 10, 25 ]
+   DroneProb: 0.6
+   MaxDroneCount: 1
+
+-  Name: CarbonSubstrateResource
+   IsScalingCount: True 
+   CountMinMax: [ 1, 2 ]
+   SizeMinMax: [ 6, 10 ]
+   DepthMinMax: [ 10, 25 ]
+   DroneProb: 0.6
+   MaxDroneCount: 1
+
+### Resource Asteroids
+AsteroidResources:
+     # - Name: IronResource
+       # Threshold: 0.2
+       # Amount: 0.2
+     # - Name: SiliconResource
+       # Threshold: 0.2
+       # Amount: 0.2
+     # - Name: NeodymiumResource
+       # Threshold: 0.2
+       # Amount: 0.2
+     # - Name: PromethiumResource
+       # Threshold: 0.2
+       # Amount: 0.2
+     # - Name: SathiumResource
+       # Threshold: 0.2
+       # Amount: 0.2
+
+### POIs
+### Planetary POIs
+# BP Group: Nexus:
+# BA_NexusCore,BA_NexusLab,BA_NexusFactory,BA_NexusTower,BA_NexusHub,BA_NexusResearch,BA_NexusStorage,BA_NexusPower,BA_NexusDefense,BA_NexusTransport,BA_NexusSettlement,BA_NexusSolar
+# BP Group: NexusDefense
+# BA_NexusDefenseTowerT1,BA_NexusDefenseTowerT2,BA_NexusDefenseTowerT3
+# BP Group: NexusSingle
+# BA_NexusWeaponFactory
+# BP Group: SkyminerNexus
+# BA_NexusSkyminer
+### POIs - Enhanced for Nexus Core
+POIs:    
+    Random:
+        # ==============================================================
+        # NEXUS CORE TECH HUB - Safe Zone POI
+        # ==============================================================
+        - GroupName: NexusCoreTechHub
+          CountMinMax: [ 1, 1 ]
+          SpawnPOINear: [START]
+          SpawnPOINearRange: [1000, 1600]
+          IsImportant: True
+          Faction: None
+          BiomesExcluded: [ Radiated, RadiatedFog, Hotspot, Dunes ]
+          Properties: 
+            - Key: MapMarker
+              Value: Neutral
+            - Key: RegenAfter
+              Value: 720
+            - Key: SafeZone
+              Value: 600
+            - Key: CommunityFacility
+              Value: "Tech,Research,Storage"
+            - Key: PersonalContainer
+              Value: "TechResources:1"
+
+        # ==============================================================
+        # TECH SAFE ZONES - Advanced Protection
+        # ==============================================================
+        - GroupName: TechSafeZone
+          CountMinMax: [ 2, 4 ]
+          SpawnPOINear: [NexusCoreTechHub]
+          SpawnPOINearRange: [200, 500]
+          IsImportant: True
+          Faction: None
+          Properties: 
+            - Key: MapMarker
+              Value: Neutral
+            - Key: SafeZone
+              Value: 400
+            - Key: CommunityProtection
+              Value: "PvP_Disabled"
+            - Key: TechFacility
+              Value: "Research,Storage,Rescue"
+            - Key: RegenAfter
+              Value: 1440
+
+        # ==============================================================
+        # RESEARCH FACILITY - Tech Explorer Support
+        # ==============================================================
+        - GroupName: ResearchFacility
+          CountMinMax: [ 1, 2 ]
+          SpawnPOINear: [NexusCoreTechHub]
+          SpawnPOINearRange: [300, 600]
+          IsImportant: True
+          Faction: None
+          Properties: 
+            - Key: MapMarker
+              Value: Neutral
+            - Key: RegenAfter
+              Value: 240
+            - Key: CommunityFacility
+              Value: "Research,Supply,Rescue"
+            - Key: PersonalContainer
+              Value: "ResearchSupplies:1"
+
+        # ==============================================================
+        # NEXUS DRONE BASE - Enhanced Community Defense
+        # ==============================================================
+        - GroupName: DroneBaseT1                         
+          DroneSetupID: DroneBaseNexus
+          Faction: Nexus 
+          IsImportant: True
+          BiomesExcluded: [ Radiated, RadiatedFog, Hotspot, Dunes ]  # To not have them spawn in radiated areas, and not at the poles. (Pole regions are problematic for gameplay & looks)
+          NoShieldReload: True 
+       #   IsCommandCenter: True             
+          CountMinMax: [ 1, 1 ]
+          DroneProb: 1.0
+          DronesMinMax: [ 3, 4 ]  
+          Properties:  
+            - Key: RegenAfter
+              Value: 720
+            - Key: SafeZone
+              Value: 300
+            - Key: CommunityProtection
+              Value: "Defense_Enabled" 
+
+
+# Nexus Core Unique
+
+        - GroupName: NexusSingle
+          Faction: Nexus  
+          IsImportant: True 
+          BiomesExcluded: [ Radiated, RadiatedFog, Hotspot, Dunes ]
+          NoShieldReload: True
+          CountMinMax: [ 1, 1 ]
+          DroneProb: 1.0
+          DronesMinMax: [ 2, 4 ]  
+       #   TroopTransport: True
+          AuxiliaryPOIs: [ NexusDefense ]
+          Properties:   
+            - Key: RegenAfter
+              Value: 720 
+              
+# Solo Groups
+              
+# Main Random Groups
+        - GroupName: Nexus
+          Faction: Nexus  
+          BiomesExcluded: [ Radiated, RadiatedFog, Hotspot, Dunes  ]
+          IsScalingCount: True
+          CountMinMax: [ 5, 10 ]
+          NoShieldReload: True 
+          DroneProb: 1.0
+          DronesMinMax: [ 1, 3 ]  
+       #   TroopTransport: True
+          AuxiliaryPOIs: [ NexusDefense ]
+          Properties:   
+            - Key: RegenAfter
+              Value: 720 
+
+# Main Random Group AUX
+        - GroupName: SkyminerNexus
+          Faction: Nexus  
+          NoShieldReload: True 
+          Territory: False
+          CountMinMax: [ 4, 4 ]
+          DroneProb: 1.0
+          DronesMinMax: [ 2, 3 ]  
+          SpawnResource: ["ErestrumResource:1-1", "NeodymiumResource:1-1", "PromethiumResource:1-1"] 
+          ResourceDistance: 120   
+          AuxiliaryPOIs: [ NexusDefense ]
+          Properties:   
+            - Key: RegenAfter
+              Value: 720 
+
+# Main Random Group DEFENSES (Auxiliary setting!)
+        - GroupName: NexusDefense
+          Faction: Nexus  
+          NoShieldReload: True
+          IsScalingCount: True
+          IsAuxPOI: True
+          SpawnPOINearRange: [120, 300]
+        #  IsImportant: True 
+          CountMinMax: [ 2, 3 ]
+          DroneProb: 0.6
+          DronesMinMax: [ 2, 3 ]  
+          Properties:  #
+            - Key: RegenAfter
+              Value: 720 
+
+# Defenses for the dronebase, in a ring
+
+        - GroupName: NexusDefense
+          Faction: Nexus  
+          NoShieldReload: True
+          SpawnPOIAvoid: [NexusDefense]  
+          SpawnPOIAvoidDistance: 300
+          SpawnPOINear: [DroneBaseT1]
+          SpawnPOINearRange: [400, 400]
+          CountMinMax: [ 6, 6 ]
+          DroneProb: 0.6
+          DronesMinMax: [ 2, 3 ]  
+          Properties:  #
+            - Key: RegenAfter
+              Value: 720 
+
+
+
+
+# Junksites
+ 
+
+       # ================================
+
+    # ==============================================================
+    # NEXUS CORE - TECH STARTER EXPERIENCE
+    # ==============================================================
+    # High-tech starter configuration for advanced players
+    # Enhanced equipment for technology-focused gameplay
+    
+    FixedPlayerStart:
+        # ==============================================================
+        # DEBUG MODE - For testing and development
+        # ==============================================================
+        - Mode: Debug
+          Armor: ArmorLight
+          Pos: [ 0, 147, 0 ]
+          RotY: 160 
+          Items: [
+            "SurvivalTool:1, Flashlight:1, PDA:1, Medikit02:5, PowerBar:10, EnergyCell:10, AdvancedConstructor:1, QuantumProcessor:1"
+          ]
+
+        # ==============================================================
+        # SURVIVAL MODE - Tech Master Experience
+        # ==============================================================
+        - Mode: Survival
+          Spawn: EscapePod
+          Pos: [0, 70, 0]
+          RotY: 160
+          
+          # Enhanced status for tech gameplay
+          Status: [ 
+           "Food: 700, Health: 700, Oxygen: 900, Stamina: 900",  # Easy Mode
+           "Food: 500, Health: 500, Oxygen: 700, Stamina: 700",  # Normal Mode  
+           "Food: 300, Health: 300, Oxygen: 600, Stamina: 600",  # Hard Mode
+           "#FreshStart:Food: 450, Health: 450, Oxygen: 750, Stamina: 750"  # Fresh Start
+          ]
+          
+          # Tech-focused starter equipment sets
+          Items: [ 
+           # EASY MODE - Tech Master Welcome Package
+           "SurvivalTool:1, Flashlight:1, SurvivalTent:1, RadarSuitT1:1, PDA:1, Bandages:8, PowerBar:8, Medikit02:5, AntidotePills:3, EmergencyRations:5, WaterBottle:4, EnergyCell:6, OreScanner:1, AdvancedConstructor:1, QuantumProcessor:1, OxygenGenerator:1, WaterGenerator:1, SolarPanel:3, Battery:3, FoodProcessor:1, WoodLog:50, Stone:50, IronOre:50, CopperOre:50, SiliconOre:40, NeodymiumOre:30, PromethiumOre:30", 
+           
+           # NORMAL MODE - Balanced Tech Master Kit
+           "SurvivalTool:1, Flashlight:1, SurvivalTent:1, RadarSuitT1:1, PDA:1, Bandages:5, PowerBar:5, Medikit02:3, AntidotePills:2, EmergencyRations:3, WaterBottle:3, EnergyCell:4, OreScanner:1, AdvancedConstructor:1, QuantumProcessor:1, OxygenGenerator:1, WaterGenerator:1, SolarPanel:2, Battery:2, WoodLog:35, Stone:35, IronOre:35, CopperOre:35, SiliconOre:25, NeodymiumOre:20, PromethiumOre:20", 
+           
+           # HARD MODE - Tech Master Challenge
+           "SurvivalTool:1, Flashlight:1, SurvivalTent:1, RadarSuitT1:1, PDA:1, Bandages:3, PowerBar:3, Medikit02:2, AntidotePills:1, EmergencyRations:2, WaterBottle:2, EnergyCell:3, OreScanner:1, AdvancedConstructor:1, WoodLog:25, Stone:25, IronOre:25, CopperOre:25, SiliconOre:20, NeodymiumOre:15, PromethiumOre:15", 
+           
+           # FRESH START - New Tech Master Experience
+           "#FreshStart: SurvivalTool:1, Flashlight:1, SurvivalTent:1, RadarSuitT1:1, PDA:1, Bandages:4, PowerBar:4, Medikit02:2, AntidotePills:1, EmergencyRations:2, WaterBottle:2, EnergyCell:3, OreScanner:1, AdvancedConstructor:1, QuantumProcessor:1, OxygenGenerator:1, WaterGenerator:1, SolarPanel:2, Battery:2, WoodLog:30, Stone:30, IronOre:30, CopperOre:30, SiliconOre:20, NeodymiumOre:15, PromethiumOre:15"
+          ]
+
+### Drones
+
+DroneBaseSetup:
+  DroneBases:                               
+    - DroneSetupID: DroneBaseNexus
+      Stock:
+        - Name: DroneSmallFast01Minigun
+          Amount: Infinite
+          Type: FighterDrone
+
+        - Name: DroneSmallFast01Rocket
+          Amount: Infinite
+          Type: FighterDrone
+
+        - Name: DroneTroopsTransport
+          Amount: Infinite
+          Type: TroopTransport
+
+        - Name: RipperDog
+          Amount: 200
+          Type: GroundTroop
+
+  PlanetVessels:
+    - Name: OPVNexusT3 
+      Faction: Nexus 
+      LevelMod: 3
+      FixedMaxSpeed: 50 
+      DelayBetweenRespawn: 600
+      DelayBeforeSelfDestruction: 300
+      IsRespawnAfterDestruction: True
+      RangePatrolTask: 
+        POINameAsPositionRef: [DroneBaseT1] 
+        DistToGround: 250 
+      Properties:
+        - Key: AIManPatrolGroups  
+          Value: "BA_NexusCore,BA_NexusLab,BA_NexusFactory,BA_NexusTower,BA_NexusHub,BA_NexusResearch,BA_NexusStorage,BA_NexusPower,BA_NexusDefense,BA_NexusTransport,BA_NexusSettlement,BA_NexusSolar"
+      Stock:
+        - Name: DroneSmallFast01Minigun               
+          Amount: Infinite                                  
+          Type: FighterDrone                           
+          
+    - Name: OPVNexusT3
+      #Position3D: [500, 0, -400]
+      Faction: Nexus                                  
+    #  CountMinMax: [2, 2]
+      LevelMod: 3
+      FixedMaxSpeed: 50 
+      DelayBetweenRespawn: 600
+      DelayBeforeSelfDestruction: 300
+      IsRespawnAfterDestruction: True
+      RangePatrolTask: 
+        POINameAsPositionRef: [DroneBaseT1]
+     #   Radius: 1000
+        DistToGround: 250 
+      Properties:
+        - Key: AIManPatrolGroups  
+          Value: "BA_NexusCore,BA_NexusLab,BA_NexusFactory,BA_NexusTower,BA_NexusHub,BA_NexusResearch,BA_NexusStorage,BA_NexusPower,BA_NexusDefense,BA_NexusTransport,BA_NexusSettlement,BA_NexusSolar"
+      Stock:
+        - Name: DroneSmallFast01Minigun               
+          Amount: Infinite                                  
+          Type: FighterDrone                           
+
+# Aerial Traffic around the Command center / HQ on the Nexus Core
+
+    - Name: CivilianDroneCVfast    # Fast Air Traffic DRONES
+      Faction: Nexus                                  
+      LevelMod: 3        
+      FixedMaxSpeed: 120 
+      DelayBetweenRespawn: 600
+      DelayBeforeSelfDestruction: 300
+      IsRespawnAfterDestruction: True
+      CountMinMax: [3, 4]
+      RangePatrolTask: 
+        POINameAsPositionRef: [NexusSingle] 
+        Radius: 600
+        DistToGround: 150   
+        
+# Planetary Air Traffic
+ 
+    - Name: CivilianDroneCVfast    # Fast Air Traffic DRONES  (Scannter, Courier)
+      Faction: Nexus                                  
+      LevelMod: 3
+      FixedMaxSpeed: 120      
+      DelayBetweenRespawn: 600
+      DelayBeforeSelfDestruction: 300
+      IsRespawnAfterDestruction: True
+      CountMinMax: [5, 8]
+      RangePatrolTask: 
+        POINameAsPositionRef: [NexusSingle] 
+      #  Radius: 500
+        DistToGround: 150   
+      Properties:
+        - Key: AIManPatrolGroups  
+          Value: "BA_NexusCore,BA_NexusLab,BA_NexusFactory,BA_NexusTower,BA_NexusHub,BA_NexusResearch,BA_NexusStorage,BA_NexusPower,BA_NexusDefense,BA_NexusTransport,BA_NexusSettlement,BA_NexusSolar"
+        
+    - Name: CV_CargoTNexusDroneBus   # CivilianMicroCV fast moving (Private Transports)
+      Faction: Nexus                                  
+      LevelMod: 3
+      FixedMaxSpeed: 100      
+      DelayBetweenRespawn: 600
+      DelayBeforeSelfDestruction: 300
+      IsRespawnAfterDestruction: True
+      CountMinMax: [3, 5]
+      RangePatrolTask: 
+        POINameAsPositionRef: [NexusSingle] 
+      #  Radius: 1000
+        DistToGround: 150   
+      Properties:
+        - Key: AIManPatrolGroups  
+          Value: "BA_NexusCore,BA_NexusLab,BA_NexusFactory,BA_NexusTower,BA_NexusHub,BA_NexusResearch,BA_NexusStorage,BA_NexusPower,BA_NexusDefense,BA_NexusTransport,BA_NexusSettlement,BA_NexusSolar"
+
+    - Name: CivilianDroneCV     # Slow Air Traffic DRONES (Transporters)
+      Faction: Nexus                                  
+      LevelMod: 3
+      FixedMaxSpeed: 40      
+      DelayBetweenRespawn: 600
+      DelayBeforeSelfDestruction: 300
+      IsRespawnAfterDestruction: True
+      CountMinMax: [3, 5]
+      RangePatrolTask: 
+        POINameAsPositionRef: [NexusSingle] 
+      #  Radius: 1500
+        DistToGround: 150   
+      Properties:
+        - Key: AIManPatrolGroups  
+          Value: "BA_NexusCore,BA_NexusLab,BA_NexusFactory,BA_NexusTower,BA_NexusHub,BA_NexusResearch,BA_NexusStorage,BA_NexusPower,BA_NexusDefense,BA_NexusTransport,BA_NexusSettlement,BA_NexusSolar"
+        
+DroneSpawning:
+    Random:
+      - Name: DroneSmallFast01Rocket
+        DronesMinMax: [ 12, 15 ]
+        Faction: Nexus
+       # CenterX: 5
+        POINameAsPositionRef: DroneBaseT1      
+        Radius: 7000                  
+
+# ==============================================================
+# ==============================================================
+
+
+# ==============================================================
+# ==============================================================
+ 
+SpawnRateZones: 
+
+      # All creatures next to the dronebase already got killed.
+   - SpawnAt: [DroneBaseT1]
+     Radius: 300
+     RadiusRandom: 0
+     RateMultiplyerCenter: 0.0
+     RateMultiplyerEdge: 1.0
+     AffectEnemies: true
+     Color: "0.0, 1.0, 0.0, 0.7" 
+
+
+
+SpawnZones: 
+
+
+     # ====================
+     # MARKER ZONES
+     # (To easily find important POI in the SSG  - - has no other function. 
+     # Please keep these active.)
+     # ====================
+
+   - SpawnAt: [DroneBaseT1]  # Marker
+     Radius: 600
+     RadiusRandom: 0
+     RateMultiplyerCenter: 0
+     RateMultiplyerEdge: 0
+     Color: "1.0, 1.0, 0.0, 1.0"
+     Entities:
+       - Names: [CyborgsDamagedHerd]
+         Biomes: [Any]
+         Amount: 0
+         Period: Always
+         DelayMinMax: [15, 25]
+   - SpawnAt: [DroneBaseT1]  # Marker
+     Radius: 1000
+     RadiusRandom: 0
+     RateMultiplyerCenter: 0
+     RateMultiplyerEdge: 0
+     Color: "1.0, 1.0, 0.0, 1.0"
+     Entities:
+       - Names: [CyborgsDamagedHerd]
+         Biomes: [Any]
+         Amount: 0
+         Period: Always
+         DelayMinMax: [15, 25]
+
+
+
+
+     # # ====================
+     # # TROOP ZONES
+     # # ====================
+
+
+
+   # - SpawnAt: [DroneBaseT1, NexusSingle, Nexus]    # Troops closest to base. 'Doorstoppers'
+     # BiomesExcluded: [RadiatedFog, Hotspot]
+     # SpawnOnlyIfPoiIsAlien: true   # (= These troops will not spawn anymore if POI has been conquered)
+     # Radius: 70
+     # RadiusRandom: 0
+     # RateMultiplyerCenter: 1.0
+     # RateMultiplyerEdge: 1.0
+     # Color: "1.0, 1.0, 1.0, 1.0" 
+     # Entities:
+       # - Names: [CyborgsDamagedHerd]
+         # Biomes: [Any]
+         # Amount: 400
+         # Period: Always
+         # DelayMinMax: [-1, -1]  # troops do not respawn
+
+   # - SpawnAt: [DroneBaseT1, NexusSingle, Nexus]          # Troops in the near vicinity
+     # BiomesExcluded: [RadiatedFog, Hotspot]
+     # SpawnOnlyIfPoiIsAlien: true
+     # Radius: 300
+     # RadiusRandom: 0
+     # RateMultiplyerCenter: 1.0
+     # RateMultiplyerEdge: 0.5
+     # Color: "1.0, 1.0, 1.0, 1.0" 
+     # Entities:
+       # - Names: [CyborgsDamagedHerd]
+         # Biomes: [Any]
+         # Amount: 200
+         # Period: Always
+         # DelayMinMax: [-1, -1]
+
+
+     # # "Civilisation spawns"
+   # - SpawnAt: [DroneBaseT1, NexusSingle, Nexus]    # Main troop anchor for the whole planet. 
+                                               # # These will still appear after conquering the POI, unless killed.
+     # BiomesExcluded: [RadiatedFog, Hotspot]
+     # Radius: 3000
+     # RadiusRandom: 0
+     # RateMultiplyerCenter: 1.0
+     # RateMultiplyerEdge: 1.0
+     # Color: "1.0, 1.0, 1.0, 1.0" 
+     # Entities:
+       # - Names: [CyborgsDamagedHerd]
+         # Biomes: [Any]
+         # Amount: 10            # Low densities, since the spawnzones are tied to many POI, and will overlap often
+         # Period: Always
+         # DelayMinMax: [-1, -1]
+
+
+
+   # - SpawnAt: [NexusDefense]    # Troops just catching some 'fresh air'.
+     # SpawnOnlyIfPoiIsAlien: true
+     # BiomesExcluded: [RadiatedFog, Hotspot]
+     # Radius: 50
+     # RadiusRandom: 0
+     # RateMultiplyerCenter: 1.0
+     # RateMultiplyerEdge: 0.5
+     # Color: "1.0, 1.0, 1.0, 1.0" 
+     # Entities:
+       # - Names: [CyborgsDamagedHerd]
+         # Biomes: [Any]
+         # Amount: 1000
+         # Period: Always
+         # DelayMinMax: [-1, -1]
+
+
+
+
+CreatureSpawning:
+    - Biomes: [Hotspot, RadiatedFog]
+      Entities:
+        - Name: Overseers
+          Period: Always
+          Amount: 40
+          DelayMinMax: [10, 20]
+
+    - Biomes: [Plains, PlainsEdge, Flats]
+      Entities:
+        - Name: WormDesertLargeHerd
+          Period: Always
+          Amount: 10
+          DelayMinMax: [10, 20]
+        - Name: AlienBugs04
+          Period: Day
+          Amount: 12
+          DelayMinMax: [10, 20]
+        - Name: Otyughs
+          Period: Night
+          Amount: 12
+          DelayMinMax: [10, 20]
+
+    - Biomes: [Sand, Barren]
+      Entities:
+        - Name: Overseers
+          Period: Night
+          Amount: 12
+          DelayMinMax: [10, 20]
+        - Name: CaveWormGreyHerd
+          Period: Always
+          Amount: 8
+          DelayMinMax: [10, 20]
+
+    - Biomes: [LowMountains, LowMountainsEdge, Flats]
+      Entities:
+        - Name: Overseers
+          Period: Always
+          Amount: 6
+          DelayMinMax: [10, 20]
+        - Name: GolemsDesert
+          Period: Night
+          Amount: 6
+          DelayMinMax: [10, 20]

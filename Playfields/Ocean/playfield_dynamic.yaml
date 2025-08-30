@@ -1,0 +1,5731 @@
+---
+# # ============================================================== 
+
+PlanetSize: 
+  SizeRange: [3,4,5]
+  SizeProbs: [0.1, 0.8, 0.1]
+TemperatureMin: [-10,-10]          # Values adjusted to the temperature masks. (Multiple POI need tropical biomes to spawn. - Rare 'cold-only' worlds are possible with the temperature masks, but in that case the planet will still have some tiny tropicals left.)
+TemperatureMax: [40,40]            # (See above)
+TemperatureNight: [4, 4]
+PlanetAxis: [10,15]
+HumidityMin: [0.10, 0.15]
+HumidityMax: [0.70, 0.70 ]
+Radiation: [0, 0]
+LandWaterRatio: [0.90, 0.90]     # Less surface = harder for POI to spawn; Careful with more landmass, the biome stamps will take much more time.
+SeaLevel: [60, 60]               # Only change if ground fog height is adjusted, too.
+TerrainLevel: [80, 80]           # Careful with change, might have drastic effects on shoreline
+BaseLevel: [0, 0]
+TerrainHeightMapMax: 499
+TemperatureHeightRange: [61, 19]
+TemperatureGradientRange: [0.7, 0]
+TemperatureNoiseFac: 0.33
+HumidityHeightFac: [1, 270]
+HumidityNoiseFac: 0.77
+
+GravityMinMax: [-8, -10]
+AtmosphereDensityMinMax: [0.9, 1.2]
+AtmosphereO2MinMax: [0.15, 0.25]
+AtmoBreathableProb: 1
+WaterProb: 1
+PvPProb: 0
+Water: [WaterBlue]
+Music: [Tempest]
+
+
+# (Please don't use dynamic fog ranges. Intensity and height of ground fog adjusted to sea level & deco.)
+
+
+# ==============================================================
+
+GroundShapes: 
+  - GroundShapeOcean_01_LO, 1          # Multiple entries to boost the spawning chances.
+  - GroundShapeOcean_01_LO, 1
+  - GroundShapeOcean_01_LO, 1 
+  - GroundShapeOcean_01_LO, 1 
+
+
+HumidityMasks:
+  - Global_2
+  - Global_2a
+  - Global_3
+  - Global_4
+
+
+TemperatureMasks: 
+  - Global_1_R, 0.125
+  - Global_2_R, 0.125 
+
+
+BiomeStampTries: 4000  # Very high number, but lots of (cheap) spawn fails, due to large water surface. Used to make islands less 'flat'
+
+
+
+
+
+
+
+Presets:
+
+
+
+   # 12 symbols max for preset names
+   # 7 entries per line
+
+
+   - Name: Empty    # To 'turn off' decoration. Will not get placed.
+     Density: 0.1
+     Snow: 0
+     spawn:
+       Min: 0
+       Max: 0
+       BushPower: 1
+       Noise: 1,0.1,2,0.5
+     scale:
+       Power: 1
+       Noise: 1,0.1,2,0.5
+     Hue: 0,0,0.001
+
+
+   - Name: GrsDnse_04
+     Density: 0.5
+     Snow: 0
+     spawn:
+       Min: 0
+       Max: 1
+       BushPower: 0
+       Noise: 0,0.4,1,0.5
+     scale:
+       Power: 5
+       Noise: 2,0.35,4,0.5
+     Hue: -9,9,0.015
+     BendPower: 0.5
+     GrassPower: 0.4
+     Contrast: 1
+     Saturation: 1
+
+
+
+   - Name: GrsDnse_08
+     Density: 0.5
+     Snow: 0
+     spawn:
+       Min: 0
+       Max: 1
+       BushPower: 0
+       Noise: 0,0.4,1,0.5
+     scale:
+       Power: 5
+       Noise: 2,0.35,4,0.5
+     Hue: -9,9,0.015
+     BendPower: 0.5
+     GrassPower: 0.8
+     Contrast: 1
+     Saturation: 1
+
+
+   - Name: GrsDnse_15
+     Density: 0.5
+     Snow: 0
+     spawn:
+       Min: 0
+       Max: 1
+       BushPower: 0
+       Noise: 0,0.4,1,0.5
+     scale:
+       Power: 5
+       Noise: 2,0.35,4,0.5
+     Hue: -9,9,0.015
+     BendPower: 0.5
+     GrassPower: 1.5
+     Contrast: 1
+     Saturation: 1
+
+
+   - Name: GrsDnse_20
+     Density: 0.5
+     Snow: 0
+     spawn:
+       Min: 0
+       Max: 1
+       BushPower: 0
+       Noise: 0,0.4,1,0.5
+     scale:
+       Power: 5
+       Noise: 2,0.35,4,0.5
+     Hue: -9,9,0.015
+     BendPower: 0.5
+     GrassPower: 2
+     Contrast: 1
+     Saturation: 1
+
+
+
+   - Name: GrassDense
+     Density: 0.5
+     Snow: 0
+     spawn:
+       Min: 0
+       Max: 1
+       BushPower: 0
+       Noise: 0,0.4,1,0.5
+     scale:
+       Power: 5
+       Noise: 2,0.35,4,0.5
+     Hue: -9,9,0.015
+     BendPower: 0.5
+     GrassPower: 1
+     Contrast: 1
+     Saturation: 1
+
+
+   - Name: =
+     Density: 0.5
+     Snow: 0
+     spawn:
+       Min: 0.755847931
+       Max: 1
+       BushPower: 10
+       Noise: 2,0.4,1,0.7
+     scale:
+       Power: 5
+       Noise: 2,0.99,4,0.5
+     Hue: 0,15,0.0051
+
+
+
+
+# # ======================== OLD PRESET STYLES  - This block seems to be good to go as 'replacement'
+   - Name: Tree   # No variance
+     Density: 0.01 
+     Snow: 0
+     spawn:
+       Min: 0.45
+       Max: 0.90
+       BushPower: 0
+       Noise: 3,0.015,3,0.45
+     scale:
+       Power: 0
+       Noise: 1,0,2,0.5
+     Hue: 0,0,0.001
+     BendPower: 1
+     GrassPower: 1
+     Contrast: 1
+     Saturation: 1
+
+   - Name: BigPlant
+     Density: 0.1
+     Snow: 0
+     spawn:
+       Min: 0.45   #0.39
+       Max: 0.90
+       BushPower: 0
+       Noise: 3,0.015,3,0.5
+     scale:
+       Power: 0
+       Noise: 1,0.1,2,0.5
+     Hue: 0,0,0.001
+
+   - Name: Plant
+     Density: 0.01
+     Snow: 0
+     spawn:
+       Min: 0.4
+       Max: 0.90
+       BushPower: 0
+       Noise: 3,0.015,3,0.5
+     scale:
+       Power: 0
+       Noise: 1,0.1,2,0.5
+     Hue: 0,0,0.001
+
+   - Name: Free
+     Density: 0.01
+     Snow: 0
+     spawn:
+       Min: 0
+       Max: 1
+       BushPower: 0
+       Noise: 0,0.4,1,0.5
+     scale:
+       Power: 0
+       Noise: 1,0.1,2,0.5
+     Hue: 0,0,0.001
+
+
+   - Name: Sunny
+     Density: 0.1
+     Snow: 0
+     spawn:
+       Min: 0.0
+       Max: 0.45
+       BushPower: 0
+       Noise: 3,0.015,3,0.5
+     scale:
+       Power: 0
+       Noise: 1,0.1,2,0.5
+     Hue: 0,0,0.001
+
+
+
+
+
+   - Name: GrsDnse_SN
+     Density: 0.5
+     Snow: 1.2
+     spawn:
+       Min: 0
+       Max: 1
+       BushPower: 0
+       Noise: 0,0.4,1,0.5
+     scale:
+       Power: 5
+       Noise: 2,0.35,4,0.5
+     Hue: -9,9,0.015
+
+
+   - Name: GrsDns_GrsL
+     Density: 0.5
+     Snow: 0
+     spawn:
+       Min: 0
+       Max: 1
+       BushPower: 0
+       Noise: 0,0.4,1,0.5
+     scale:
+       Power: 5
+       Noise: 2,0.35,4,0.5
+     Hue: -24,-8,0.015
+     BendPower: 0.5
+     GrassPower: 1
+     Contrast: 1.01999998
+     Saturation: 1.10000002
+
+
+     # ================== Next line
+
+
+   - Name: Tree_V  # OK - Trees with about 30-50% size difference in comparison to scale 1. (Check with "Tree" for the minimum individual scale to use)
+     Density: 0.01 
+     Snow: 0
+     spawn:
+       Min: 0.45
+       Max: 0.9
+       BushPower: 0.3
+       Noise: 3,0.015,3,0.45
+     scale:
+       Power: 1
+       Noise: 1,0.1,2,0.5
+     Hue: -10,10,0.015
+     BendPower: 0.7
+     GrassPower: 1
+     Contrast: 1
+     Saturation: 1
+
+# 
+   - Name: BigPlant_V
+     Density: 0.1
+     Snow: 0
+     spawn:
+       Min: 0.39
+       Max: 0.90
+       BushPower: 0.3
+       Noise: 3,0.015,3,0.45
+     scale:
+       Power: 1
+       Noise: 1,0.3,2,0.5
+     Hue: -10,10,0.015
+
+
+# 
+   - Name: Plant_V 
+     Density: 0.01
+     Snow: 0
+     spawn:
+       Min: 0
+       Max: 0.594
+       BushPower: 0.3
+       Noise: 3,0.015,3,0.45
+     scale:
+       Power: 1
+       Noise: 2,0.02,2,0.5
+     Hue: -10,10,0.015
+
+
+
+   - Name: Free_V
+     Density: 0.01
+     Snow: 0
+     spawn:
+       Min: 0
+       Max: 1
+       BushPower: 0.0
+       Noise: 1,0.4,2,0.5
+     scale:
+       Power: 1
+       Noise: 0,0.1,2,0.5
+     Hue: 0,0,0.001
+
+
+   - Name: Sunny_V
+     Density: 0.1
+     Snow: 0
+     spawn:
+       Min: 0.0
+       Max: 0.39
+       BushPower: 0.3
+       Noise: 3,0.015,3,0.45
+     scale:
+       Power: 1
+       Noise: 1,0.3,2,0.5
+     Hue: -10,10,0.015
+
+
+   - Name: GrsDns_Tun
+     Density: 0.5
+     Snow: 0
+     spawn:
+       Min: 0
+       Max: 1
+       BushPower: 0
+       Noise: 0,0.4,1,0.5
+     scale:
+       Power: 5
+       Noise: 2,0.35,4,0.5
+     Hue: -8,8,0.015
+     BendPower: 0.5
+     GrassPower: 1
+     Contrast: 0.980000019
+     Saturation: 1
+
+
+   - Name: GrsDns_Swmp            # Darker, redder grass-
+     Density: 0.5
+     Snow: 0
+     spawn:
+       Min: 0
+       Max: 1
+       BushPower: 0
+       Noise: 0,0.4,1,0.5
+     scale:
+       Power: 5
+       Noise: 2,0.35,4,0.5
+     Hue: -40,-40,0.015
+     BendPower: 1
+     GrassPower: 1
+     Contrast: 1
+     Saturation: 0.7
+
+
+
+
+     # ================== Next line
+
+
+     # Colour variants not used yet
+
+   - Name: Tree_V_C  # Darker and less saturated. Trees with about 30-50% size difference in comparison to scale 1. 
+     Density: 0.01 
+     Snow: 0
+     spawn:
+       Min: 0.45
+       Max: 0.9
+       BushPower: 0.3
+       Noise: 3,0.015,3,0.45
+     scale:
+       Power: 1
+       Noise: 1,0.1,2,0.5
+     Hue: -10,10,0.015
+     BendPower: 0.7
+     GrassPower: 1
+     Contrast: 1.05
+     Saturation: 0.7
+
+
+
+# 
+   - Name: BigPlant_V_C
+     Density: 0.1
+     Snow: 0
+     spawn:
+       Min: 0.39
+       Max: 0.90
+       BushPower: 0.3
+       Noise: 3,0.015,3,0.45
+     scale:
+       Power: 1
+       Noise: 1,0.3,2,0.5
+     Hue: -18,2,0.015
+
+
+
+# 
+   - Name: Plant_V_C
+     Density: 0.01
+     Snow: 0
+     spawn:
+       Min: 0
+       Max: 0.594
+       BushPower: 0.3
+       Noise: 3,0.015,3,0.45
+     scale:
+       Power: 1
+       Noise: 2,0.02,2,0.5
+     Hue: -10,10,0.015
+
+
+
+   - Name: Free_V_C
+     Density: 0.01
+     Snow: 0
+     spawn:
+       Min: 0
+       Max: 1
+       BushPower: 0.0
+       Noise: 1,0.4,2,0.5
+     scale:
+       Power: 1
+       Noise: 0,0.1,2,0.5
+     Hue: -16.5,-15.5,0.6
+     BendPower: 0.7
+     GrassPower: 1
+     Contrast: 0.98
+     Saturation: 0.6
+
+
+
+
+   - Name: Sunny_V_Edge
+     Density: 0.1
+     Snow: 0
+     spawn:
+       Min: 0.40
+       Max: 0.50
+       BushPower: 0.3
+       Noise: 3,0.015,3,0.45
+     scale:
+       Power: 1
+       Noise: 1,0.3,2,0.5
+     Hue: 1,10,0.015
+     BendPower: 1
+     GrassPower: 1
+     Contrast: 1
+     Saturation: 1
+
+
+
+
+
+   - Name: GrsDns_Red
+     Density: 0.5
+     Snow: 0
+     spawn:
+       Min: 0
+       Max: 1
+       BushPower: 0
+       Noise: 0,0.4,1,0.5
+     scale:
+       Power: 5
+       Noise: 2,0.35,4,0.5
+     Hue: -108.5,-99.5,0.015
+     BendPower: 0.5
+     GrassPower: 1
+     Contrast: 1
+     Saturation: 1
+
+
+   - Name: GrsDns_Swp2
+     Density: 0.5
+     Snow: 0
+     spawn:
+       Min: 0
+       Max: 1
+       BushPower: 0
+       Noise: 0,0.4,1,0.5
+     scale:
+       Power: 5
+       Noise: 0,0.4,1,0.5
+     Hue: 320,325,0.015
+     BendPower: 1
+     GrassPower: 1
+     Contrast: 1.02
+     Saturation: 1.1
+
+
+
+
+
+     # ================== Next line
+
+
+     # Colour variants not used yet
+
+   - Name: Tree_V_D  # Much darker and less saturated. Trees with about 30-50% size difference
+     Density: 0.01 
+     Snow: 0
+     spawn:
+       Min: 0.45
+       Max: 0.9
+       BushPower: 0.3
+       Noise: 3,0.015,3,0.45
+     scale:
+       Power: 1
+       Noise: 1,0.1,2,0.5
+     Hue: -10,10,0.015
+     BendPower: 0.7
+     GrassPower: 1
+     Contrast: 0.99
+     Saturation: 0.7
+
+
+
+# 
+   - Name: BigPlant_V_D
+     Density: 0.1
+     Snow: 0
+     spawn:
+       Min: 0.39
+       Max: 0.90
+       BushPower: 0.3
+       Noise: 3,0.015,3,0.45
+     scale:
+       Power: 1
+       Noise: 1,0.3,2,0.5
+     Hue: -18,2,0.015
+
+
+
+# 
+   - Name: Plant_V_D
+     Density: 0.01
+     Snow: 0
+     spawn:
+       Min: 0
+       Max: 0.594
+       BushPower: 0.3
+       Noise: 3,0.015,3,0.45
+     scale:
+       Power: 1
+       Noise: 2,0.02,2,0.5
+     Hue: -10,10,0.015
+
+
+
+   - Name: Free_V_D           # Black
+     Density: 0.01
+     Snow: 0
+     spawn:
+       Min: 0
+       Max: 1
+       BushPower: 0.0
+       Noise: 1,0.4,2,0.5
+     scale:
+       Power: 1
+       Noise: 0,0.1,2,0.5
+     Hue: -8,-7,0.6
+     BendPower: 1
+     GrassPower: 1
+     Contrast: 0.5
+     Saturation: 0.05
+
+
+   - Name: Sunny_V_D
+     Density: 0.1
+     Snow: 0
+     spawn:
+       Min: 0.0
+       Max: 0.39
+       BushPower: 0.3
+       Noise: 3,0.015,3,0.45
+     scale:
+       Power: 1
+       Noise: 1,0.3,2,0.5
+     Hue: -10,10,0.015
+
+
+
+   - Name: =
+     Density: 0.5
+     Snow: 0
+     spawn:
+       Min: 0.755847931
+       Max: 1
+       BushPower: 10
+       Noise: 2,0.4,1,0.7
+     scale:
+       Power: 5
+       Noise: 2,0.99,4,0.5
+     Hue: 0,15,0.0051
+
+
+
+   - Name: GrsDns_Flow
+     Density: 0.5
+     Snow: 0
+     spawn:
+       Min: 0
+       Max: 1
+       BushPower: 0.5
+       Noise: 0,0.4,1,0.5
+     scale:
+       Power: 4
+       Noise: 2,0.35,4,0.5
+     Hue: -68.15981,-59.84019,0.015
+     BendPower: 0.5
+     GrassPower: 1
+     Contrast: 1
+     Saturation: 1.5
+
+
+
+
+
+# ================== New line
+
+
+   - Name: Tree_VS
+     Density: 0.01
+     Snow: 1
+     spawn:
+       Min: 0.45
+       Max: 0.9
+       BushPower: 0.3
+       Noise: 3,0.015,3,0.45
+     scale:
+       Power: 1
+       Noise: 1,0.1,2,0.5
+     Hue: -10,10,0.015
+     BendPower: 0.70
+     GrassPower: 1
+     Contrast: 1
+     Saturation: 1
+   - Name: BigPlant_VS
+     Density: 0.1
+     Snow: 1
+     spawn:
+       Min: 0.39
+       Max: 0.9
+       BushPower: 0.3
+       Noise: 3,0.015,3,0.45
+     scale:
+       Power: 1
+       Noise: 1,0.3,2,0.5
+     Hue: -10,10,0.015
+     BendPower: 1
+     GrassPower: 1
+     Contrast: 1
+     Saturation: 1
+   - Name: Plant_VS
+     Density: 0.01
+     Snow: 1
+     spawn:
+       Min: 0
+       Max: 0.594
+       BushPower: 0.3
+       Noise: 3,0.015,3,0.45
+     scale:
+       Power: 1
+       Noise: 2,0.02,2,0.5
+     Hue: -10,10,0.015
+     BendPower: 1
+     GrassPower: 1
+     Contrast: 1
+     Saturation: 1
+   - Name: Free_VS
+     Density: 0.01
+     Snow: 1
+     spawn:
+       Min: 0
+       Max: 1
+       BushPower: 0
+       Noise: 1,0.4,2,0.5
+     scale:
+       Power: 1
+       Noise: 0,0.1,2,0.5
+     Hue: 0,0,0.001
+     BendPower: 1
+     GrassPower: 1
+     Contrast: 1
+     Saturation: 1
+
+   - Name: Sunny_V_C
+     Density: 0.1
+     Snow: 1
+     spawn:
+       Min: 0.0
+       Max: 0.39
+       BushPower: 0.3
+       Noise: 3,0.015,3,0.45
+     scale:
+       Power: 1
+       Noise: 1,0.3,2,0.5
+     Hue: 1,10,0.015
+     BendPower: 1
+     GrassPower: 1
+     Contrast: 0.97
+     Saturation: 0.70
+
+
+
+   - Name: =
+     Density: 0.5
+     Snow: 0
+     spawn:
+       Min: 0.755847931
+       Max: 1
+       BushPower: 10
+       Noise: 2,0.4,1,0.7
+     scale:
+       Power: 5
+       Noise: 2,0.99,4,0.5
+     Hue: 0,15,0.0051
+     BendPower: 1
+     GrassPower: 1
+     Contrast: 1
+  
+
+   - Name: GrsDnsSavn
+     Density: 0.5
+     Snow: 0
+     spawn:
+       Min: 0
+       Max: 1
+       BushPower: 0
+       Noise: 0,0.4,1,0.5
+     scale:
+       Power: 5
+       Noise: 2,0.35,4,0.5
+     Hue: -8,0,0.015
+     BendPower: 0.5
+     GrassPower: 1
+     Contrast: 1.02
+     Saturation: 1.1
+
+
+# ================== New line
+
+
+
+   - Name: GrsOutback   # Large clusters of grass.
+     Density: 0.5
+     Snow: 0
+     spawn:
+       Min: 0.658382058
+       Max: 0.99
+       BushPower: 5
+       Noise: 2,0.09,2,0.1
+     scale:
+       Power: 15
+       Noise: 2,0.99,4,0.5
+     Hue: 0,15,0.0051
+     BendPower: 0.2
+     GrassPower: 1
+     Contrast: 1
+     Saturation: 1
+
+
+
+
+
+   - Name: GrsSand   #  Clusters more sparsely than Outback, but bigger
+     Density: 0.5
+     Snow: 0
+     spawn:
+       Min: 0.70
+       Max: 0.99
+       BushPower: 5
+       Noise: 2,0.047,3,0.4
+     scale:
+       Power: 2
+       Noise: 2,0.05,3,0.4
+     Hue: 0,15,0.0051
+
+
+
+
+   - Name: GrsArid
+     Density: 0.5
+     Snow: 0
+     spawn:
+       Min: 0.755847931
+       Max: 1
+       BushPower: 5
+       Noise: 2,0.4,1,0.7
+     scale:
+       Power: 8
+       Noise: 2,0.99,4,0.5
+     Hue: 0,15,0.0051
+     BendPower: -1.3
+     GrassPower: 2
+     Contrast: 1
+     Saturation: 1
+
+   - Name: GrsArid_In
+     Density: 0.5
+     Snow: 0
+     spawn:
+       Min: 0.755847931
+       Max: 1
+       BushPower: 2
+       Noise: 2,0.4,1,0.7
+     scale:
+       Power: 7
+       Noise: 2,0.99,4,0.5
+     Hue: 0,15,0.0051
+     BendPower: -0.5
+     GrassPower: 1
+     Contrast: 1
+     Saturation: 1
+
+
+    # 
+   - Name: GrsDunes # Mid frequency strips of grass. Less than 50% coverage at max density.
+     Density: 0.5
+     Snow: 0
+     spawn:
+       Min: 0
+       Max: 0.4
+       BushPower: 2
+       Noise: 2,0.1,1.5,10
+     scale:
+       Power: 1
+       Noise: 2,0.35,4,0.5
+     Hue: -9,9,0.015
+     BendPower: -1.2
+     GrassPower: 1
+     Contrast: 1
+     Saturation: 1
+
+
+   # 
+   - Name: GrsSteppe # High frequency grass tufts with large inner. Less than 50% coverage at max density.
+     Density: 0.5
+     Snow: 0
+     spawn:
+       Min: 0
+       Max: 0.45
+       BushPower: 4
+       Noise: 2,0.4,2,0.3
+     scale:
+       Power: 1
+       Noise: 2,0.35,4,0.5
+     Hue: -9,9,0.015
+     BendPower: 0.5
+     GrassPower: 1
+     Contrast: 1
+     Saturation: 1
+
+
+   - Name: GrsDnsSavn2
+     Density: 0.5
+     Snow: 0
+     spawn:
+       Min: 0
+       Max: 1
+       BushPower: 0
+       Noise: 0,0.4,1,0.5
+     scale:
+       Power: 5
+       Noise: 2,0.35,4,0.5
+     Hue: -10.5,-5.5,0.015
+     BendPower: 0.5
+     GrassPower: 1
+     Contrast: 1
+     Saturation: 1.5
+
+
+# ================== New line
+
+
+    # Placeholders for color variants
+
+
+   - Name: GrsOutb_C   # Large clusters of grass.
+     Density: 0.5
+     Snow: 0
+     spawn:
+       Min: 0.658382058
+       Max: 0.99
+       BushPower: 5
+       Noise: 2,0.09,2,0.1
+     scale:
+       Power: 15
+       Noise: 2,0.99,4,0.5
+     Hue: 0,15,0.0051
+     BendPower: 0.2
+     GrassPower: 1
+     Contrast: 1
+     Saturation: 1
+
+
+
+
+   # Unused
+   - Name: GrsSnd_C   #  Clusters more sparsely than Outback, but bigger
+     Density: 0.5
+     Snow: 0
+     spawn:
+       Min: 0.70
+       Max: 0.99
+       BushPower: 5
+       Noise: 2,0.047,3,0.4
+     scale:
+       Power: 2
+       Noise: 2,0.05,3,0.4
+     Hue: 0,15,0.0051
+
+
+
+   - Name: GrsArid_C             # Used
+     Density: 0.5
+     Snow: 0
+     spawn:
+       Min: 0.755847931
+       Max: 1
+       BushPower: 5
+       Noise: 2,0.4,1,0.7
+     scale:
+       Power: 8
+       Noise: 2,0.99,4,0.5
+     Hue: -24.9375,-23.0625,0.0051
+     BendPower: -0.899999976
+     GrassPower: 2
+     Contrast: 1
+     Saturation: 5
+
+
+   - Name: GrsAr_In_C
+     Density: 0.5
+     Snow: 0
+     spawn:
+       Min: 0.755847931
+       Max: 1
+       BushPower: 2
+       Noise: 2,0.4,1,0.7
+     scale:
+       Power: 7
+       Noise: 2,0.99,4,0.5
+     Hue: 0,15,0.0051
+     BendPower: -0.5
+     GrassPower: 1
+     Contrast: 1
+     Saturation: 1
+
+
+    # 
+   - Name: GrsDune_C # Mid frequency strips of grass. Less than 50% coverage at max density.
+     Density: 0.5
+     Snow: 0
+     spawn:
+       Min: 0
+       Max: 0.4
+       BushPower: 2
+       Noise: 2,0.1,1.5,10
+     scale:
+       Power: 1
+       Noise: 2,0.35,4,0.5
+     Hue: -9,9,0.015
+     BendPower: -1.20000005
+     GrassPower: 1
+     Contrast: 1.01
+     Saturation: 0.8
+
+
+
+   # 
+   - Name: GrsStep_C # High frequency grass tufts with large inner. Less than 50% coverage at max density.
+     Density: 0.5
+     Snow: 0
+     spawn:
+       Min: 0
+       Max: 0.45
+       BushPower: 4
+       Noise: 2,0.4,2,0.3
+     scale:
+       Power: 1
+       Noise: 2,0.35,4,0.5
+     Hue: -9,9,0.015
+     BendPower: 0.5
+     GrassPower: 1
+     Contrast: 1
+     Saturation: 1
+
+
+   - Name: GrsDnsSavn3
+     Density: 0.5
+     Snow: 0
+     spawn:
+       Min: 0
+       Max: 1
+       BushPower: 0
+       Noise: 0,0.4,1,0.5
+     scale:
+       Power: 5
+       Noise: 2,0.35,4,0.5
+     Hue: -10.5,-5.5,0.015
+     BendPower: 0.5
+     GrassPower: 1
+     Contrast: 1.04999995
+     Saturation: 0.699999988
+
+
+# ================== New line
+
+
+
+     # ======= GRASS MATS ========  # Low frequency regions of different grasses. Each 'part' will leave the other mostly free.
+
+     # 
+   - Name: GrsMatIn
+     Density: 0.5
+     Snow: 0
+     spawn:
+       Min: 0.45
+       Max: 0.9
+       BushPower: 2
+       Noise: 3,0.015,3,0.45
+     scale:
+       Power: 0.1
+       Noise: 1,0.01,2,0.5
+     Hue: 0,0,0.001
+
+     # 
+   - Name: GrsMatMid
+     Density: 0.5
+     Snow: 0
+     spawn:
+       Min: 0.2
+       Max: 0.55
+       BushPower: 1.5
+       Noise: 3,0.015,3,0.45
+     scale:
+       Power: 0.1
+       Noise: 1,0.01,2,0.5
+     Hue: 0,0,0.001
+
+     # 
+   - Name: GrsMatOut
+     Density: 0.5
+     Snow: 0
+     spawn:
+       Min: 0
+       Max: 0.3
+       BushPower: 2
+       Noise: 3,0.015,3,0.45
+     scale:
+       Power: 0.1
+       Noise: 1,0.01,2,0.5
+     Hue: 0,0,0.001
+
+
+
+   - Name: GrsDns1In
+     Density: 0.05
+     Snow: 0
+     spawn:
+       Min: 0.5
+       Max: 1
+       BushPower: 1
+       Noise: 3,0.1,5,0.5
+     scale:
+       Power: 2
+       Noise: 2,0.01,3,0.3
+     Hue: 0,0,0.001
+
+
+   - Name: GrsDns1Out
+     Density: 0.05
+     Snow: 0
+     spawn:
+       Min: 0
+       Max: 0.479999989
+       BushPower: 3
+       Noise: 3,0.1,5,0.5
+     scale:
+       Power: 5
+       Noise: 2,0.1,3,0.3
+     Hue: 0,0,0.001
+
+
+
+   - Name: =
+     Density: 0.5
+     Snow: 0
+     spawn:
+       Min: 0.755847931
+       Max: 1
+       BushPower: 10
+       Noise: 2,0.4,1,0.7
+     scale:
+       Power: 5
+       Noise: 2,0.99,4,0.5
+     Hue: 0,15,0.0051
+
+
+   - Name: =
+     Density: 0.5
+     Snow: 0
+     spawn:
+       Min: 0.755847931
+       Max: 1
+       BushPower: 10
+       Noise: 2,0.4,1,0.7
+     scale:
+       Power: 5
+       Noise: 2,0.99,4,0.5
+     Hue: 0,15,0.0051
+
+
+
+# ================== New line
+
+
+     # Placeholder colour variants
+     # ======= GRASS MATS ========  # Low frequency regions of different grasses. Each 'part' will leave the other mostly free.
+
+     # 
+   - Name: GrsMatIn_C
+     Density: 0.5
+     Snow: 0
+     spawn:
+       Min: 0.45
+       Max: 0.9
+       BushPower: 2
+       Noise: 3,0.015,3,0.45
+     scale:
+       Power: 0.1
+       Noise: 1,0.01,2,0.5
+     Hue: -34,-30,0.001
+     BendPower: 0.7
+     GrassPower: 1
+     Contrast: 1
+     Saturation: 1
+
+     # 
+   - Name: GrsMatMid_C
+     Density: 0.5
+     Snow: 0
+     spawn:
+       Min: 0.2
+       Max: 0.55
+       BushPower: 1.5
+       Noise: 3,0.015,3,0.45
+     scale:
+       Power: 0.1
+       Noise: 1,0.01,2,0.5
+     Hue: -48,-48,0.001
+
+
+   - Name: GrsMatOutA
+     Density: 0.5
+     Snow: 0
+     spawn:
+       Min: 0
+       Max: 0.230000004
+       BushPower: 2
+       Noise: 3,0.015,3,0.45
+     scale:
+       Power: 0.100000001
+       Noise: 1,0.01,2,0.5
+     Hue: -5,-5,0.001
+     BendPower: 1
+     GrassPower: 1
+     Contrast: 1
+     Saturation: 1
+
+
+   - Name: GrsMatOutA2
+     Density: 0.5
+     Snow: 0
+     spawn:
+       Min: 0
+       Max: 0.200000003
+       BushPower: 2
+       Noise: 3,0.015,3,0.49
+     scale:
+       Power: 0.100000001
+       Noise: 1,0.01,2,0.5
+     Hue: -5,5,0.001
+     BendPower: 0.5
+     GrassPower: 1
+     Contrast: 0.949999988
+     Saturation: 1
+
+
+
+
+
+   - Name: =
+     Density: 0.5
+     Snow: 0
+     spawn:
+       Min: 0.755847931
+       Max: 1
+       BushPower: 10
+       Noise: 2,0.4,1,0.7
+     scale:
+       Power: 5
+       Noise: 2,0.99,4,0.5
+     Hue: 0,15,0.0051
+
+
+
+# 
+   - Name: HighGrass               #  (Unused, rework) A high grass variant, about 3-4m. (Minimal bushpower height variation)
+     Density: 0.5
+     Snow: 0
+     spawn:
+       Min: 0.3
+       Max: 0.8
+       BushPower: 2
+       Noise: 2,0.5,2,0.5
+     scale:
+       Power: 5
+       Noise: 2,0.15,4,0.5
+     Hue: 0,15,0.0051
+
+
+
+
+   - Name: HighGrass2               # (Unused, rework) A high grass variant, about 3-4m, but less coverage (allows for more dense 'tufts')
+     Density: 0.5
+     Snow: 0
+     spawn:
+       Min: 0.3
+       Max: 0.8
+       BushPower: 2
+       Noise: 2,0.5,2,0.5
+     scale:
+       Power: 7
+       Noise: 2,0.15,4,0.5
+     Hue: 0,15,0.0051
+
+
+
+
+     # ==== Sand bush clusters =====
+
+     # Unused
+   - Name: SandBu_Tree            # Variant of SandBushIn. Centermost.
+     Density: 0.5
+     Snow: 0
+     spawn:
+       Min: 0.8
+       Max: 1
+       BushPower: 1
+       Noise: 2,0.02,1,0.7
+     scale:
+       Power: 3
+       Noise: 2,0.15,4,0.5
+     Hue: 0,15,0.0051
+
+
+   - Name: SandBushIn            # Uncommon bushes & stones in the deserts
+     Density: 0.05
+     Snow: 0
+     spawn:
+       Min: 0.72
+       Max: 1
+       BushPower: 2
+       Noise: 3,0.02,3,0.45
+     scale:
+       Power: 1.8
+       Noise: 3,0.02,2,0.45
+     Hue: 0,0,0.001
+
+   - Name: SandBush             # Uncommon bushes in the deserts. Close to stones. Only minimal size differences.
+     Density: 0.5
+     Snow: 0
+     spawn:
+       Min: 0.68
+       Max: 1
+       BushPower: 0.3
+       Noise: 3,0.02,3,0.45
+     scale:
+       Power: 1
+       Noise: 3,0.02,2,0.45
+     Hue: 0,0,0.001
+
+   - Name: SandBush_V            # Uncommon bushes in the deserts. Outer ring. High size difference
+     Density: 0.5
+     Snow: 0
+     spawn:
+       Min: 0.68
+       Max: 1
+       BushPower: 6
+       Noise: 3,0.02,3,0.45
+     scale:
+       Power: 3
+       Noise: 3,0.02,2,0.45
+     Hue: 0,0,0.001
+
+
+   - Name: SandBushOut             # Uncommon bushes in the deserts. Outmost ring.
+     Density: 0.5
+     Snow: 0
+     spawn:
+       Min: 0.64
+       Max: 0.77
+       BushPower: 2
+       Noise: 3,0.02,3,0.45
+     scale:
+       Power: 3
+       Noise: 3,0.02,2,0.45
+     Hue: 0,0,0.001
+     BendPower: 1
+     GrassPower: 1
+     Contrast: 1
+     Saturation: 1
+
+
+   - Name: HghGrs_C               # A high grass variant, about 3-4m. (Minimal bushpower height variation)
+     Density: 0.5
+     Snow: 0
+     spawn:
+       Min: 0.3
+       Max: 0.8
+       BushPower: 2
+       Noise: 2,0.5,2,0.5
+     scale:
+       Power: 5
+       Noise: 2,0.15,4,0.5
+     Hue: 0,15,0.0051
+
+
+
+
+   - Name: HghGrs2_C               #  A high grass variant, about 3-4m, but less coverage (allows for more dense 'tufts')
+     Density: 0.5
+     Snow: 0
+     spawn:
+       Min: 0.3
+       Max: 0.8
+       BushPower: 2
+       Noise: 2,0.5,2,0.5
+     scale:
+       Power: 7
+       Noise: 2,0.15,4,0.5
+     Hue: 0,15,0.0051
+
+
+# ================================
+
+
+
+
+
+     # ==== Sand bush clusters =====
+
+
+   - Name: SandBu_Mat    # Outer of sandbush, wide area
+     Density: 0.5
+     Snow: 0
+     spawn:
+       Min: 0.3
+       Max: 0.6
+       BushPower: 1
+       Noise: 2,0.02,1,0.7
+     scale:
+       Power: 3
+       Noise: 2,0.15,4,0.5
+     Hue: -15.5,-0.5,0.0051
+     BendPower: 0.5
+     GrassPower: 1
+     Contrast: 0.99
+     Saturation: 0.7
+
+
+   - Name: SandBu_Sunny
+     Density: 0.05
+     Snow: 0
+     spawn:
+       Min: 0
+       Max: 0.3
+       BushPower: 2
+       Noise: 3,0.02,3,0.45
+     scale:
+       Power: 1.8
+       Noise: 3,0.02,2,0.45
+     Hue: 0,0,0.001
+     BendPower: 1
+     GrassPower: 1
+     Contrast: 1
+     Saturation: 1
+
+
+
+
+   - Name: SandBu_C             # Uncommon bushes in the deserts. Close to stones. Only minimal size differences.
+     Density: 0.5
+     Snow: 0
+     spawn:
+       Min: 0.680000007
+       Max: 1
+       BushPower: 0.300000012
+       Noise: 3,0.02,3,0.45
+     scale:
+       Power: 1
+       Noise: 3,0.02,2,0.45
+     Hue: 0,0,0.001
+     BendPower: 1
+     GrassPower: 1
+     Contrast: 1
+     Saturation: 1
+
+
+   - Name: SandBu_V_C            # Uncommon bushes in the deserts. Outer ring. High size difference
+     Density: 0.5
+     Snow: 0
+     spawn:
+       Min: 0.68
+       Max: 1
+       BushPower: 6
+       Noise: 3,0.02,3,0.45
+     scale:
+       Power: 3
+       Noise: 3,0.02,2,0.45
+     # Hue: -8,0,0.015
+     # BendPower: 0.5
+     # GrassPower: 1
+     # Contrast: 1.02
+     # Saturation: 1.1
+     Hue: -8,0,0.015
+     BendPower: -0.5
+     GrassPower: 1
+     Contrast: 1.08000004
+     Saturation: 0.5
+
+
+
+   - Name: GrsGrndCov1
+     Density: 0.5
+     Snow: 0
+     spawn:
+       Min: 0
+       Max: 1
+       BushPower: 0
+       Noise: 2,0.4,1,0.7
+     scale:
+       Power: 0
+       Noise: 2,0.99,4,0.5
+     Hue: 0,15,0.0051
+     BendPower: -5
+     GrassPower: 0.1
+     Contrast: 0.9
+     Saturation: 0.5
+
+
+   - Name: SandBu_VC2            # Uncommon bushes in the deserts. Outer ring. High size difference
+     Density: 0.5
+     Snow: 0
+     spawn:
+       Min: 0.68
+       Max: 1
+       BushPower: 6
+       Noise: 3,0.02,3,0.45
+     scale:
+       Power: 3
+       Noise: 3,0.02,2,0.45
+     Hue: -26.5,-21.5,0.015
+     BendPower: 0.5
+     GrassPower: 1
+     Contrast: 1.01
+     Saturation: 1.1
+
+   - Name: Bush
+     Density: 0.01
+     Snow: 0
+     spawn:
+       Min: 0
+       Max: 1
+       BushPower: 0
+       Noise: 2,0.4,2,0.5
+     scale:
+       Power: 0
+       Noise: 1,0.1,2,0.5
+     Hue: 0,0,0.001
+
+
+
+# ========================================
+
+   - Name: PolarTreeOut
+     Density: 0.01
+     Snow: 0
+     spawn:
+       Min: 0.60
+       Max: 0.75
+       BushPower: 4
+       Noise: 2,0.005,3,0.4
+     scale:
+       Power: 1.8
+       Noise: 2,0.05,4,0.5
+     Hue: -15.5,-0.5,0.0051
+     BendPower: 0.5
+     GrassPower: 1
+     Contrast: 0.99
+     Saturation: 0.75
+
+
+   - Name: PolarTreeIn
+     Density: 0.01
+     Snow: 0
+     spawn:
+       Min: 0.70
+       Max: 0.85
+       BushPower: 1.5
+       Noise: 2,0.005,3,0.4
+     scale:
+       Power: 5
+       Noise: 2,0.05,4,0.5
+     Hue: -15.5,-0.5,0.0051
+     BendPower: 0.5
+     GrassPower: 1
+     Contrast: 0.99
+     Saturation: 0.9
+
+   - Name: PolarTreeCore
+     Density: 0.01
+     Snow: 0
+     spawn:
+       Min: 0.80
+       Max: 1
+       BushPower: 1
+       Noise: 2,0.005,3,0.4
+     scale:
+       Power: 5
+       Noise: 2,0.05,4,0.5
+     Hue: 0,15,0.0051
+     BendPower: 0.7
+     GrassPower: 1
+     Contrast: 0.99
+     Saturation: 0.75
+
+
+
+
+   - Name: =
+     Density: 0.5
+     Snow: 0
+     spawn:
+       Min: 0.755847931
+       Max: 1
+       BushPower: 10
+       Noise: 2,0.4,1,0.7
+     scale:
+       Power: 5
+       Noise: 2,0.99,4,0.5
+     Hue: 0,15,0.0051
+
+
+   - Name: SandBuOut_C2
+     Density: 0.5
+     Snow: 0
+     spawn:
+       Min: 0.64
+       Max: 0.77
+       BushPower: 2
+       Noise: 3,0.02,3,0.45
+     scale:
+       Power: 3
+       Noise: 3,0.02,2,0.45
+     Hue: -8,-8,0.001
+     BendPower: 1
+     GrassPower: 1
+     Contrast: 0.97
+     Saturation: 0.70
+
+
+
+
+
+   - Name: Shrublnd_Svn1
+     Density: 0.01
+     Snow: 0
+     spawn:
+       Min: 0.70
+       Max: 0.80
+       BushPower: 1
+       Noise: 2,0.4,1,0.7
+     scale:
+       Power: 5
+       Noise: 2,0.99,4,0.5
+     Hue: 0.5,15.5,0.0051
+     BendPower: 1
+     GrassPower: 1
+     Contrast: 1.01
+     Saturation: 1
+
+
+   - Name: ShrubLand_Svn
+     Density: 0.1
+     Snow: 0
+     spawn:
+       Min: 0.6
+       Max: 1
+       BushPower: 2
+       Noise: 2,0.02,3,2
+     scale:
+       Power: 1.8
+       Noise: 3,0.02,2,0.45
+     Hue: -40,-40,0.001
+     BendPower: 0.7
+     GrassPower: 1
+     Contrast: 1.02
+     Saturation: 0.8
+
+
+
+# ========================================
+
+
+
+   - Name: PlrTreeOut_S
+     Density: 0.01
+     Snow: 1.0
+     spawn:
+       Min: 0.60
+       Max: 0.75
+       BushPower: 4
+       Noise: 2,0.005,3,0.4
+     scale:
+       Power: 1.8
+       Noise: 2,0.05,4,0.5
+     Hue: 0,15,0.0051
+     BendPower: 0.7
+     GrassPower: 1
+     Contrast: 1
+     Saturation: 1
+
+
+   - Name: PlrTreeIn_S
+     Density: 0.01
+     Snow: 0.4
+     spawn:
+       Min: 0.70
+       Max: 0.85
+       BushPower: 1.5
+       Noise: 2,0.005,3,0.4
+     scale:
+       Power: 5
+       Noise: 2,0.05,4,0.5
+     Hue: 0,15,0.0051
+     BendPower: 0.7
+     GrassPower: 1
+     Contrast: 1
+     Saturation: 1
+
+   - Name: PlrTreeCore_S
+     Density: 0.01
+     Snow: 0.4
+     spawn:
+       Min: 0.80
+       Max: 1
+       BushPower: 1
+       Noise: 2,0.005,3,0.4
+     scale:
+       Power: 5
+       Noise: 2,0.05,4,0.5
+     Hue: 0,15,0.0051
+     BendPower: 0.7
+     GrassPower: 1
+     Contrast: 1
+     Saturation: 1
+
+
+   - Name: PlrOpen_S
+     Density: 0.00999999978
+     Snow: 1
+     spawn:
+       Min: 0
+       Max: 0.5
+       BushPower: 1
+       Noise: 2,0.4,1,0.7
+     scale:
+       Power: 1
+       Noise: 2,0.99,4,0.5
+     Hue: 0,15,0.0051
+     BendPower: 1
+     GrassPower: 1
+     Contrast: 1
+     Saturation: 1
+
+
+   - Name: =
+     Density: 0.5
+     Snow: 0
+     spawn:
+       Min: 0.755847931
+       Max: 1
+       BushPower: 10
+       Noise: 2,0.4,1,0.7
+     scale:
+       Power: 5
+       Noise: 2,0.99,4,0.5
+     Hue: 0,15,0.0051
+
+   - Name: =
+     Density: 0.5
+     Snow: 0
+     spawn:
+       Min: 0.755847931
+       Max: 1
+       BushPower: 10
+       Noise: 2,0.4,1,0.7
+     scale:
+       Power: 5
+       Noise: 2,0.99,4,0.5
+     Hue: 0,15,0.0051
+
+
+   - Name: Trees1c_V
+     Density: 1
+     Snow: 0
+     spawn:
+       Min: 0.0
+       Max: 0.25
+       BushPower: 3
+       Noise: 1,0.02,2,0.5
+     scale:
+       Power: 1
+       Noise: 1,0.1,2,0.5
+     Hue: -10,20,0.01
+     BendPower: 1
+     GrassPower: 1.5
+     Contrast: 1
+     Saturation: 1
+
+# ===================================
+
+   - Name: EqualMeasure
+     Density: 0.5
+     Snow: 0
+     spawn:
+       Min: 0.268
+       Max: 0.28
+       BushPower: 0.5
+       Noise: 2,0.1,6,30
+     scale:
+       Power: 1
+       Noise: 2,0.99,4,0.5
+     Hue: 0,15,0.0051
+     BendPower: 1
+     GrassPower: 1
+     Contrast: 1
+     Saturation: 1
+
+
+   - Name: Equal_Out
+     Density: 0.5
+     Snow: 0
+     spawn:
+       Min: 0.7
+       Max: 0.715
+       BushPower: 0.5
+       Noise: 2,0.1,6,30
+     scale:
+       Power: 1
+       Noise: 2,0.99,4,0.5
+     Hue: 0,15,0.0051
+     BendPower: 1
+     GrassPower: 1
+     Contrast: 1
+     Saturation: 1
+
+   - Name: Equal_Wide
+     Density: 0.5
+     Snow: 0
+     spawn:
+       Min: 0.91
+       Max: 1
+       BushPower: 0.5
+       Noise: 2,0.1,6,30
+     scale:
+       Power: 1
+       Noise: 2,0.99,4,0.5
+     Hue: 0,15,0.0051
+     BendPower: 1
+     GrassPower: 1
+     Contrast: 1
+     Saturation: 1
+
+
+   - Name: EqualMeasure_C
+     Density: 0.5
+     Snow: 0
+     spawn:
+       Min: 0.268
+       Max: 0.28
+       BushPower: 0.5
+       Noise: 2,0.1,6,30
+     scale:
+       Power: 1
+       Noise: 2,0.99,4,0.5
+     Hue: 0,15,0.0051
+     BendPower: 1
+     GrassPower: 1
+     Contrast: 1
+     Saturation: 1
+
+
+   - Name: Free_V_C_Svn
+     Density: 0.01
+     Snow: 0
+     spawn:
+       Min: 0
+       Max: 1
+       BushPower: 2
+       Noise: 1,0.4,2,0.5
+     scale:
+       Power: 1
+       Noise: 0,0.1,2,0.5
+     Hue: -5,15.81714,0.6
+     BendPower: 0.70
+     GrassPower: 1
+     Contrast: 1
+     Saturation: 0.70
+
+
+
+
+   - Name: Trees1_Sunny
+     Density: 1
+     Snow: 0
+     spawn:
+       Min: 0.0
+       Max: 0.3
+       BushPower: 3
+       Noise: 1,0.02,2,0.5
+     scale:
+       Power: 1
+       Noise: 1,0.1,2,0.5
+     Hue: -5,5,0.01
+     BendPower: 1
+     GrassPower: 1
+     Contrast: 1
+     Saturation: 1
+
+
+   - Name: Trees1b_V
+     Density: 1
+     Snow: 0
+     spawn:
+       Min: 0.0
+       Max: 0.3
+       BushPower: 3
+       Noise: 1,0.02,2,0.5
+     scale:
+       Power: 1
+       Noise: 1,0.1,2,0.5
+     Hue: -10,20,0.01
+     BendPower: 1
+     GrassPower: 1
+     Contrast: 1
+     Saturation: 1
+
+# % ======== older presets =============================================================================
+
+
+   - Name: GrassIn
+     Density: 1
+     Snow: 0
+     spawn:
+       Min: 0
+       Max: 0.600000024
+       BushPower: 3
+       Noise: 2,0.1,2,1
+     scale:
+       Power: -1
+       Noise: 1,0.05,2,0.5
+     Hue: -360,-360,0.5686136
+     BendPower: 1
+     GrassPower: 1
+     Contrast: 1
+     Saturation: 0.699999988
+
+
+   - Name: GrassOut
+     Density: 1
+     Snow: 0
+     spawn:
+       Min: 0.5
+       Max: 1
+       BushPower: 3
+       Noise: 2,0.1,2,1
+     scale:
+       Power: -1
+       Noise: 1,0.05,2,0.5
+     Hue: 0,0,0.001
+     BendPower: 1
+     GrassPower: 1
+     Contrast: 1
+     Saturation: 0.699999988
+
+
+   - Name: GrassMid
+     Density: 1
+     Snow: 0
+     spawn:
+       Min: 0.300000012
+       Max: 0.600000024
+       BushPower: 1
+       Noise: 2,0.1,2,1
+     scale:
+       Power: -1
+       Noise: 1,0.1,2,0.5
+     Hue: 0,0,0.001
+     BendPower: 1
+     GrassPower: 1
+     Contrast: 1
+     Saturation: 0.699999988
+
+
+   - Name: GrassMid_Dns
+     Density: 1
+     Snow: 0
+     spawn:
+       Min: 0.3
+       Max: 0.6
+       BushPower: 1
+       Noise: 2,0.1,2,1
+     scale:
+       Power: -1
+       Noise: 1,0.1,2,0.5
+     Hue: 0,0,0.001
+     BendPower: 1
+     GrassPower: 10
+     Contrast: 1
+     Saturation: 0.7
+
+
+   - Name: Grass4
+     Density: 1
+     Snow: 0
+     spawn:
+       Min: 0
+       Max: 1
+       BushPower: 0.5
+       Noise: 2,0.1,2,0.5
+     scale:
+       Power: -1
+       Noise: 1,0.1,2,0.5
+     Hue: 0,0,0.001
+     BendPower: 1
+     GrassPower: 1
+     Contrast: 1
+     Saturation: 0.699999988
+
+
+   - Name: Grass5
+     Density: 1
+     Snow: 0
+     spawn:
+       Min: 0
+       Max: 0.5
+       BushPower: 1
+       Noise: 1,0.1,2,0.5
+     scale:
+       Power: 1
+       Noise: 1,0.1,2,0.5
+     Hue: 0,0,0.001
+     BendPower: 1
+     GrassPower: 1
+     Contrast: 1
+     Saturation: 1
+
+
+   - Name: Trees1
+     Density: 1
+     Snow: 0
+     spawn:
+       Min: 0
+       Max: 0.5
+       BushPower: 1
+       Noise: 1,0.02,2,0.5
+     scale:
+       Power: 1
+       Noise: 1,0.1,2,0.5
+     Hue: 0,0,0.001
+     BendPower: 1
+     GrassPower: 1
+     Contrast: 1
+     Saturation: 1
+
+# =======================================
+
+
+   - Name: Trees1_V
+     Density: 1
+     Snow: 0
+     spawn:
+       Min: 0
+       Max: 0.5
+       BushPower: 3
+       Noise: 1,0.02,2,0.5
+     scale:
+       Power: 1
+       Noise: 1,0.1,2,0.5
+     Hue: -10,20,0.01
+     BendPower: 1
+     GrassPower: 1
+     Contrast: 1
+     Saturation: 1
+
+
+
+
+   - Name: Trees2_In
+     Density: 1
+     Snow: 0
+     spawn:
+       Min: 0
+       Max: 0.5
+       BushPower: 3
+       Noise: 2,0.02,2,0.5
+     scale:
+       Power: 1
+       Noise: 1,0.1,2,0.5
+     Hue: -20,0,0.01
+     BendPower: 1
+     GrassPower: 1
+     Contrast: 1
+     Saturation: 1
+    
+   - Name: Trees2_Out
+     Density: 1
+     Snow: 0
+     spawn:
+       Min: 0.4
+       Max: 0.8
+       BushPower: 3
+       Noise: 2,0.02,2,0.5
+     scale:
+       Power: 1
+       Noise: 1,0.1,2,0.5
+     Hue: 0,0,0.01
+     BendPower: 1
+     GrassPower: 1
+     Contrast: 1
+     Saturation: 1
+
+
+
+   - Name: Bushes1
+     Density: 1
+     Snow: 0
+     spawn:
+       Min: 0
+       Max: 0.49000001
+       BushPower: 1
+       Noise: 2,0.02,2,0.5
+     scale:
+       Power: 1
+       Noise: 1,0.1,2,0.5
+     Hue: 0,0,0.001
+     BendPower: 1
+     GrassPower: 1
+     Contrast: 1
+     Saturation: 1
+
+
+   - Name: Bushes2
+     Density: 1
+     Snow: 0
+     spawn:
+       Min: 0
+       Max: 0.5
+       BushPower: 1
+       Noise: 2,0.02,2,0.5
+     scale:
+       Power: 1
+       Noise: 1,0.1,2,0.5
+     Hue: 0,0,0.001
+     BendPower: 1
+     GrassPower: 1
+     Contrast: 1
+     Saturation: 1
+
+
+   - Name: Bushes3
+     Density: 1
+     Snow: 0
+     spawn:
+       Min: 0
+       Max: 0.5
+       BushPower: 1
+       Noise: 3,0.02,2,0.5
+     scale:
+       Power: 1
+       Noise: 1,0.1,2,0.5
+     Hue: 0,0,0.001
+     BendPower: 1
+     GrassPower: 1
+     Contrast: 1
+     Saturation: 1
+
+
+   - Name: Bushes4
+     Density: 1
+     Snow: 0
+     spawn:
+       Min: 0
+       Max: 0.5
+       BushPower: 1
+       Noise: 1,0.02,2,0.5
+     scale:
+       Power: 1
+       Noise: 1,0.1,2,0.5
+     Hue: 0,0,0.001
+     BendPower: 1
+     GrassPower: 1
+     Contrast: 1
+     Saturation: 1
+
+# =======================================
+
+   - Name: StonesIn
+     Density: 1
+     Snow: 0
+     spawn:
+       Min: 0
+       Max: 0.3
+       BushPower: 10
+       Noise: 2,0.02,2,0.5
+     scale:
+       Power: 1
+       Noise: 1,0.1,2,0.5
+     Hue: 0,0,0.001
+     BendPower: 1
+     GrassPower: 1
+     Contrast: 1
+     Saturation: 0.7
+
+
+   - Name: StonesMid
+     Density: 1
+     Snow: 0
+     spawn:
+       Min: 0.2
+       Max: 0.35
+       BushPower: 5
+       Noise: 1,0.02,2,0.5
+     scale:
+       Power: 1
+       Noise: 1,0.1,2,0.5
+     Hue: 0,0,0.001
+     BendPower: 1
+     GrassPower: 1
+     Contrast: 1
+     Saturation: 0.7
+
+   - Name: StonesOut
+     Density: 1
+     Snow: 0
+     spawn:
+       Min: 0
+       Max: 0.5
+       BushPower: 1
+       Noise: 3,0.02,2,0.5
+     scale:
+       Power: 1
+       Noise: 1,0.1,2,0.5
+     Hue: 0,0,0.001
+     BendPower: 1
+     GrassPower: 1
+     Contrast: 1
+     Saturation: 1
+
+
+
+
+   - Name: Flowers1
+     Density: 1
+     Snow: 0
+     spawn:
+       Min: 0
+       Max: 0.3
+       BushPower: 4
+       Noise: 2,0.051,2,0.5
+     scale:
+       Power: 1
+       Noise: 1,0.1,2,0.5
+     Hue: 0,0,0
+     BendPower: 0.25
+     GrassPower: 1
+     Contrast: 1
+     Saturation: 0.7
+
+
+   - Name: Flowers2
+     Density: 1
+     Snow: 0
+     spawn:
+       Min: 0.7
+       Max: 1
+       BushPower: 4
+       Noise: 2,0.05,2,0.5
+     scale:
+       Power: 1
+       Noise: 1,0.1,2,0.5
+     Hue: 0,0,0
+     BendPower: 2
+     GrassPower: 1
+     Contrast: 1
+     Saturation: 0.7
+
+
+
+
+   - Name: Flowers3
+     Density: 1
+     Snow: 0
+     spawn:
+       Min: 0
+       Max: 0.3
+       BushPower: 4
+       Noise: 2,0.052,2,0.5
+     scale:
+       Power: 1
+       Noise: 1,0.1,2,0.5
+     Hue: 0,0,0
+     BendPower: 0.25
+     GrassPower: 1
+     Contrast: 1
+     Saturation: 0.7
+
+
+
+
+
+
+
+
+
+
+
+Biomes:
+
+  # - Name: TestBiome
+    # AmbientSound: Ocean
+    # IgnoreForcedBiome: true
+    # Texture: [10, 2, 0.01]
+
+    # SelectionCriteria:
+    # # - Height < SeaLevel - 50
+    # - +Lat > 0.15
+    # - +Lat < 0.4
+    
+    # Color: [1, 0, 0.4]
+
+
+
+
+# # ==============================================================  
+  - Name: Abyss
+    AmbientSound: Ocean
+    IgnoreForcedBiome: true
+    Texture: [10, 2, 0.01]
+
+    SelectionCriteria:
+    - Height < SeaLevel - 50
+    Color: [0, 0, 0.4]
+
+    UndergroundLayers:
+               - [10, 3]
+               - [11, -1]
+               - [12, 1]
+
+    Decorations:
+
+               - [RockGrey01Large, 0.005, Free_V, 1.50]
+               - [RockGrey02Large, 0.05, Free_V, 1.50]
+               - [RealRock1Water, 0.001, Free_V, 1.50]
+               - [RealRock5Water, 0.001, Free_V, 1.50]
+               - [RealRock8Water, 0.007, Free_V, 1.50]
+               - [RealRock9Water, 0.003, Free_V, 1.50]
+               - [Rock_Group_14_LoDed, 0.03, Free_V|Bp=0.00|Sp=1.00|Snow=0.00|Bri=0.80|Sat=1.00|Bend=1.00|Hue=300.00, 5.00]
+               - [GasEmitter2Red, 0.06, Free_V, 1.00]
+               - [BallFlower03, 0.005, Tree_V, 3.00]
+               - [BallFlower01, 0.003, BigPlant_V|Bp=0.30|Sp=1.00|Snow=0.00|Bri=1.00|Sat=10.00|Bend=1.00|Hue=300.00, 5.00]
+               - [BallFlower02, 0.005, Tree_V, 1.50]
+               - [FingerSponge03-01, 0.02, Free_V, 1.50]
+               - [CoralStone03-06, 0.03, Sunny, 4.00]
+
+               - [CrystalStraight, 0.002, BigPlant, 2.50]
+               - [CrystalsPyramidBlue, 0.01, BigPlant_V|Bp=0.00|Sp=0.00|Snow=0.00|Bri=1.00|Sat=20.00|Bend=1.00|Hue=0.00, 3.00]
+               - [PromethiumStone, 0.02, BigPlant|Bp=0.00|Sp=0.00|Snow=0.00|Bri=1.00|Sat=20.00|Bend=1.00|Hue=355.00, 7.00]
+               - [RockResourcePromethium, 0.01, Empty|Bp=0.00|Sp=0.00|Snow=0.00|Bri=1.00|Sat=100.00|Bend=1.00|Hue=0.00, 10.00]
+               - [RockResourceCobalt, 0.01, Free, 2.50]
+               - [RockResourceIron, 0.04, Free, 2.50]
+
+    Grass: 
+               - Name: GrassBlue02
+                 Density: 0.6
+                 YScale: 0.7
+                 Preset: GrassDense|Bp=5.00|Sp=5.00|Snow=0.00|Bri=1.00|Sat=1.00|Bend=0.50|Hue=0.00
+               - Name: FlowerBlue01
+                 Density: 0.02
+                 YScale: 0.5
+                 Preset: GrassDense
+               - Name: FlowerBlue01
+                 Density: 0.02
+                 YScale: 4
+                 Preset: GrassDense
+               - Name: Flower20
+                 Density: 0.01
+                 YScale: 3
+                 Preset: Trees1|Bp=1.00|Sp=1.00|Snow=0.00|Bri=1.00|Sat=20.00|Bend=1.00|Hue=0.00
+               - Name: Grass01
+                 Density: 0.5
+                 YScale: 1
+                 Preset: GrassDense|Bp=1.00|Sp=1.00|Snow=0.00|Bri=1.00|Sat=20.00|Bend=1.00|Hue=0.00
+               - Name: Grass26
+                 Density: 0.005
+                 YScale: 6
+                 Preset: GrsMatIn|Bp=2.00|Sp=0.10|Snow=0.00|Bri=0.70|Sat=70.70|Bend=1.00|Hue=220.00
+               - Name: Grass26
+                 Density: 0.01
+                 YScale: 10
+                 Preset: GrsMatOut|Bp=2.00|Sp=0.10|Snow=0.00|Bri=0.80|Sat=5.00|Bend=1.00|Hue=240.00
+
+# # ============================================================== 
+
+  - Name: DeepSea
+    AmbientSound: Ocean
+    IgnoreForcedBiome: true
+    Texture: [10, 2, 0.01]
+
+    SelectionCriteria:
+    - Height < SeaLevel - 37
+
+    UndergroundLayers:
+               - [10, 4]
+               - [12, 1]
+               - [11, -1]
+               - [12, 1]
+
+    Color: [0, 0, 0.7]
+
+    Decorations:
+
+               - [RealRock1Water, 0.001, Free_V, 1.50]
+               - [RealRock5Water, 0.001, Free_V|Bp=0.00|Sp=1.00|Snow=0.00|Bri=1.30|Sat=0.70|Bend=1.00|Hue=0.00, 1.50]
+               - [RealRock8Water, 0.05, Tree_V|Bp=0.30|Sp=1.00|Snow=0.00|Bri=1.00|Sat=1.40|Bend=0.70|Hue=300.00, 1.50]
+               - [RealRock9Water, 0.05, Tree_V|Bp=0.30|Sp=1.00|Snow=0.00|Bri=1.10|Sat=0.90|Bend=0.70|Hue=100.00, 1.50]
+               - [RockGrey01Large, 0.001, Free_V, 1.50]
+               - [RockGrey02Large, 0.001, Free_V, 1.50]
+               - [CoralStone03-06, 0.01, GrsMatOut, 3.00]
+               - [SkeletonWhalePart, 0.0004, GrsMatIn|Bp=2.00|Sp=0.10|Snow=0.00|Bri=1.00|Sat=1.00|Bend=1.00|Hue=0.00, 2.00]
+               - [SkeletonMammothTorso, 0.001, Free_V, 1.50]
+               - [BushWinter03, 0.10, Tree_V|Bp=2.00|Sp=1.00|Snow=0.00|Bri=1.00|Sat=1.00|Bend=0.70|Hue=0.00, 1.00]
+               - [AlienTentacleStage1, 0.02, Sunny_V|Bp=0.30|Sp=5.00|Snow=0.00|Bri=0.97|Sat=7.00|Bend=1.00|Hue=200.00, 1.00]
+               - [BallFlower03, 0.01, Empty, 1.50]
+               - [BallFlower01, 0.0025, Tree_V, 1.50]
+
+               - [CoralBig01, 0.002, Tree_V, 1.50]
+               - [CoralBig08, 0.01, Tree_V, 1.50]
+
+               - [PromethiumStone, 0.001, GrsMatIn, 2.50]
+               - [CrystalsPyramidBlue, 0.001, Plant, 2.50]
+               - [CrystalStraight, 0.03, Plant_V, 2.50]
+               - [RockResourceSilicon, 0.002, GrsMatIn|Bp=1.00|Sp=0.10|Snow=0.00|Bri=1.00|Sat=1.00|Bend=1.00|Hue=0.00, 3.00]
+               - [RockResourceIron, 0.02, Plant|Bp=0.00|Sp=0.00|Snow=0.00|Bri=0.97|Sat=1.50|Bend=1.00|Hue=0.00, 2.50]
+               - [RockResourceNeodymium, 0.04, BigPlant, 2.50]
+               - [RockResourceMagnesium, 0.02, BigPlant_V, 2.00]
+
+
+    Grass: 
+               - Name: GrassBrown02d
+                 Density: 0.3
+                 YScale: 0.5
+                 Preset: GrassDense|Bp=0.00|Sp=5.00|Snow=0.00|Bri=1.30|Sat=1.00|Bend=0.50|Hue=0.00
+               - Name: GrassGreen06Snow
+                 Density: 0.9
+                 YScale: 0.5
+                 Preset: GrassDense|Bp=0.00|Sp=5.00|Snow=0.00|Bri=1.00|Sat=1.00|Bend=0.50|Hue=0.00
+               - Name: GrassGreen01
+                 Density: 1
+                 YScale: 0.5
+                 Preset: GrassDense|Bp=0.00|Sp=5.00|Snow=0.00|Bri=3.00|Sat=0.10|Bend=0.50|Hue=150.00
+               - Name: GrassTall07
+                 Density: 0.5
+                 YScale: 1
+                 Preset: GrsMatOut|Bp=8.00|Sp=0.10|Snow=0.00|Bri=2.00|Sat=1.00|Bend=-5.00|Hue=330.00
+               - Name: GrassBrown05
+                 Density: 0.02
+                 YScale: 2
+                 Preset: GrsMatOut|Bp=4.00|Sp=0.10|Snow=0.00|Bri=2.00|Sat=1.00|Bend=1.00|Hue=0.00
+               - Name: Grass26
+                 Density: 0.1
+                 YScale: 1
+                 Preset: GrsMatIn|Bp=3.00|Sp=0.10|Snow=0.00|Bri=0.70|Sat=1.70|Bend=1.00|Hue=200.00
+               - Name: GrassBrownThin01
+                 Density: 0.002
+                 YScale: 5
+                 Preset: GrsMatMid|Bp=2.00|Sp=0.10|Snow=0.00|Bri=0.96|Sat=10.00|Bend=3.00|Hue=300.00
+
+
+# # ============================================================== 
+
+  - Name: Shelf
+    AmbientSound: Ocean
+    IgnoreForcedBiome: true
+    Texture: [4, 2, -0.1]
+
+    SelectionCriteria:
+    - Height < SeaLevel - 30
+
+    Color: [0, 0, 1]
+    
+    UndergroundLayers:
+               - [10, 4]
+               - [12, 1]
+               - [11, -1]
+               - [12, 1]
+
+    Decorations:
+               - [RockGrey01Large, 0.05, BigPlant_V|Bp=3.00|Sp=1.00|Snow=0.00|Bri=1.00|Sat=1.00|Bend=1.00|Hue=0.00, 0.70]
+               - [RockGrey02Large, 0.05, BigPlant_V|Bp=3.00|Sp=1.00|Snow=0.00|Bri=1.00|Sat=1.00|Bend=1.00|Hue=0.00, 0.70]
+               - [RealRock1Water, 0.001, Free_V, 1.50]
+               - [RealRock5Water, 0.001, Free_V, 1.50]
+               - [RealRock8Water, 0.001, Tree_V, 1.50]
+               - [RealRock9Water, 0.001, Free_V, 1.50]
+               - [CoralStone01-05, 0.003, Free_V, 1.50]
+               - [CoralStone03-06, 0.003, Free_V, 1.50]
+               - [FingerSponge03-01, 0.001, Free_V, 1.50]
+
+               - [CoralBig01, 0.001, Plant_V, 1.50]
+               - [CoralBig08, 0.0005, Plant_V, 1.50]
+               - [SeaWeed02-04, 0.003, Plant, 2.50]
+               - [Cactus1, 0.15, Tree, 2.50]
+
+               - [CrystalStraight, 0.0015, Free, 2.50]
+               - [RockResourceIron, 0.04, BigPlant, 2.50]
+               - [RockResourceSathium, 0.002, BigPlant, 2.50]
+               - [RockResourceMagnesium, 0.003, Free, 2.50]
+
+    Grass: 
+               - Name: Reeds01
+                 Density: 0.40
+                 YScale: 0.50
+                 Preset: GrassDense|Bp=0.00|Sp=5.00|Snow=0.00|Bri=0.94|Sat=0.70|Bend=0.50|Hue=350.00
+               - Name: Grass26
+                 Density: 0.50
+                 YScale: 1.00
+                 Preset: GrsDnse_08|Bp=0.00|Sp=5.00|Snow=0.00|Bri=0.53|Sat=1.50|Bend=0.50|Hue=30.00
+               - Name: Seaweed02
+                 Density: 0.20
+                 YScale: 0.40
+                 Preset: GrsDnse_08|Bp=7.00|Sp=5.00|Snow=0.00|Bri=0.98|Sat=1.00|Bend=0.20|Hue=320.00
+               - Name: GrassDense04
+                 Density: 0.50
+                 YScale: 1.00
+                 Preset: GrsMatOut|Bp=8.00|Sp=0.10|Snow=0.00|Bri=0.98|Sat=1.00|Bend=-5.00|Hue=330.00
+               - Name: Seaweed05
+                 Density: 0.003
+                 YScale: 0.50
+                 Preset: GrassDense
+               - Name: Seaweed03
+                 Density: 0.02
+                 YScale: 0.30
+                 Preset: GrassDense
+               - Name: GrassBrownThin01
+                 Density: 0.004
+                 YScale: 3.00
+                 Preset: GrsMatMid|Bp=2.00|Sp=0.10|Snow=0.00|Bri=0.96|Sat=10.00|Bend=3.00|Hue=300.00
+
+# # ============================================================== 
+
+  - Name: KelpForest
+    AmbientSound: Ocean
+    IgnoreForcedBiome: true
+    Texture: [10, 2, 0.01]
+
+    SelectionCriteria:
+    - Height > SeaLevel - 26
+    - Height < SeaLevel - 23
+    - Temperature > 5
+    - Temperature < 40
+
+    Color: [0.0, 0.45, 0.4]
+
+    UndergroundLayers:
+               - [10, 4]
+               - [12, 1]
+               - [11, -1]
+               - [12, 1]
+    
+    Decorations:
+               - [ CoralStone01-05, 0.01, BigPlant_V, 3.00 ]
+               - [ CoralStone03-06, 0.004, BigPlant_V, 5.00 ]
+               - [ FingerSponge03-01, 0.001, Free_V, 20.00 ]
+               - [ RockGrey01Large, 0.001, Empty, 1.50 ]
+               - [ RockGrey02Large, 0.001, Empty, 1.50 ]
+               - [ RealRock1Water, 0.005, BigPlant_V, 3.00 ]
+               - [ RealRock5Water, 0.001, Free_V, 1.50 ]
+               - [ RealRock8Water, 0.01, Free_V, 1.50 ]
+               - [ RealRock9Water, 0.01, Tree_V, 1.50 ]
+               - [ Alien_Plant_8_3, 0.05, Tree_V, 4.00 ]
+
+               - [ SeaWeed02-04, 0.025, Trees1b_V|Bp=0.30|Sp=5.00|Snow=0.00|Bri=1.00|Sat=1.00|Bend=1.00|Hue=0.00, 2.00 ]
+
+               - [ CrystalStraight, 0.02, Free, 3.00 ]
+               - [ PromethiumStone, 0.001, Free, 2.50 ]
+               - [ RockResourceIron, 0.03, Sunny_V, 2.50 ]
+               - [ RockResourceSilicon, 0.05, Sunny_V, 3.00 ]
+               - [ RockResourceNeodymium, 0.01, Free, 2.50 ]
+               - [ RockResourceGold, 0.03, BigPlant_V, 2.50 ]
+               - [ RockResourceCarbon, 0.02, BigPlant_V, 2.00 ]
+
+    Grass: 
+               - Name: Grass09
+                 Density: 0.05
+                 YScale: 1.20
+                 Preset: GrsDnse_15|Bp=5.00|Sp=5.00|Snow=0.00|Bri=1.00|Sat=0.70|Bend=0.50|Hue=300.00
+               - Name: Seaweed03
+                 Density: 0.05
+                 YScale: 2.00
+                 Preset: GrassDense
+               - Name: Grass24
+                 Density: 0.50
+                 YScale: 3.50
+                 Preset: Sunny_V|Bp=0.30|Sp=1.00|Snow=0.00|Bri=0.97|Sat=0.70|Bend=1.00|Hue=300.00
+               - Name: GrassTall03
+                 Density: 0.02
+                 YScale: 2.00
+                 Preset: GrsDnse_08
+               - Name: Seaweed05
+                 Density: 0.02
+                 YScale: 3.00
+                 Preset: GrsSand|Bp=5.00|Sp=2.00|Snow=0.00|Bri=0.99|Sat=0.70|Bend=1.00|Hue=50.00
+               - Name: Seaweed05
+                 Density: 0.01
+                 YScale: 1.60
+                 Preset: GrsDnse_08|Bp=4.00|Sp=10.00|Snow=0.00|Bri=0.98|Sat=0.80|Bend=0.50|Hue=25.00
+               - Name: Grass14
+                 Density: 0.02
+                 YScale: 3.50
+                 Preset: GrsDnse_15|Bp=0.00|Sp=5.00|Snow=0.00|Bri=1.00|Sat=0.30|Bend=0.50|Hue=270.00
+               - Name: GrassBrown05
+                 Density: 0.05
+                 YScale: 2.00
+                 Preset: Empty
+               - Name: GrassGreen01
+                 Density: 1.00
+                 YScale: 1.00
+                 Preset: GrsDnse_15|Bp=1.00|Sp=5.00|Snow=0.00|Bri=1.00|Sat=1.00|Bend=0.50|Hue=0.00
+               - Name: Flower02
+                 Density: 0.002
+                 YScale: 2.50
+                 Preset: GrsDnse_15|Bp=0.00|Sp=5.00|Snow=0.00|Bri=0.85|Sat=0.60|Bend=0.50|Hue=190.00
+               - Name: GrassTall04
+                 Density: 0.01
+                 YScale: 6.00
+                 Preset: Trees1b_V|Bp=3.00|Sp=1.00|Snow=0.00|Bri=0.90|Sat=0.40|Bend=2.00|Hue=100.00
+               - Name: GrassTall05
+                 Density: 0.01
+                 YScale: 4.00
+                 Preset: Trees1b_V|Bp=3.00|Sp=1.00|Snow=0.00|Bri=0.70|Sat=0.50|Bend=0.00|Hue=0.00
+
+# ==============================================================
+  - Name: CoralReefs
+    AmbientSound: Islands
+    IgnoreForcedBiome: true
+    Texture: [0, 10, -0.1]
+    
+    SelectionCriteria: 
+    - Height > SeaLevel - 15
+    - Height < SeaLevel - 13.5
+    - Temperature > 30
+
+
+    Color: [0.4, 0.3, 1]
+
+    UndergroundLayers:
+               - [0, 2]
+               - [10, 3]
+               - [11, -1]
+               - [12, 1]
+
+    Decorations:
+               - [RockGrey01Large, 0.01, Free_V, 1.50]
+               - [RockGrey02Large, 0.30, Free_V, 1.50]
+               - [RealRock5Water, 0.05, BigPlant_V|Bp=2.00|Sp=1.00|Snow=0.00|Bri=0.94|Sat=0.70|Bend=1.00|Hue=150.00, 1.80]
+               - [Rock_14_LoDed, 0.02, BigPlant_V|Bp=0.30|Sp=1.00|Snow=0.00|Bri=0.85|Sat=0.75|Bend=1.00|Hue=50.00, 10.00]
+               - [RealRock9Water, 0.04, BigPlant_V|Bp=2.00|Sp=1.00|Snow=0.00|Bri=0.96|Sat=0.70|Bend=1.00|Hue=25.00, 0.80]
+               - [P_Soil_Cliff_5, 0.05, Tree_V|Bp=0.30|Sp=1.00|Snow=0.00|Bri=0.85|Sat=0.50|Bend=0.70|Hue=50.00, 3.00]
+               - [P_Soil_Cliff_4, 0.10, Tree_V|Bp=0.00|Sp=0.00|Snow=0.00|Bri=0.87|Sat=0.30|Bend=1.00|Hue=20.00, 4.00]
+               - [CoralStone01-05, 0.50, Tree_V|Bp=3.00|Sp=1.00|Snow=0.00|Bri=1.00|Sat=0.90|Bend=0.70|Hue=330.00, 1.50]
+               - [FingerSponge03-01, 0.02, BigPlant_V|Bp=0.30|Sp=1.00|Snow=0.00|Bri=0.50|Sat=1.50|Bend=1.00|Hue=300.00, 8.00]
+               - [Alien_Shroom_plant1_3, 0.01, Empty|Bp=0.30|Sp=1.00|Snow=0.00|Bri=0.96|Sat=3.00|Bend=1.00|Hue=340.00, 5.00]
+               - [FingerSponge03-01, 0.80, Tree_V|Bp=3.00|Sp=1.00|Snow=0.00|Bri=0.55|Sat=0.80|Bend=0.70|Hue=150.00, 8.00]
+
+
+               - [Cactus2, 0.10, Tree_V|Bp=0.30|Sp=1.50|Snow=0.00|Bri=0.97|Sat=15.00|Bend=1.00|Hue=250.00, 0.50]
+               - [DimpleDomeSnow, 0.03, Empty|Bp=0.00|Sp=0.00|Snow=0.00|Bri=0.70|Sat=9.00|Bend=1.00|Hue=150.00, 2.00]
+               - [CoralBig01, 0.018, BigPlant_V|Bp=0.30|Sp=1.00|Snow=0.00|Bri=0.95|Sat=3.00|Bend=1.00|Hue=0.00, 1.50]
+               - [CoralBig08, 0.02, Empty|Bp=0.30|Sp=1.00|Snow=0.00|Bri=0.85|Sat=1.50|Bend=1.00|Hue=330.00, 2.00]
+               - [Hydrilla2, 0.10, Plant|Bp=0.00|Sp=0.00|Snow=0.00|Bri=1.00|Sat=5.00|Bend=1.00|Hue=50.00, 5.50]
+
+               - [CrystalStraight, 0.016, Free, 4.00]
+               - [PromethiumStone, 0.10, Tree_V, 2.00]
+               - [RockResourceIron, 0.01, Plant_V, 2.50]
+               - [RockResourceCopper, 0.10, Free_V, 2.50]
+               - [RockResourceSathium, 0.05, Sunny_V|Bp=0.30|Sp=1.00|Snow=0.00|Bri=0.97|Sat=0.70|Bend=1.00|Hue=0.00, 2.00]
+               - [RockResourceSilicon, 0.10, Empty, 3.00]
+
+    Grass: 
+               - Name: Grass24
+                 Density: 0.2
+                 YScale: 1
+                 Preset: GrassDense|Bp=0.00|Sp=5.00|Snow=0.00|Bri=0.97|Sat=0.50|Bend=0.50|Hue=150.00
+               - Name: GrassBlue02
+                 Density: 0.1
+                 YScale: 0.75
+                 Preset: GrassDense
+               - Name: GrassGreen01
+                 Density: 1
+                 YScale: 2.5
+                 Preset: BigPlant_V
+               - Name: GrassTall04
+                 Density: 0.8
+                 YScale: 0.5
+                 Preset: GrassDense
+               - Name: Seaweed03
+                 Density: 0.05
+                 YScale: 0.5
+                 Preset: GrassDense
+               - Name: Seaweed051
+                 Density: 0.01
+                 YScale: 2
+                 Preset: BigPlant_V|Bp=0.30|Sp=1.00|Snow=0.00|Bri=0.99|Sat=1.00|Bend=-2.00|Hue=0.00
+               - Name: GrassTall05
+                 Density: 0.05
+                 YScale: 2
+                 Preset: BigPlant_V|Bp=0.10|Sp=1.00|Snow=0.00|Bri=0.95|Sat=2.00|Bend=-4.00|Hue=300.00
+               - Name: Seaweed01
+                 Density: 0.5
+                 YScale: 1.9
+                 Preset: BigPlant_V|Bp=0.30|Sp=1.00|Snow=0.00|Bri=0.97|Sat=2.50|Bend=-7.00|Hue=240.00
+               - Name: GrassDense01
+                 Density: 0.5
+                 YScale: 1.8
+                 Preset: BigPlant_V|Bp=0.30|Sp=1.00|Snow=0.00|Bri=1.00|Sat=1.00|Bend=3.00|Hue=0.00
+               - Name: Grass09
+                 Density: 0.1
+                 YScale: 1.5
+                 Preset: BigPlant_V|Bp=10.00|Sp=1.00|Snow=0.00|Bri=1.00|Sat=1.00|Bend=1.00|Hue=0.00
+               - Name: GrassGreen01a
+                 Density: 0.5
+                 YScale: 1
+                 Preset: GrassDense
+               - Name: Flower02
+                 Density: 0.02
+                 YScale: 3
+                 Preset: BigPlant_V|Bp=3.00|Sp=1.00|Snow=0.00|Bri=1.00|Sat=1.00|Bend=0.50|Hue=180.00
+                 
+# ==============================================================
+  - Name: OpenSea
+    AmbientSound: Ocean
+    IgnoreForcedBiome: true
+    Texture: [4, 2, -0.1]
+
+    SelectionCriteria: 
+    - Height < SeaLevel - 13
+    Color: [0.1, 0.25, 1]
+
+    UndergroundLayers:
+               - [10, 8]
+               - [12, 4]
+               - [11, -1]
+               - [12, 1]
+    
+    Decorations:
+               - [RockGrey01Large, 0.002, Free_V, 1.50]
+               - [RockGrey02Large, 0.001, Free_V, 1.50]
+               - [RealRock5Water, 0.001, Free_V, 1.50]
+               - [FingerSponge03-01, 0.01, Free_V, 1.50]
+               - [SkeletonWhaleFull, 0.006, Tree_V, 1.50]
+
+               - [CoralBig08, 0.004, Tree_V, 1.50]
+               - [CoralBig08, 0.004, Empty, 1.50]
+               - [SeaWeed02-04, 0.008, Plant_V, 3.00]
+
+               - [CrystalStraight, 0.001, Free, 2.50]
+
+    Grass: 
+               - Name: GrassTall03
+                 Density: 0.8
+                 YScale: 0.5
+                 Preset: GrassDense|Bp=0.00|Sp=5.00|Snow=0.00|Bri=1.00|Sat=1.00|Bend=-0.50|Hue=0.00
+               - Name: Seaweed03
+                 Density: 0.05
+                 YScale: 0.5
+                 Preset: GrassDense
+               - Name: Seaweed03
+                 Density: 0.01
+                 YScale: 1.5
+                 Preset: GrassDense
+               - Name: Seaweed05
+                 Density: 0.1
+                 YScale: 0.6
+                 Preset: GrsOutback
+               - Name: GrassGreen01a
+                 Density: 0.5
+                 YScale: 1
+                 Preset: GrassDense
+               - Name: GrassGreen06Snow
+                 Density: 1
+                 YScale: 0.5
+                 Preset: GrassDense|Bp=0.00|Sp=5.00|Snow=0.00|Bri=1.00|Sat=1.00|Bend=-3.00|Hue=0.00
+               - Name: Seaweed04
+                 Density: 0.01
+                 YScale: 1
+                 Preset: GrsMatIn|Bp=2.00|Sp=5.00|Snow=0.00|Bri=0.95|Sat=1.00|Bend=2.00|Hue=20.00
+
+
+# ==============================================================     # For snow climates, will overwrite Gravelbeach, and turn the Pole'continent' completely to ice. Completely barren witout deco.
+  - Name: IceShelf
+    AmbientSound: ArcticLowPlains 
+    IgnoreForcedBiome: true
+    Texture: [5, 5, 0.2] 
+
+    SelectionCriteria:
+    - Height < SeaLevel + 4
+    - Height > SeaLevel - 2
+    - Temperature < -2
+
+    Color: [0.9, 0.9, 1]
+
+    UndergroundLayers:
+               - [0, 2]
+               - [10, 4]
+               - [11, -1]
+               - [10, 1]
+
+
+
+
+
+# ============================================================== ( Thin belt of tropical water plants)
+  - Name: ShallowWaterLilies
+    # Sound: Off              # Biome is too thin for that. (There is a 'two biome sound overlay' -Limit, else there will be cutoffs)
+    IgnoreForcedBiome: true
+    Texture: [2, 10, -0.5]
+
+    SelectionCriteria: 
+    - Height < SeaLevel -4.2
+    - Height > SeaLevel -5.2
+    - Temperature > 20
+    - Temperature < 35
+
+    Color: [1.0, 0.2, 0.5]
+
+    UndergroundLayers:
+               - [7, 3]
+               - [11, -1]
+               - [12, 1]
+
+    Decorations:
+               - [RockGrey01Large, 0.15, Tree_V, 1.50]
+               - [RockGrey02Large, 0.006, Trees1b_V|Bp=3.00|Sp=1.00|Snow=0.00|Bri=0.97|Sat=0.70|Bend=1.00|Hue=20.00, 1.50]
+               - [RealRock1Water, 0.01, Tree_V, 1.50]
+               - [Rock_06_LoDed, 0.01, Trees1b_V|Bp=3.00|Sp=1.00|Snow=0.00|Bri=0.85|Sat=0.50|Bend=1.00|Hue=50.00, 3.00]
+               - [OmicronPlant, 0.015, Trees1b_V|Bp=0.50|Sp=1.00|Snow=0.00|Bri=0.99|Sat=0.70|Bend=1.00|Hue=50.00, 2.20]
+
+               - [CoralBig01, 0.005, Trees1b_V|Bp=1.00|Sp=1.00|Snow=0.00|Bri=1.00|Sat=1.00|Bend=1.00|Hue=0.00, 1.50]
+               - [Hydrilla2, 0.015, Trees1b_V|Bp=1.00|Sp=1.00|Snow=0.00|Bri=1.01|Sat=2.00|Bend=1.00|Hue=20.00, 1.40]
+               - [Alien_Tree_04_2, 0.0008, Trees1b_V|Bp=0.30|Sp=0.50|Snow=0.00|Bri=1.00|Sat=1.00|Bend=1.00|Hue=330.00, 0.85]
+               - [Alien_Plant_8_3, 0.001, Trees1b_V|Bp=2.00|Sp=1.00|Snow=0.00|Bri=1.00|Sat=1.00|Bend=1.00|Hue=0.00, 3.00]
+
+    Grass: 
+               - Name: GrassGreen01
+                 Density: 0.1
+                 YScale: 0.75
+                 Preset: GrassDense
+               - Name: Grass09
+                 Density: 0.4
+                 YScale: 1.2
+                 Preset: GrassDense|Bp=0.00|Sp=5.00|Snow=0.00|Bri=1.00|Sat=1.00|Bend=0.50|Hue=300.00
+               - Name: Seaweed03
+                 Density: 0.03
+                 YScale: 1.5
+                 Preset: GrassDense|Bp=0.00|Sp=5.00|Snow=0.00|Bri=0.98|Sat=0.70|Bend=0.50|Hue=320.00
+               - Name: GrassTall03
+                 Density: 0.5
+                 YScale: 0.5
+                 Preset: GrsDnse_20|Bp=0.00|Sp=5.00|Snow=0.00|Bri=1.00|Sat=0.70|Bend=1.00|Hue=350.00
+               - Name: GrassTall04
+                 Density: 0.09
+                 YScale: 0.8
+                 Preset: GrassDense
+               - Name: GrassBrown05
+                 Density: 0.005
+                 YScale: 4
+                 Preset: Empty|Bp=1.00|Sp=1.00|Snow=0.00|Bri=1.00|Sat=1.00|Bend=0.50|Hue=0.00
+
+# ==============================================================
+  - Name: Pole
+    Weather: PoleFog
+    AmbientSound: ArcticLowPlains 
+    IgnoreForcedBiome: true
+    Texture: [5, 5, 0.2] 
+
+    SelectionCriteria:
+    - +Lat > 0.975
+    Color: [0.9, 0.9, 0.9]
+
+
+    UndergroundLayers:
+               - [5, 15]
+               - [12, 1]
+               - [11, -1]
+               - [12, 1]
+
+
+# ==============================================================   # Sandy wet glistening shore edges
+  - Name: Surf_Volcanic
+    AmbientSound: Water 
+    IgnoreForcedBiome: true
+    Texture: [9, 2, 0.0]
+
+    SelectionCriteria: 
+    - Height < SeaLevel - 1
+    - Height > SeaLevel - 2
+    - Temperature > 27
+    - Temperature < 28
+
+    UndergroundLayers:
+               - [9, 4]
+               - [12, 8]
+               - [11, -1]
+               - [12, 1]
+
+    Color: [0.3, 0.25, 0]
+    Decorations: 
+               - [RockGrey01Large, 0.025, BigPlant_V, 1.50]
+               - [RockGrey02Large, 0.02, BigPlant_V, 1.50]
+               - [Rock_Group_17_LoDed, 0.0005, Trees1_V, 3.00]
+               - [RockGrey02Large, 0.008, Tree_V, 2.00]
+               - [RealRock7, 0.02, Empty, 1.50]
+               - [RealRock4, 0.01, Empty, 1.50]
+               - [Rock_Group_21_LoDed, 0.004, Trees1_V|Bp=3.00|Sp=1.00|Snow=0.00|Bri=0.98|Sat=1.00|Bend=1.00|Hue=355.00, 3.00]
+               - [Rock_Group_17_LoDed, 0.005, Trees1_V, 6.00]
+               - [Rock_Group_22_LoDed, 0.005, Trees1b_V|Bp=3.00|Sp=1.00|Snow=0.00|Bri=0.95|Sat=1.05|Bend=1.00|Hue=40.00, 3.50]
+               - [Rock_Group_07_LoDed, 0.002, Trees1b_V, 4.00]
+               - [Alien_Plant_06_2, 0.008, Trees1b_V|Bp=3.00|Sp=1.00|Snow=0.00|Bri=1.05|Sat=0.70|Bend=1.00|Hue=350.00, 2.00]
+               - [_Palm_Coconut_Hero_1_Fall, 0.003, Trees1_V|Bp=3.00|Sp=1.00|Snow=0.00|Bri=0.97|Sat=1.00|Bend=1.00|Hue=30.00, 2.00]
+
+               - [RockResourceIron, 0.001, Free, 2.50]
+               - [RockResourceCopper, 0.001, Free_V, 2.50]
+               - [RockResourceSilicon, 0.001, Free_V, 3.00]
+               - [RockResourceCobalt, 0.01, Tree_V, 2.50]
+               
+               
+    Grass: 
+               - Name: GrassBrown01
+                 Density: 0.002
+                 YScale: 0.5
+                 Preset: GrassDense
+
+
+
+# ==============================================================   # Sandy wet glistening shore edges
+  - Name: Surf_1
+    AmbientSound: Water 
+    IgnoreForcedBiome: true
+    Texture: [9, 9, 0] 
+
+    SelectionCriteria: 
+    - Height < SeaLevel - 1
+    - Height > SeaLevel - 3
+    - Temperature > 25
+
+
+    UndergroundLayers:
+               - [9, 4]
+               - [12, 8]
+               - [11, -1]
+               - [12, 1]
+
+    Color: [0.3, 0.15, 0]
+    Decorations: 
+               - [RockGrey01Large, 0.025, BigPlant_V, 1.50]
+               - [RockGrey02Large, 0.02, BigPlant_V, 1.50]
+               - [Rock_Group_17_LoDed, 0.0001, Trees1_V|Bp=10.00|Sp=1.00|Snow=0.00|Bri=1.00|Sat=1.00|Bend=1.00|Hue=0.00, 1.50]
+               - [RockGrey01Large, 0.005, Trees1, 1.50]
+               - [RealRock4, 0.01, Empty, 1.50]
+               - [Rock_Group_21_LoDed, 0.00002, Trees1b_V, 3.00]
+               - [P_Pebble_2, 0.03, Trees1_V, 1.00]
+               - [Rock_Group_15_LoDed, 0.0001, Trees1b_V|Bp=3.00|Sp=1.00|Snow=0.00|Bri=1.00|Sat=1.00|Bend=1.00|Hue=0.00, 2.50]
+               - [Rock_08_LoDed, 0.0002, Trees1_V, 5.00]
+
+               - [CoralBig08, 0.02, Free_V, 1.50]
+
+               - [RockResourceIron, 0.001, Free, 2.50]
+               - [RockResourceCopper, 0.001, Free_V, 2.50]
+               - [RockResourceSilicon, 0.001, Free_V, 3.00]
+               - [RockResourceCobalt, 0.01, Empty, 2.50]
+
+
+    Grass: 
+               - Name: GrassBrown01
+                 Density: 0.002
+                 YScale: 0.5
+                 Preset: Empty
+               - Name: GrassDry03
+                 Density: 0.005
+                 YScale: 0.4
+                 Preset: GrsArid
+               - Name: GrassTall04
+                 Density: 0.01
+                 YScale: 0.3
+                 Preset: GrsArid_In|Bp=10.00|Sp=3.00|Snow=0.00|Bri=1.00|Sat=1.00|Bend=0.70|Hue=0.00
+               - Name: GrassThin02
+                 Density: 0.03
+                 YScale: 0.7
+                 Preset: GrsOutback|Bp=2.00|Sp=3.00|Snow=0.00|Bri=0.95|Sat=1.20|Bend=1.00|Hue=340.00
+
+
+# ==============================================================   (Colder climate special shore. Has to overwrite 'Surf')
+  - Name: SwampShore
+    IgnoreForcedBiome: true
+    # No sound. Biome too thin.
+    Texture: [10, 11, 0.2]   
+
+
+    SelectionCriteria:
+    - Height < SeaLevel + 0.5
+    - Height > SeaLevel - 0.8
+    - Humidity > 0.63
+    # - Humidity < 0.8
+    - Temperature > 20
+    - Temperature < 25
+
+    Color: [0, 1, 0.4]
+
+    UndergroundLayers:
+               - [10, 8]
+               - [12, 10]
+               - [11, -1]
+               - [12, 1]
+
+    Decorations:
+               - [ ChineseBanyan, 1.00, Tree_V|Bp=3.00|Sp=1.00|Snow=0.00|Bri=1.00|Sat=0.50|Bend=0.70|Hue=320.00, 1.70 ]
+               - [ AkuaBush1, 0.08, BigPlant_V|Bp=0.30|Sp=1.00|Snow=0.00|Bri=0.99|Sat=0.30|Bend=1.00|Hue=355.00, 1.50 ]
+               - [ DeadTree02b, 0.007, Sunny_V, 1.50 ]
+               - [ DeadTree02a, 0.007, Sunny_V, 1.50 ]
+               - [ DeadTree01, 0.007, Sunny_V|Bp=0.30|Sp=1.00|Snow=0.00|Bri=0.97|Sat=0.30|Bend=1.00|Hue=55.00, 1.50 ]
+               - [ OmicronPlant, 0.01, Plant_V, 1.50 ]
+               - [ Alien_Tree_05_1, 0.10, BigPlant|Bp=0.00|Sp=0.00|Snow=0.00|Bri=1.06|Sat=0.30|Bend=1.00|Hue=20.00, 1.50 ]
+
+               - [ DimpleDome, 0.0015, Plant, 2.50 ]
+               - [ ClusterShroom, 0.0015, Free, 2.50 ]
+               - [ CattailWinter, 0.10, Plant|Bp=0.00|Sp=0.00|Snow=0.00|Bri=0.90|Sat=1.00|Bend=1.00|Hue=20.00, 5.00 ]
+               - [ PixieStalks, 0.02, Sunny_V, 1.50 ]
+               - [ CornDogBush, 0.001, Empty, 2.50 ]
+
+
+
+
+    Grass:
+               - Name: Reeds01
+                 Density: 0.30
+                 YScale: 0.30
+                 Preset: GrsOutback
+               - Name: GrassGreen06
+                 Density: 0.45
+                 YScale: 0.40
+                 Preset: GrsDnse_15
+               - Name: GrassBrown01
+                 Density: 0.20
+                 YScale: 0.50
+                 Preset: GrassDense
+               - Name: GrassBrown05
+                 Density: 0.10
+                 YScale: 0.25
+                 Preset: GrsOutback
+
+# ==============================================================   # Dark wet glistening shore edges. Colder climates
+  - Name: Surf
+    AmbientSound: Water 
+    IgnoreForcedBiome: true
+    Texture: [10, 11, 0.2]
+
+
+    SelectionCriteria: 
+    - Height < SeaLevel - 1
+    - Height > SeaLevel - 2
+
+    UndergroundLayers:
+               - [10, 8]
+               - [12, 8]
+               - [11, -1]
+               - [12, 1]
+
+    Color: [0.1, 0.1, 0.3]
+
+    Decorations: 
+               - [RockGrey01Large, 0.025, BigPlant_V, 1.50]
+               - [RockGrey02Large, 0.02, BigPlant_V, 1.50]
+               - [RockGrey01Large, 0.15, Tree_V, 1.50]
+               - [RockGrey02Large, 0.08, Tree_V, 1.50]
+               - [RealRock7, 0.02, Tree_V, 1.50]
+               - [RealRock4, 0.01, Tree_V, 1.50]
+
+               - [CoralBig08, 0.0005, Free_V, 1.50]
+
+               - [RockResourceIron, 0.001, Free, 2.50]
+               - [RockResourceCopper, 0.001, Free, 2.50]
+               - [RockResourceSilicon, 0.001, Free, 3.0]
+               - [RockResourceCobalt, 0.01, Tree, 2.50]
+
+    Grass: 
+               - Name: GrassBrown01
+                 Density: 0.002
+                 YScale: 0.5
+                 Preset: GrassDense
+
+
+# ==============================================================   # To prevent some water POI from spawning in the arctic
+  - Name: ShallowWater_1
+    AmbientSound: Water 
+    IgnoreForcedBiome: true
+    Texture: [10, 2, 0.01]
+
+    SelectionCriteria: 
+    - Height < SeaLevel - 1.5
+    - Temperature < 4
+
+    UndergroundLayers:
+               - [10, 8]
+               - [12, 8]
+               - [11, -1]
+               - [12, 1]
+
+    Color: [0.15, 0.55, 1]
+
+    Decorations: 
+               - [RockGrey01Large, 0.002, Free_V, 1.50]
+               - [RockGrey02Large, 0.002, Free_V, 1.50]
+
+    Grass: 
+               - Name: GrassGreen01
+                 Density: 0.2
+                 YScale: 0.5
+                 Preset: GrassDense
+
+
+# ==============================================================   # Catchall Shallow Water.
+  - Name: ShallowWater
+    AmbientSound: Water 
+    IgnoreForcedBiome: true
+    Texture: [10, 2, 0.01]
+
+    SelectionCriteria: 
+    - Height < SeaLevel - 1.5
+
+    UndergroundLayers:
+               - [10, 8]
+               - [12, 8]
+               - [11, -1]
+               - [12, 1]
+
+    Color: [0.1, 0.5, 1]
+    Decorations: 
+               - [ RockGrey01Large, 0.002, Free_V, 1.50 ]
+               - [ RockGrey02Large, 0.002, Free_V, 1.50 ]
+               - [ P_Pebble_Group_2, 0.01, SandBushOut, 5.00 ]
+
+               - [ CoralBig08, 0.01, Sunny|Bp=2.00|Sp=0.00|Snow=0.00|Bri=1.00|Sat=1.00|Bend=1.00|Hue=0.00, 1.80 ]
+
+    Grass: 
+               - Name: Seaweed04
+                 Density: 2.00
+                 YScale: 0.50
+                 Preset: GrsDunes|Bp=2.00|Sp=1.00|Snow=0.00|Bri=0.98|Sat=0.50|Bend=-1.20|Hue=30.00
+               - Name: GrassGreen01
+                 Density: 0.04
+                 YScale: 0.50
+                 Preset: GrassDense
+               - Name: GrassGreen01
+                 Density: 0.20
+                 YScale: 0.30
+                 Preset: GrsDnse_15|Bp=5.00|Sp=5.00|Snow=0.00|Bri=1.00|Sat=1.00|Bend=0.50|Hue=0.00
+               - Name: Grass09
+                 Density: 0.50
+                 YScale: 1.00
+                 Preset: GrsDunes|Bp=0.00|Sp=5.00|Snow=0.00|Bri=0.95|Sat=0.70|Bend=0.50|Hue=330.00
+               - Name: GrassTall07
+                 Density: 0.50
+                 YScale: 1.00
+                 Preset: GrsMatOut|Bp=8.00|Sp=0.10|Snow=0.00|Bri=1.00|Sat=0.50|Bend=-3.00|Hue=30.00
+               - Name: Grass27
+                 Density: 0.05
+                 YScale: 1.40
+                 Preset: GrsMatOut|Bp=2.00|Sp=0.10|Snow=0.00|Bri=1.00|Sat=0.30|Bend=1.00|Hue=0.00
+               - Name: Seaweed03
+                 Density: 0.10
+                 YScale: 0.50
+                 Preset: GrsMatMid|Bp=1.50|Sp=7.00|Snow=0.00|Bri=1.00|Sat=1.00|Bend=0.20|Hue=0.00
+               - Name: Grass06
+                 Density: 0.01
+                 YScale: 2.50
+                 Preset: Trees1b_V|Bp=3.00|Sp=1.00|Snow=0.00|Bri=1.00|Sat=0.80|Bend=1.00|Hue=0.00
+
+
+
+# ==============================================================   # LAND BIOMES
+
+# NOTE: Land biomes are divided in warmer (>25°C), colder (<25°C) and very cold biomes (Tundra, Ice...) 
+# This division is to prevent incompatibilities of water, shore textures to the land biome textures. (Only 3 ground textures may overlap, else there would be sharp edges between biomes.)
+
+
+# ==============================================================   #  (Hot climate) Shallow water with bright beach sand, shaped by waves. Close to no vegetation.
+  - Name: SandBeach_1
+    AmbientSound: Islands
+    IgnoreForcedBiome: true
+    Texture: [8, 2, 0.5]
+
+    SelectionCriteria:
+    - Height > SeaLevel
+    - Height < SeaLevel + 2.5
+    - Temperature > 25.5
+    - Humidity > 0.6
+    - Humidity < 0.9
+
+    Color: [0.9, 0.8, 0.6]
+    
+    UndergroundLayers:
+               - [8, 7]
+               - [11, -1]
+               - [12, 1]
+
+
+    StampProb: 0.5                                     # ===================== Test
+    StampForcesBiomeType: OverlapAll
+    Stamps:
+               - MicroDunes_01, 0.9
+
+
+    Decorations: 
+               - [RockGrey01Large, 0.002, Free_V, 1.50]
+               - [RockGrey02Large, 0.0005, Free_V, 1.50]
+               - [Rock_Group_17_LoDed, 0.001, Trees1b_V, 2.00]
+               - [_Palm_Coconut_Hero_1_Fall, 0.001, Trees1_V|Bp=3.00|Sp=1.00|Snow=0.00|Bri=1.07|Sat=0.80|Bend=1.00|Hue=350.00, 1.50]
+               - [Rock_small_2_1, 0.008, Trees1b_V, 2.00]
+
+               - [CoralBig08, 0.0005, Free_V, 1.50]
+
+               - [RockResourceMagnesium, 0.0001, Free, 2.50]
+
+    Grass: 
+               - Name: Flower05
+                 Density: 0.001
+                 YScale: 0.2
+                 Preset: GrassDense|Bp=0.00|Sp=5.00|Snow=0.00|Bri=1.20|Sat=0.70|Bend=0.50|Hue=350.00
+
+
+# ============================================================== # (Hot climate) Warm water palm shores. Palms reaching into the water.
+  - Name: PalmBeach
+    IgnoreForcedBiome: true
+    AmbientSound: Islands 
+    Texture: [8, 2, 0.25]
+
+    SelectionCriteria:
+    - Height > SeaLevel + 2
+    - Height < SeaLevel + 7
+    - Temperature > 25
+
+    Color: [1, 1, 0]  
+
+    UndergroundLayers:
+               - [8, 12]
+               - [11, -1]
+               - [12, 1]
+
+    Decorations:
+               - [RockGrey01Large, 0.005, Free_V, 1.50]
+               - [Rock_06_LoDed, 0.025, BigPlant_V|Bp=3.00|Sp=3.00|Snow=0.00|Bri=0.96|Sat=1.00|Bend=1.00|Hue=0.00, 1.50]
+               - [RockGrey02Large, 0.003, Free_V, 1.50]
+               - [OmicronPalm, 0.02, BigPlant_V|Bp=3.00|Sp=1.00|Snow=0.00|Bri=1.08|Sat=0.75|Bend=1.00|Hue=15.00, 1.00]
+               - [_Palm_Coconut_Desktop_2_Fall, 0.006, Trees1_V|Bp=3.00|Sp=1.00|Snow=0.00|Bri=0.97|Sat=1.10|Bend=1.00|Hue=0.00, 1.50]
+               - [Alien_Tree_08, 0.003, Trees1_V|Bp=3.00|Sp=1.00|Snow=0.00|Bri=1.02|Sat=0.50|Bend=1.00|Hue=340.00, 1.30]
+               - [AlienPlant02, 0.002, Trees1|Bp=1.00|Sp=1.00|Snow=0.00|Bri=1.02|Sat=0.60|Bend=1.00|Hue=0.00, 1.50]
+               - [BushGreen01, 0.10, Plant_V, 1.50]
+               - [AkuaPlant2, 0.02, Tree_V|Bp=0.30|Sp=1.00|Snow=0.00|Bri=0.99|Sat=1.50|Bend=0.70|Hue=330.00, 1.00]
+               - [CoralStone04-03, 0.001, Trees1|Bp=1.00|Sp=1.00|Snow=0.00|Bri=1.01|Sat=1.00|Bend=1.00|Hue=0.00, 0.90]
+               - [AlienTreeBlue02, 0.00011, Trees1|Bp=1.00|Sp=1.00|Snow=0.00|Bri=1.05|Sat=0.70|Bend=1.00|Hue=0.00, 2.20]
+               - [AlienPalmTree, 0.0001, Trees1|Bp=1.00|Sp=1.00|Snow=0.00|Bri=0.94|Sat=1.25|Bend=1.00|Hue=2.00, 2.50]
+               - [_Palmetto_Sabal_Desktop_Spring, 0.002, Trees1_V, 1.00]
+               - [_Dracaena_Sapling_Desktop_Fall, 0.005, Trees1_V|Bp=3.00|Sp=1.00|Snow=0.00|Bri=0.99|Sat=1.00|Bend=1.00|Hue=340.00, 2.00]
+               - [_Palm_Coconut_Hero_1_Fall, 0.002, Trees1_V|Bp=3.00|Sp=1.00|Snow=0.00|Bri=0.97|Sat=1.20|Bend=1.00|Hue=10.00, 2.00]
+               - [_Palmetto_Sabal_Desktop_Spring, 0.03, BigPlant_V|Bp=0.30|Sp=1.00|Snow=0.00|Bri=1.02|Sat=0.70|Bend=1.00|Hue=0.00, 2.50]
+               - [Rock_Group_17_LoDed, 0.01, Sunny_V|Bp=2.00|Sp=2.00|Snow=0.00|Bri=1.02|Sat=0.70|Bend=1.00|Hue=20.00, 3.00]
+
+               - [ElderberryBushHarvested, 0.0015, Trees1|Bp=1.00|Sp=1.00|Snow=0.00|Bri=1.02|Sat=0.90|Bend=1.00|Hue=330.00, 1.00]
+               - [ElderberryBush, 0.0015, Trees1|Bp=1.00|Sp=1.00|Snow=0.00|Bri=1.02|Sat=1.90|Bend=1.00|Hue=340.00, 1.00]
+               - [CornDogBush, 0.001, Trees1|Bp=1.00|Sp=1.00|Snow=0.00|Bri=1.02|Sat=1.90|Bend=1.00|Hue=0.00, 2.50]
+
+               - [PromethiumStone, 0.0005, Trees1|Bp=1.00|Sp=1.00|Snow=0.00|Bri=1.02|Sat=0.90|Bend=1.00|Hue=0.00, 1.50]
+               - [RockResourceIron, 0.0001, Free, 2.50]
+               - [RockResourceCopper, 0.0002, Free, 2.50]
+               - [RockResourceSilicon, 0.0003, Free, 3.00]
+
+
+
+    Grass: 
+               - Name: Grass13
+                 Density: 0.1
+                 YScale: 0.6
+                 Preset: Trees1b_V|Bp=3.00|Sp=1.00|Snow=0.00|Bri=1.10|Sat=0.50|Bend=0.50|Hue=0.00
+               - Name: GrassBrown04
+                 Density: 0.4
+                 YScale: 0.5
+                 Preset: Empty
+               - Name: GrassBrown04b
+                 Density: 0.05
+                 YScale: 0.5
+                 Preset: Trees1b_V
+               - Name: GrassBrown01
+                 Density: 0.01
+                 YScale: 0.5
+                 Preset: Empty
+               - Name: Plant01Brown
+                 Density: 0.005
+                 YScale: 1
+                 Preset: Trees1b_V
+               - Name: Flower06
+                 Density: 0.02
+                 YScale: 0.5
+                 Preset: Empty|Bp=0.00|Sp=5.00|Snow=0.00|Bri=0.99|Sat=0.50|Bend=0.50|Hue=330.00
+               - Name: Flower05
+                 Density: 1
+                 YScale: 0.2
+                 Preset: Plant
+               - Name: Flower05
+                 Density: 2
+                 YScale: 0.7
+                 Preset: Tree_V|Bp=0.30|Sp=1.00|Snow=0.00|Bri=1.00|Sat=1.00|Bend=0.70|Hue=320.00
+               - Name: Grass16
+                 Density: 0.1
+                 YScale: 0.5
+                 Preset: Trees1b_V|Bp=0.00|Sp=5.00|Snow=0.00|Bri=1.05|Sat=0.70|Bend=0.50|Hue=0.00
+               - Name: Grass16
+                 Density: 0.8
+                 YScale: 0.7
+                 Preset: BigPlant_V|Bp=0.30|Sp=1.00|Snow=0.00|Bri=1.15|Sat=0.80|Bend=1.00|Hue=0.00
+               - Name: Grass08
+                 Density: 0.05
+                 YScale: 1
+                 Preset: Trees1b_V|Bp=0.00|Sp=1.00|Snow=0.00|Bri=0.99|Sat=0.30|Bend=1.00|Hue=0.00
+               - Name: Flower01
+                 Density: 0.008
+                 YScale: 0.5
+                 Preset: Trees1c_V|Bp=3.00|Sp=1.00|Snow=0.00|Bri=0.99|Sat=0.90|Bend=1.00|Hue=302.00
+               - Name: Grass21
+                 Density: 0.01
+                 YScale: 0.7
+                 Preset: Trees1b_V|Bp=3.00|Sp=1.00|Snow=0.00|Bri=1.01|Sat=0.70|Bend=1.00|Hue=330.00
+
+
+
+# ============================================================== # (All climates) Special shore. Plenty of nice rock resources. 
+  - Name: GravelBeach
+    # No sound. Biome too thin.
+    IgnoreForcedBiome: true
+    Texture: [10, 2, -0.5]
+
+    
+    SelectionCriteria: 
+    - Height < SeaLevel + 2
+    - Humidity > 0.7
+    - Humidity < 0.80
+
+    - +Lat > 0.17  # thin strip above and below equator, close to where it gets into temperate regions
+    - +Lat < 0.4
+
+
+    Color: [01, 0.25, 0.1]
+
+    UndergroundLayers:
+               - [2, 5]
+               - [11, -1]
+               - [12, 1]
+               
+    Decorations: 
+               - [ RockGrey01Large, 0.90, Free_V|Bp=3.00|Sp=3.00|Snow=0.00|Bri=1.00|Sat=0.70|Bend=1.00|Hue=330.00, 0.50 ]
+               - [ P_Pebble_Group_1, 0.005, Trees1_V|Bp=3.00|Sp=1.00|Snow=0.00|Bri=1.05|Sat=0.50|Bend=1.00|Hue=5.00, 2.50 ]
+               - [ Rock_01_LoDed, 0.30, Free_V, 3.00 ]
+               - [ Rock_small_1_3, 0.01, Trees1c_V, 5.00 ]
+               - [ P_Pebble_Group_3, 0.001, Trees1c_V|Bp=0.00|Sp=0.00|Snow=0.00|Bri=0.97|Sat=1.00|Bend=1.00|Hue=0.00, 5.00 ]
+               - [ Rock_Group_15_LoDed, 0.002, Trees1b_V|Bp=3.00|Sp=0.50|Snow=0.00|Bri=0.98|Sat=0.90|Bend=1.00|Hue=350.00, 1.20 ]
+               - [ Rock_Group_12_LoDed, 0.002, Trees1b_V|Bp=3.00|Sp=1.00|Snow=0.21|Bri=0.99|Sat=0.60|Bend=1.00|Hue=355.00, 1.50 ]
+
+               - [ Snakeweed, 0.02, Plant, 2.50 ]
+               - [ AlienPlant05, 0.05, Tree_V, 2.50 ]
+
+               - [ RockResourceSilicon, 0.001, Trees1|Bp=0.30|Sp=1.00|Snow=0.24|Bri=1.00|Sat=1.00|Bend=1.00|Hue=350.00, 1.70 ]
+               - [ RockResourceIron, 0.001, Trees1|Bp=0.30|Sp=1.00|Snow=0.22|Bri=0.97|Sat=1.00|Bend=1.00|Hue=0.00, 2.00 ]
+               - [ RockResourceNeodymium, 0.0002, Trees1b_V|Bp=0.30|Sp=1.00|Snow=0.24|Bri=0.95|Sat=0.90|Bend=1.00|Hue=340.00, 1.50 ]
+               - [ RockResourceGold, 0.001, Plant, 2.50 ]
+
+    Grass: 
+               - Name: GrassBrown02c
+                 Density: 0.1
+                 YScale: 0.4
+                 Preset: GrsArid
+               - Name: Grass11
+                 Density: 0.5
+                 YScale: 0.25
+                 Preset: GrsArid|Bp=5.00|Sp=8.00|Snow=0.00|Bri=0.98|Sat=0.50|Bend=-1.30|Hue=320.00
+               - Name: Grass21
+                 Density: 0.005
+                 YScale: 0.5
+                 Preset: GrsDnse_15|Bp=0.00|Sp=5.00|Snow=0.00|Bri=0.96|Sat=0.60|Bend=0.50|Hue=330.00
+               - Name: Grass01
+                 Density: 0.04
+                 YScale: 0.4
+                 Preset: GrsDns_Swmp|Bp=0.00|Sp=5.00|Snow=0.00|Bri=1.00|Sat=0.70|Bend=0.50|Hue=0.00
+               - Name: Flower05
+                 Density: 0.1
+                 YScale: 0.3
+                 Preset: GrsArid|Bp=5.00|Sp=8.00|Snow=0.00|Bri=1.00|Sat=1.00|Bend=0.00|Hue=0.00
+
+
+
+# ============================================================== # (Colder climate) High humidity water edge.
+  - Name: Swamp
+    IgnoreForcedBiome: true
+    AmbientSound: Islands
+    Texture: [4, 4, 0.2]
+
+    SelectionCriteria:
+    - Height < SeaLevel + 5 
+    - Height > SeaLevel
+    - Humidity > 0.66
+    - Humidity < 0.9
+    - Temperature > 18
+    - Temperature < 25
+    
+    Color: [0, 0.9, 0.0]
+
+    UndergroundLayers:
+               - [12, 2]
+               - [10, 5]
+               - [12, 10]
+               - [11, -1]
+               - [12, 1]
+
+    Decorations:
+
+               - [ ChineseBanyan, 0.14, Tree_V|Bp=0.30|Sp=1.00|Snow=0.00|Bri=0.98|Sat=0.40|Bend=0.70|Hue=330.00, 1.50 ]
+               - [ ChineseBanyan, 0.01, Empty, 1.50 ]
+               - [ DeadTree02b, 0.001, Free_V, 1.50 ]
+               - [ DeadTree02a, 0.001, Free_V, 1.50 ]
+               - [ DeadTree01, 0.01, BigPlant_V|Bp=0.00|Sp=1.00|Snow=0.00|Bri=1.07|Sat=0.20|Bend=1.00|Hue=50.00, 1.50 ]
+               - [ SkeletonWhaleFull, 0.005, Tree_V|Bp=0.30|Sp=1.00|Snow=0.00|Bri=1.00|Sat=1.00|Bend=1.00|Hue=0.00, 1.50 ]
+               - [ AkuaBush1, 0.04, Free_V|Bp=0.00|Sp=1.00|Snow=0.00|Bri=1.00|Sat=0.40|Bend=1.00|Hue=320.00, 1.50 ]
+               - [ ElderberryBushGreen, 0.0015, Free_V, 1.50 ]
+
+               - [ DimpleDome, 0.0015, Plant, 2.50 ]
+               - [ CobraLeavesPlant, 0.001, Plant, 2.50 ]
+               - [ CattailWinter, 0.001, Plant, 2.50 ]
+               - [ MushroomTallGreen01, 0.002, Free_V, 1.50 ]
+               - [ ClusterShroom, 0.0015, Free, 2.50 ]
+               - [ CornDogBush, 0.001, Plant, 2.50 ]
+
+               - [ RockResourceIron, 0.001, Free, 2.50 ]
+               - [ RockResourceCopper, 0.001, Free, 2.50 ]
+               - [ RockResourceSilicon, 0.0001, Free, 3.00 ]
+
+
+    Grass:
+               - Name: Grass06
+                 Density: 0.04
+                 YScale: 0.45
+                 Preset: HighGrass|Bp=2.00|Sp=5.00|Snow=0.00|Bri=1.00|Sat=0.60|Bend=1.00|Hue=20.00
+               - Name: Flower01
+                 Density: 0.001
+                 YScale: 0.75
+                 Preset: GrassDense|Bp=0.00|Sp=5.00|Snow=0.00|Bri=1.00|Sat=0.20|Bend=1.00|Hue=330.00
+               - Name: GrassBrownThin02
+                 Density: 0.50
+                 YScale: 0.30
+                 Preset: GrsOutback
+               - Name: GrassBrown05
+                 Density: 0.20
+                 YScale: 0.35
+                 Preset: GrassDense|Bp=3.00|Sp=5.00|Snow=0.00|Bri=0.98|Sat=0.40|Bend=0.50|Hue=20.00
+               - Name: GrassTall02
+                 Density: 1.00
+                 YScale: 0.50
+                 Preset: Sunny_V|Bp=0.00|Sp=0.00|Snow=0.00|Bri=1.00|Sat=1.00|Bend=1.00|Hue=0.00
+               - Name: GrassBrown04b
+                 Density: 0.70
+                 YScale: 1.10
+                 Preset: Empty
+               - Name: GrassBrown05
+                 Density: 5.00
+                 YScale: 0.90
+                 Preset: Tree_V|Bp=0.30|Sp=1.00|Snow=0.00|Bri=0.99|Sat=0.70|Bend=0.70|Hue=0.00
+               - Name: GrassDry03
+                 Density: 1.00
+                 YScale: 2.00
+                 Preset: Tree_V|Bp=0.30|Sp=1.00|Snow=0.00|Bri=0.99|Sat=0.70|Bend=0.70|Hue=0.00
+               - Name: Grass18
+                 Density: 0.50
+                 YScale: 2.20
+                 Preset: Tree_V|Bp=0.00|Sp=0.00|Snow=0.00|Bri=1.00|Sat=0.20|Bend=1.00|Hue=0.00
+               - Name: GrassBrownThin01
+                 Density: 1.50
+                 YScale: 0.50
+                 Preset: GrassDense|Bp=0.00|Sp=5.00|Snow=0.00|Bri=0.98|Sat=1.00|Bend=0.50|Hue=0.00
+               - Name: Grass03
+                 Density: 2.00
+                 YScale: 0.20
+                 Preset: GrsGrndCov1
+               - Name: GrassBrownThin01
+                 Density: 20.00
+                 YScale: 1.20
+                 Preset: Tree_V|Bp=0.30|Sp=1.00|Snow=0.00|Bri=0.99|Sat=0.70|Bend=0.70|Hue=0.00
+               - Name: GrassThin01
+                 Density: 0.50
+                 YScale: 1.30
+                 Preset: Sunny_V|Bp=0.30|Sp=1.00|Snow=0.00|Bri=0.95|Sat=0.50|Bend=1.00|Hue=350.00
+
+
+
+
+# ==============================================================   # (Colder climate <25°C) Shallow water with bright beach sand, shaped by waves. Close to no vegetation. (Double of SandBeach_1 to prevent texture errors.)
+  - Name: SandBeach
+    AmbientSound: Islands
+    IgnoreForcedBiome: true
+    Texture: [8, 10, 0.3]
+
+    SelectionCriteria: 
+    - Height > SeaLevel -0.8
+    - Height < SeaLevel + 1.5
+    - Temperature > 6 
+    - Humidity > 0.4
+    - Humidity < 0.699 # Old setting with lots of GravelBeach
+
+
+    Color: [0.9, 0.8, 0.6]
+
+    UndergroundLayers:
+               - [8, 7]
+               - [11, -1]
+               - [12, 1]
+
+    Decorations: 
+               - [RockGrey01Large, 0.002, Free_V, 1.50]
+               - [RockGrey02Large, 0.0005, Free_V, 1.50]
+
+    Grass: 
+               - Name: Flower05
+                 Density: 0.004
+                 YScale: 0.2
+                 Preset: GrassDense
+               - Name: Flower05
+                 Density: 0.002
+                 YScale: 0.3
+                 Preset: GrassDense
+               - Name: GrassTall06
+                 Density: 0.03
+                 YScale: 0.2
+                 Preset: GrsArid
+               - Name: Grass04
+                 Density: 0.1
+                 YScale: 0.5
+                 Preset: GrsSand|Bp=0.00|Sp=5.00|Snow=0.00|Bri=1.00|Sat=0.50|Bend=1.00|Hue=330.00
+               - Name: GrassTall04
+                 Density: 0.01
+                 YScale: 0.5
+                 Preset: GrsSand|Bp=5.00|Sp=2.00|Snow=0.00|Bri=1.00|Sat=1.00|Bend=-0.50|Hue=340.00
+
+
+
+# ==============================================================   # Standard catchall water edge, all climates
+  - Name: Shore
+    # No sound. Biome too thin.
+    IgnoreForcedBiome: true
+    Texture: [0, 8, -0.]
+    
+    SelectionCriteria: 
+    - Height < SeaLevel + 2
+    - Temperature > 3
+
+    Color: [0.7, 0.1, 0.1]
+
+    UndergroundLayers:
+               - [0, 2]
+               - [10, 2]
+               - [11, -1]
+               - [12, 1]
+
+    Decorations: 
+               - [ P_Rock_4, 0.10, SandBushIn|Bp=4.00|Sp=1.80|Snow=0.00|Bri=0.92|Sat=0.80|Bend=1.00|Hue=0.00, 1.00 ]
+               - [ RockGrey01Large, 0.009, Plant_V|Bp=0.30|Sp=1.00|Snow=0.00|Bri=1.00|Sat=0.71|Bend=1.00|Hue=0.00, 1.50 ]
+               - [ Rock_07_LoDed, 0.06, GrsMatOut|Bp=2.00|Sp=0.10|Snow=0.00|Bri=0.97|Sat=0.70|Bend=1.00|Hue=0.00, 1.00 ]
+               - [ _Hickory_Pignut_Sapling_Spring, 0.04, SandBu_Tree|Bp=7.00|Sp=3.00|Snow=0.00|Bri=1.00|Sat=1.00|Bend=1.00|Hue=0.00, 0.75 ]
+
+               - [ Snakeweed, 0.002, Empty|Bp=0.30|Sp=1.00|Snow=0.00|Bri=1.00|Sat=1.00|Bend=1.00|Hue=0.00, 2.50 ]
+
+               - [ RockResourceCarbon, 0.002, GrsDunes|Bp=1.00|Sp=1.00|Snow=0.00|Bri=1.00|Sat=1.00|Bend=1.00|Hue=0.00, 1.30 ]
+               - [ RockResourceSilicon, 0.01, SandBush|Bp=0.30|Sp=1.00|Snow=0.00|Bri=1.05|Sat=1.00|Bend=1.00|Hue=300.00, 1.20 ]
+               - [ RockResourceIron, 0.005, SandBushOut, 0.70 ]
+
+
+
+    Grass: 
+               - Name: Grass01
+                 Density: 0.50
+                 YScale: 0.30
+                 Preset: GrsSteppe|Bp=5.00|Sp=5.00|Snow=0.00|Bri=1.00|Sat=1.00|Bend=0.50|Hue=0.00
+               - Name: Grass11
+                 Density: 0.07
+                 YScale: 0.55
+                 Preset: GrsSteppe|Bp=4.00|Sp=1.00|Snow=0.00|Bri=0.97|Sat=0.50|Bend=0.50|Hue=310.00
+               - Name: GrassGreen06
+                 Density: 0.005
+                 YScale: 0.50
+                 Preset: GrassDense
+               - Name: Reeds01
+                 Density: 0.60
+                 YScale: 0.30
+                 Preset: Empty
+               - Name: Reeds01
+                 Density: 0.20
+                 YScale: 0.50
+                 Preset: Empty
+
+
+
+
+# # ==============================================================  # Ice close to poles. Will remove trees from PolarSnow, covers mountains and turns them into icebergs. 
+  - Name: IceSheet
+    AmbientSound: ArcticLowPlains 
+    IgnoreForcedBiome: true
+    Texture: [5, 5, 0.2]
+
+    SelectionCriteria:
+    - Temperature < -5
+
+    Color: [0.85, 0.85, 1]
+
+    UndergroundLayers:
+               - [5, 15]
+               - [12, 1]
+               - [11, -1]
+               - [12, 1]
+
+    Decorations:  
+               - [RealRock1Snow, 0.0001, Free_V, 1.50]
+               - [RealRock6Snow, 0.0001, BigPlant_V, 1.50]
+               - [RealRock10Snow, 0.0001, BigPlant_V, 1.50]
+
+
+# ==============================================================   # LAND BIOMES: Solid land, 'ignore forced'-Biomes
+
+# ============================================================== # (Low altitude Taiga trees) - has to overwrite DustBowl biome deco
+  - Name: PolarSnow
+    AmbientSound: Mountains 
+    IgnoreForcedBiome: true
+    Texture: [5, 5, 0.2]
+
+
+
+    SelectionCriteria:
+    - Temperature < 1
+    - Height < SeaLevel + 43
+    - Humidity > 0.2
+    - Humidity < 0.5
+    - +Lat < 0.95
+
+    Color: [0.90, 0.95, 0.9]
+
+
+    UndergroundLayers:
+               - [5, 2]
+               - [12, 1]
+               - [11, -1]
+               - [12, 1]
+
+
+    Decorations:  
+               - [ RealRock1, 0.01, Tree_V|Bp=0.30|Sp=1.00|Snow=1.00|Bri=1.00|Sat=1.00|Bend=0.70|Hue=0.00, 1.50 ]
+               - [ RealRock3, 0.001, Tree_V|Bp=0.30|Sp=1.00|Snow=1.00|Bri=1.00|Sat=1.00|Bend=0.70|Hue=0.00, 1.50 ]
+               - [ Rock_04_LoDed, 0.0004, BigPlant_V|Bp=0.30|Sp=1.00|Snow=1.00|Bri=1.00|Sat=1.00|Bend=1.00|Hue=0.00, 5.00 ]
+               - [ RealRock8, 0.001, Tree_V|Bp=0.30|Sp=1.00|Snow=1.00|Bri=1.00|Sat=1.00|Bend=0.70|Hue=0.00, 1.50 ]
+               - [ RealRock10, 0.0005, BigPlant_V|Bp=0.30|Sp=1.00|Snow=1.00|Bri=1.00|Sat=1.00|Bend=1.00|Hue=0.00, 1.50 ]
+               - [ Rock_04_LoDed, 0.10, PlrTreeIn_S, 2.00 ]
+               - [ Rock_05_LoDed, 0.10, PlrTreeIn_S, 1.30 ]
+               - [ Rock_06_LoDed, 0.10, PlrTreeIn_S, 1.70 ]
+               - [ BushWinter01, 0.02, GrsSand|Bp=2.00|Sp=2.00|Snow=1.00|Bri=1.00|Sat=1.00|Bend=1.00|Hue=0.00, 0.70 ]
+               - [ BlueSpruceWinter, 0.006, PlrOpen_S, 1.20 ]
+               - [ BlueSpruceWinter, 0.0015, GrsSand|Bp=2.00|Sp=2.00|Snow=0.40|Bri=1.00|Sat=1.00|Bend=1.00|Hue=0.00, 1.00 ]
+               - [ _Spruce_Norway_Seedling_Spring, 0.02, GrsSand|Bp=0.00|Sp=1.00|Snow=1.00|Bri=1.00|Sat=1.00|Bend=1.00|Hue=0.00, 7.00 ]
+               - [ _Spruce_Norway_Desktop_1_Field_Spring, 0.50, PlrTreeOut_S, 0.70 ]
+               - [ _Spruce_Norway_Desktop_1_Field_Fall, 0.30, PlrTreeOut_S, 0.75 ]
+               - [ _Spruce_Norway_Desktop_1_Forest_Fall, 0.50, PlrTreeIn_S, 1.20 ]
+               - [ _Spruce_Norway_Desktop_2_Forest_Spring, 0.50, PlrTreeCore_S, 1.50 ]
+               - [ BlueSpruceWinter, 0.10, PlrTreeOut_S|Bp=4.00|Sp=1.80|Snow=0.70|Bri=0.90|Sat=1.00|Bend=0.70|Hue=0.00, 0.70 ]
+               - [ AlaskaCedarBare, 0.10, PlrTreeCore_S, 1.20 ]
+               - [ ElderberryBushGreen, 0.10, PlrTreeIn_S, 0.10 ]
+               - [ BushWinter01, 0.10, PlrTreeOut_S, 1.00 ]
+               - [ _Hickory_Pignut_Undergrowth_1_Hero, 0.02, PlrTreeOut_S, 1.00 ]
+               - [ _Moss_Club_Desktop_Fall, 2.00, PlrTreeIn_S, 0.60 ]
+               - [ _Spruce_Norway_Desktop_1_Forest_Spring, 0.002, GrsSand|Bp=1.50|Sp=5.00|Snow=0.70|Bri=1.00|Sat=1.00|Bend=0.70|Hue=0.00, 0.50 ]
+               - [ _Acacia_Sapling_Fall, 0.05, GrsSand|Bp=4.00|Sp=2.00|Snow=0.70|Bri=1.00|Sat=1.00|Bend=1.00|Hue=0.00, 2.00 ]
+               - [ Rock_Group_16_LoDed, 0.10, SandBushIn|Bp=5.00|Sp=2.00|Snow=3.00|Bri=1.30|Sat=3.00|Bend=1.00|Hue=195.00, 10.00 ]
+               - [ Rock_Group_17_LoDed, 0.10, SandBushIn|Bp=2.00|Sp=1.80|Snow=0.50|Bri=1.00|Sat=1.00|Bend=1.00|Hue=0.00, 10.00 ]
+
+               - [ CornDogBush, 0.20, PlrTreeIn_S, 1.00 ]
+
+               - [ RockResourceIron, 0.50, PlrTreeIn_S|Bp=1.50|Sp=5.00|Snow=0.60|Bri=0.98|Sat=4.00|Bend=0.70|Hue=0.00, 0.70 ]
+               - [ CrystalsPyramidBlue, 0.20, PlrTreeIn_S|Bp=1.50|Sp=5.00|Snow=0.60|Bri=0.99|Sat=10.00|Bend=0.70|Hue=10.00, 0.40 ]
+               - [ RockResourceGold, 0.20, PlrTreeIn_S|Bp=1.50|Sp=5.00|Snow=0.40|Bri=0.98|Sat=0.50|Bend=0.70|Hue=0.00, 0.70 ]
+
+
+    Grass:
+               - Name: GrassBrown03
+                 Density: 30.00
+                 YScale: 0.25
+                 Preset: PlrTreeOut_S|Bp=4.00|Sp=1.80|Snow=1.00|Bri=1.20|Sat=4.00|Bend=0.70|Hue=200.00
+               - Name: GrassTall04
+                 Density: 5.00
+                 YScale: 0.50
+                 Preset: PlrTreeIn_S
+               - Name: GrassBrownThin01
+                 Density: 0.10
+                 YScale: 0.50
+                 Preset: GrsSand|Bp=0.00|Sp=5.00|Snow=1.20|Bri=1.00|Sat=1.00|Bend=1.00|Hue=0.00
+               - Name: Grass15
+                 Density: 5.00
+                 YScale: 0.30
+                 Preset: PlrTreeOut_S
+               - Name: GrassBrownThin01
+                 Density: 20.00
+                 YScale: 0.50
+                 Preset: PlrTreeIn_S
+               - Name: Grass13
+                 Density: 1.00
+                 YScale: 0.20
+                 Preset: GrsSand|Bp=32.00|Sp=5.00|Snow=1.41|Bri=1.00|Sat=1.00|Bend=0.70|Hue=0.00
+               - Name: GrassBrownThin01
+                 Density: 0.50
+                 YScale: 0.70
+                 Preset: GrsSand|Bp=5.00|Sp=2.00|Snow=2.00|Bri=1.50|Sat=3.00|Bend=0.50|Hue=120.00
+               - Name: Grass13
+                 Density: 0.008
+                 YScale: 0.40
+                 Preset: GrsDunes|Bp=2.00|Sp=1.00|Snow=5.00|Bri=1.00|Sat=1.00|Bend=-1.20|Hue=0.00
+
+
+# ==============================================================  # MULTI ROLE BIOME: As mountain top, as Taiga edge close to pole cap. Has to overwrite DustBowl biome deco
+  - Name: Glacier
+    AmbientSound: ArcticLowPlains 
+    IgnoreForcedBiome: true
+    Texture: [5, 11, 0.2]
+
+    SelectionCriteria:
+    - Temperature < 0
+
+    Color: [1, 1, 1]
+
+    UndergroundLayers:
+               - [5, 3]
+               - [12, 1]
+               - [11, -1]
+               - [12, 1]
+    Decorations:  
+               - [RealRock1Snow, 0.0001, Free_V, 1.50]
+               - [RealRock6Snow, 0.0001, BigPlant_V, 1.50]
+               - [RealRock10Snow, 0.0001, BigPlant_V, 1.50]
+
+
+# ============================================================== # MULTI ROLE BIOME: As mountain top / transition biome (Mountain to ice, _and_ Tundra to ice) Has to overwrite DustBowl biome in cold climates to remove the vegetation.
+  - Name: Rocks
+    IgnoreForcedBiome: true
+    AmbientSound: Mountains
+    Texture: [10, 11, -0.1]
+
+    SelectionCriteria: 
+    - Temperature < 2
+
+
+    Color: [0.65, 0.5, 0.5]
+
+    UndergroundLayers:
+               - [11, 0]
+               - [11, -1]
+               - [10, 1]
+
+
+    Decorations:  
+               - [ RockGrey01Large, 0.04, Sunny_V_Edge|Bp=0.30|Sp=5.00|Snow=0.00|Bri=0.90|Sat=0.90|Bend=1.00|Hue=350.00, 0.50 ]
+               - [ RockGrey02Large, 0.002, Sunny_V_Edge, 1.50 ]
+
+               - [ Snakeweed, 0.03, Sunny_V_Edge|Bp=0.30|Sp=0.50|Snow=0.00|Bri=1.00|Sat=0.80|Bend=1.00|Hue=350.00, 1.00 ]
+
+               - [ RockResourceCopper, 0.0002, Free, 2.50 ]
+               - [ RockResourceSilicon, 0.0005, Free, 3.00 ]
+
+    Grass:
+
+               - Name: GrassBrown06b
+                 Density: 0.50
+                 YScale: 1.00
+                 Preset: Sunny_V_Edge|Bp=0.00|Sp=0.00|Snow=0.00|Bri=0.97|Sat=0.90|Bend=1.00|Hue=350.00
+               - Name: GrassTall07
+                 Density: 1.00
+                 YScale: 0.80
+                 Preset: Tree_V|Bp=2.00|Sp=1.00|Snow=0.00|Bri=0.98|Sat=0.90|Bend=0.70|Hue=340.00
+
+
+
+# # ============================================================== # MULTI ROLE BIOME: Biome is placed with stamp. Will modify any climate zone's shape, but deco will only be placed in temperate and tropical biomes.
+  - Name: DustBowl
+    IgnoreForcedBiome: true
+    AmbientSound: Islands
+    Texture: [7, 10, 0.6, 11, 11, 0.5, -0.2]
+    
+    UndergroundLayers:
+               - [7, 7]
+               - [10, 2]
+               - [11, -1]
+               - [10, 1]
+
+    SelectionCriteria:
+       - false
+    Color: [1, 1, 0.2]
+
+    StampForcesBiome: true
+    StampTries: 300
+    StampForcesBiomeType: OverlapOther
+    Stamps: 
+               - Hollow_01_SUB, 0.3 
+               - Erosion_2, 0.8
+               - CraterMoon_6, 0.01
+               - MicroHill_01, 0.01
+
+    Decorations:
+               - [ RockGrey01Large, 0.01, Free_V, 1.50 ]
+               - [ RockGrey02Large, 0.01, Free_V, 1.50 ]
+               - [ RealRock4, 0.0007, Free_V, 1.50 ]
+               - [ RealRock5, 0.0007, Free_V, 1.50 ]
+               - [ DeadTree01, 0.0003, Free_V, 1.50 ]
+               - [ DeadTree02b, 0.0007, Free_V, 1.50 ]
+               - [ AkuaFern, 0.05, Tree_V|Bp=0.30|Sp=1.00|Snow=0.00|Bri=0.99|Sat=1.20|Bend=0.70|Hue=310.00, 1.50 ]
+               - [ AlienPlant05, 0.01, Plant_V, 1.50 ]
+               - [ ElderberryBushRed, 0.01, Sunny|Bp=0.00|Sp=1.00|Snow=0.00|Bri=1.00|Sat=1.20|Bend=1.00|Hue=30.00, 0.70 ]
+               - [ RockGrey01Large, 0.07, GrsArid, 0.40 ]
+               - [ RockGrey02Large, 0.10, Free_V, 2.00 ]
+               - [ RealRock5, 0.006, GrsMatIn_C|Bp=2.00|Sp=0.10|Snow=0.00|Bri=1.04|Sat=1.00|Bend=0.70|Hue=20.00, 1.50 ]
+               - [ RealRock4, 0.003, GrsMatIn_C, 2.00 ]
+               - [ Alien_Plant_13B, 0.02, Tree_V|Bp=0.30|Sp=1.00|Snow=0.00|Bri=1.03|Sat=1.00|Bend=0.70|Hue=280.00, 1.50 ]
+               - [ DeadTree02b, 0.0005, GrsMatIn, 1.30 ]
+               - [ AlienPlant05, 0.002, GrsMatIn, 2.50 ]
+               - [ Alien_Plant_03_2, 0.001, GrsMatIn|Bp=2.00|Sp=0.10|Snow=0.00|Bri=0.99|Sat=0.80|Bend=1.00|Hue=340.00, 1.00 ]
+
+               - [ CornDogBush, 0.10, Plant_V, 3.20 ]
+               - [ CornDogBush, 0.002, Plant, 2.50 ]
+               - [ Snakeweed, 0.002, GrsMatIn, 1.20 ]
+               - [ Snakeweed, 0.002, Plant, 2.50 ]
+               - [ DesertPlant20, 0.002, GrsMatOut|Bp=2.00|Sp=0.10|Snow=0.00|Bri=0.93|Sat=0.95|Bend=1.00|Hue=330.00, 2.00 ]
+               - [ ElderberryBush, 0.05, Tree|Bp=0.00|Sp=0.00|Snow=0.00|Bri=1.00|Sat=1.20|Bend=1.00|Hue=340.00, 2.50 ]
+               - [ AlienPlant07, 0.002, Plant, 2.50 ]
+
+               - [ CrystalStraight, 0.02, Plant_V, 1.70 ]
+               - [ RockResourceSilicon, 0.007, GrsMatIn, 1.20 ]
+               - [ RockResourceSilicon, 0.0007, Free, 3.00 ]
+               - [ RockResourceCopper, 0.006, GrsMatIn_C|Bp=2.00|Sp=0.10|Snow=0.00|Bri=1.03|Sat=0.70|Bend=0.70|Hue=30.00, 1.80 ]
+               - [ RockResourceCopper, 0.0003, Free, 2.50 ]
+               - [ PromethiumStone, 0.0004, Plant, 2.50 ]
+
+
+
+
+    Grass: 
+               - Name: Grass15
+                 Density: 0.003
+                 YScale: 0.5
+                 Preset: GrsDns_Swmp
+               - Name: GrassBrown05b
+                 Density: 0.5
+                 YScale: 0.5
+                 Preset: GrsDunes
+               - Name: Flower05
+                 Density: 0.2
+                 YScale: 0.7
+                 Preset: GrsDns_Swmp
+               - Name: Flower02
+                 Density: 0.05
+                 YScale: 0.3
+                 Preset: GrsArid_In
+               - Name: Grass01
+                 Density: 0.4
+                 YScale: 0.5
+                 Preset: GrsDns_Swmp
+               - Name: GrassFern0
+                 Density: 0.001
+                 YScale: 0.5
+                 Preset: GrsDns_Swmp
+               - Name: GrassTall05
+                 Density: 0.002
+                 YScale: 0.7
+                 Preset: GrsDns_Swmp
+         
+
+# # ============================================================== # Height biome, minimal vegetation. (For extremely large or cold mountains, this biome will have on top the biomes: Rocks, Glacier, and then IceSheet.)
+  - Name: Mountains 
+    IgnoreForcedBiome: true
+    AmbientSound: Mountains
+    Texture: [6, 11, 0.4]
+
+    SelectionCriteria: 
+    - Height > SeaLevel + 80  #100
+    Color: [0.5, 0.5, 0.5]
+
+    UndergroundLayers:
+               - [11, 0]
+               - [11, -1]
+               - [10, 1]
+
+
+    Decorations:  
+               - [RockGrey01Large, 0.002, Free_V, 1.50]
+               - [RockGrey02Large, 0.002, Free_V, 1.50]
+               - [RockGrey01Large, 0.035, Tree_V, 1.50]
+               - [RockGrey02Large, 0.10, Tree_V, 1.20]
+
+               - [Snakeweed, 0.20, Tree, 2.50]
+               - [AlienPlant07, 0.01, Empty, 2.50]
+
+               - [RockResourceCopper, 0.0002, Empty, 2.50]
+               - [RockResourceCopper, 0.01, BigPlant_V, 2.00]
+               - [RockResourceSilicon, 0.05, Tree_V, 2.00]
+
+    Grass:
+               - Name: GrassGreen08
+                 Density: 2
+                 YScale: 0.7
+                 Preset: GrsSteppe
+               - Name: Plant01Brown
+                 Density: 0.001
+                 YScale: 1.5
+                 Preset: GrsMatMid
+               - Name: GrassBrown06
+                 Density: 0.05
+                 YScale: 1.1
+                 Preset: GrsMatMid
+               - Name: Grass03
+                 Density: 1.5
+                 YScale: 0.3
+                 Preset: GrsDnse_15
+               - Name: Plant01Brown
+                 Density: 0.05
+                 YScale: 0.5
+                 Preset: SandBush_V
+               - Name: GrassBrown04b
+                 Density: 0.025
+                 YScale: 0.5
+                 Preset: SandBush_V
+               - Name: Flower05
+                 Density: 0.04
+                 YScale: 0.8
+                 Preset: GrsMatMid_C
+
+
+
+# ============================================================== (Very hot and dry climate, mid-to-mountain biome, replacing the blue-ish-LowMountains texture. Not in all seeds (depends on humidity mask), but if this biome is there, then in large areas)
+  - Name: Savanna
+    IgnoreForcedBiome: true
+    AmbientSound: ArcticLowPlains
+    Temperature: 1
+    Texture: [1, 11, 0.1]
+
+    SelectionCriteria:  
+    - Humidity < 0.25
+    - Humidity > 0.12
+    - Temperature > 30
+    - Height > SeaLevel +15
+
+    Color: [0.65, 0.58, 0.05]
+
+
+    UndergroundLayers:
+               - [12, 7]
+               - [11, -1]
+               - [12, 1]
+
+    Decorations:  
+               - [ RockGrey01Large, 0.002, Free_V, 1.50 ]
+               - [ RockGrey02Large, 0.0007, Free_V, 1.50 ]
+               - [ WeepingPalm1, 0.001, Free_V|Bp=0.00|Sp=1.00|Snow=0.00|Bri=1.00|Sat=1.20|Bend=1.00|Hue=355.00, 3.00 ]
+               - [ WeepingPalm3, 0.0005, Free_V|Bp=0.00|Sp=1.00|Snow=0.00|Bri=1.00|Sat=1.20|Bend=1.00|Hue=355.00, 1.50 ]
+               - [ BushGreen02, 0.0003, Free_V, 1.50 ]
+               - [ BushGreen01, 0.0002, Free_V, 1.50 ]
+               - [ ElderberryBushOrange, 0.0001, Trees1|Bp=1.00|Sp=1.00|Snow=0.00|Bri=1.00|Sat=1.00|Bend=1.00|Hue=10.00, 1.00 ]
+               - [ AkuaBushRed, 0.05, Empty|Bp=0.00|Sp=1.00|Snow=0.00|Bri=1.02|Sat=4.00|Bend=1.00|Hue=200.00, 1.30 ]
+               - [ DeadTree02b, 0.10, SandBushIn, 0.40 ]
+               - [ _Acacia_Sapling_Fall, 1.00, SandBushIn|Bp=6.00|Sp=1.80|Snow=0.00|Bri=0.97|Sat=1.50|Bend=1.00|Hue=350.00, 0.70 ]
+               - [ Alien_Plant_10_2, 0.05, Empty|Bp=0.00|Sp=1.00|Snow=0.00|Bri=1.00|Sat=1.00|Bend=1.00|Hue=150.00, 2.50 ]
+               - [ _Fern_Cinnamon_Hero_1_Fall, 0.03, Sunny_V|Bp=0.00|Sp=1.00|Snow=0.00|Bri=1.01|Sat=1.20|Bend=1.00|Hue=160.00, 3.00 ]
+
+               - [ Snakeweed, 0.003, Plant_V, 2.50 ]
+               - [ EggPlant, 0.006, Sunny_V|Bp=0.30|Sp=1.00|Snow=0.00|Bri=0.98|Sat=1.50|Bend=1.00|Hue=355.00, 2.50 ]
+               - [ InsanityPepper, 0.02, Tree_V, 2.50 ]
+               - [ AlienPlantPod2, 0.00025, Free_V, 2.50 ]
+               - [ CattailWinter, 0.001, Free_V, 2.50 ]
+
+               - [ RockResourceNeodymium, 0.0004, Free_V, 2.50 ]
+               - [ RockResourceSilicon, 0.0001, Free_V, 3.00 ]
+
+
+    Grass:
+               - Name: GrassThin01
+                 Density: 2.70
+                 YScale: 0.45
+                 Preset: GrsDns_Swp2
+               - Name: GrassBrown02
+                 Density: 0.20
+                 YScale: 0.53
+                 Preset: GrassDense|Bp=0.00|Sp=5.00|Snow=0.00|Bri=1.00|Sat=1.50|Bend=0.50|Hue=-10.00
+               - Name: GrassBrown04
+                 Density: 1.50
+                 YScale: 0.55
+                 Preset: GrsDunes|Bp=2.00|Sp=1.00|Snow=0.00|Bri=1.01|Sat=0.80|Bend=-1.20|Hue=0.00
+               - Name: Reed02
+                 Density: 0.50
+                 YScale: 0.65
+                 Preset: GrsDunes
+               - Name: GrassTall04
+                 Density: 0.50
+                 YScale: 0.70
+                 Preset: GrsMatIn_C
+               - Name: Reed01
+                 Density: 0.20
+                 YScale: 0.70
+                 Preset: GrsMatOut
+               - Name: Grass13
+                 Density: 0.10
+                 YScale: 0.60
+                 Preset: GrassDense|Bp=0.00|Sp=5.00|Snow=0.00|Bri=1.00|Sat=0.50|Bend=1.00|Hue=-40.00
+               - Name: Flower08
+                 Density: 0.005
+                 YScale: 0.75
+                 Preset: SandBushIn
+               - Name: GrassTall05
+                 Density: 0.10
+                 YScale: 0.65
+                 Preset: GrsMatOut|Bp=1.00|Sp=5.00|Snow=0.00|Bri=1.02|Sat=1.00|Bend=1.00|Hue=0.00
+               - Name: GrassBrown04b
+                 Density: 0.01
+                 YScale: 0.80
+                 Preset: GrsArid|Bp=5.00|Sp=8.00|Snow=0.00|Bri=0.99|Sat=1.20|Bend=-1.30|Hue=340.00
+               - Name: GrassThin02
+                 Density: 0.50
+                 YScale: 0.50
+                 Preset: GrsArid|Bp=5.00|Sp=2.00|Snow=0.00|Bri=1.00|Sat=0.90|Bend=-1.30|Hue=330.00
+               - Name: GrassGreen02
+                 Density: 0.50
+                 YScale: 0.45
+                 Preset: GrsArid|Bp=5.00|Sp=8.00|Snow=0.00|Bri=0.99|Sat=1.90|Bend=1.00|Hue=300.00
+
+
+
+
+# ============================================================== (Cold climate)
+  - Name: Tundra
+    IgnoreForcedBiome: true
+    AmbientSound: ArcticLowPlains 
+    Texture: [4, 10, -0.3]
+
+    SelectionCriteria:  
+    - Temperature < 6.5
+    # - Height < SeaLevel +60
+
+    Color: [0.4, 0.4, 0.015] 
+    
+    UndergroundLayers:
+               - [10, 1]
+               - [12, 2]
+               - [10, 6]
+               - [11, 1]
+               - [10, 1]
+               - [11, -1]
+               - [12, 1]
+
+    StampProb: 0.5
+    StampForcesBiomeType: OverlapAll              
+    Stamps:
+    - Pingo_01, 0.9                # == PLACEHOLDER STAMPS
+    - CraterMoon_1, 0.8
+    - CraterMoon_03, 0.6
+               
+    Decorations:  
+               - [ RockGrey01Large, 0.002, Free_V, 1.50 ]
+               - [ RockGrey02Large, 0.002, Free_V, 1.50 ]
+               - [ RealRock4, 0.0006, Free_V, 1.50 ]
+               - [ RealRock5, 0.0006, Free_V|Bp=0.00|Sp=1.00|Snow=0.00|Bri=1.00|Sat=0.70|Bend=1.00|Hue=350.00, 1.50 ]
+               - [ RealRock1, 0.0006, Free_V|Bp=0.00|Sp=1.00|Snow=0.00|Bri=0.99|Sat=1.00|Bend=1.00|Hue=0.00, 1.50 ]
+               - [ HollywoodJuniperDesktop, 0.0005, Trees1b_V|Bp=0.30|Sp=1.00|Snow=0.00|Bri=0.97|Sat=1.00|Bend=0.70|Hue=350.00, 1.50 ]
+               - [ HollywoodJuniperDesktopBare, 0.02, Empty, 1.50 ]
+               - [ ElderberryBushRed, 0.0006, BigPlant_V|Bp=0.30|Sp=1.00|Snow=0.00|Bri=1.01|Sat=0.90|Bend=1.00|Hue=10.00, 0.60 ]
+               - [ _Spruce_Norway_Desktop_1_Forest_Fall, 0.0002, BigPlant_V|Bp=0.30|Sp=1.00|Snow=0.00|Bri=1.00|Sat=0.70|Bend=1.00|Hue=0.00, 0.70 ]
+
+               - [ ClusterShroom, 0.002, Free, 2.50 ]
+               - [ CornDogBush, 0.002, Free, 2.50 ]
+               - [ Snakeweed, 0.0024, Plant|Bp=0.00|Sp=0.00|Snow=0.00|Bri=0.95|Sat=0.80|Bend=1.00|Hue=0.00, 2.50 ]
+
+               - [ RockResourceIron, 0.0003, Free, 2.50 ]
+               - [ RockResourceCopper, 0.0003, Free, 2.50 ]
+               - [ RockResourceSilicon, 0.0003, Free, 3.00 ]
+               - [ RockResourceNeodymium, 0.01, Tree, 2.50 ]
+
+    Grass:
+               - Name: GrassBrown06
+                 Density: 1.00
+                 YScale: 0.50
+                 Preset: GrassDense|Bp=0.00|Sp=5.00|Snow=0.00|Bri=1.01|Sat=0.70|Bend=0.50|Hue=20.00
+               - Name: GrassBrown06b
+                 Density: 1.00
+                 YScale: 0.50
+                 Preset: GrsDnse_15|Bp=0.00|Sp=5.00|Snow=0.00|Bri=0.98|Sat=0.60|Bend=0.50|Hue=30.00
+               - Name: Plant01Brown
+                 Density: 0.05
+                 YScale: 0.71
+                 Preset: GrassDense
+               - Name: Plant01
+                 Density: 0.05
+                 YScale: 0.80
+                 Preset: GrsMatOutA
+               - Name: Flower01
+                 Density: 0.01
+                 YScale: 1.00
+                 Preset: GrsMatMid_C|Bp=1.50|Sp=0.10|Snow=0.00|Bri=0.95|Sat=0.15|Bend=2.00|Hue=0.00
+               - Name: Flower05
+                 Density: 0.04
+                 YScale: 1.00
+                 Preset: GrsMatMid_C|Bp=1.50|Sp=0.10|Snow=0.00|Bri=0.99|Sat=0.80|Bend=1.00|Hue=5.00
+               - Name: GrassBrown04b
+                 Density: 0.30
+                 YScale: 1.00
+                 Preset: GrsMatMid_C|Bp=1.50|Sp=0.10|Snow=0.00|Bri=1.00|Sat=1.00|Bend=1.00|Hue=50.00
+               - Name: GrassTall02
+                 Density: 0.20
+                 YScale: 0.40
+                 Preset: GrsMatIn_C|Bp=7.50|Sp=0.10|Snow=0.00|Bri=0.96|Sat=0.70|Bend=0.70|Hue=8.00
+               - Name: GrassThin02
+                 Density: 0.50
+                 YScale: 1.00
+                 Preset: GrsMatOut|Bp=2.00|Sp=0.10|Snow=0.00|Bri=0.97|Sat=0.85|Bend=1.00|Hue=340.00
+               - Name: Grass28
+                 Density: 0.20
+                 YScale: 0.70
+                 Preset: GrsMatOut|Bp=2.00|Sp=0.10|Snow=0.00|Bri=0.91|Sat=0.50|Bend=1.00|Hue=330.00
+
+
+
+
+
+
+
+
+# ==============================================================  End of 'IgnoreForcedBiome'- chain 
+
+
+# ============================================================== # Temperate biome. 'Wet forest & plains' biome. Close to swamps.
+
+  - Name: Marsh 
+    # No sound. Biome too thin.
+    Texture: [4, 11, 0.2]
+
+    SelectionCriteria:  
+    - Humidity > 0.65
+
+    - Temperature > 15
+    - Temperature < 22
+    - Height < SeaLevel + 10
+
+    Color: [0.55, 0.65, 0.1]
+
+    UndergroundLayers:
+               - [12, 2]
+               - [10, 3]
+               - [12, 10]
+               - [11, -1]
+               - [12, 1]
+
+
+    Decorations:
+               - [ WhiteOak, 0.15, Tree_V, 1.50 ]
+               - [ RiverBirch, 0.02, Tree_V, 1.50 ]
+               - [ ElderberryBushGreen, 0.05, BigPlant_V|Bp=0.30|Sp=1.00|Snow=0.00|Bri=1.00|Sat=0.70|Bend=1.00|Hue=340.00, 1.50 ]
+               - [ DeadTree01, 0.005, Free_V, 1.50 ]
+               - [ DeadTree02b, 0.005, Free_V, 1.50 ]
+               - [ RealRock3Dark, 0.0004, Free_V, 1.50 ]
+               - [ RealRock4Dark, 0.002, Free_V, 1.50 ]
+               - [ RealRock8Dark, 0.0004, Free_V, 1.50 ]
+               - [ RealRock10Dark, 0.0005, Free_V, 1.50 ]
+               - [ SkeletonMammothTorso, 0.001, Free_V, 1.50 ]
+
+               - [ AlienPlant07, 0.003, Plant_V, 1.50 ]
+               - [ ElderberryBush, 0.01, BigPlant, 2.50 ]
+               - [ ClusterShroom, 0.0015, Free, 3.00 ]
+               - [ DimpleDome, 0.0015, Plant, 2.50 ]
+               - [ Snakeweed, 0.005, Plant, 2.50 ]
+               - [ CobraLeavesPlant, 0.005, Plant, 2.50 ]
+               - [ MushroomBellBrown01, 0.0001, Plant, 2.50 ]
+               - [ ScalyPods, 0.002, Plant, 2.50 ]
+               - [ CattailWinter, 0.008, Plant, 2.50 ]
+
+               - [ RockResourceIron, 0.0005, Free, 2.50 ]
+               - [ RockResourceSilicon, 0.0003, Free, 3.00 ]
+
+
+
+    Grass:
+               - Name: GrassThin02
+                 Density: 1.20
+                 YScale: 0.35
+                 Preset: GrassDense|Bp=0.00|Sp=5.00|Snow=0.00|Bri=1.00|Sat=0.70|Bend=0.50|Hue=340.00
+               - Name: GrassBrown05
+                 Density: 0.90
+                 YScale: 0.50
+                 Preset: GrassDense|Bp=0.00|Sp=5.00|Snow=0.00|Bri=1.00|Sat=0.50|Bend=0.50|Hue=0.00
+               - Name: GrassGreen04
+                 Density: 0.20
+                 YScale: 0.50
+                 Preset: GrassDense
+               - Name: Reeds01
+                 Density: 0.02
+                 YScale: 0.80
+                 Preset: GrassDense
+
+
+
+
+
+# ============================================================== #  (Hot climate) Transition biome to HighPalms, and to reduce cases with enormous 'palm load': Manual clearing in PalmForest
+  - Name: ForestClearing
+    AmbientSound: DesertLowPlains
+    Texture: [7, 11, -0.1] 
+    Texture: [7, 11, 0.2] 
+
+    SelectionCriteria:
+    - Humidity < 0.45
+    - Humidity > 0.13
+    - Temperature > 25
+    - Height < SeaLevel +28
+    - Height > SeaLevel +15
+
+    Color: [1, 0.5, 0]
+
+    UndergroundLayers:
+               - [10, 2]
+               - [11, -1]
+               - [12, 1]
+
+    StampProb: 0.5
+    StampForcesBiomeType: OverlapAll              
+    Stamps:
+    - Pingo_01, 0.9                # ============= PLACEHOLDER STAMPS
+    - MicroHill_01, 0.8
+    - CraterMoon_03, 0.3
+
+    Decorations:
+
+               - [ Rock_12_LoDed, 0.01, Trees1|Bp=7.00|Sp=1.00|Snow=0.00|Bri=0.96|Sat=0.50|Bend=1.00|Hue=0.00, 0.90 ]
+               - [ RockGrey01Large, 0.0025, Empty, 1.50 ]
+               - [ RockGrey02Large, 0.02, BigPlant_V, 1.50 ]
+               - [ RealRock7, 0.02, Tree_V, 1.50 ]
+               - [ RealRock8, 0.02, Tree_V, 1.50 ]
+               - [ OmicronPalm, 0.0069, Trees1b_V, 1.50 ]
+               - [ OmicronPalmGreen, 0.04, Tree_V|Bp=1.00|Sp=1.00|Snow=0.00|Bri=1.00|Sat=1.00|Bend=0.70|Hue=330.00, 4.00 ]
+               - [ ElderberryBushGreen, 0.04, GrsOutback|Bp=5.00|Sp=1.00|Snow=0.00|Bri=1.04|Sat=0.50|Bend=0.00|Hue=295.00, 0.20 ]
+
+               - [ ScalyPods, 0.01, BigPlant_V|Bp=0.30|Sp=1.00|Snow=0.00|Bri=0.97|Sat=1.50|Bend=1.00|Hue=160.00, 2.20 ]
+               - [ Snakeweed, 0.005, GrsOutback|Bp=1.00|Sp=2.00|Snow=0.00|Bri=1.00|Sat=1.00|Bend=0.20|Hue=0.00, 1.20 ]
+               - [ CornDogBush, 0.05, Plant|Bp=1.00|Sp=0.00|Snow=0.00|Bri=0.99|Sat=1.20|Bend=1.00|Hue=330.00, 3.00 ]
+
+               - [ RockResourceIron, 0.001, Sunny_V, 2.50 ]
+               - [ RockResourceCopper, 0.001, Sunny_V, 2.50 ]
+               - [ RockResourceCobalt, 0.015, Tree, 2.50 ]
+
+
+    Grass: 
+               - Name: GrassBrown06b
+                 Density: 0.6
+                 YScale: 0.5
+                 Preset: GrsArid
+               - Name: Grass01
+                 Density: 0.1
+                 YScale: 0.35
+                 Preset: GrsOutback|Bp=5.00|Sp=15.00|Snow=0.00|Bri=1.05|Sat=0.40|Bend=0.20|Hue=340.00
+               - Name: Flower05
+                 Density: 0.1
+                 YScale: 0.3
+                 Preset: GrsOutback|Bp=5.00|Sp=15.00|Snow=0.00|Bri=1.00|Sat=0.70|Bend=0.20|Hue=340.00
+               - Name: Flower05
+                 Density: 0.1
+                 YScale: 0.5
+                 Preset: GrassDense|Bp=0.00|Sp=5.00|Snow=0.00|Bri=0.99|Sat=0.70|Bend=0.50|Hue=320.00
+               - Name: Flower05
+                 Density: 0.005
+                 YScale: 0.65
+                 Preset: GrassDense|Bp=0.00|Sp=5.00|Snow=0.00|Bri=1.00|Sat=0.70|Bend=0.50|Hue=350.00
+               - Name: GrassFern0
+                 Density: 0.002
+                 YScale: 0.4
+                 Preset: GrsArid_In|Bp=2.00|Sp=7.00|Snow=0.00|Bri=1.00|Sat=0.70|Bend=-0.50|Hue=330.00
+               - Name: GrassTall01
+                 Density: 0.1
+                 YScale: 0.65
+                 Preset: GrsArid_In|Bp=3.00|Sp=6.00|Snow=0.00|Bri=1.00|Sat=0.60|Bend=-0.50|Hue=315.00
+               - Name: GrassBrownThin02
+                 Density: 0.2
+                 YScale: 0.7
+                 Preset: GrsMatMid|Bp=1.50|Sp=0.10|Snow=0.00|Bri=1.03|Sat=0.90|Bend=-1.50|Hue=310.00
+               - Name: Flower25
+                 Density: 0.2
+                 YScale: 0.65
+                 Preset: GrsArid_In|Bp=2.00|Sp=2.00|Snow=0.00|Bri=1.00|Sat=0.15|Bend=0.00|Hue=0.00
+
+
+
+# ============================================================== # (Hot climate) Very densely populated palm field with red terrain texture.
+  - Name: PalmForest
+    AmbientSound: DesertLowPlains
+    Texture: [0, 11, 0] 
+
+    SelectionCriteria:
+    - Humidity < 0.52   # Careful with changing these parameters - Too much of this biome in combination with other high-density sea biomes might overload the deco system.
+    - Temperature > 25
+    - Height < SeaLevel +25
+    - Height > SeaLevel +13
+
+
+    Color: [1, 0.4, 0]
+
+    UndergroundLayers:
+               - [0, 2]
+               - [12, 4]
+               - [11, -1]
+               - [12, 1]
+
+    Decorations:
+
+               - [ RockGrey01Large, 0.001, Free_V, 1.50 ]
+               - [ Rock_Group_21_LoDed, 0.001, Trees1_V|Bp=3.00|Sp=1.00|Snow=0.00|Bri=0.97|Sat=0.50|Bend=1.00|Hue=0.00, 1.20 ]
+               - [ Rock_14_LoDed, 0.003, Trees1_V|Bp=3.00|Sp=1.00|Snow=0.00|Bri=0.95|Sat=0.50|Bend=1.00|Hue=0.00, 1.50 ]
+               - [ DesertRockMedium1, 0.001, Empty|Bp=2.00|Sp=0.00|Snow=0.00|Bri=1.00|Sat=1.00|Bend=1.00|Hue=0.00, 2.00 ]
+               - [ CoralStone04-03, 0.01, BigPlant_V, 1.00 ]
+               - [ OmicronPalm, 0.20, BigPlant_V, 2.00 ]
+               - [ OmicronPalm, 1.70, EqualMeasure, 2.50 ]
+               - [ OmicronPalmGreen, 0.018, BigPlant_V, 1.50 ]
+               - [ AlienBushRedFronds, 0.40, Tree_V|Bp=0.30|Sp=1.00|Snow=0.00|Bri=0.99|Sat=0.70|Bend=0.70|Hue=15.00, 2.50 ]
+               - [ Alien_Fern1, 0.10, BigPlant_V|Bp=0.30|Sp=1.00|Snow=0.00|Bri=1.00|Sat=0.70|Bend=1.00|Hue=340.00, 2.50 ]
+               - [ ElderberryBushOrange, 0.05, BigPlant_V|Bp=0.30|Sp=1.00|Snow=0.00|Bri=1.05|Sat=0.60|Bend=1.00|Hue=10.00, 1.50 ]
+               - [ ElderberryBushRed, 0.10, Free_V, 0.90 ]
+               - [ BushGreen01, 0.005, Free_V, 1.50 ]
+               - [ DeadTree02b, 0.02, BigPlant_V, 0.70 ]
+               - [ DeadTree02a, 0.03, Empty, 1.50 ]
+               - [ AlienPlant02, 0.02, BigPlant_V, 1.50 ]
+               - [ AlienPalmTree, 0.02, Tree_V|Bp=0.30|Sp=1.00|Snow=0.00|Bri=0.93|Sat=1.50|Bend=0.70|Hue=10.00, 5.00 ]
+               - [ AlienPalmTreeHarvested, 0.03, Empty, 5.00 ]
+               - [ Alien_Tree_08, 0.06, Sunny_V|Bp=0.30|Sp=1.00|Snow=0.00|Bri=1.00|Sat=0.70|Bend=1.00|Hue=330.00, 3.00 ]
+               - [ _Palm_Coconut_Desktop_Sapling_Spring, 0.30, Tree_V|Bp=0.30|Sp=1.00|Snow=0.00|Bri=0.98|Sat=0.40|Bend=0.70|Hue=0.00, 7.00 ]
+               - [ _Palm_Coconut_Desktop_2_Fall, 1.00, EqualMeasure|Bp=1.20|Sp=1.00|Snow=0.00|Bri=1.00|Sat=0.50|Bend=1.00|Hue=350.00, 2.50 ]
+               - [ _Dracaena_Sapling_Desktop_Fall, 0.06, BigPlant_V|Bp=0.30|Sp=1.00|Snow=0.00|Bri=0.98|Sat=0.70|Bend=1.00|Hue=0.00, 4.00 ]
+               - [ _Palmetto_Sabal_Desktop_Spring, 0.008, GrsMatMid|Bp=0.30|Sp=1.00|Snow=0.00|Bri=0.98|Sat=0.50|Bend=1.00|Hue=5.00, 1.50 ]
+               - [ Rock_Group_14_LoDed, 0.005, SandBu_Tree, 5.50 ]
+               - [ Rock_Group_15_LoDed, 0.008, Empty, 5.00 ]
+
+               - [ LavaPlant2, 0.02, Empty, 1.20 ]
+               - [ ScalyPods, 0.01, Empty, 2.30 ]
+               - [ AlienPlant07, 0.05, BigPlant_V, 1.90 ]
+               - [ Snakeweed, 0.01, Sunny_V, 2.00 ]
+               - [ AlienPlant05, 0.013, BigPlant_V|Bp=1.00|Sp=1.00|Snow=0.00|Bri=1.00|Sat=1.00|Bend=1.00|Hue=0.00, 2.00 ]
+
+               - [ RockResourceIron, 0.002, Plant_V, 2.50 ]
+               - [ RockResourceGold, 0.004, Plant_V, 2.50 ]
+               - [ RockResourceCobalt, 0.15, Tree_V|Bp=0.30|Sp=1.00|Snow=0.00|Bri=1.00|Sat=1.50|Bend=0.70|Hue=0.00, 1.50 ]
+
+
+
+    Grass: 
+               - Name: GrassBrown01
+                 Density: 0.5
+                 YScale: 0.5
+                 Preset: GrassDense
+               - Name: Reeds01
+                 Density: 0.25
+                 YScale: 0.5
+                 Preset: GrassDense
+               - Name: GrassBrown06
+                 Density: 0.2
+                 YScale: 0.5
+                 Preset: GrassDense
+               - Name: Flower05
+                 Density: 0.05
+                 YScale: 0.7
+                 Preset: GrassDense|Bp=2.00|Sp=5.00|Snow=0.00|Bri=0.99|Sat=0.90|Bend=0.50|Hue=355.00
+               - Name: GrassFern0
+                 Density: 0.001
+                 YScale: 0.5
+                 Preset: GrassDense
+               - Name: Grass27
+                 Density: 0.05
+                 YScale: 0.4
+                 Preset: GrassIn|Bp=1.00|Sp=5.00|Snow=0.00|Bri=1.02|Sat=0.30|Bend=0.20|Hue=0.00
+               - Name: Grass13
+                 Density: 1.5
+                 YScale: 0.3
+                 Preset: GrassDense|Bp=0.00|Sp=5.00|Snow=0.00|Bri=1.00|Sat=0.50|Bend=0.50|Hue=0.00
+               - Name: Flower25
+                 Density: 0.02
+                 YScale: 1
+                 Preset: GrsMatMid|Bp=0.00|Sp=5.00|Snow=0.00|Bri=1.02|Sat=0.30|Bend=0.50|Hue=5.00
+               - Name: Flower02
+                 Density: 0.05
+                 YScale: 0.7
+                 Preset: GrsMatIn|Bp=2.00|Sp=0.10|Snow=0.00|Bri=1.00|Sat=0.50|Bend=1.00|Hue=0.00
+               - Name: Grass15
+                 Density: 0.1
+                 YScale: 0.75
+                 Preset: GrsMatMid|Bp=2.00|Sp=0.10|Snow=0.00|Bri=0.99|Sat=0.70|Bend=1.00|Hue=0.00
+
+
+
+
+
+# ============================================================== # (Hot climate) Dry palms on the lower island, with sandy terrain.
+  - Name: Dunes
+    AmbientSound: ArcticLowPlains
+    Texture: [8, 11, 0.3]
+
+    SelectionCriteria:
+    - Humidity < 0.585
+    - Temperature > 25 
+    - Height < SeaLevel +30
+
+    Color: [0.9, 0.7, 0.25]
+
+    UndergroundLayers:
+               - [8, 14]
+               - [11, -1]
+               - [12, 1]
+
+    Decorations:
+               - [ RockGrey01Large, 0.002, GrsOutback, 0.30 ]
+               - [ RockGrey02Large, 0.001, GrsOutback, 0.30 ]
+               - [ RealRock7, 0.01, GrsMatOut, 1.00 ]
+               - [ RealRock4, 0.01, GrsMatOutA, 1.00 ]
+               - [ RealRock8, 0.01, GrsMatOutA|Bp=4.00|Sp=0.10|Snow=0.00|Bri=1.00|Sat=1.00|Bend=1.00|Hue=0.00, 0.40 ]
+               - [ _Palmetto_Sabal_Desktop_Fall, 0.005, GrsMatOutA2, 2.50 ]
+               - [ Alien_Tree_08, 0.50, SandBushIn|Bp=4.00|Sp=1.80|Snow=0.00|Bri=1.05|Sat=0.50|Bend=1.00|Hue=340.00, 1.00 ]
+               - [ AlienBushRedFronds, 0.01, SandBu_Tree|Bp=1.00|Sp=1.00|Snow=0.00|Bri=1.00|Sat=1.00|Bend=1.00|Hue=0.00, 1.00 ]
+               - [ ElderberryBushOrange, 0.005, SandBush|Bp=3.00|Sp=1.00|Snow=0.00|Bri=1.05|Sat=0.70|Bend=1.00|Hue=0.00, 0.70 ]
+               - [ BushGreen01, 0.02, SandBush_V|Bp=5.00|Sp=15.00|Snow=0.00|Bri=1.00|Sat=1.00|Bend=0.20|Hue=0.00, 0.15 ]
+               - [ CoralStone01-03, 0.004, GrsMatOutA, 1.50 ]
+               - [ _Palm_Coconut_Hero_1_Fall, 0.01, GrsMatOutA|Bp=1.50|Sp=0.10|Snow=0.00|Bri=1.00|Sat=1.00|Bend=1.00|Hue=0.00, 4.00 ]
+               - [ _Palm_Coconut_Desktop_Sapling_Spring, 0.001, SandBush, 1.00 ]
+               - [ ElderberryBushRed, 0.005, GrsMatOut|Bp=1.50|Sp=0.10|Snow=0.00|Bri=1.00|Sat=1.00|Bend=1.00|Hue=0.00, 0.60 ]
+
+               - [ CobraLeavesPlant, 0.02, SandBushIn, 1.00 ]
+               - [ CornDogBush, 0.03, GrsMatOutA2|Bp=0.30|Sp=0.10|Snow=0.00|Bri=1.00|Sat=1.50|Bend=1.00|Hue=0.00, 3.50 ]
+               - [ Snakeweed, 0.01, GrsMatOutA|Bp=0.30|Sp=0.10|Snow=0.00|Bri=1.00|Sat=1.50|Bend=1.00|Hue=15.00, 2.00 ]
+
+               - [ RockResourceIron, 0.01, GrsMatOutA|Bp=0.30|Sp=0.10|Snow=0.00|Bri=1.00|Sat=1.00|Bend=1.00|Hue=0.00, 2.00 ]
+               - [ RockResourceCopper, 0.004, SandBush, 2.00 ]
+               - [ RockResourceSilicon, 0.003, SandBushIn, 1.20 ]
+               - [ RockResourceCarbon, 0.05, SandBush, 1.00 ]
+
+
+    Grass: 
+               - Name: Grass16
+                 Density: 0.7
+                 YScale: 0.5
+                 Preset: SandBush
+               - Name: GrassBrown05
+                 Density: 0.03
+                 YScale: 0.75
+                 Preset: Empty
+               - Name: Flower05
+                 Density: 0.1
+                 YScale: 0.2
+                 Preset: SandBush
+               - Name: Grass16
+                 Density: 0.003
+                 YScale: 0.5
+                 Preset: GrsDnse_08|Bp=1.50|Sp=0.10|Snow=0.00|Bri=1.10|Sat=0.50|Bend=1.00|Hue=0.00
+               - Name: Grass01
+                 Density: 0.5
+                 YScale: 0.5
+                 Preset: SandBushIn
+               - Name: Flower05
+                 Density: 0.05
+                 YScale: 1
+                 Preset: GrsMatOutA|Bp=2.00|Sp=0.10|Snow=0.00|Bri=1.00|Sat=0.50|Bend=1.00|Hue=0.00
+               - Name: Grass13
+                 Density: 0.5
+                 YScale: 0.9
+                 Preset: GrsMatOutA|Bp=2.00|Sp=0.10|Snow=0.00|Bri=1.10|Sat=0.70|Bend=2.00|Hue=0.00
+               - Name: Grass16
+                 Density: 0.5
+                 YScale: 0.5
+                 Preset: GrsMatOut|Bp=5.00|Sp=0.10|Snow=0.00|Bri=1.05|Sat=0.70|Bend=1.00|Hue=0.00
+               - Name: Grass25
+                 Density: 0.5
+                 YScale: 0.8
+                 Preset: GrsMatOutA2
+               - Name: GrassTall01
+                 Density: 0.1
+                 YScale: 1
+                 Preset: GrsMatOutA2|Bp=2.00|Sp=0.10|Snow=0.00|Bri=1.08|Sat=0.40|Bend=0.50|Hue=0.00
+               - Name: Grass15
+                 Density: 0.1
+                 YScale: 1
+                 Preset: GrsMatOutA2
+               - Name: GrassGreen05
+                 Density: 0.1
+                 YScale: 1
+                 Preset: GrsMatOutA|Bp=2.00|Sp=0.10|Snow=0.00|Bri=1.00|Sat=0.30|Bend=0.50|Hue=40.00
+               - Name: Flower01
+                 Density: 0.025
+                 YScale: 1.2
+                 Preset: GrsMatOutA2|Bp=2.00|Sp=0.10|Snow=0.00|Bri=1.02|Sat=1.00|Bend=1.00|Hue=320.00
+
+
+
+
+
+
+# ============================================================== # (Hot climate) Sand, devoid of nearly all plant life.
+  - Name: PalmDunes
+    AmbientSound: DesertHighPlains
+    Texture: [8, 7, 0]
+
+    SelectionCriteria:
+    - Humidity > 0.15
+    - Humidity < 0.75 
+    - Temperature > 25
+    - Height < SeaLevel +15
+
+    Color: [0.8, 0.75, 0.6]
+
+    UndergroundLayers:
+               - [8, 3]
+               - [12, 2]
+               - [11, -1]
+               - [12, 1]
+
+
+    Decorations:
+               - [RockGrey01Large, 0.0212, Trees1b_V|Bp=5.00|Sp=1.00|Snow=0.00|Bri=1.00|Sat=1.00|Bend=1.00|Hue=0.00, 0.80]
+               - [RockGrey02Large, 0.05, GrsOutback|Bp=5.00|Sp=1.00|Snow=0.00|Bri=1.00|Sat=1.20|Bend=0.20|Hue=0.00, 0.40]
+               - [RealRock8, 0.005, GrsSand, 0.40]
+               - [RealRock7, 0.01, GrsSand, 0.40]
+               - [RealRock4, 0.008, GrsSand, 0.50]
+               - [OmicronPalm, 0.02, GrsSand|Bp=2.00|Sp=2.00|Snow=0.00|Bri=1.08|Sat=0.50|Bend=1.00|Hue=0.00, 1.00]
+               - [_Palmetto_Sabal_Desktop_Fall, 0.005, Trees1_V, 1.50]
+               - [_Palm_Coconut_Desktop_2_Fall, 0.01, GrsSand, 0.75]
+               - [CoralStone01-03, 0.001, GrsSand|Bp=2.00|Sp=2.00|Snow=0.00|Bri=1.00|Sat=0.90|Bend=1.00|Hue=0.00, 1.00]
+               - [BushGreen01, 0.01, GrsSand|Bp=1.00|Sp=1.00|Snow=0.00|Bri=1.03|Sat=0.90|Bend=1.00|Hue=0.00, 1.50]
+               - [_Dracaena_Sapling_Desktop_Fall, 0.005, GrsSand|Bp=5.00|Sp=2.00|Snow=0.00|Bri=1.03|Sat=0.70|Bend=1.00|Hue=330.00, 2.00]
+
+               - [CornDogBush, 0.005, GrsSand|Bp=0.30|Sp=2.00|Snow=0.00|Bri=1.00|Sat=1.00|Bend=1.00|Hue=0.00, 2.50]
+
+               - [RockResourceIron, 0.001, Trees1b_V|Bp=0.30|Sp=1.00|Snow=0.00|Bri=1.00|Sat=1.00|Bend=1.00|Hue=0.00, 2.20]
+               - [RockResourceSilicon, 0.0015, Trees1b_V|Bp=0.30|Sp=1.00|Snow=0.00|Bri=0.99|Sat=1.50|Bend=1.00|Hue=0.00, 2.00]
+               - [RockResourceMagnesium, 0.001, Trees1b_V|Bp=0.30|Sp=1.00|Snow=0.00|Bri=1.00|Sat=1.00|Bend=1.00|Hue=0.00, 1.80]
+               - [RockResourceCarbon, 0.01, GrsSand|Bp=0.30|Sp=2.00|Snow=0.00|Bri=1.00|Sat=1.00|Bend=1.00|Hue=0.00, 1.50]
+
+
+
+    Grass: 
+               - Name: GrassBrown04b
+                 Density: 0.004
+                 YScale: 0.3
+                 Preset: GrsArid
+               - Name: Flower05
+                 Density: 0.2
+                 YScale: 0.3
+                 Preset: GrsOutback|Bp=0.00|Sp=8.00|Snow=0.00|Bri=1.10|Sat=0.70|Bend=0.50|Hue=0.00
+               - Name: Flower05
+                 Density: 0.01
+                 YScale: 0.3
+                 Preset: Empty
+               - Name: GrassBrownThin02
+                 Density: 0.5
+                 YScale: 0.38
+                 Preset: GrsSand|Bp=10.00|Sp=1.00|Snow=0.00|Bri=1.07|Sat=0.70|Bend=0.20|Hue=0.00
+               - Name: Grass20
+                 Density: 0.1
+                 YScale: 0.5
+                 Preset: GrsSand|Bp=5.00|Sp=2.00|Snow=0.00|Bri=1.10|Sat=0.90|Bend=1.00|Hue=300.00
+               - Name: GrassTall05
+                 Density: 0.02
+                 YScale: 0.4
+                 Preset: Trees1b_V|Bp=7.00|Sp=5.00|Snow=0.00|Bri=1.00|Sat=1.00|Bend=1.00|Hue=0.00
+               - Name: GrassBrownThin02
+                 Density: 0.05
+                 YScale: 0.7
+                 Preset: Trees1b_V|Bp=3.00|Sp=1.00|Snow=0.00|Bri=1.08|Sat=1.00|Bend=1.00|Hue=0.00
+               - Name: GrassBrown04b
+                 Density: 0.01
+                 YScale: 1
+                 Preset: Trees1b_V
+               - Name: GrassTall01
+                 Density: 0.01
+                 YScale: 0.7
+                 Preset: Trees1b_V|Bp=5.00|Sp=2.00|Snow=0.00|Bri=1.01|Sat=0.50|Bend=1.00|Hue=340.00
+               - Name: GrassTall01
+                 Density: 0.05
+                 YScale: 1.2
+                 Preset: GrsSand|Bp=5.00|Sp=2.00|Snow=0.00|Bri=1.05|Sat=0.50|Bend=1.00|Hue=350.00
+
+
+# ============================================================== # (Temperate to hot climate) Bright red stone side, red stone top with lots of rocks. Will create Algarve-like cliffs at steep angles.
+  - Name: Cliffs
+    AmbientSound: Islands
+    Texture: [7, 2, -0.4]
+
+    UndergroundLayers:
+               - [7, 3]
+               - [11, -1]
+               - [12, 1]
+
+    SelectionCriteria:
+    - Humidity > 0.19
+    - Humidity < 0.25
+    - Temperature > 16
+    - Height < SeaLevel +35
+    - Height > SeaLevel +7
+
+    Color: [0.75, 0.4, 0.3]  
+
+    StampProb: 0.5
+    StampForcesBiomeType: OverlapAll              
+    Stamps:
+    - Pingo_01, 0.9                # ============= PLACEHOLDER STAMPS
+    - MicroHill_01, 0.8
+ 
+
+    Decorations:
+               - [Rock_Group_21_LoDed, 0.005, BigPlant_V|Bp=4.00|Sp=1.00|Snow=0.00|Bri=1.00|Sat=1.00|Bend=1.00|Hue=0.00, 3.00]
+               - [Rock_Group_22_LoDed, 0.05, Tree_V, 7.00]
+               - [Rock_Group_16_LoDed, 0.20, Sunny_V|Bp=15.00|Sp=1.00|Snow=0.00|Bri=1.00|Sat=1.00|Bend=1.00|Hue=0.00, 0.80]
+               - [Rock_Group_09_LoDed, 0.01, Sunny_V|Bp=5.00|Sp=1.00|Snow=0.00|Bri=1.00|Sat=1.00|Bend=1.00|Hue=0.00, 3.00]
+               - [RockGrey01Large, 0.25, Tree_V, 1.50]
+               - [RockGrey02Large, 0.20, Tree_V, 1.50]
+               - [RealRock7, 0.07, Tree_V, 1.50]
+               - [RealRock4, 0.056, Tree_V, 1.50]
+               - [_Oak_White_Desktop_Field_Spring, 0.05, Tree_V, 2.00]
+               - [CoralStone01-03, 0.10, Empty, 2.00]
+               - [Rock_Group_05_LoDed, 0.003, Empty, 10.00]
+               - [_Moss_Club_Desktop_Fall, 0.05, Sunny|Bp=2.00|Sp=0.00|Snow=0.00|Bri=1.05|Sat=0.50|Bend=1.00|Hue=10.00, 1.20]
+               - [_Fern_Rock_Desktop_2_Spring, 0.01, Sunny_V_Edge|Bp=1.00|Sp=1.00|Snow=0.00|Bri=1.00|Sat=0.70|Bend=1.00|Hue=310.00, 3.00]
+               - [ElderberryBushGreen, 0.01, Sunny_V_Edge|Bp=3.00|Sp=1.00|Snow=0.00|Bri=1.03|Sat=0.70|Bend=1.00|Hue=310.00, 0.30]
+
+               - [Snakeweed, 0.01, Tree_V, 2.50]
+
+               - [RockResourceIron, 0.002, Sunny_V_Edge|Bp=0.30|Sp=1.00|Snow=0.00|Bri=0.97|Sat=1.10|Bend=1.00|Hue=340.00, 2.10]
+               - [RockResourceSilicon, 0.008, Sunny_V_Edge|Bp=0.30|Sp=1.00|Snow=0.00|Bri=1.00|Sat=1.00|Bend=1.00|Hue=340.00, 2.10]
+
+
+    Grass: 
+               - Name: Reed01
+                 Density: 2
+                 YScale: 0.8
+                 Preset: Tree_V|Bp=0.30|Sp=1.00|Snow=0.00|Bri=1.05|Sat=0.30|Bend=0.70|Hue=5.00
+               - Name: Grass01
+                 Density: 0.01
+                 YScale: 0.5
+                 Preset: GrassDense|Bp=0.00|Sp=5.00|Snow=0.00|Bri=1.05|Sat=0.20|Bend=0.50|Hue=340.00
+               - Name: Flower05
+                 Density: 0.02
+                 YScale: 0.35
+                 Preset: GrassDense|Bp=0.00|Sp=5.00|Snow=0.00|Bri=1.05|Sat=0.70|Bend=0.50|Hue=340.00
+               - Name: Grass16
+                 Density: 10
+                 YScale: 0.4
+                 Preset: Tree_V|Bp=5.00|Sp=1.00|Snow=0.00|Bri=0.99|Sat=0.50|Bend=1.00|Hue=0.00
+
+
+
+# ============================================================== #(Hot climate) Weeping palm forest
+  - Name: HighPalms
+    AmbientSound: DesertHighPlains
+    Texture: [1, 11, 0.2]
+
+    UndergroundLayers:
+               - [12, 6]
+               - [11, 1]
+               - [12, 1]
+               - [11, -1]
+               - [12, 1]
+
+    SelectionCriteria:
+    - Humidity < 0.7  #0.5
+    - Temperature > 25
+    - Height < SeaLevel +48 # >>Leaves hole of 2m height for TropicalHills transition to LowMountains
+    - Height > SeaLevel +23
+
+    Color: [1, 0.6, 0.1]  
+
+
+    Decorations:
+               - [ RockGrey01Large, 0.002, Empty, 2.00 ]
+               - [ P_Rock_2, 0.001, Sunny_V|Bp=0.30|Sp=1.00|Snow=0.00|Bri=0.93|Sat=0.70|Bend=1.00|Hue=350.00, 2.00 ]
+               - [ RealRock7, 0.004, Empty, 1.50 ]
+               - [ RealRock7, 0.001, Empty, 1.50 ]
+               - [ RealRock4, 0.001, Free_V, 1.50 ]
+               - [ Rock_Group_08_LoDed, 0.01, Sunny_V|Bp=0.30|Sp=1.00|Snow=0.00|Bri=0.96|Sat=1.00|Bend=1.00|Hue=10.00, 1.50 ]
+               - [ OmicronPalm, 0.02, SandBush|Bp=0.30|Sp=1.00|Snow=0.00|Bri=0.99|Sat=1.00|Bend=1.00|Hue=355.00, 1.50 ]
+               - [ BaldCypresFall, 0.0005, Sunny_V|Bp=0.30|Sp=1.00|Snow=0.00|Bri=1.00|Sat=0.80|Bend=1.00|Hue=10.00, 1.50 ]
+               - [ WeepingPalm1, 0.005, SandBushOut|Bp=0.30|Sp=1.00|Snow=0.00|Bri=1.00|Sat=1.00|Bend=1.00|Hue=0.00, 1.80 ]
+               - [ WeepingPalm3, 0.03, SandBu_Tree|Bp=1.00|Sp=3.00|Snow=0.00|Bri=1.00|Sat=1.10|Bend=1.00|Hue=355.00, 1.30 ]
+               - [ WeepingPalm3, 0.01, SandBushIn|Bp=1.00|Sp=3.00|Snow=0.00|Bri=1.00|Sat=1.00|Bend=1.00|Hue=0.00, 1.50 ]
+               - [ ElderberryBushOrange, 0.01, SandBushOut|Bp=3.00|Sp=1.00|Snow=0.00|Bri=1.00|Sat=1.20|Bend=0.70|Hue=10.00, 0.90 ]
+               - [ ElderberryBushOrange, 0.0005, Trees1_V|Bp=5.00|Sp=1.00|Snow=0.00|Bri=1.00|Sat=0.90|Bend=1.00|Hue=20.00, 0.40 ]
+               - [ BushGreen01, 0.01, GrsMatOut, 1.00 ]
+               - [ BushGreen02, 0.001, Free_V, 1.50 ]
+               - [ DeadTree02b, 0.002, Sunny_V, 1.20 ]
+               - [ AkuaBushGreen, 0.01, SandBush_V|Bp=0.30|Sp=1.00|Snow=0.00|Bri=1.05|Sat=0.50|Bend=0.70|Hue=340.00, 1.00 ]
+               - [ Alien_Plant_03_2, 0.04, Sunny_V|Bp=0.30|Sp=1.00|Snow=0.00|Bri=0.99|Sat=1.30|Bend=1.00|Hue=350.00, 1.50 ]
+               - [ Alien_Fern1, 0.02, SandBushIn|Bp=0.30|Sp=1.00|Snow=0.00|Bri=1.01|Sat=1.00|Bend=1.00|Hue=330.00, 3.00 ]
+
+               - [ AlienPlant07, 0.01, Sunny_V, 2.00 ]
+               - [ CornDogBush, 0.001, Tree_V, 2.50 ]
+               - [ EggPlant, 0.01, Sunny_V, 2.50 ]
+               - [ AlienPlantPod2, 0.01, Tree_V, 2.00 ]
+               - [ InsanityPepper, 0.008, Plant_V|Bp=0.30|Sp=1.00|Snow=0.00|Bri=1.00|Sat=1.50|Bend=1.00|Hue=10.00, 2.50 ]
+               - [ CattailWinter, 0.03, Empty, 2.50 ]
+               - [ AlienPlantSpike1, 0.80, SandBushIn|Bp=1.00|Sp=1.00|Snow=0.00|Bri=0.93|Sat=0.50|Bend=1.00|Hue=340.00, 2.00 ]
+               - [ Snakeweed, 0.03, Sunny_V, 1.50 ]
+
+               - [ RockResourceSilicon, 0.006, SandBushOut|Bp=0.30|Sp=2.00|Snow=0.00|Bri=0.98|Sat=1.00|Bend=1.00|Hue=0.00, 1.70 ]
+               - [ RockResourceIron, 0.001, Sunny_V|Bp=0.30|Sp=2.00|Snow=0.00|Bri=1.00|Sat=1.00|Bend=1.00|Hue=0.00, 2.00 ]
+               - [ RockResourceCopper, 0.001, SandBushOut|Bp=0.30|Sp=2.00|Snow=0.00|Bri=1.00|Sat=1.00|Bend=1.00|Hue=0.00, 2.00 ]
+
+
+
+    Grass: 
+               - Name: Grass01
+                 Density: 3.00
+                 YScale: 0.30
+                 Preset: GrassDense|Bp=2.00|Sp=5.00|Snow=0.00|Bri=0.99|Sat=0.90|Bend=0.50|Hue=340.00
+               - Name: Grass03
+                 Density: 0.005
+                 YScale: 0.60
+                 Preset: GrsArid_In
+               - Name: Plant01Blue
+                 Density: 0.08
+                 YScale: 1.00
+                 Preset: Sunny_V|Bp=0.30|Sp=1.00|Snow=0.00|Bri=0.98|Sat=2.00|Bend=1.00|Hue=30.00
+               - Name: Grass25
+                 Density: 0.52
+                 YScale: 1.00
+                 Preset: SandBushOut|Bp=2.00|Sp=0.10|Snow=0.00|Bri=0.85|Sat=1.10|Bend=1.00|Hue=0.00
+               - Name: Grass08
+                 Density: 0.40
+                 YScale: 1.00
+                 Preset: Sunny_V|Bp=0.30|Sp=1.00|Snow=0.00|Bri=0.97|Sat=0.70|Bend=1.00|Hue=0.00
+               - Name: GrassFern0
+                 Density: 2.00
+                 YScale: 0.60
+                 Preset: Tree_V|Bp=0.30|Sp=1.00|Snow=0.00|Bri=1.02|Sat=1.00|Bend=0.70|Hue=315.00
+               - Name: Reed02
+                 Density: 0.20
+                 YScale: 0.80
+                 Preset: Sunny_V|Bp=0.30|Sp=1.00|Snow=0.00|Bri=1.04|Sat=0.55|Bend=1.00|Hue=0.00
+               - Name: Flower03
+                 Density: 1.00
+                 YScale: 0.75
+                 Preset: Sunny_V|Bp=2.00|Sp=1.00|Snow=0.00|Bri=1.09|Sat=0.30|Bend=1.00|Hue=330.00
+               - Name: GrassTall04
+                 Density: 0.20
+                 YScale: 1.00
+                 Preset: Sunny_V|Bp=3.00|Sp=1.00|Snow=0.00|Bri=1.00|Sat=1.00|Bend=1.00|Hue=0.00
+               - Name: GrassTall01
+                 Density: 0.30
+                 YScale: 0.45
+                 Preset: GrassDense|Bp=0.00|Sp=5.00|Snow=0.00|Bri=1.00|Sat=1.00|Bend=0.50|Hue=330.00
+               - Name: Flower08
+                 Density: 0.40
+                 YScale: 0.80
+                 Preset: Sunny_V|Bp=2.00|Sp=0.10|Snow=0.00|Bri=1.00|Sat=0.50|Bend=1.00|Hue=340.00
+               - Name: GrassTall01
+                 Density: 0.01
+                 YScale: 1.10
+                 Preset: GrsMatMid|Bp=1.50|Sp=0.10|Snow=0.00|Bri=1.00|Sat=0.50|Bend=1.00|Hue=300.00
+               - Name: Reed02
+                 Density: 0.10
+                 YScale: 0.95
+                 Preset: BigPlant_V
+               - Name: Flower24
+                 Density: 0.05
+                 YScale: 1.00
+                 Preset: Trees1b_V|Bp=0.40|Sp=1.00|Snow=0.00|Bri=1.00|Sat=0.40|Bend=1.00|Hue=330.00
+
+
+
+# ============================================================== # (Hot climate) Transition to LowMountains, transition to temperate climate, and catchall for hot climates. Prevents texture clashes and has different cliff tex.
+  - Name: TropicalHills
+    AmbientSound: TropicalForest 
+    Texture: [1, 11, -0.0]
+
+    UndergroundLayers:
+               - [12, 5]
+               - [11, -1]
+               - [12, 1]
+
+    SelectionCriteria:  
+    - Temperature > 24
+
+    Color: [0.65, 0.75, 0.2] 
+
+    StampProb: 0.5
+    StampForcesBiomeType: OverlapAll              
+    Stamps:
+    - Pingo_01, 0.9                # ============= PLACEHOLDER STAMPS
+    - CraterMoon_1, 0.8
+    - CraterMoon_03, 0.6
+
+    Decorations:
+               - [ RockGrey02Large, 0.01, Sunny_V|Bp=2.00|Sp=1.00|Snow=0.00|Bri=0.97|Sat=1.90|Bend=1.00|Hue=50.00, 1.30 ]
+               - [ Rock_04_LoDed, 0.005, Sunny_V|Bp=0.30|Sp=1.00|Snow=0.00|Bri=0.95|Sat=0.80|Bend=1.00|Hue=50.00, 10.00 ]
+               - [ RealRock1, 0.0007, BigPlant_V, 1.50 ]
+               - [ RealRock3, 0.0005, BigPlant_V, 1.50 ]
+               - [ RealRock4, 0.0007, Plant_V, 1.50 ]
+               - [ RealRock8, 0.0025, Tree_V, 1.50 ]
+               - [ RealRock7, 0.00, Plant_V, 1.50 ]
+               - [ _Acacia_Sapling_Spring, 0.03, Tree_V|Bp=0.30|Sp=1.00|Snow=0.00|Bri=0.99|Sat=0.90|Bend=0.70|Hue=10.00, 20.00 ]
+               - [ AlienBushRedFronds, 0.02, Tree_V|Bp=0.30|Sp=1.00|Snow=0.00|Bri=1.05|Sat=0.30|Bend=0.70|Hue=60.00, 1.50 ]
+               - [ ElderberryBushRed, 0.01, Tree_V|Bp=0.30|Sp=1.00|Snow=0.00|Bri=1.02|Sat=1.60|Bend=0.70|Hue=340.00, 1.50 ]
+               - [ BushGreen01, 0.10, Tree_V|Bp=0.30|Sp=1.00|Snow=0.00|Bri=1.02|Sat=1.00|Bend=0.70|Hue=10.00, 1.50 ]
+               - [ _Pine_Eastern_White_Desktop_Forest_Spring, 0.30, Tree_V|Bp=0.50|Sp=1.00|Snow=0.00|Bri=0.96|Sat=1.00|Bend=0.70|Hue=5.00, 2.00 ]
+               - [ Alien_Plant_5_1, 0.01, Empty|Bp=3.00|Sp=1.00|Snow=0.00|Bri=0.99|Sat=0.50|Bend=1.00|Hue=0.00, 1.50 ]
+               - [ _Hickory_Pignut_Sapling_Spring, 0.10, Trees1c_V|Bp=3.00|Sp=1.00|Snow=0.00|Bri=1.01|Sat=0.95|Bend=1.00|Hue=345.00, 2.50 ]
+               - [ Alien_Plant_01_1, 0.10, Tree_V|Bp=3.00|Sp=1.00|Snow=0.00|Bri=0.99|Sat=1.80|Bend=0.70|Hue=340.00, 2.00 ]
+
+               - [ ElderberryBush, 0.01, Tree|Bp=0.00|Sp=0.00|Snow=0.00|Bri=0.99|Sat=1.50|Bend=1.00|Hue=340.00, 2.50 ]
+               - [ AlienPlantSpike1, 0.005, Empty, 2.50 ]
+               - [ Snakeweed, 0.0002, Plant, 2.50 ]
+               - [ DesertPlant20, 0.08, Tree_V|Bp=0.30|Sp=1.00|Snow=0.00|Bri=0.90|Sat=2.70|Bend=0.70|Hue=310.00, 2.50 ]
+
+               - [ RockResourceIron, 0.005, Tree, 2.50 ]
+               - [ RockResourceCopper, 0.0003, Free, 2.50 ]
+
+
+    Grass:
+               - Name: Grass03
+                 Density: 0.25
+                 YScale: 0.70
+                 Preset: GrsMatOut
+               - Name: Grass12
+                 Density: 2.50
+                 YScale: 0.50
+                 Preset: GrassDense|Bp=0.00|Sp=5.00|Snow=0.00|Bri=1.00|Sat=0.50|Bend=0.50|Hue=5.00
+               - Name: GrassTall04
+                 Density: 0.20
+                 YScale: 0.90
+                 Preset: GrsMatOut
+               - Name: Flower02
+                 Density: 0.02
+                 YScale: 0.60
+                 Preset: GrsMatOut
+               - Name: Grass21
+                 Density: 0.05
+                 YScale: 0.90
+                 Preset: GrsMatOut|Bp=2.00|Sp=0.10|Snow=0.00|Bri=1.00|Sat=0.70|Bend=1.00|Hue=330.00
+               - Name: Flower02
+                 Density: 0.005
+                 YScale: 0.70
+                 Preset: GrsDnse_08|Bp=0.00|Sp=5.00|Snow=0.00|Bri=1.04|Sat=0.70|Bend=0.50|Hue=340.00
+               - Name: GrassGreen07
+                 Density: 0.60
+                 YScale: 0.50
+                 Preset: GrsDns_Swmp|Bp=0.00|Sp=5.00|Snow=0.00|Bri=1.05|Sat=0.45|Bend=1.00|Hue=0.00
+               - Name: GrassTall04
+                 Density: 0.05
+                 YScale: 0.50
+                 Preset: GrassDense
+               - Name: Flower05
+                 Density: 0.20
+                 YScale: 0.60
+                 Preset: GrsDns_Swmp
+               - Name: Flower05
+                 Density: 0.01
+                 YScale: 0.90
+                 Preset: GrsDns_Flow|Bp=0.50|Sp=4.00|Snow=0.00|Bri=1.00|Sat=0.70|Bend=0.50|Hue=340.00
+               - Name: GrassBrown06
+                 Density: 0.50
+                 YScale: 1.00
+                 Preset: Empty
+               - Name: GrassBrown03
+                 Density: 0.30
+                 YScale: 0.70
+                 Preset: GrsOutback|Bp=5.00|Sp=10.00|Snow=0.00|Bri=1.00|Sat=0.70|Bend=0.20|Hue=50.00
+               - Name: GrassThin02
+                 Density: 0.10
+                 YScale: 3.00
+                 Preset: Empty|Bp=3.00|Sp=1.00|Snow=0.00|Bri=0.99|Sat=1.20|Bend=2.00|Hue=0.00
+               - Name: Flower23
+                 Density: 1.00
+                 YScale: 0.50
+                 Preset: GrsArid_In|Bp=2.00|Sp=0.10|Snow=0.00|Bri=1.00|Sat=0.60|Bend=2.00|Hue=0.00
+
+
+
+
+
+
+
+
+# ============================================================== # Biome places the mountain stamps, and is a 'height catchall' for (temperate) hills that get too high.
+  - Name: LowMountains
+    # IgnoreForcedBiome: true
+    AmbientSound: ArcticLowPlains
+    Texture: [6, 3, 0.6, 11, 2, 0.35, 0.25]
+
+    Color: [0.4, 0.4, 0.4]
+
+    SelectionCriteria: 
+    - Height > SeaLevel + 50
+
+    UndergroundLayers:
+               - [12, 3]
+               - [11, -1]
+               - [12, 1]
+
+
+    StampForcesBiome: true    # All of these stamps are rather small. May chain up with self-overlays.
+    StampTries: 70
+    StampForcesBiomeType: OverlapAll
+    Stamps: 
+
+    - MountainSharp_01, 0.9
+    - Cliff_1, 0.9
+    - Cliff_2, 0.9
+    - Cliff_3, 0.9
+    - Volcanic_01a, 0.7
+    - Volcanic_01b, 0.5
+    - Mountain_14a, 0.7
+    - Mountain_15a, 0.3
+
+
+
+    Decorations:
+
+               - [ RockGrey01Large, 0.001, Free_V, 1.50 ]
+               - [ RockGrey01Large, 0.01, Tree_V, 1.50 ]
+               - [ RockGrey02Large, 0.001, Free_V, 1.50 ]
+               - [ RockGrey02Large, 0.01, Tree_V, 1.50 ]
+               - [ Rock_05_LoDed, 0.05, Tree_V|Bp=4.00|Sp=1.00|Snow=0.00|Bri=1.00|Sat=0.60|Bend=0.70|Hue=12.00, 4.00 ]
+               - [ ElderberryBushRed, 0.001, Tree_V, 1.50 ]
+               - [ ElderberryBushGreen, 0.001, GrsMatMid|Bp=1.50|Sp=0.10|Snow=0.00|Bri=1.00|Sat=1.00|Bend=1.00|Hue=330.00, 0.30 ]
+               - [ ElderberryBushGreen, 0.15, Sunny_V|Bp=0.30|Sp=1.00|Snow=0.00|Bri=1.01|Sat=0.80|Bend=1.00|Hue=330.00, 0.20 ]
+
+               - [ AlienPlant07, 0.003, Empty, 1.00 ]
+               - [ Snakeweed, 0.02, Tree, 2.50 ]
+
+               - [ RockResourceCopper, 0.02, Sunny_V|Bp=0.30|Sp=1.00|Snow=0.00|Bri=1.02|Sat=0.90|Bend=1.00|Hue=350.00, 2.50 ]
+               - [ RockResourceSilicon, 0.01, Tree|Bp=0.00|Sp=0.00|Snow=0.00|Bri=0.99|Sat=1.00|Bend=1.00|Hue=0.00, 3.00 ]
+               - [ RockResourceIron, 0.0002, Free, 2.50 ]
+
+    Grass:
+               - Name: Grass03
+                 Density: 0.25
+                 YScale: 1.00
+                 Preset: GrsMatOut|Bp=2.00|Sp=0.10|Snow=0.00|Bri=1.05|Sat=0.50|Bend=1.00|Hue=30.00
+               - Name: GrassGreen08
+                 Density: 2.00
+                 YScale: 0.70
+                 Preset: GrassDense|Bp=0.00|Sp=5.00|Snow=0.00|Bri=1.05|Sat=0.50|Bend=0.50|Hue=350.00
+               - Name: GrassTall04
+                 Density: 0.20
+                 YScale: 1.00
+                 Preset: GrsMatOut
+               - Name: Flower02
+                 Density: 0.02
+                 YScale: 1.00
+                 Preset: GrsMatOut
+               - Name: Flower01
+                 Density: 0.10
+                 YScale: 1.20
+                 Preset: GrsMatOut|Bp=2.00|Sp=0.10|Snow=0.00|Bri=0.96|Sat=0.40|Bend=1.00|Hue=335.00
+               - Name: Flower05b
+                 Density: 0.002
+                 YScale: 0.50
+                 Preset: GrsDnse_08|Bp=0.00|Sp=5.00|Snow=0.00|Bri=0.95|Sat=0.60|Bend=0.50|Hue=350.00
+               - Name: Flower05b
+                 Density: 0.03
+                 YScale: 0.60
+                 Preset: GrsMatIn|Bp=2.00|Sp=0.10|Snow=0.00|Bri=1.00|Sat=0.60|Bend=1.00|Hue=320.00
+               - Name: GrassGreen07
+                 Density: 0.60
+                 YScale: 0.50
+                 Preset: GrassDense|Bp=0.00|Sp=5.00|Snow=0.00|Bri=1.00|Sat=0.70|Bend=1.00|Hue=0.00
+               - Name: GrassTall04
+                 Density: 0.05
+                 YScale: 0.50
+                 Preset: GrassDense
+               - Name: Grass11
+                 Density: 0.20
+                 YScale: 0.60
+                 Preset: GrassDense|Bp=0.00|Sp=5.00|Snow=0.00|Bri=1.00|Sat=0.35|Bend=1.00|Hue=330.00
+               - Name: GrassTall02
+                 Density: 0.03
+                 YScale: 0.70
+                 Preset: GrassDense|Bp=0.50|Sp=4.00|Snow=0.00|Bri=1.00|Sat=1.00|Bend=0.50|Hue=0.00
+               - Name: GrassBrown06
+                 Density: 0.50
+                 YScale: 0.70
+                 Preset: GrsMatIn|Bp=2.00|Sp=0.10|Snow=0.00|Bri=1.00|Sat=1.00|Bend=1.00|Hue=10.00
+               - Name: Grass14
+                 Density: 0.20
+                 YScale: 0.75
+                 Preset: GrsMatIn|Bp=3.00|Sp=0.10|Snow=0.00|Bri=0.97|Sat=0.65|Bend=1.00|Hue=330.00
+               - Name: GrassTall04
+                 Density: 0.07
+                 YScale: 0.70
+                 Preset: GrsMatMid|Bp=2.00|Sp=2.00|Snow=0.00|Bri=1.00|Sat=1.00|Bend=1.00|Hue=0.00
+               - Name: GrassThin02
+                 Density: 1.00
+                 YScale: 0.50
+                 Preset: Sunny_V_Edge|Bp=5.00|Sp=1.00|Snow=0.00|Bri=0.97|Sat=1.00|Bend=1.00|Hue=330.00
+
+
+
+
+# # ============================================================ # This biome is only placed by its stamp. Extra biome used to prevent hostile ADD stamp overlaps and self-overlays
+  - Name: LowMountains_1
+    AmbientSound: ArcticLowPlains
+    Texture: [6,3,0.6, 11,2,0.2, 0.25]  
+
+    Color: [1, 0.4, 0.4]
+
+    SelectionCriteria:
+       - false
+
+    UndergroundLayers:
+               - [12, 3]
+               - [11, -1]
+               - [12, 1]
+
+    StampForcesBiome: true
+    StampForcesBiomeType: OverlapOther 
+    StampTries: 100
+    Stamps:
+    - MountainDesert_04_LO, 0.3     # This is one of the largest stamps.
+    - MountainSharp_01, 0.9
+
+
+
+
+    Decorations:
+               - [HollywoodJuniperDesktop, 0.005, Free_V, 1.50]
+               - [HollywoodJuniperDesktopBare, 0.005, Free_V, 1.50]
+               - [RockGrey01Large, 0.001, Free_V, 1.50]
+               - [RockGrey02Large, 0.001, Free_V, 1.50]
+               - [_Oak_White_Desktop_Field_1_Spring, 0.01, Tree_V, 2.00]
+
+               - [Snakeweed, 0.003, Free, 2.50]
+
+               - [RockResourceCopper, 0.001, Free, 2.50]
+               - [RockResourceSilicon, 0.001, Free, 3.00]
+               - [RockResourceCarbon, 0.02, Tree_V, 2.00]
+
+
+
+    Grass:
+               - Name: GrassGreen02
+                 Density: 0.4
+                 YScale: 0.4
+                 Preset: GrassDense|Bp=0.00|Sp=5.00|Snow=0.00|Bri=1.00|Sat=1.00|Bend=1.00|Hue=0.00
+               - Name: Flower02
+                 Density: 0.001
+                 YScale: 0.6
+                 Preset: GrassDense
+               - Name: Grass05
+                 Density: 0.05
+                 YScale: 0.5
+                 Preset: GrassDense
+               - Name: GrassGreen06Snow
+                 Density: 0.5
+                 YScale: 0.5
+                 Preset: GrassDense
+               - Name: GrassGreen04
+                 Density: 0.5
+                 YScale: 0.5
+                 Preset: GrassDense|Bp=0.00|Sp=5.00|Snow=0.00|Bri=1.00|Sat=0.70|Bend=0.50|Hue=0.00
+               - Name: GrassBrown06b
+                 Density: 2.5
+                 YScale: 0.5
+                 Preset: GrassDense|Bp=0.00|Sp=5.00|Snow=0.00|Bri=1.00|Sat=1.00|Bend=0.50|Hue=50.00
+               - Name: GrassBrown06
+                 Density: 0.5
+                 YScale: 1
+                 Preset: GrsSand
+               - Name: GrassTall02
+                 Density: 0.03
+                 YScale: 1
+                 Preset: GrsMatMid|Bp=1.50|Sp=0.10|Snow=0.00|Bri=1.00|Sat=1.00|Bend=1.00|Hue=330.00
+               - Name: Flower09
+                 Density: 0.1
+                 YScale: 1
+                 Preset: GrsMatOut
+               - Name: Flower13
+                 Density: 0.05
+                 YScale: 0.25
+                 Preset: GrsOutback|Bp=5.00|Sp=15.00|Snow=0.00|Bri=1.00|Sat=0.50|Bend=0.20|Hue=330.00
+               - Name: Flower20
+                 Density: 0.5
+                 YScale: 0.25
+                 Preset: GrsOutback|Bp=5.00|Sp=15.00|Snow=0.00|Bri=0.96|Sat=0.50|Bend=0.20|Hue=0.00
+
+# ============================================================== # (Temperate climate) Densely populated, shadowy forest
+  - Name: DeepForest
+    AmbientSound: TropicalForest
+    Texture: [4, 2, 0.35]
+
+
+    SelectionCriteria:  
+    - Humidity > 0.50
+    - Humidity < 0.7
+    
+    - Temperature > 9
+    - Temperature < 22
+
+    - Height > SeaLevel +4
+    - Height < SeaLevel +28
+
+    Color: [0, 0.3, 0]
+
+    UndergroundLayers:
+               - [0, 2]
+               - [12, 15]
+               - [11, -1]
+               - [12, 1]
+
+    Temperature: -2
+
+    Decorations:
+               - [ RealRock3Dark, 0.005, Plant_V|Bp=0.30|Sp=1.00|Snow=0.00|Bri=1.00|Sat=0.70|Bend=1.00|Hue=10.00, 1.50 ]
+               - [ RealRock4Dark, 0.01, Plant_V, 1.50 ]
+               - [ RealRock8Dark, 0.005, Plant_V|Bp=0.30|Sp=1.00|Snow=0.00|Bri=1.00|Sat=0.75|Bend=1.00|Hue=30.00, 1.50 ]
+               - [ Rainforest, 0.002, Free_V|Bp=0.00|Sp=1.00|Snow=0.00|Bri=1.02|Sat=0.70|Bend=1.00|Hue=330.00, 1.50 ]
+               - [ WhiteOak, 0.50, EqualMeasure_C|Bp=0.50|Sp=1.00|Snow=0.00|Bri=1.02|Sat=0.70|Bend=1.00|Hue=350.00, 1.50 ]
+               - [ _Oak_White_Desktop_Field_2_Spring, 0.40, Empty, 2.00 ]
+               - [ WhiteOak, 0.005, Plant|Bp=1.50|Sp=1.00|Snow=0.00|Bri=1.02|Sat=0.80|Bend=0.70|Hue=330.00, 1.70 ]
+               - [ BaldCypres, 0.01, Tree_V|Bp=0.30|Sp=1.00|Snow=0.00|Bri=0.98|Sat=0.50|Bend=0.70|Hue=0.00, 1.50 ]
+               - [ _Redwood_Sierra_Desktop_Field, 0.07, PolarTreeIn|Bp=2.00|Sp=1.00|Snow=0.00|Bri=1.02|Sat=0.50|Bend=0.50|Hue=30.00, 1.90 ]
+               - [ RiverBirch, 0.003, Plant_V|Bp=0.30|Sp=1.00|Snow=0.00|Bri=1.00|Sat=0.50|Bend=1.00|Hue=20.00, 1.50 ]
+               - [ ElderberryBushGreen, 0.01, Free_V|Bp=0.00|Sp=1.00|Snow=0.00|Bri=0.99|Sat=0.60|Bend=1.00|Hue=330.00, 1.50 ]
+               - [ _Fern_Rock_Desktop_2_Spring, 0.10, Tree_V|Bp=0.30|Sp=1.00|Snow=0.00|Bri=1.00|Sat=0.50|Bend=0.70|Hue=340.00, 5.00 ]
+               - [ DeadTree02b, 0.003, Empty|Bp=1.00|Sp=1.00|Snow=0.00|Bri=1.00|Sat=1.00|Bend=1.00|Hue=0.00, 1.50 ]
+               - [ DeadTree01, 0.05, Tree_V|Bp=0.30|Sp=1.00|Snow=0.00|Bri=1.02|Sat=0.40|Bend=0.70|Hue=20.00, 1.00 ]
+               - [ AlienPlantThorn2, 0.03, Sunny_V|Bp=0.30|Sp=1.00|Snow=0.00|Bri=1.15|Sat=0.10|Bend=0.70|Hue=30.00, 2.00 ]
+               - [ Alien_Plant_9, 0.20, Tree_V|Bp=0.30|Sp=1.00|Snow=0.00|Bri=0.98|Sat=1.00|Bend=0.70|Hue=330.00, 1.50 ]
+               - [ AkuaFern, 0.05, Empty, 1.50 ]
+
+               - [ MushroomTallGreen01, 0.01, BigPlant_V|Bp=0.30|Sp=1.00|Snow=0.00|Bri=0.99|Sat=1.10|Bend=1.00|Hue=0.00, 2.50 ]
+               - [ LavaPlant2, 0.015, Sunny_V|Bp=0.30|Sp=1.00|Snow=0.00|Bri=1.05|Sat=0.80|Bend=1.00|Hue=8.00, 1.50 ]
+               - [ AlienPlantWorm1, 0.01, Tree|Bp=0.00|Sp=0.00|Snow=0.00|Bri=0.98|Sat=1.00|Bend=1.00|Hue=340.00, 3.00 ]
+               - [ MushroomBellBrown01, 0.02, Empty, 2.50 ]
+
+               - [ RockResourceCopper, 0.10, Tree_V|Bp=0.30|Sp=1.00|Snow=0.00|Bri=1.00|Sat=1.00|Bend=0.70|Hue=20.00, 4.00 ]
+               - [ RockResourceIron, 0.003, Empty, 2.00 ]
+               - [ RockResourceGold, 0.003, Free_V|Bp=0.00|Sp=1.00|Snow=0.00|Bri=0.99|Sat=3.00|Bend=1.00|Hue=350.00, 2.50 ]
+
+
+
+    Grass:
+               - Name: GrassGreen07
+                 Density: 1.20
+                 YScale: 0.50
+                 Preset: GrassDense
+               - Name: GrassThin02
+                 Density: 0.20
+                 YScale: 0.75
+                 Preset: Sunny_V_Edge|Bp=0.30|Sp=1.00|Snow=0.00|Bri=1.00|Sat=1.00|Bend=1.00|Hue=330.00
+               - Name: GrassGreen04
+                 Density: 1.02
+                 YScale: 0.48
+                 Preset: HighGrass|Bp=2.00|Sp=5.00|Snow=0.00|Bri=0.98|Sat=0.50|Bend=1.00|Hue=340.00
+               - Name: GrassFern0
+                 Density: 0.10
+                 YScale: 0.55
+                 Preset: GrassDense|Bp=2.00|Sp=5.00|Snow=0.00|Bri=1.00|Sat=0.90|Bend=1.00|Hue=0.00
+               - Name: Grass02
+                 Density: 0.27
+                 YScale: 0.45
+                 Preset: GrsOutback|Bp=5.00|Sp=15.00|Snow=0.00|Bri=0.97|Sat=1.00|Bend=-0.50|Hue=320.00
+               - Name: Grass15
+                 Density: 0.50
+                 YScale: 0.65
+                 Preset: GrsSand|Bp=3.00|Sp=2.00|Snow=0.00|Bri=0.97|Sat=0.90|Bend=1.00|Hue=340.00
+               - Name: Flower07
+                 Density: 0.40
+                 YScale: 0.85
+                 Preset: Sunny_V|Bp=1.00|Sp=1.00|Snow=0.00|Bri=0.97|Sat=0.50|Bend=0.50|Hue=340.00
+               - Name: FlowerBlue04
+                 Density: 2.00
+                 YScale: 0.75
+                 Preset: Tree_V|Bp=2.00|Sp=0.10|Snow=0.00|Bri=0.98|Sat=0.70|Bend=2.00|Hue=310.00
+               - Name: Flower12
+                 Density: 0.60
+                 YScale: 1.10
+                 Preset: Sunny_V|Bp=1.00|Sp=0.10|Snow=0.00|Bri=1.00|Sat=0.40|Bend=1.00|Hue=350.00
+               - Name: Grass08
+                 Density: 3.00
+                 YScale: 1.00
+                 Preset: Tree_V|Bp=0.30|Sp=1.00|Snow=0.00|Bri=1.03|Sat=0.75|Bend=0.70|Hue=10.00
+               - Name: GrassGreen07
+                 Density: 0.40
+                 YScale: 1.50
+                 Preset: Tree_V|Bp=3.00|Sp=1.00|Snow=0.00|Bri=0.97|Sat=0.50|Bend=0.70|Hue=340.00
+
+
+
+
+# ============================================================== (Cold climate) 
+  - Name: Forest
+    AmbientSound: TropicalForest 
+    Texture: [3, 2, -0.15]
+
+
+    SelectionCriteria:
+    - Humidity > 0.20
+    - Humidity < 0.9
+    - Temperature > 11
+    - Temperature < 25
+    - Height < SeaLevel + 30 # Leaves hole for Grassland, Hills, HighForest
+
+    Color: [0, 0.4, 0]
+
+    UndergroundLayers:
+               - [12, 13]
+               - [11, -1]
+               - [12, 1]
+
+    Temperature: -1
+
+    Decorations:
+               - [RealRock3Dark, 0.0004, Free_V, 1.50]
+               - [RealRock4Dark, 0.002, Free_V, 1.50]
+               - [RealRock8Dark, 0.0004, Free_V, 1.50]
+               - [RealRock10Dark, 0.0005, Free_V, 1.50]
+               - [RealRock8Dark, 0.0002, Free_V, 1.50]
+               - [AridRock03, 0.00005, Tree_V, 1.50]
+               - [WhiteOak, 0.20, Tree_V, 1.50]
+               - [BaldCypres, 0.05, Tree_V|Bp=0.30|Sp=1.00|Snow=0.00|Bri=1.01|Sat=0.50|Bend=0.70|Hue=10.00, 1.50]
+               - [ _Redwood_Sierra_Desktop_Field, 0.03, PolarTreeIn|Bp=2.00|Sp=0.50|Snow=0.00|Bri=1.05|Sat=0.40|Bend=1.00|Hue=20.00, 1.50 ]
+               - [Rainforest, 0.02, Tree_V|Bp=0.30|Sp=1.00|Snow=0.00|Bri=1.02|Sat=0.90|Bend=0.70|Hue=0.00, 1.50]
+               - [RiverBirch, 0.03, Tree_V|Bp=0.30|Sp=1.00|Snow=0.00|Bri=0.97|Sat=0.70|Bend=0.70|Hue=350.00, 1.50]
+               - [ElderberryBushGreen, 0.04, BigPlant_V|Bp=0.30|Sp=1.00|Snow=0.00|Bri=1.00|Sat=0.70|Bend=1.00|Hue=340.00, 1.00]
+               - [ElderberryBushGreen, 0.001, Free_V, 1.50]
+               - [DeadTree01, 0.001, Free_V, 1.50]
+               - [DeadTree02b, 0.001, Free_V, 1.50]
+               - [SkeletonMammothTorso, 0.001, Free_V, 1.50]
+
+               - [AlienPlant07, 0.001, Plant, 2.50]
+               - [BigFlower, 0.001, Plant, 2.50]
+               - [ElderberryBush, 0.004, BigPlant, 2.50]
+               - [Snakeweed, 0.001, Plant, 2.50]
+               - [CobraLeavesPlant, 0.001, Plant, 2.50]
+               - [MushroomBellBrown01, 0.001, Plant, 2.50]
+               - [ScalyPods, 0.001, Plant, 2.50]
+               - [AlienPlantWorm1, 0.001, Plant, 2.50]
+
+               - [RockResourceCopper, 0.0005, Free, 2.50]
+               - [RockResourceSilicon, 0.0003, Free, 3.00]
+
+
+
+    Grass:
+               - Name: GrassGreen08
+                 Density: 2.00
+                 YScale: 0.60
+                 Preset: GrassDense|Bp=0.00|Sp=5.00|Snow=0.00|Bri=1.02|Sat=0.60|Bend=0.50|Hue=10.00
+               - Name: GrassFern0
+                 Density: 4.00
+                 YScale: 1.00
+                 Preset: Tree_V|Bp=0.30|Sp=1.00|Snow=0.00|Bri=1.02|Sat=0.50|Bend=0.70|Hue=2.00
+               - Name: Plant02
+                 Density: 0.02
+                 YScale: 0.55
+                 Preset: GrassDense|Bp=0.00|Sp=5.00|Snow=0.00|Bri=0.97|Sat=0.50|Bend=0.50|Hue=30.00
+               - Name: Flower05
+                 Density: 1.00
+                 YScale: 0.95
+                 Preset: Sunny_V|Bp=0.30|Sp=1.00|Snow=0.00|Bri=0.98|Sat=0.60|Bend=1.00|Hue=0.00
+               - Name: Grass03
+                 Density: 1.00
+                 YScale: 0.80
+                 Preset: Tree_V|Bp=0.30|Sp=1.00|Snow=0.00|Bri=0.98|Sat=0.50|Bend=0.70|Hue=0.00
+               - Name: GrassThin01
+                 Density: 0.70
+                 YScale: 0.70
+                 Preset: Sunny_V|Bp=0.30|Sp=1.00|Snow=0.00|Bri=1.00|Sat=0.70|Bend=1.00|Hue=0.00
+               - Name: GrassTall07
+                 Density: 2.00
+                 YScale: 1.10
+                 Preset: Tree_V
+               - Name: GrassTall04
+                 Density: 0.50
+                 YScale: 0.80
+                 Preset: Sunny_V|Bp=0.30|Sp=1.00|Snow=0.00|Bri=0.97|Sat=0.90|Bend=1.00|Hue=0.00
+               - Name: GrassBrown06b
+                 Density: 0.50
+                 YScale: 0.40
+                 Preset: GrassDense|Bp=0.00|Sp=5.00|Snow=0.00|Bri=0.98|Sat=1.00|Bend=0.50|Hue=20.00
+               - Name: GrassTall05
+                 Density: 0.10
+                 YScale: 0.70
+                 Preset: GrsMatIn|Bp=2.00|Sp=0.10|Snow=0.00|Bri=0.99|Sat=0.50|Bend=1.00|Hue=350.00
+               - Name: Flower24
+                 Density: 0.025
+                 YScale: 0.70
+                 Preset: Sunny|Bp=2.00|Sp=0.00|Snow=0.00|Bri=1.00|Sat=0.40|Bend=1.00|Hue=0.00
+
+
+
+# ============================================================== # Near- LowMountain Biome, usually in very dry climate. Grassland variant, but dryer with dark red side for colourful cliffs
+  - Name: Hills
+    AmbientSound: Islands
+    Texture: [3, 7, -0.1]
+
+    UndergroundLayers:
+               - [12, 3]
+               - [11, -1]
+               - [12, 1]
+
+    SelectionCriteria:
+    - Temperature > 16
+    - Height > SeaLevel + 10
+    - Height < SeaLevel + 40 # Leaves hole for Grassland, HighForest
+
+    Color: [0.60, 0.50, 0.2] 
+
+
+    Decorations:
+               - [AmericanElm, 0.002, Tree_V, 1.50]
+               - [ElderberryBushGreen, 0.001, BigPlant_V|Bp=0.30|Sp=1.00|Snow=0.00|Bri=1.01|Sat=0.90|Bend=1.00|Hue=330.00, 1.30]
+               - [BushGreen01, 0.0008, BigPlant_V, 1.50]
+               - [RealRock10, 0.00015, Free_V, 1.50]
+               - [RealRock1, 0.00015, Free_V, 1.50]
+               - [RealRock3, 0.00015, Free_V, 1.50]
+               - [RealRock4, 0.00015, Free_V, 1.50]
+               - [RealRock8, 0.00015, Free_V, 1.50]
+
+               - [ElderberryBush, 0.0001, BigPlant, 2.50]
+               - [Snakeweed, 0.001, Plant, 2.50]
+               - [CornDogBush, 0.001, Plant, 2.50]
+
+               - [RockResourceIron, 0.0002, Free, 2.50]
+               - [RockResourceCopper, 0.0002, Free, 2.50]
+
+    Grass:
+               - Name: GrassGreen02
+                 Density: 1.80
+                 YScale: 0.28
+                 Preset: GrassDense|Bp=2.00|Sp=8.00|Snow=0.00|Bri=1.00|Sat=1.00|Bend=0.60|Hue=330.00
+               - Name: GrassGreen04aSnow
+                 Density: 0.08
+                 YScale: 0.55
+                 Preset: GrassDense|Bp=0.00|Sp=5.00|Snow=0.00|Bri=0.97|Sat=1.20|Bend=0.50|Hue=0.00
+               - Name: Flower04
+                 Density: 0.01
+                 YScale: 0.55
+                 Preset: GrassDense|Bp=0.00|Sp=5.00|Snow=0.00|Bri=0.99|Sat=0.70|Bend=0.50|Hue=330.00
+               - Name: Flower09
+                 Density: 0.10
+                 YScale: 1.00
+                 Preset: SandBu_Tree|Bp=1.00|Sp=3.00|Snow=0.00|Bri=1.00|Sat=0.80|Bend=1.00|Hue=320.00
+               - Name: GrassBrown05
+                 Density: 0.02
+                 YScale: 1.00
+                 Preset: SandBu_Tree|Bp=1.00|Sp=3.00|Snow=0.00|Bri=0.98|Sat=1.10|Bend=1.00|Hue=320.00
+               - Name: GrassDense02
+                 Density: 0.02
+                 YScale: 0.33
+                 Preset: GrassMid_Dns|Bp=5.00|Sp=5.00|Snow=0.00|Bri=1.00|Sat=0.40|Bend=-1.00|Hue=330.00
+               - Name: Flower05
+                 Density: 0.02
+                 YScale: 1.20
+                 Preset: GrassMid|Bp=1.00|Sp=-0.50|Snow=0.00|Bri=1.00|Sat=0.70|Bend=1.00|Hue=340.00
+               - Name: GrassTall04
+                 Density: 0.50
+                 YScale: 1.00
+                 Preset: GrassMid_Dns
+               - Name: GrassTall05
+                 Density: 0.02
+                 YScale: 1.20
+                 Preset: GrassMid_Dns|Bp=1.00|Sp=-1.00|Snow=0.00|Bri=1.02|Sat=0.70|Bend=1.00|Hue=0.00
+                 
+           
+# ==============================================================  # (Temperate climate) Higher altitude variant of Forest, and edge to ColdPlains. Mostly bushes
+  - Name: HighForest
+    AmbientSound: OpenPlains
+    Texture: [3, 2, -0.25]
+
+    SelectionCriteria:  
+    - Humidity > 0.151
+    - Humidity < 0.42
+    - Temperature > 8
+    - Temperature < 20
+    - Height < SeaLevel + 100
+    - Height > SeaLevel + 14
+    
+    Color: [0.0, 0.65, 0.35] 
+    
+    UndergroundLayers:
+               - [0, 2]
+               - [12, 15]
+               - [11, -1]
+               - [12, 1]
+
+    Temperature: -1
+
+
+    Decorations:
+               - [ RealRock3Dark, 0.0004, Free_V, 1.50 ]
+               - [ RealRock4Dark, 0.002, Free_V, 1.50 ]
+               - [ RealRock8Dark, 0.0004, Free_V, 1.50 ]
+               - [ RealRock10Dark, 0.0005, Free_V, 1.50 ]
+               - [ WhiteOak, 0.02, Tree_V, 1.50 ]
+               - [ RiverBirch, 0.15, Tree_V|Bp=0.30|Sp=1.00|Snow=0.00|Bri=1.00|Sat=0.70|Bend=0.70|Hue=355.00, 1.50 ]
+               - [ ElderberryBushGreen, 0.03, BigPlant_V|Bp=0.30|Sp=1.00|Snow=0.00|Bri=1.01|Sat=0.70|Bend=1.00|Hue=10.00, 1.50 ]
+               - [ DeadTree01, 0.001, Sunny, 1.50 ]
+               - [ DeadTree02b, 0.001, Free_V, 1.50 ]
+
+               - [ ElderberryBush, 0.004, BigPlant, 2.50 ]
+               - [ AlienPlant07, 0.001, Sunny_V, 2.50 ]
+               - [ BigFlower, 0.01, Tree|Bp=0.00|Sp=0.00|Snow=0.00|Bri=1.00|Sat=0.50|Bend=1.00|Hue=300.00, 2.50 ]
+               - [ Snakeweed, 0.001, Plant, 2.50 ]
+               - [ CobraLeavesPlant, 0.001, Plant, 2.50 ]
+               - [ MushroomBellBrown01, 0.05, Tree, 2.50 ]
+               - [ ScalyPods, 0.001, Plant, 2.50 ]
+
+               - [ RockResourceCopper, 0.01, Sunny_V, 2.20 ]
+               - [ RockResourceSilicon, 0.0003, Free, 2.50 ]
+
+    Grass:
+               - Name: GrassGreen07
+                 Density: 0.90
+                 YScale: 0.50
+                 Preset: GrassDense|Bp=0.00|Sp=5.00|Snow=0.00|Bri=1.08|Sat=0.30|Bend=0.50|Hue=20.00
+               - Name: GrassGreen08
+                 Density: 0.95
+                 YScale: 0.50
+                 Preset: GrassDense
+               - Name: GrassFern0
+                 Density: 0.02
+                 YScale: 0.50
+                 Preset: GrassDense|Bp=0.00|Sp=5.00|Snow=0.00|Bri=1.02|Sat=0.80|Bend=0.50|Hue=0.00
+               - Name: Plant02
+                 Density: 0.05
+                 YScale: 0.50
+                 Preset: GrassDense|Bp=0.00|Sp=5.00|Snow=0.00|Bri=1.00|Sat=1.20|Bend=0.50|Hue=0.00
+               - Name: Flower05
+                 Density: 0.50
+                 YScale: 1.20
+                 Preset: Sunny|Bp=0.00|Sp=0.00|Snow=0.00|Bri=0.97|Sat=0.90|Bend=0.50|Hue=358.00
+               - Name: GrassFern0
+                 Density: 0.50
+                 YScale: 1.20
+                 Preset: Tree|Bp=0.00|Sp=0.00|Snow=0.00|Bri=1.00|Sat=1.00|Bend=4.00|Hue=350.00
+
+
+
+
+# ============================================================== # (Cold climate) Grassland close to Tundra, and a shore type for itself.
+  - Name: ColdPlains
+    AmbientSound: ArcticForest
+    Texture: [6, 11, 0.35]
+
+    SelectionCriteria:
+    - Temperature < 9
+
+
+    Color: [0, 0.44, 0.28] 
+
+    UndergroundLayers:
+               - [12, 9]
+               - [10, 1]
+               - [11, 1]
+               - [10, 1]
+               - [11, -1]
+               - [12, 1]
+
+    Decorations:
+               - [ RealRock10, 0.0001, Free_V, 1.50 ]
+               - [ RealRock1, 0.0001, Free_V, 1.50 ]
+               - [ RealRock3, 0.0001, Free_V, 1.50 ]
+               - [ RealRock4, 0.0001, Free_V, 1.50 ]
+               - [ RealRock8, 0.0001, Free_V, 1.50 ]
+               - [ RealRock10, 0.0001, BigPlant_V, 1.50 ]
+               - [ P_Rock_2, 0.001, SandBushOut|Bp=0.30|Sp=1.00|Snow=0.00|Bri=0.97|Sat=0.30|Bend=1.00|Hue=30.00, 1.50 ]
+               - [ P_Rock_1, 0.00015, Trees1b_V|Bp=3.00|Sp=1.00|Snow=0.00|Bri=0.98|Sat=0.50|Bend=1.00|Hue=0.00, 1.80 ]
+               - [ RealRock4, 0.10, SandBushIn|Bp=2.00|Sp=1.80|Snow=0.00|Bri=0.98|Sat=0.70|Bend=1.00|Hue=20.00, 1.00 ]
+               - [ P_Rock_4, 0.08, SandBushIn|Bp=5.00|Sp=1.00|Snow=0.00|Bri=1.20|Sat=0.20|Bend=1.00|Hue=100.00, 2.00 ]
+               - [ _Spruce_Norway_Sapling_Spring, 0.001, SandBushOut|Bp=0.30|Sp=8.00|Snow=0.00|Bri=1.02|Sat=0.30|Bend=0.70|Hue=350.00, 1.50 ]
+               - [ ElderberryBushGreen, 0.006, SandBushOut|Bp=2.00|Sp=1.00|Snow=0.00|Bri=1.03|Sat=0.50|Bend=1.00|Hue=330.00, 0.30 ]
+               - [ ElderberryBushRed, 0.0002, Trees1b_V|Bp=3.00|Sp=1.00|Snow=0.00|Bri=1.01|Sat=1.05|Bend=1.00|Hue=10.00, 0.70 ]
+               - [ BushGreen01, 0.0002, Empty, 1.50 ]
+
+               - [ ElderberryBush, 0.0001, Empty, 2.50 ]
+               - [ Snakeweed, 0.001, Plant, 2.50 ]
+
+               - [ RockResourceIron, 0.0004, Free, 2.50 ]
+               - [ RockResourceCopper, 0.0004, BigPlant, 2.50 ]
+
+    Grass:
+               - Name: GrassThin01
+                 Density: 1.50
+                 YScale: 0.50
+                 Preset: GrassDense|Bp=1.00|Sp=4.00|Snow=0.00|Bri=1.06|Sat=0.40|Bend=0.50|Hue=0.00
+               - Name: GrassGreen03
+                 Density: 0.40
+                 YScale: 0.50
+                 Preset: GrassDense|Bp=0.00|Sp=5.00|Snow=0.00|Bri=1.00|Sat=1.00|Bend=0.50|Hue=20.00
+               - Name: GrassGreen06
+                 Density: 0.02
+                 YScale: 0.50
+                 Preset: GrassDense
+               - Name: Flower04
+                 Density: 0.003
+                 YScale: 0.50
+                 Preset: GrassDense|Bp=0.00|Sp=5.00|Snow=0.00|Bri=1.02|Sat=0.80|Bend=0.50|Hue=350.00
+               - Name: Grass21
+                 Density: 0.10
+                 YScale: 0.70
+                 Preset: SandBu_Sunny|Bp=3.00|Sp=1.00|Snow=0.00|Bri=0.91|Sat=0.40|Bend=0.50|Hue=335.00
+               - Name: Flower05
+                 Density: 0.10
+                 YScale: 0.65
+                 Preset: Trees1b_V|Bp=3.00|Sp=1.00|Snow=0.00|Bri=1.03|Sat=0.50|Bend=0.50|Hue=355.00
+               - Name: GrassGreen07
+                 Density: 0.40
+                 YScale: 0.70
+                 Preset: GrsDunes|Bp=2.00|Sp=1.00|Snow=0.00|Bri=1.05|Sat=0.30|Bend=-1.20|Hue=30.00
+               - Name: GrassTall02
+                 Density: 0.10
+                 YScale: 0.50
+                 Preset: Trees1_V|Bp=3.00|Sp=1.00|Snow=0.00|Bri=1.00|Sat=0.70|Bend=1.00|Hue=0.00
+               - Name: GrassTall07
+                 Density: 0.20
+                 YScale: 0.65
+                 Preset: Trees2_Out|Bp=3.00|Sp=1.00|Snow=0.00|Bri=1.05|Sat=0.40|Bend=1.00|Hue=20.00
+               - Name: Flower01
+                 Density: 0.04
+                 YScale: 0.50
+                 Preset: GrsMatIn|Bp=5.00|Sp=0.50|Snow=0.00|Bri=1.05|Sat=0.50|Bend=-1.00|Hue=340.00
+               - Name: GrassBrown04b
+                 Density: 0.20
+                 YScale: 0.80
+                 Preset: GrsMatMid|Bp=1.50|Sp=0.10|Snow=0.00|Bri=1.00|Sat=0.65|Bend=1.00|Hue=70.00
+               - Name: GrassTall01
+                 Density: 0.50
+                 YScale: 0.85
+                 Preset: GrsMatMid_C|Bp=1.50|Sp=1.00|Snow=0.00|Bri=1.02|Sat=0.50|Bend=1.00|Hue=20.00
+
+
+# ============================================================== # (Temperate climate) Low grassland regions, shore to prevent texture clashes and has ocean island sound flavour (prevents weird, misplaced 'openPlains' bird & bee sound when close to water). No trees.
+  - Name: GrasslandShore
+    AmbientSound: Islands
+    Texture: [3, 11, 0.4]
+
+    UndergroundLayers:
+               - [12, 14]
+               - [11, -1]
+               - [12, 1]
+
+    SelectionCriteria:
+    - Height < SeaLevel + 5
+
+    Color: [0, 0.3, 0.1] 
+
+
+    Decorations:
+               - [ElderberryBushGreen, 0.001, BigPlant_V, 1.50]
+               - [BushGreen01, 0.0004, BigPlant_V, 1.50]
+               - [BushGreen02, 0.0004, BigPlant_V, 1.50]
+               - [RealRock10, 0.00015, Free_V, 1.50]
+               - [RealRock1, 0.00015, Free_V, 1.50]
+               - [RealRock3, 0.00015, Free_V, 1.50]
+               - [RealRock4, 0.00015, Free_V, 1.50]
+               - [RealRock8, 0.00015, Free_V, 1.50]
+
+               - [ElderberryBush, 0.0001, BigPlant, 2.50]
+               - [Snakeweed, 0.001, Plant, 2.50]
+               - [CornDogBush, 0.001, Plant, 2.50]
+
+               - [RockResourceIron, 0.0002, Free, 2.50]
+               - [RockResourceCopper, 0.0002, Free, 2.50]
+
+
+    Grass:
+               - Name: GrassGreen02
+                 Density: 1.50
+                 YScale: 0.50
+                 Preset: Sunny_V|Bp=0.00|Sp=5.00|Snow=0.00|Bri=1.00|Sat=0.70|Bend=0.50|Hue=0.00
+               - Name: GrassGreen03
+                 Density: 0.80
+                 YScale: 0.50
+                 Preset: GrassDense
+               - Name: Flower04
+                 Density: 0.01
+                 YScale: 0.50
+                 Preset: GrassDense|Bp=0.00|Sp=5.00|Snow=0.00|Bri=1.00|Sat=0.50|Bend=-1.00|Hue=300.00
+               - Name: Flower24
+                 Density: 0.50
+                 YScale: 1.00
+                 Preset: Sunny_V|Bp=1.00|Sp=1.00|Snow=0.00|Bri=1.03|Sat=0.50|Bend=1.00|Hue=330.00
+               - Name: Grass21
+                 Density: 0.50
+                 YScale: 1.00
+                 Preset: Sunny_V|Bp=0.30|Sp=1.00|Snow=0.00|Bri=1.00|Sat=0.70|Bend=1.00|Hue=330.00
+               - Name: Grass06
+                 Density: 0.50
+                 YScale: 0.90
+                 Preset: Sunny_V
+               - Name: Grass08
+                 Density: 0.50
+                 YScale: 1.00
+                 Preset: Sunny_V|Bp=0.30|Sp=1.00|Snow=0.00|Bri=0.98|Sat=0.70|Bend=1.00|Hue=0.00
+               - Name: GrassDense01
+                 Density: 0.50
+                 YScale: 1.00
+                 Preset: Sunny_V|Bp=0.30|Sp=1.00|Snow=0.00|Bri=0.97|Sat=1.00|Bend=1.00|Hue=330.00
+               - Name: Grass13
+                 Density: 2.00
+                 YScale: 1.00
+                 Preset: Plant_V
+               - Name: GrassTall01
+                 Density: 8.00
+                 YScale: 0.20
+                 Preset: BigPlant_V|Bp=5.00|Sp=5.00|Snow=0.00|Bri=1.04|Sat=1.00|Bend=1.00|Hue=330.00
+
+
+                 
+# ============================================================== # catch all for all biomes
+# MASTER CATCH ALL
+# ==============================================================
+                 
+
+  - Name: Grassland
+    AmbientSound: OpenPlains 
+    Texture: [3, 11, 0.6]
+    UndergroundLayersDefault: True
+    UndergroundLayers:
+               - [12, 14]
+               - [11, -1]
+               - [12, 1]
+    SelectionCriteria:
+       - true
+ 
+    Color: [0.1, 0.55, 0.0] 
+
+
+    Decorations:  
+               - [AmericanElm, 0.002, Tree_V, 1.50]
+               - [ElderberryBushGreen, 0.001, BigPlant_V, 1.50]
+               - [BushGreen01, 0.0004, BigPlant_V, 1.50]
+               - [BushGreen02, 0.0004, BigPlant_V, 1.50]
+               - [RealRock10, 0.00015, Free_V, 1.50]
+               - [RealRock1, 0.00015, Free_V, 1.50]
+               - [RealRock3, 0.00015, Free_V, 1.50]
+               - [RealRock4, 0.00015, Free_V, 1.50]
+               - [RealRock8, 0.00015, Free_V, 1.50]
+
+               - [ElderberryBush, 0.0001, BigPlant, 2.50]
+               - [Snakeweed, 0.001, Plant, 2.50]
+               - [CornDogBush, 0.001, Plant, 2.50]
+
+               - [RockResourceIron, 0.0002, Free, 2.50]
+               - [RockResourceCopper, 0.0002, Free, 2.50]
+
+    Grass:
+               - Name: GrassGreen08
+                 Density: 2.00
+                 YScale: 0.55
+                 Preset: GrassDense|Bp=0.00|Sp=5.00|Snow=0.00|Bri=1.03|Sat=0.50|Bend=0.50|Hue=20.00
+               - Name: Grass06
+                 Density: 0.01
+                 YScale: 0.50
+                 Preset: GrassDense|Bp=1.00|Sp=3.00|Snow=0.00|Bri=0.99|Sat=0.70|Bend=0.50|Hue=40.00
+               - Name: GrassGreen04
+                 Density: 0.10
+                 YScale: 0.30
+                 Preset: GrsDns_Swmp
+               - Name: Grass20
+                 Density: 0.02
+                 YScale: 0.40
+                 Preset: GrsDns_Swmp
+               - Name: Flower01
+                 Density: 0.005
+                 YScale: 0.60
+                 Preset: GrsDns_Swmp|Bp=0.00|Sp=5.00|Snow=0.00|Bri=1.00|Sat=0.40|Bend=1.00|Hue=10.00
+               - Name: Flower20
+                 Density: 0.001
+                 YScale: 0.50
+                 Preset: GrassDense|Bp=0.00|Sp=5.00|Snow=0.00|Bri=0.96|Sat=0.60|Bend=0.50|Hue=10.00
+               - Name: Flower05
+                 Density: 0.015
+                 YScale: 0.60
+                 Preset: GrsDns_Swmp|Bp=0.00|Sp=5.00|Snow=0.00|Bri=1.00|Sat=0.50|Bend=1.00|Hue=10.00
+               - Name: GrassBrownThin02
+                 Density: 0.10
+                 YScale: 0.65
+                 Preset: GrsSteppe|Bp=4.00|Sp=1.00|Snow=0.00|Bri=1.00|Sat=0.90|Bend=0.50|Hue=340.00
+               - Name: Grass06
+                 Density: 0.10
+                 YScale: 0.43
+                 Preset: GrsMatIn|Bp=2.00|Sp=0.10|Snow=0.00|Bri=1.00|Sat=0.70|Bend=1.00|Hue=30.00
+               - Name: Flower16
+                 Density: 0.03
+                 YScale: 0.85
+                 Preset: GrsMatOut|Bp=2.00|Sp=0.10|Snow=0.00|Bri=1.00|Sat=0.80|Bend=1.00|Hue=20.00
+               - Name: Grass03
+                 Density: 0.50
+                 YScale: 0.50
+                 Preset: GrsMatOut|Bp=2.00|Sp=0.10|Snow=0.00|Bri=1.00|Sat=0.50|Bend=1.00|Hue=40.00
+               - Name: GrassTall04
+                 Density: 0.20
+                 YScale: 0.70
+                 Preset: GrsMatOut
+               - Name: GrassBrown06b
+                 Density: 2.00
+                 YScale: 0.70
+                 Preset: GrsMatOut|Bp=2.00|Sp=0.10|Snow=0.00|Bri=1.00|Sat=1.00|Bend=1.00|Hue=50.00
+               - Name: Grass08
+                 Density: 0.05
+                 YScale: 1.00
+                 Preset: GrsMatOut|Bp=2.00|Sp=0.10|Snow=0.00|Bri=1.00|Sat=0.50|Bend=1.00|Hue=0.00
+               - Name: Flower16
+                 Density: 0.10
+                 YScale: 0.75
+                 Preset: SandBush
+               - Name: Grass03
+                 Density: 0.50
+                 YScale: 0.45
+                 Preset: SandBuOut_C
+               - Name: Plant02
+                 Density: 0.20
+                 YScale: 0.60
+                 Preset: SandBuOut_C
+               - Name: GrassTall04
+                 Density: 0.20
+                 YScale: 0.60
+                 Preset: SandBuOut_C
+               - Name: Reed03
+                 Density: 0.02
+                 YScale: 0.50
+                 Preset: GrsMatMid|Bp=1.50|Sp=0.10|Snow=0.00|Bri=1.02|Sat=0.50|Bend=1.00|Hue=330.00
+

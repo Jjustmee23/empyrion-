@@ -1,0 +1,122 @@
+# --------------------------------------------------------------------------------------------------------------------------
+# Created by EPD v2.34.0.5831, Playfield Version: 1.7.5 [3714] (V1.7.5)
+# Last Saved: 2023-01-18 18:03:18
+# --------------------------------------------------------------------------------------------------------------------------
+#
+PlanetSize:
+   SizeRange: [2]
+   SizeProbs: [1]
+PlanetAxis: [15, 25]
+PlayfieldLevelOverride: [0, 0]
+TemperatureMin: [-157, -127]
+TemperatureMax: [-50, -33]
+TemperatureNight: [75, 75]
+HumidityMin: [0.3, 0.5]
+HumidityMax: [0.7, 0.8]
+Radiation: [5, 12]
+LandWaterRatio: [0, 0]
+BaseLevel: [20, 30]
+SeaLevel: [0, 0]
+TerrainLevel: [150, 200]
+TerrainHeightMapMax: 490
+TemperatureHeightRange: [1, 240]
+TemperatureGradientRange: [0.45, 0]
+TemperatureNoiseFac: 0.75
+HumidityHeightFac: [0, 270]
+HumidityNoiseFac: 0.9
+GravityMinMax: [-9, -4]
+AtmosphereDensityMinMax: [1.4, 1.7]
+AtmoBreathableProb: 1
+AtmosphereFogRange: [0.3, 0.4]
+WaterProb: 1
+Water: [RockLava03]
+Music: [moonstone]
+HumidityMasks:
+- Global_3
+- Global_4
+TemperatureMasks:
+- Global_2_R
+BiomeStampTries: 50
+# 
+# ====================
+# BIOMES 
+# ====================
+#
+Biomes:
+-  Name: Pole
+   Color: [1, 1, 1]
+   SelectionCriteria:
+   - +Lat > 0.975
+   Weather: PoleFog
+   AmbientSound: ArcticLowPlains
+   IgnoreForcedBiome: True
+   Texture: [5, 11, 0.2]
+   UndergroundLayers:
+   - [0, 2]
+   - [10, 4]
+   - [11, -1]
+   - [10, 1]
+   Temperature: -6
+-  Name: Crystal Ridge
+   Color: [0.5, 0, 0]
+   Stamps:
+   - MountainRadiated_01
+   IgnoreForcedBiome: True
+   Texture: [10, 11, 0.6, 11, 5, 0.7, 0.5]
+   StampForcesBiome: True
+   StampTries: 13
+-  Name: Haranyst Seam
+   Color: [0.98, 0.5, 0.45]
+   Stamps:
+   - RiftIce_01
+   IgnoreForcedBiome: True
+   Texture: [5, 5, 0]
+   StampForcesBiome: True
+   StampTries: 15
+-  Name: Rashmond
+   Color: [0.86, 0.08, 0.24]
+   SelectionCriteria:
+   - Height>70
+   - Height<110
+   Texture: [2, 1, 0.5]
+-  Name: Atenite Crystal
+   Color: [0, 0, 1]
+   Stamps:
+   - Crystalline_Plates
+   IgnoreForcedBiome: False
+   Texture: [9, 10, 0.5, 3, 11, 0.5, 0.5]
+   StampForcesBiome: True
+   StampTries: 50
+-  Name: Kalyst Crystal
+   Color: [0.82, 0.41, 0.12]
+   SelectionCriteria:
+   - Height<100
+   Stamps:
+   - IceBergs_01_BML
+   IgnoreForcedBiome: False
+   Texture: [10, 11, 0]
+   StampForcesBiome: True
+   StampTries: 10
+-  Name: Small Crystals
+   Color: [1, 0.84, 0]
+   Stamps:
+   - Spring_01, 0.8
+   - Pools_01, 0.7
+   - MicroHill_01, 0.5
+   Decorations:
+   - [PromethiumStone, 0.001, 0]
+   - [CrystalsPyramidOrange, 0.001, 0]
+   - [CrystalFormation, 0.001, 0]
+   - [CrystalStraight, 0.001, 0]
+   - [CrystalTall, 0.001, 0]
+   - [CrystalsPyramidBlue, 0.001, 0]
+   Texture: [6, 4, 0.5]
+   StampForcesBiome: True
+   StampTries: 50
+-  Name: Trelium Gathide Crystal
+   Color: [0.5, 1, 0.83]
+   SelectionCriteria:
+   - true
+   IgnoreForcedBiome: False
+   Texture: [0, 0, 0]
+   StampForcesBiomeType: OverlapOwn

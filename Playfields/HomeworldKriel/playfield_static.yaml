@@ -1,0 +1,143 @@
+# Planet Type: DesertBurnt
+# Biomes: Pole, ImpactCrater, StrikeCrater, AtomicCrater, BurntLandscape, Mountains, Dunes, Plateau, Hills, RadiatedLandscape, LavaFold, Scarred Landscape, Crater, TornLandscape, Barren Plains
+Description: |
+  The devastation on this planet is visible from far away, and what's more, the cause was not a natural event. 
+
+  If there was ever an atmosphere, then it's been entirely stripped away. There is no sign of life, even at the microbiological level, and in essence, this planet is the very definition of a lifeless rock endlessly circling its star.
+
+  Someone bombarded the planet from space, but who, what, why, and when are yet to be determined...
+
+PlanetClass: BarrenDestroyed
+PlanetType: KrielOldHomeworld
+PlayfieldType: Planet
+AtmosphereEnabled: False
+Difficulty: 10
+LandClaimZone: Device
+
+
+SpecialEffectsGlobal:
+-  Name: Clear
+   Type: Weather
+   InitialDelay: 0
+   Delay: 2
+   Lifetime: 1200
+
+AtmosphereColor: 0,1,1
+SkyColor: 0.85,0.65,0.13
+SkyHorizonColor: 0.68,0.85,0.9
+AtmosphereParams: [1, 1.6]
+LightZenithColor: 0,0,1
+LightHorizonColor: 0,0.5,0.5
+DayLightIntensity: 1.8
+NightLightIntensity: 0.55
+NightLightColor: 1,0.55,0
+
+SunFlare: EnvironmentalEffects/SunFlareBlue
+
+AtmosphereFog: 0.3
+FogColor: 0.8,0.36,0.36
+
+CloudsDensity: 0.0  #0.3
+CloudsSharpness: 0.35
+CloudsBrightness: 0.7
+CloudsOpacity: 0.0  #0.7
+CloudsZenithColor: 0.71,0.27,0.13
+CloudsHorizonColor: 0.45,0.26,0.2
+CloudsNightZenithColor: 0.43,0.19,0.13
+CloudsNightHorizonColor: 0.45,0.16,0.16
+WindSpeed: 15
+
+
+
+RandomResources:
+-  Name: IronResource
+   Biome: [Barren Plains, Scarred Landscape, Atomic Crater]
+   IsScalingCount: True
+   IsImportant: False
+   CountMinMax: [2, 5]
+   SizeMinMax: [3, 10]
+   DepthMinMax: [6, 15]
+
+-  Name: CopperResource
+   Biome: [Dunes, Impact Crater, Burnt Landscape]
+   IsScalingCount: True
+   IsImportant: False
+   CountMinMax: [4, 6]
+   SizeMinMax: [4, 10]
+   DepthMinMax: [6, 15]
+
+-  Name: TitanResource
+   Biome: [Impact Crater, Strike Crater, Hills]
+   IsScalingCount: True
+   IsImportant: False
+   CountMinMax: [4, 5]
+   SizeMinMax: [3, 8]
+   DepthMinMax: [6, 15]
+
+
+
+# 
+# ====================
+# POIS 
+# ====================
+#
+POIs:
+    Random:
+
+#DroneBase
+
+#Unique
+
+#Solo
+
+#Main
+
+#Aux
+
+#Defenses
+
+#Randoms
+
+        - GroupName: Junksite
+          Faction: none  
+          CountMinMax: [ 3, 10 ]
+          # DroneProb: 1.0
+          # DronesMinMax: [ 3, 5 ]
+          # ReserveCount: 5 
+          Properties: 
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: JunkT1
+          Faction: none  
+          CountMinMax: [ 3, 10 ]
+          # DroneProb: 1.0
+          # DronesMinMax: [ 3, 5 ]
+          # ReserveCount: 5 
+          Properties: 
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: JunkT2
+          Faction: none  
+          CountMinMax: [ 3, 10 ]
+          # DroneProb: 1.0
+          # DronesMinMax: [ 3, 5 ]
+          # ReserveCount: 5 
+          Properties: 
+            - Key: RegenAfter
+              Value: 720
+    
+    FixedPlayerStart:
+    -  Mode: Debug
+       Pos: [0, 147, 0]
+       RotY: 160
+       Status: ['Food:500, Health: 500', 'Food:500, Health: 500', 'Food:500, Health: 500', '#FreshStart:Food:500, Health: 500'] 
+# 
+# ====================
+# DRONEBASE SETUP 
+# ====================
+
+# DroneSpawning:   
+        
+DroneBaseSetup:

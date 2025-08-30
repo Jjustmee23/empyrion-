@@ -1,0 +1,215 @@
+# Playfield Characteristics
+Gravity: 0                         
+AtmosphereEnabled: False          
+PvPProb: 0
+UseFixed: True                       
+Radiation: [10,15]                    
+TemperatureDay: [100,200]    
+Music: [moonstone, space, DistantWorlds, Migration]          
+ 
+PlayfieldType: Space  
+PlanetType: Space            
+
+AllowBlueprintSV: False         # Dis-allow to spawn SV Blueprint in this playfield, default is True
+AllowBlueprintCV: False         # Dis-allow to spawn CV Blueprint in this playfield, default is True
+AllowBlueprintBA: False         # Dis-allow to spawn BA Blueprint in this playfield, default is True
+AllowBlueprintHV: False         # Dis-allow to spawn HV Blueprint in this playfield, default is True
+
+### Resource Asteroid
+Resources:                     
+    # - Name: [ AsteroidVoxel01Iron, AsteroidVoxel02Iron, AsteroidVoxel03Iron]
+      # DisplayName: Iron Asteroid
+      # CountMinMax: [ 1, 3 ]
+      # Probability: 0.4     
+      # Properties:     
+        # - Key: RegenAfter
+          # Value: 180       
+ 
+    # - Name: [ AsteroidVoxel01Copper, AsteroidVoxel02Copper, AsteroidVoxel03Copper]
+      # DisplayName: Copper Asteroid
+      # CountMinMax: [ 1, 3 ]
+      # Probability: 0.4     
+      # Properties:     
+        # - Key: RegenAfter
+          # Value: 180       
+ 
+    # - Name: [ AsteroidVoxel01Silicon, AsteroidVoxel02Silicon, AsteroidVoxel03Silicon]
+      # DisplayName: Silicon Asteroid
+      # CountMinMax: [ 1, 3 ]
+      # Probability: 0.4     
+      # Properties:     
+        # - Key: RegenAfter
+          # Value: 180       
+
+    # - Name: [ AsteroidVoxel01Magnesium, AsteroidVoxel02Magnesium, AsteroidVoxel03Magnesium]
+      # DisplayName: Magnesium Asteroid
+      # CountMinMax: [ 1, 3 ]
+      # Probability: 0.4     
+      # Properties:     
+        # - Key: RegenAfter
+          # Value: 180       
+
+    # - Name: [ AsteroidVoxel01Cobalt, AsteroidVoxel02Cobalt, AsteroidVoxel03Cobalt]
+      # DisplayName: Cobalt Asteroid
+      # CountMinMax: [ 1, 3 ]
+      # Probability: 0.4     
+      # Properties:     
+        # - Key: RegenAfter
+          # Value: 180       
+
+    # - Name: [ AsteroidVoxel01Promethium, AsteroidVoxel02Promethium, AsteroidVoxel03Promethium]
+      # DisplayName: Promethium Asteroid
+      # CountMinMax: [ 1, 3 ]
+      # Probability: 0.4     
+      # Properties:     
+        # - Key: RegenAfter
+          # Value: 180       
+
+    # - Name: [ AsteroidVoxel01Sathium, AsteroidVoxel02Sathium, AsteroidVoxel03Sathium]
+      # DisplayName: Sathium Asteroid
+      # CountMinMax: [ 1, 3 ]
+      # Probability: 0.4     
+      # Properties:     
+        # - Key: RegenAfter
+          # Value: 180       
+
+    # - Name: [ AsteroidVoxel01Erestrum, AsteroidVoxel02Erestrum, AsteroidVoxel03Erestrum]
+      # DisplayName: Erestrum Asteroid
+      # CountMinMax: [ 1, 3 ]
+      # Probability: 0.3     
+      # Properties:     
+        # - Key: RegenAfter
+          # Value: 180       
+
+    # - Name: [ AsteroidVoxel01Zascosium, AsteroidVoxel02Zascosium, AsteroidVoxel03Zascosium]
+      # DisplayName: Zascosium Asteroid
+      # CountMinMax: [ 1, 3 ]
+      # Probability: 0.3     
+      # Properties:     
+        # - Key: RegenAfter
+          # Value: 180       
+
+    # - Name: [ AsteroidVoxel01Pentaxid, AsteroidVoxel02Pentaxid, AsteroidVoxel03Pentaxid]
+      # DisplayName: Pentaxid Asteroid
+      # CountMinMax: [ 1, 3 ]
+      # Probability: 0.3     
+      # Properties:     
+        # - Key: RegenAfter
+          # Value: 180       
+
+    # - Name: [ AsteroidVoxel01Gold, AsteroidVoxel02Gold, AsteroidVoxel03Gold]
+      # DisplayName: Gold Asteroid
+      # CountMinMax: [ 1, 3 ]
+      # Probability: 0.3     
+      # Properties:     
+        # - Key: RegenAfter
+          # Value: 180       
+
+    # - Name: [ AsteroidVoxel01Titan, AsteroidVoxel02Titan, AsteroidVoxel03Titan]
+      # DisplayName: Titan Asteroid
+      # CountMinMax: [ 1, 3 ]
+      # Probability: 0.4 
+      # Properties:     
+        # - Key: RegenAfter
+          # Value: 180          
+           
+### POIs
+POIs:
+    - Type: BA_Alien
+      Name: [BAO_UCHRadarStation]  
+      DisplayName: Radar Station
+      Faction: UCH
+      Mode: Survival
+      CountMinMax: [ 1, 1 ]     
+      Probability: 1
+      # SpaceDefenseOverrideDefaults: True
+      # SpaceDefenseProbability: 0
+      # SpaceDefensePriceMinMax: [ 30, 60 ] 
+      InitPower: True
+      Properties: 
+        - Key: Music
+          Value: NebularClouds  
+        - Key: Discovery
+          Value: False
+ 
+    # - Type: BA_Alien
+      # Name: [BAO_UCHOutpost]  
+      # DisplayName: Outpost
+      # Faction: UCH
+      # Mode: Survival
+      # CountMinMax: [ 1, 1 ]     
+      # Probability: 1
+      # # SpaceDefenseOverrideDefaults: True
+      # # SpaceDefenseProbability: 0
+      # # SpaceDefensePriceMinMax: [ 30, 60 ] 
+      # InitPower: True
+      # Properties: 
+        # - Key: Music
+          # Value: NebularClouds  
+        # - Key: Discovery
+          # Value: False
+
+
+DroneBaseSetup:                                           
+# Free Roaming Drones
+      - FreeDrones:                                             
+          - Name: [SpaceDronePolarisLaser]
+            Faction: UCH                               
+            CanNotBeControlledByMasterAI: False          
+            Count: [10, 16]                       
+            Radius: [2500, 10000]
+            Properties:
+              - Key: AIManMaxPursuitRange 
+                Value: 2500
+                
+        SpaceVessels: 
+
+# Combat Vessels
+          # - Name: [OPVUCHT2]     
+            # Faction: UCH
+            # CountMinMax: [4, 4]   
+            # Probability: 1  
+            # CanNotBeControlledByMasterAI: False 
+            # FixedMaxSpeed: [50, 55] 
+            # Mission: SpacePatrol   
+            # MissionDescription:
+              # DelayBetweenRespawnMinMax: [300, 600]  
+              # DelayBeforeSelfDestructionMinMax: [200, 250]  
+              # IsRespawnAfterDestruction: True               
+              # RadiusMinMax: [1000, 10000]         
+            # StockDescription:
+              # Name: [SpaceDronePolarisLaser] 
+              # AmountMinMax: [2, 4]  
+              # Type: FighterDrone  
+            # Properties:                      
+              # - Key: SelfDestructionWithNoCore 
+                # Value: True                        
+              # - Key: AIManMaxPursuitRange 
+                # Value: 4000
+              # - Key: AIManPatrolFactions  
+                # Value: "UCH"
+                
+          - Name: [OPVUCHT3]     
+            Faction: UCH
+            CountMinMax: [2, 2]   
+            Probability: 1  
+            CanNotBeControlledByMasterAI: False 
+            FixedMaxSpeed: [45, 50] 
+            Mission: SpacePatrol   
+            MissionDescription:
+              DelayBetweenRespawnMinMax: [300, 600]  
+              DelayBeforeSelfDestructionMinMax: [200, 250]  
+              IsRespawnAfterDestruction: True               
+              RadiusMinMax: [1000, 10000]         
+            StockDescription:
+              Name: [SpaceDronePolarisLaser] 
+              AmountMinMax: [2, 4]  
+              Type: FighterDrone  
+            Properties:                      
+              - Key: SelfDestructionWithNoCore 
+                Value: True                        
+              - Key: AIManMaxPursuitRange 
+                Value: 4000
+              - Key: AIManPatrolFactions  
+                Value: "UCH"
+                 

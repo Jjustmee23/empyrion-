@@ -1,0 +1,148 @@
+================================================================================
+                            NEXON WORLD SCENARIO
+                        Enhanced Multiplayer Experience
+================================================================================
+
+SCENARIO OVERVIEW:
+==================
+
+Name: Nexon World - Enhanced Multiplayer Experience
+Type: Balanced Multiplayer (PvE/PvP)
+Focus: Community Building & New Player Experience
+Compatibility: All standard Empyrion content preserved
+
+================================================================================
+                            ENHANCEMENTS MADE
+================================================================================
+
+1. GAME OPTIONS OPTIMIZATION:
+============================
+
+MULTIPLAYER ENHANCEMENTS:
+- DecayTime: 10 hours (increased from 5) - Better for new players
+- WipeTime: 1440 hours (60 days, increased from 30) - Community building
+- ProtectTime: 48 hours (increased from 24) - Better offline protection
+- ProtectDelay: 900 seconds (15 min, reduced from 30) - Faster protection
+- MaxStructures: 1500 (increased from 1000) - Larger community bases
+- MaxSpawnedEnemies: 15 (increased from 10) - Better PvE experience
+
+ANTI-GRIEFING IMPROVEMENTS:
+- AntiGriefDistancePvE: 25m (increased from 10m) - Better new player protection
+- AntiGriefDistancePvP: 400m (increased from 300m) - Better PvP base protection
+- AntiGriefOresDistance: 75m (increased from 50m) - Better resource protection
+
+COMMUNITY FEATURES:
+- OriginAutoAlliance: true - Automatic faction alliances
+- OriginFactionStart: true - Automatic faction creation
+- DespawnEscapePod: false - Players keep escape pods
+- RegeneratePOIs: true - Better server economy
+- FOWTransparency: 25 - Better map visibility
+
+PERFORMANCE OPTIMIZATIONS:
+- DSLUnloadSecs: 45 seconds (increased from 30)
+- DSLDistancePlanet: 1500m (increased from 1200m)
+- DSLDistanceSpace: 4000m (increased from 3000m)
+
+2. STARTING EXPERIENCE ENHANCEMENT:
+==================================
+
+AKUA PLANET IMPROVEMENTS:
+- Enhanced starting health and food values
+- Better starting equipment including:
+  * OreScanner for resource finding
+  * More medical supplies
+  * Better survival tools
+  * Enhanced food and water supplies
+
+3. SCENARIO IDENTITY:
+=====================
+
+UNIQUE FEATURES:
+- Custom scenario name and description
+- Enhanced planet descriptions
+- Workshop-ready metadata
+- Community-focused features
+
+================================================================================
+                            TECHNICAL DETAILS
+================================================================================
+
+FILES MODIFIED:
+===============
+1. description.txt - Scenario identity and description
+2. gameoptions.yaml - Multiplayer optimizations
+3. Playfields/GS_Akua/playfield_static.yaml - Starting experience
+
+FILES PRESERVED:
+================
+- All original planet configurations
+- All original POI placements
+- All original resource distributions
+- All original faction settings
+
+================================================================================
+                            RECOMMENDED USAGE
+================================================================================
+
+PERFECT FOR:
+============
+- Community servers and guilds
+- New player friendly environments
+- Balanced PvE/PvP gameplay
+- Server administrators wanting stability
+- Players looking for enhanced multiplayer experience
+
+SERVER SETTINGS:
+================
+- Recommended MaxPlayers: 20-50
+- Recommended Server Specs: 8GB RAM, 4+ CPU cores
+- Backup Frequency: Every 6 hours
+- Restart Schedule: Daily during low activity
+
+================================================================================
+                            WORKSHOP UPLOAD
+================================================================================
+
+UPLOAD REQUIREMENTS:
+====================
+- File size: Under 10MB ✓
+- Required files: All present ✓
+- Custom content: Enhanced but compatible ✓
+- Testing: Singleplayer and multiplayer tested ✓
+
+TAGS RECOMMENDED:
+=================
+- Multiplayer
+- PvE
+- PvP
+- Community
+- Enhanced
+- Balanced
+- New Player Friendly
+
+================================================================================
+                            SUPPORT & UPDATES
+================================================================================
+
+MAINTENANCE:
+============
+- Test after major game updates
+- Monitor community feedback
+- Update compatibility as needed
+- Backup scenario before modifications
+
+COMMUNITY FEEDBACK:
+===================
+- Encourage player feedback
+- Monitor server performance
+- Adjust settings based on usage
+- Share improvements with community
+
+================================================================================
+                            END OF DOCUMENTATION
+================================================================================
+
+Nexon World - Enhanced Multiplayer Experience
+Created: 2024
+Version: 1.0
+Status: Ready for Workshop Upload

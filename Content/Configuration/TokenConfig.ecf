@@ -1,0 +1,329 @@
+
+# Tokens are instances of the item 'GenericToken' that will get their purpose in game.
+# F.e. you can define a lock code for a door to be opened by a token that has the id of this lock code. Or you can
+# define a quest or a PDA mission that needs a token to get finished.
+# You don't need to define every token here, but if defined, the name and description will show up correctly.
+# Set RemoveOnUse: true to remove it from the inventory of the player as soon as it was used.
+# === Possible Usage ====
+# 1. Place a Token with a certain key (= Meta ) to a inventory (f.ex. Container in an Alien POI): Open Console > 'give item Token 0001' > This will add a token to your inventory > place it in a container > Save POI (Only works with admin core POI at the moment)
+# 2. Give a Token with a certain Meta to a player via PDA via Reward or InventoryOps: Use 'Token:0001' to give the Red Keycard for example
+# 3. Give a Token in a dialogue: Use a function, f.ex AddItem('KeyCardBlack', 3, 1234)  = Will give the player 3x Keycard Black with the Meta 1234
+# 4. Let a Trader sell/buy tokens: Enter an item to Trader config. Example: 'Item3: "Token:0001, 1, 1-2, 1-1, 1-2" = will buy and sell the Red Keycard from below
+# 5. Use a Token in a loot table. Same as with a Trader. Use 'Token:0001' in your loot table/config 
+# ========== IMPORTANT ===========
+# - Currently only the item 'Token' (Itemsconfig.ecf id: 1305) can have a 4-digit META element. Any OTHER "keycard" named item or other items in general can NOT have meta info attached!
+# - When working with the TokenConfig.ecf, adding custom names for the Token:Meta combination, you can use the console command 'token reload' when you are ingame. You do not need to restart the game when working with this file!
+# =================================
+#
+# DropOnDeath:   > If set to 'False'  this item or block is not dropped on player death. Use for important story items that players shall not lose on death. Default is set to 'True'.
+# =================================
+# Example Token
+{ Token Id: 1, Name: KeyCardRed
+  Description: The red key card will open red doors
+# CustomIcon: AddAnIconNameHere
+  DropMeshfile: Entities/Misc/BagSmallChristmasPrefab
+}
+
+{ Token Id: 2, Name: KeyCardGreen
+  Description: The green key card will open green doors
+}
+
+{ Token Id: 1234, Name: GoldenKey
+  Description: descGoldenKey
+  #RemoveOnUse: true
+}
+
+# === RP Creditibility Token ===
+
+{ Token Id: 100, Name: CredTokenZiraxEmpire
+  Description: descCredTokenGeneral
+  CustomIcon: CredTokenZiraxEmpire
+  MarketPrice: 300000, display: true
+  #RemoveOnUse: true
+}
+{ Token Id: 101, Name: CredTokenXenu
+  Description: descCredTokenGeneral
+  CustomIcon: CredTokenXenu
+  MarketPrice: 300000, display: true
+  #RemoveOnUse: true
+}
+{ Token Id: 102, Name: CredTokenRados
+  Description: descCredTokenGeneral
+  CustomIcon: CredTokenRados
+  MarketPrice: 300000, display: true
+  #RemoveOnUse: true
+}
+{ Token Id: 103, Name: CredTokenGhyst
+  Description: descCredTokenGeneral
+  CustomIcon: CredTokenGhyst
+  MarketPrice: 300000, display: true
+  #RemoveOnUse: true
+}
+{ Token Id: 104, Name: CredTokenEpsilon
+  Description: descCredTokenGeneral
+  CustomIcon: CredTokenEpsilon
+  MarketPrice: 300000, display: true
+  #RemoveOnUse: true
+}
+{ Token Id: 105, Name: CredTokenSerdu
+  Description: descCredTokenGeneral
+  CustomIcon: CredTokenSerdu
+  MarketPrice: 300000, display: true
+  #RemoveOnUse: true
+}
+{ Token Id: 106, Name: CredTokenAbyssal
+  Description: descCredTokenGeneral
+  CustomIcon: CredTokenAbyssal
+  MarketPrice: 300000, display: true
+  #RemoveOnUse: true
+}
+{ Token Id: 107, Name: CredTokenPolaris
+  Description: descCredTokenGeneral
+  CustomIcon: CredTokenPolaris
+  MarketPrice: 300000, display: true
+  #RemoveOnUse: true
+}
+{ Token Id: 108, Name: CredTokenTradersGuild
+  Description: descCredTokenGeneral
+  CustomIcon: CredTokenTradersGuild
+  MarketPrice: 300000, display: true
+  #RemoveOnUse: true
+}
+{ Token Id: 109, Name: CredTokenPirates
+  Description: descCredTokenGeneral
+  CustomIcon: CredTokenPirates
+  MarketPrice: 300000, display: true
+  #RemoveOnUse: true
+}
+{ Token Id: 110, Name: CredTokenKriel
+  Description: descCredTokenGeneral
+  CustomIcon: CredTokenKriel
+  MarketPrice: 300000, display: true
+  #RemoveOnUse: true
+}
+{ Token Id: 111, Name: CredTokenTesch
+  Description: descCredTokenGeneral
+  CustomIcon: CredTokenTesch
+  MarketPrice: 300000, display: true
+  #RemoveOnUse: true
+}
+{ Token Id: 112, Name: CredTokenTalon
+  Description: descCredTokenGeneral
+  CustomIcon: CredTokenTalon
+  MarketPrice: 300000, display: true
+  #RemoveOnUse: true
+}
+{ Token Id: 113, Name: CredTokenColonists
+  Description: descCredTokenGeneral
+  CustomIcon: CredTokenColonists
+  MarketPrice: 300000, display: true
+  #RemoveOnUse: true
+}
+{ Token Id: 114, Name: CredTokenFarr
+  Description: descCredTokenGeneral
+  CustomIcon: CredTokenFarr
+  MarketPrice: 300000, display: true
+  #RemoveOnUse: true
+}
+{ Token Id: 115, Name: CredTokenUCH
+  Description: descCredTokenGeneral
+  CustomIcon: CredTokenUCH
+  MarketPrice: 300000, display: true
+  #RemoveOnUse: true
+}
+
+# === Quest Items ===
+
+{ Token Id: 200, Name: ExplReportPlanet
+  Description: descTokenQuestItem
+  CustomIcon: Tablet
+  MarketPrice: 25000, display: true
+  #RemoveOnUse: true
+}
+# Quest Temperate Starter FARM 1
+{ Token Id: 201, Name: QuestItemCrops
+  Description: descTokenQuestItem
+  CustomIcon: QuestItemCrops  
+  DropOnDeath: false
+  # MarketPrice: 25000, display: true
+  # RemoveOnUse: true
+}
+# Quest Temperate Starter FARM 2
+{ Token Id: 202, Name: QuestItemMushroomExtract
+  Description: descTokenQuestItem
+  CustomIcon: QuestItemMushroomExtract  
+  DropOnDeath: false
+  # MarketPrice: 25000, display: true
+  # RemoveOnUse: true
+}
+# Quest Temperate Starter FARM 3
+{ Token Id: 203, Name: QuestItemBrewingLichen
+  Description: descTokenQuestItem
+  CustomIcon: QuestItemBrewingLichen  
+  DropOnDeath: false
+  # MarketPrice: 25000, display: true
+  # RemoveOnUse: true
+}
+# Quest Temperate Starter FARM 4
+{ Token Id: 204, Name: QuestItemPumpSpareParts
+  Description: descTokenQuestItem
+  CustomIcon: QuestItemPumpSpareParts  
+  DropOnDeath: false
+  # MarketPrice: 25000, display: true
+  # RemoveOnUse: true
+}
+# Quest Temperate Starter FARM 5
+{ Token Id: 205, Name: QuestItemRaptorSkin
+  Description: descTokenQuestItem
+  CustomIcon: QuestItemRaptorSkin  
+  DropOnDeath: false
+  # MarketPrice: 25000, display: true
+  # RemoveOnUse: true
+}
+# Quest Temperate Starter FIELD 1
+{ Token Id: 206, Name: QuestItemAmmoCrossbow
+  Description: descTokenQuestItem
+  CustomIcon: QuestItemAmmoCrossbow  
+  DropOnDeath: false
+  # MarketPrice: 25000, display: true
+  # RemoveOnUse: true
+}
+# Quest Temperate Starter FIELD 2
+{ Token Id: 207, Name: QuestItemButterflySecretion
+  Description: descTokenQuestItem
+  CustomIcon: QuestItemButterflySecretion  
+  DropOnDeath: false
+  # MarketPrice: 25000, display: true
+  # RemoveOnUse: true
+}
+# Quest Temperate Starter FIELD 3
+{ Token Id: 208, Name: QuestItemFishParasite
+  Description: descTokenQuestItem
+  CustomIcon: QuestItemFishParasite  
+  DropOnDeath: false
+  # MarketPrice: 25000, display: true
+  # RemoveOnUse: true
+}
+# Quest Temperate Starter FIELD 4
+{ Token Id: 209, Name: QuestItemWildCorn
+  Description: descTokenQuestItem
+  CustomIcon: QuestItemWildCorn  
+  DropOnDeath: false
+  # MarketPrice: 25000, display: true
+  # RemoveOnUse: true
+}
+# Quest Temperate Starter FIELD 5 Item 1
+{ Token Id: 210, Name: QuestItemTelluropodClutches
+  Description: descTokenQuestItem
+ CustomIcon: QuestItemTelluropodClutches  
+  DropOnDeath: false
+  # MarketPrice: 25000, display: true
+  # RemoveOnUse: true
+}
+ 
+# === Story Tokens (Do not change! === 
+
+{ Token Id: 9999, Name: AIRoutine32Key
+  Description: descTokenAIRoutine32Key
+  #RemoveOnUse: true
+}
+{ Token Id: 9998, Name: ChiefPalant
+  Description: descTokenChiefPalant
+  #RemoveOnUse: true
+}
+{ Token Id: 9997, Name: EnsignEmmerson
+  Description: descTokenEnsignEmmerson
+  #RemoveOnUse: true
+}
+{ Token Id: 9996, Name: LogM
+  Description: descTokenM
+  #RemoveOnUse: true
+}
+{ Token Id: 9995, Name: TitanCodeRecoveryMainKey
+  Description: descTokenTitanCodeRecoveryMainKey
+  #RemoveOnUse: true
+}
+{ Token Id: 9994, Name: TitanCodeFragment
+  Description: descTokenTitanCodeFragment
+  #RemoveOnUse: true
+}
+{ Token Id: 9993, Name: ZiraxCommanderKeycard
+  Description: descTokenZiraxCommanderKeycard
+  #RemoveOnUse: true
+}
+{ Token Id: 9992, Name: RootBeerFormula
+  Description: descTokenRootBeerFormula
+  #RemoveOnUse: true
+}
+{ Token Id: 9991, Name: RepairBayKeyCard
+  Description: descTokenRepairBayKeyCard
+}
+{ Token Id: 9990, Name: MedandO2StationsKeyCard
+  Description: descTokenMedandO2StationsKeyCard
+}
+{ Token Id: 9989, Name: SealoftheHouseofAbyssal
+  Description: descTokenSealoftheHouseofAbyssal
+}
+{ Token Id: 9988, Name: GhystCommandCard
+  Description: descTokenGhystCommandCard
+}
+{ Token Id: 9987, Name: BrotherhoodCommandCard
+  Description: descTokenBrotherhoodCommandCard
+}
+{ Token Id: 9986, Name: DoctorMandorsSpaceAnomaliesreport
+  Description: descTokenDoctorMandorsSpaceAnomaliesreport
+}
+
+{ Token Id: 9985, Name: TemperatePlanetData
+  CustomIcon: KeyCardGreen
+  Description: descTokenTemperatePlanetData
+}
+{ Token Id: 9984, Name: SnowPlanetData
+  CustomIcon: KeyCardBlue
+  Description: descTokenSnowPlanetData
+}
+{ Token Id: 9983, Name: BarrenPlanetData
+  CustomIcon: KeyCardYellow
+  Description: descTokenBarrenPlanetData
+}
+{ Token Id: 9982, Name: AlienPlanetData
+  CustomIcon: KeyCardRed
+  Description: descTokenAlienPlanetData
+}
+{ Token Id: 9981, Name: TalesofTashDamagedDatapad
+  CustomIcon: Tablet
+  Description: descTokenTalesofTashDamagedDatapad
+}
+{ Token Id: 9980, Name: NTyreport
+  CustomIcon: Tablet
+  Description: "descTokenNTyreport"
+}
+{ Token Id: 9979, Name: TSOAshonCorePurgeKeycardCOPY
+  CustomIcon: Tablet
+  Description: "descTSOAshonCorePurgeKeycardCOPY"
+}
+{ Token Id: 9978, Name: HuskVisitorKeycard
+  CustomIcon: KeyCardYellow
+  DropOnDeath: false
+  Description: "descHuskVisitorKeycard"
+}
+{ Token Id: 9977, Name: HuskSalurianKeycard
+  CustomIcon: KeyCardRed
+  DropOnDeath: false
+  Description: "descHuskSalurianKeycard"
+}
+{ Token Id: 9976, Name: HuskTOPInvitation
+  CustomIcon: Tablet
+  DropOnDeath: false
+  Description: "descHuskTOPInvitation"
+}
+{ Token Id: 9975, Name: DeepMineAccess
+  CustomIcon: KeyCardBlue
+  DropOnDeath: false
+  Description: "descDeepMineAccess"
+}
+{ Token Id: 9965, Name: KeyMatrix
+  CustomIcon: Tablet
+  DropOnDeath: false
+  Description: "descTokenKeyMatrix"
+}

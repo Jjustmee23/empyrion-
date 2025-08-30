@@ -1,0 +1,854 @@
+---
+# Playfield Configuration - FROST FORGE (Formerly GS_Ningues)
+# IMPORTANT: YAML files use spaces as indentation. Please don't use TABs - tab indentation is forbidden: http://yaml.org/faq.html
+
+Description: |
+  🌟 FROST FORGE - The Frozen Realm of Nexon World! 🌟
+  
+  Welcome to Frost Forge, a world where the eternal winter has transformed 
+  a once-magnificent planet into a realm of ice and survival. Between 
+  glaciers and frozen plains, one can still sense the former splendor 
+  of this frozen world, now locked in an endless embrace with winter.
+  
+  FEATURES:
+  • Vast ice-covered landscapes with hidden glaciers
+  • Dangerous fauna adapted to extreme cold
+  • Sparse but resilient flora fighting for survival
+  • Polaris Megacorp Science Station with challenges
+  • Advanced survival gameplay for experienced players
+  
+  Frost Forge tells a story of adaptation and resilience, where the 
+  fight against cold and the unconditional will to survive drives 
+  not only the dangerous fauna but also the sparse flora to their 
+  absolute limits. This is a world where every step could be your last, 
+  and every resource must be fought for.
+  
+  The Polaris Megacorp Science Station offers unique challenges for 
+  those who can survive the first few hours in this frozen wasteland. 
+  But getting there requires mastering the art of survival in a world 
+  where even the air itself seems to want you dead.
+  
+  This is a world for advanced players who can adapt to the harshest 
+  conditions. In Frost Forge, survival is not just a goal - it's a 
+  testament to your willpower and ingenuity.
+
+#Description: "Between ice and glaciers, one can still sense the former splendor of this frozen planet. The fight against cold and the unconditional will to survive all tangible opportunities drives not only the quite dangerous fauna, but also the sparse flora of this icy moon to the utmost.\n\nSuitable for advanced players"
+
+PlanetClass: Snow
+PlanetType: SnowStarter
+PlayfieldType: Moon # 'Planet' will be shown with an orbit line in the system map, and not be grouped to gas giants!
+Difficulty: 1
+
+LandClaimZone: Device
+
+# ==============================================================
+# Special parameters:
+# ==============================================================
+
+#AllowBlueprintSV: False         # Dis-allow to spawn SV Blueprint in this playfield, default is True
+#AllowBlueprintCV: False         # Dis-allow to spawn CV Blueprint in this playfield, default is True
+#AllowBlueprintBA: False         # Dis-allow to spawn BA Blueprint in this playfield, default is True
+#AllowBlueprintHV: False         # Dis-allow to spawn HV Blueprint in this playfield, default is True
+
+Seed: 575561                    # Integer [1, 999999] If set overwrites main Seed 
+#UseFixed: True  			   	   # If set to True uses fixed POIs + resources in Survival mode (per default set to False). Can be used together with UseRandom
+#UseRandom: True				   # If set to True uses random POIs + resources in Survival mode (per default set to True). Can be used together with UseFixed
+#IndestructibleTerrain: True     # If set to True terrain on this playfield will be indestructible
+
+# ==============================================================
+# Atmosphere and Sky - Enhanced for Frost Forge
+AtmosphereEnabled: True
+# AtmosphereColor: "0.95, 1.18, 1.6" 
+AtmosphereColor: "0.855, 1.062, 1.44"  # Enhanced ice atmosphere
+SkyColor: "1.02, 0.76, 1.02"  # Rich ice sky
+
+SkyHorizonColor: "1, 0.3, 0"  # Enhanced horizon colors
+AtmosphereParams: [0.4, 1.7]
+
+# Light - Enhanced for Frost Forge's frozen beauty
+DayLightIntensity: 0.8
+
+
+NightLightIntensity: 0.25
+DayShadowStrength: 0.95
+NightShadowStrength: 0.5
+
+
+LightZenithColor: "0.9, 0.95, 1.10"  # Enhanced zenith lighting
+LightHorizonColor: "0.8, 0.45, 0.10"  # Rich horizon glow
+NightLightColor: "0.3, 0.3, 0.7"  # Enhanced night atmosphere
+
+# Sun - Enhanced for Frost Forge
+SunFlare: EnvironmentalEffects/SunFlareWhite
+
+# Fog - Enhanced atmospheric effects for Frost Forge
+# AtmosphereFog: 0.5       # (See: playfield_dynamic)
+FogCloudIntensity: 0.8
+# GroundFogIntensity: 0.07 # (See: playfield_dynamic)
+# GroundFogHeight: 40
+
+FogColor: "0.85, 0.85, 1.03"  # Enhanced fog for ice world
+
+# Clouds and Wind - Enhanced weather patterns for Frost Forge
+CloudsDensity: 0.3
+CloudsSharpness: 0.2
+CloudsBrightness: 0.6
+
+
+CloudsZenithColor: "0.60, 0.63, 0.86"  # Enhanced cloud colors
+CloudsHorizonColor: "0.72, 0.24, 0.08"  # Rich horizon clouds
+
+CloudsNightZenithColor: "0.015, 0.023, 0.029"  # Enhanced night clouds
+CloudsNightHorizonColor: "0.015, 0.023, 0.029"  # Mystical night atmosphere
+
+WindSpeed: 3
+
+# Special Effects - Enhanced for Frost Forge
+SpecialEffectsLocal:
+  - Name: FireFliesRed
+    Biome: [ Taiga, TaigaEdge, TaigaSnow, Oasis]
+    Time: Night
+    MaxHeight: 15
+
+  - Name: FireFliesOrange
+    Biome: [ Shore, Taiga, TaigaEdge, TaigaSnow, Oasis]
+    Time: Night
+    MaxHeight: 15
+
+  - Name: FireFliesRed
+    Biome: [ Oasis]
+    Time: Day
+    MaxHeight: 15
+
+  - Name: FireFliesOrange
+    Biome: [ Shore, Taiga, Oasis]
+    Time: Day
+    MaxHeight: 15
+
+
+
+SpecialEffectsGlobal:
+
+
+
+    # Starting weather
+  - Name: SnowHeavy
+    Type: Weather
+    InitialDelay: 0 # (Should start directly.)
+    Lifetime: 50  # (2 ingame days - 1 RL hour -  of sunshine.)
+    Delay: 10000    # (This long period should not happen too often)
+
+  - Name: Clear
+    Type: Weather
+    InitialDelay: 10 # (sShould start directly.)
+    Lifetime: 7200  # (2 ingame days - 1 RL hour -  of sunshine.)
+    Delay: 1000    # (This long period should not happen too often)
+
+
+  - Name: SnowLight
+    Type: Weather
+    InitialDelay: 48
+    Delay: 5
+    Lifetime: 600
+
+    # Soon
+  - Name: Clear
+    Type: Weather
+    InitialDelay: 50
+    Delay: 12
+    Lifetime: 1000
+
+  - Name: SnowMedium
+    Type: Weather
+    InitialDelay: 50
+    Delay: 12
+    Lifetime: 800
+
+
+    # Later
+  - Name: Clear
+    Type: Weather
+    InitialDelay: 72
+    Delay: 12
+    Lifetime: 600
+    
+  - Name: SnowHeavy
+    Type: Weather
+    InitialDelay: 72
+    Delay: 12
+    Lifetime: 600
+
+  - Name: ColdWave
+    Type: Weather
+    InitialDelay: 72
+    Delay: 24
+    Lifetime: 1000
+
+  - Name: Hail
+    Type: Weather
+    InitialDelay: 72
+    Delay: 48
+    Lifetime: 600
+
+  - Name: HeatWave
+    Type: Weather
+    InitialDelay: 90
+    Delay: 90
+    Lifetime: 400
+
+
+    # (All standard clouds removed, too 'busy' looking.
+    # - Colors adjusted to ColdWave's clouds.)
+
+  # - Name: CloudsLight
+    # Type: Weather
+    # InitialDelay: 10
+    # Delay: 10
+    # Lifetime: 400
+
+  # - Name: CloudsMedium  # (Too bright here)
+    # Type: Weather
+    # InitialDelay: 0
+    # Delay: 3
+    # Lifetime: 1200
+
+  # - Name: Clouds   # (Strange colour)
+    # Type: Weather
+    # InitialDelay: 5
+    # Delay: 5
+    # Lifetime: 900
+
+# ==============================================================
+
+### Resource Deposits
+
+RandomResources:
+    - Name: CarbonResource
+      BiomesExcluded: [ Dunes, Glacier] 
+      IsScalingCount: True   # Medium Planet: 6-8 Deposits, Large planet 9-12
+      CountMinMax: [ 2, 4 ]  # (was [ 5, 8 ] unscaled)
+      SizeMinMax: [ 5, 7 ]
+      DepthMinMax: [ 0, 5 ]
+      DroneProb: 0.2
+      MaxDroneCount: 1
+      
+    - Name: IronResource
+      BiomesExcluded: [ Dunes, Glacier] 
+      IsScalingCount: True   # Medium Planet: 6-8 Deposits, Large planet 9-12
+      CountMinMax: [ 1, 4 ]  # (was [ 5, 8 ] unscaled)
+      SizeMinMax: [ 5, 7 ]
+      DepthMinMax: [ 5, 10 ]
+      DroneProb: 0.2
+      MaxDroneCount: 1
+
+    - Name: CopperResource
+      BiomesExcluded: [ Dunes, Glacier] 
+      IsScalingCount: True   # Medium Planet: 4-8 Deposits, Large planet 6-12
+      CountMinMax: [ 1, 4 ]  # (was [ 4, 7 ] unscaled)
+      SizeMinMax: [ 4, 6 ]
+      DepthMinMax: [ 5, 10 ]
+      DroneProb: 0.3
+
+    - Name: SiliconResource
+      BiomesExcluded: [ Dunes, Glacier] 
+      IsScalingCount: True   # Medium Planet: 4-6 Deposits, Large planet 6-9
+      CountMinMax: [ 1, 6 ]  # (was [ 4, 7 ] unscaled)
+      SizeMinMax: [ 4, 6 ]
+      DepthMinMax: [ 5, 10 ]
+      DroneProb: 0.3  
+      
+    - Name: CobaltResource
+      Biome: [ LowMountains, Mountains, HighMountains ]
+      IsScalingCount: True   # Medium Planet: 4-8 Deposits, Large planet 6-12
+      CountMinMax: [ 2, 6 ]  # (was [ 4, 7 ] unscaled)
+      SizeMinMax: [ 3, 4 ]
+      DepthMinMax: [ 5, 10 ]
+      DroneProb: 0.3
+
+### Resource Asteroids
+AsteroidResources:
+     - Name: IronResource
+       Threshold: 0.2
+       Amount: 0.2
+     - Name: CopperResource
+       Threshold: 0.2
+       Amount: 0.2
+     - Name: SiliconResource
+       Threshold: 0.2
+       Amount: 0.2
+     - Name: CarbonResource
+       Threshold: 0.2
+       Amount: 0.2
+
+### POIs - Enhanced for Frost Forge
+POIs:
+    Random:
+        # ==============================================================
+        # FROST FORGE ICE HUB - Safe Zone POI
+        # ==============================================================
+        - GroupName: FrostForgeIceHub
+          CountMinMax: [ 1, 1 ]
+          SpawnPOINear: [START]
+          SpawnPOINearRange: [900, 1400]
+          IsImportant: True
+          Faction: None
+          Biome: [GlacierHills, Tundra, Plains, Taiga, TaigaEdge, TaigaSnow, TaigaSnowEdge]
+          Properties: 
+            - Key: MapMarker
+              Value: Neutral
+            - Key: RegenAfter
+              Value: 720
+            - Key: SafeZone
+              Value: 450
+            - Key: CommunityFacility
+              Value: "Ice,Storage,Rescue"
+            - Key: PersonalContainer
+              Value: "IceResources:1"
+
+        # ==============================================================
+        # ICE SAFE ZONES - Polar Protection
+        # ==============================================================
+        - GroupName: IceSafeZone
+          CountMinMax: [ 3, 5 ]
+          SpawnPOINear: [FrostForgeIceHub]
+          SpawnPOINearRange: [150, 450]
+          IsImportant: True
+          Faction: None
+          Properties: 
+            - Key: MapMarker
+              Value: Neutral
+            - Key: SafeZone
+              Value: 300
+            - Key: CommunityProtection
+              Value: "PvP_Disabled"
+            - Key: IceFacility
+              Value: "Rescue,Supply,Storage"
+            - Key: RegenAfter
+              Value: 1440
+
+        # ==============================================================
+        # POLAR SUPPLY DEPOT - Ice Explorer Support
+        # ==============================================================
+        - GroupName: PolarSupplyDepot
+          CountMinMax: [ 1, 2 ]
+          SpawnPOINear: [FrostForgeIceHub]
+          SpawnPOINearRange: [200, 500]
+          IsImportant: True
+          Faction: None
+          Properties: 
+            - Key: MapMarker
+              Value: Neutral
+            - Key: RegenAfter
+              Value: 360
+            - Key: CommunityFacility
+              Value: "Supply,Storage,Rescue"
+            - Key: PersonalContainer
+              Value: "PolarSupplies:1"
+
+        # ==============================================================
+        # BASIC RESOURCES - Ice Starter Area
+        # ==============================================================
+        - GroupName: NullPOI
+          CountMinMax: [ 1, 1 ]
+          SpawnPOINear: [START]
+          SpawnPOINearDistance: 10
+          IsImportant: True
+          PlaceAt: Terrain, UnderWater
+          SpawnResource: ["IronResource:1-1", "CopperResource:1-1", "SiliconResource:1-1" ]
+          SpawnResourceRange: [300, 400]
+
+        - GroupName: TemperateStarterTribalTower
+          Faction: None          
+          CountMinMax: [ 1, 1 ]
+          Biome: [GlacierHills, Tundra, Plains, Taiga, TaigaEdge, TaigaSnow, TaigaSnowEdge] 
+          SpawnPOIAvoid: [ START ]
+          SpawnPOIAvoidDistance: 1000
+          Properties: 
+            - Key: MapMarker
+              Value: Neutral
+            - Key: RegenAfter
+              Value: 240
+
+        - GroupName: TemperateStarterRuinsTribal            
+          Faction: None          
+          CountMinMax: [ 1, 20 ] 
+          SpawnPOINear: [ TemperateStarterTribalTower ]
+          SpawnPOINearRange: [50,300]
+          Properties: 
+            - Key: MapMarker
+              Value: Neutral
+            - Key: RegenAfter
+              Value: 180
+
+        - GroupName: Ruins
+          IsImportant: True
+          Faction: None
+          CountMinMax: [ 1, 1 ]
+          SpawnPOIAvoid: [ NullPOI]
+          SpawnPOIAvoidDistance: 500
+          Properties: 
+            - Key: MapMarker
+              Value: Neutral
+            - Key: RegenAfter
+              Value: 240
+
+        - GroupName: Wreckage
+          IsImportant: True
+          Faction: Alien
+          CountMinMax: [ 1, 1 ]
+          SpawnPOINear: [ NullPOI]
+          SpawnPOIAvoidDistance: 500
+          Properties: 
+            - Key: MapMarker
+              Value: Neutral
+            - Key: RegenAfter
+              Value: 240
+
+        - GroupName: Ruins
+          BiomesExcluded: [ Dunes, Glacier, GlacierHills_1 ] 
+          Faction: None
+          CountMinMax: [ 10, 10 ]
+          SpawnPOIAvoid: [ NullPOI, Ruins]
+          SpawnPOIAvoidDistance: 600
+          Properties: 
+            - Key: MapMarker
+              Value: Neutral
+            - Key: RegenAfter
+              Value: 240
+
+        - GroupName: Wreckage
+          BiomesExcluded: [ Dunes, Glacier, GlacierHills_1 ] 
+          Faction: Alien          
+          CountMinMax: [ 10, 10 ]
+          SpawnPOIAvoid: [ START, Wreckage ]
+          SpawnPOIAvoidDistance: 600
+          Properties: 
+            - Key: MapMarker
+              Value: Neutral
+            - Key: RegenAfter
+              Value: 240
+
+    # ==============================================================
+    # FROST FORGE - ICE STARTER EXPERIENCE
+    # ==============================================================
+    # Ice-focused starter configuration for polar explorers
+    # Enhanced equipment for ice world survival and cold resistance
+    
+    FixedPlayerStart:
+        # ==============================================================
+        # DEBUG MODE - For testing and development
+        # ==============================================================
+        - Mode: Debug
+          Armor: ArmorLight
+          Pos: [ 0, 147, 0 ]
+          RotY: 160 
+          Items: [
+            "SurvivalTool:1, Flashlight:1, PDA:1, Medikit02:5, PowerBar:10, EnergyCell:10, HeatResistantSuit:1"
+          ]
+
+        # ==============================================================
+        # SURVIVAL MODE - Ice World Experience
+        # ==============================================================
+        - Mode: Survival
+          Armor: ArmorLight
+          Spawn: EscapePod
+          Pos: [0, 70, 0]
+          RotY: 160
+          
+          # Enhanced status for ice world survival
+          Status: [ 
+           "Food: 600, Health: 600, Oxygen: 800, Stamina: 800",  # Easy Mode
+           "Food: 400, Health: 400, Oxygen: 600, Stamina: 600",  # Normal Mode  
+           "Food: 250, Health: 250, Oxygen: 500, Stamina: 500",  # Hard Mode
+           "#FreshStart:Food: 350, Health: 350, Oxygen: 600, Stamina: 600"  # Fresh Start
+          ]
+          
+          # Ice-focused starter equipment sets
+          Items: [ 
+           # EASY MODE - Ice Explorer Welcome Package
+           "SurvivalTool:1, Flashlight:1, SurvivalTent:1, RadarSuitT1:1, PDA:1, Bandages:6, PowerBar:6, Medikit02:4, AntidotePills:2, EmergencyRations:4, WaterBottle:3, EnergyCell:4, OreScanner:1, HeatResistantSuit:1, SmallConstructor:1, OxygenGenerator:1, WaterGenerator:1, SolarPanel:2, Battery:2, FoodProcessor:1, WoodLog:40, Stone:40, IronOre:40, CopperOre:40, SiliconOre:30", 
+           
+           # NORMAL MODE - Balanced Ice Explorer Kit
+           "SurvivalTool:1, Flashlight:1, SurvivalTent:1, RadarSuitT1:1, PDA:1, Bandages:4, PowerBar:4, Medikit02:3, AntidotePills:1, EmergencyRations:3, WaterBottle:2, EnergyCell:3, OreScanner:1, HeatResistantSuit:1, SmallConstructor:1, OxygenGenerator:1, WaterGenerator:1, SolarPanel:1, Battery:1, WoodLog:25, Stone:25, IronOre:25, CopperOre:25, SiliconOre:20", 
+           
+           # HARD MODE - Ice Survival Challenge
+           "SurvivalTool:1, Flashlight:1, SurvivalTent:1, RadarSuitT1:1, PDA:1, Bandages:2, PowerBar:2, Medikit02:2, AntidotePills:1, EmergencyRations:2, WaterBottle:1, EnergyCell:2, OreScanner:1, HeatResistantSuit:1, WoodLog:15, Stone:15, IronOre:15, CopperOre:15, SiliconOre:10", 
+           
+           # FRESH START - New Ice Explorer Experience
+           "#FreshStart: SurvivalTool:1, Flashlight:1, SurvivalTent:1, RadarSuitT1:1, PDA:1, Bandages:3, PowerBar:3, Medikit02:2, AntidotePills:1, EmergencyRations:2, WaterBottle:1, EnergyCell:2, OreScanner:1, HeatResistantSuit:1, SmallConstructor:1, OxygenGenerator:1, WaterGenerator:1, SolarPanel:1, Battery:1, WoodLog:20, Stone:20, IronOre:20, CopperOre:20, SiliconOre:15"
+          ]
+# ==============================================================
+# ==============================================================
+### Drones
+
+DroneBaseSetup:
+  DroneBases:                               
+    - DroneSetupID: DroneBaseNingues 
+      Stock:
+        - Name: DroneBatteredCannon  
+          Amount: Infinite 
+          Type: FighterDrone 
+          
+DroneSpawning:
+    Random:
+      - Name: DroneBatteredCannon        
+        DronesMinMax: [ 9, 10 ]
+        Faction: Alien
+        CenterX: 500 
+     #   POINameAsPositionRef: 
+        Radius: 6000        
+         
+
+# ==============================================================
+# ==============================================================
+
+
+SpawnRateZones:
+
+
+# STARTER  ====
+   - SpawnAt: [START]
+     Radius: 1000
+     RadiusRandom: 0
+     RateMultiplyerCenter: 0.0
+     RateMultiplyerEdge: 1.0
+     AffectEnemies: true
+     Color: "0.0, 1.0, 0.0, 0.7" 
+
+SpawnZones:  
+
+# TOTObeliskSnow, NinguesConvoy, NinguesScienceVessel DamagedHVo2,  ... , NinguesMineralSynthLab, TOTFontB, TemperateStarterTribalTower... TOTActivator
+
+     # ====================
+     # Comment in for testing- MARKER ZONES
+     # (To easily find story POI in the SSG  - - has no other function)
+     # ====================
+   - SpawnAt: [TOTObeliskSnow, NinguesConvoy, NinguesScienceVessel, NinguesMineralSynthLab, TOTFontB, TemperateStarterTribalTower] 
+     Radius: 280
+     RateMultiplyerCenter: 1.0
+     RateMultiplyerEdge: 0.6
+     Color: "1.0, 1, 0.3, 1.0"
+     Entities:
+       - Names: [GolemsIce]
+         Amount: 30  
+         Period: Always
+         DelayMinMax: [99, 99]
+         
+   - SpawnAt: [NinguesScienceVessel] 
+     Radius: 380
+     RateMultiplyerCenter: 1.0
+     RateMultiplyerEdge: 0.6
+     Color: "1.0, 0, 0.3, 1.0"
+     Entities:
+       - Names: [GolemsIce]
+         Amount: 30  
+         Period: Always
+         DelayMinMax: [99, 99]
+         
+   - SpawnAt: [TOTObeliskSnow, NinguesConvoy, NinguesScienceVessel] 
+     Radius: 400
+     RateMultiplyerCenter: 1.0
+     RateMultiplyerEdge: 0.6
+     Color: "1.0, 1, 0.3, 1.0"
+     Entities:
+       - Names: [GolemsIce]
+         Amount: 30  
+         Period: Always
+         DelayMinMax: [99, 99]
+         
+   - SpawnAt: [TOTActivator, TOTFontB] 
+     Radius: 50
+     RateMultiplyerCenter: 1.0
+     RateMultiplyerEdge: 1.0
+     Color: "1.0, 1, 0.3, 1.0"
+     Entities:
+       - Names: [GolemsIce]
+         Amount: 100  
+         Period: Always
+         DelayMinMax: [40, 40]
+
+   - SpawnAt: [Ruins]
+     BiomesExcluded: [ LowMountains, Mountains ]
+     Radius: 200
+     RadiusRandom: 0
+     RateMultiplyerCenter: 1.0
+     RateMultiplyerEdge: 0.5
+     Color: "0.7, 0.0, 0.0, 0.7"
+     SpawnOnlyIfPoiIsAlien: true
+     Entities:
+       - Names: [CaveWormsWhite]
+         Biomes: [Any]
+         Amount: 200
+         Period: Always
+         DelayMinMax: [-1, -1]
+ 
+   - SpawnAt: [Ruins]
+     BiomesExcluded: [ Mountains ]
+     Radius: 100
+     RadiusRandom: 0
+     RateMultiplyerCenter: 1.0
+     RateMultiplyerEdge: 0.5
+     Color: "0.7, 0.7, 0.7, 0.7"
+     SpawnOnlyIfPoiIsAlien: true
+     Entities:
+       - Names: [CaveWormsWhite]
+         Biomes: [Any]
+         Amount: 100
+         Period: Always
+         DelayMinMax: [-1, -1]
+
+     # Hunting grounds ========
+   - SpawnAt: [CobaltResource]
+     Radius: 300
+     RadiusRandom: 50
+     RateMultiplyerCenter: 1.0
+     RateMultiplyerEdge: 0.5
+     Color: "0.3, 0.3, 0.3, 0.8"
+     Entities:
+       - Names: [GolemsIce]
+         Biomes: [ Mountains, HighMountains, HighMountains_1]
+         Amount: 80
+         Period: Always
+         DelayMinMax: [-1, -1] 
+
+
+### Creatures
+CreatureSpawning:
+
+    # 'Food poor' world: 
+    # What you kill is gone ( ...at least for a long time)
+    
+    - Biomes: [Shore, CrashSite_1]
+      Entities:
+        - Name: SlimesWhite   # Harmless food
+          Period: Always
+          Amount: 10
+          Color: "1, 1, 1"
+          DelayMinMax: [70, 90]
+
+    # - Biomes: [ShallowWater] 
+      # Entities:
+        # - Name: Telluropods   # Biting food
+          # Period: Always
+          # Amount: 40
+          # AllowInWater: true 
+          # Color: "1.0, 0.7, 0.0"
+          # DelayMinMax: [70, 90]
+          
+    - Biomes: [Shore] 
+      Entities:
+        - Name: ParasaursFew
+          Period: Always
+          Amount: 10
+          AllowInWater: true 
+          Color: "1.0, 0.7, 0.0"
+          DelayMinMax: [70, 90]
+
+        - Name: Raptors  # (Ultra-dangerous) food. - Srsly, leave those alone!
+          Period: Always
+          Amount: 10
+          AllowInWater: true 
+          Color: "0.9, 0.9, 0.0"
+          DelayMinMax: [70, 90]
+
+
+    - Biomes: [ CrashSite] 
+      Entities:
+        - Name: SlimesWhite
+          Period: Day
+          Amount: 5
+          Color: "1, 1, 1"
+          DelayMinMax: [10, 12]
+        - Name: Oviraptors    # Cute food
+          Period: Always
+          Amount: 10
+          Color: "0.6, 0.6, 1"
+          DelayMinMax: [70, 90]
+        - Name: Raptors
+          Period: Always
+          Amount: 10
+          AllowInWater: true 
+          Color: "0.9, 0.9, 0.0"
+          DelayMinMax: [70, 90] 
+
+    - Biomes: [ Grove] 
+      Entities:
+        - Name: SlimesWhite
+          Period: Day
+          Amount: 8
+          Color: "1, 1, 1"
+          DelayMinMax: [70, 90]
+        - Name: Oviraptors
+          Period: Always
+          Amount: 15
+          Color: "0.6, 0.6, 1"
+          DelayMinMax: [70, 90]
+
+        - Name: Raptors
+          Period: Always
+          Amount: 30
+          AllowInWater: true 
+          Color: "0.9, 0.9, 0.0"
+          DelayMinMax: [70, 90]
+          
+        - Name: CaveWormWhiteHerd  # Agressive food
+          Period: Night
+          Amount: 20
+          Color: "0.7, 0.0, 0.0"
+          DelayMinMax: [20, 90] 
+
+    - Biomes: [ Taiga] 
+      Entities:
+        - Name: SlimesWhite
+          Period: Day
+          Amount: 16
+          Color: "1, 1, 1"
+          DelayMinMax: [10, 12]
+        - Name: Oviraptors
+          Period: Always
+          Amount: 20
+          Color: "0.6, 0.6, 1"
+          DelayMinMax: [70, 90]
+        - Name: Raptors
+          Period: Always
+          Amount: 20
+          AllowInWater: true 
+          Color: "0.9, 0.9, 0.0"
+          DelayMinMax: [70, 90]
+        - Name: RaptorsNight
+          Period: Night
+          Amount: 60
+          Color: "0.8, 0.0, 0.8"
+          DelayMinMax: [20, 24]
+        - Name: CaveWormWhiteHerd
+          Period: Night
+          Color: "0.9, 0.9, 0.0"
+          Amount: 15
+          DelayMinMax: [20, 90]
+
+    - Biomes: [ TaigaEdge, TaigaSnow, TaigaSnowEdge] 
+      Entities:
+        - Name: SlimesWhite
+          Period: Day
+          Amount: 8
+          Color: "1, 1, 1"
+          DelayMinMax: [10, 12]
+        - Name: Oviraptors
+          Period: Always
+          Amount: 15
+          Color: "0.6, 0.6, 1"
+          DelayMinMax: [70, 90]
+        - Name: Raptors
+          Period: Always
+          Amount: 5
+          AllowInWater: true 
+          Color: "0.9, 0.9, 0.0"
+          DelayMinMax: [70, 90] 
+        - Name: RaptorsNight
+          Period: Night
+          Amount: 30
+          Color: "0.8, 0.0, 0.8"
+          DelayMinMax: [20, 24]
+        - Name: CaveWormWhiteHerd
+          Period: Night
+          Amount: 6
+          Color: "0.7, 0.0, 0.0"
+          DelayMinMax: [20, 90]
+
+
+    - Biomes: [ Plains] 
+      Entities:
+        - Name: Oviraptors
+          Period: Always
+          Amount: 3
+          Color: "0.6, 0.6, 1"
+          DelayMinMax: [70, 90]
+          
+        - Name: CaveWormWhiteHerd
+          Period: Night
+          Amount: 3
+          Color: "0.7, 0.0, 0.0"
+          DelayMinMax: [20, 90]
+
+    - Biomes: [Dunes] 
+      Entities:
+        - Name: SlimesWhite
+          Period: Always
+          Amount: 1
+          Color: "1, 1, 1"
+          DelayMinMax: [70, 90]
+
+    - Biomes: [Tundra] 
+      Entities:
+        - Name: SlimesWhite
+          Period: Always
+          Amount: 2
+          Color: "1, 1, 1"
+          DelayMinMax: [70, 90]
+        - Name: Oviraptors
+          Period: Always
+          Amount: 1
+          Color: "0.6, 0.6, 1"
+          DelayMinMax: [70, 90]
+        - Name: GolemsIce          # Resources on legs  (& Resource safety, so that you don't get stuck on this planet)
+          Period: Always
+          Amount: 10
+          Color: "0.0, 0.0, 0.0"
+          DelayMinMax: [70, 90]
+
+    - Biomes: [GlacierHills, IceShelf] 
+      Entities:
+        - Name: SlimesWhite
+          Period: Always
+          Amount: 5
+          Color: "1, 1, 1"
+          DelayMinMax: [70, 90]
+        - Name: GolemsIce
+          Period: Always
+          Amount: 10
+          Color: "0.0, 0.0, 0.3"
+          DelayMinMax: [70, 90]
+
+
+    - Biomes: [ LowMountains, Mountains ] 
+      Entities:
+        - Name: GolemsIce
+          Period: Day
+          Amount: 10
+          Color: "0.2, 0.2, 0.2"
+          DelayMinMax: [24, 34]
+        - Name: GolemsIce
+          Period: Night
+          Amount: 10
+          Color: "0.0, 0.0, 0.3"
+          DelayMinMax: [30, 74]
+
+    - Biomes: [ HighMountains, HighMountains_1 ] 
+      Entities:
+        - Name: GolemsIce
+          Period: Day
+          Amount: 5
+          Color: "0.2, 0.2, 0.2"
+          DelayMinMax: [24, 34]
+        - Name: GolemsIce
+          Period: Night
+          Amount: 5
+          Color: "0.0, 0.0, 0.3"
+          DelayMinMax: [30, 74]
+
+    - Biomes: [ Oasis] 
+      Entities:
+        - Name: Oviraptors
+          Period: Always
+          Amount: 15
+          Color: "0.6, 0.6, 1"
+          DelayMinMax: [70, 90]
+          
+    - Biomes: [Water, ShallowWater, CrashSite_1water]
+      Entities: 
+        - Name: ShoalofFishesSmall
+          Period: Always
+          Amount: 10
+          AllowInWater: true
+          DelayMinMax: [0, 1]
+          Color: "1, 1.0, 0.0" 
